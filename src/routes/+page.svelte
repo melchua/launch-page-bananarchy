@@ -1,5 +1,4 @@
 <script>
-	import box from '$lib/assets/box.png';
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { onMount } from 'svelte';
 
@@ -25,7 +24,11 @@
 				in this fast-paced, mischievous party game.
 			</h2>
 		</div>
-		<img src={box} alt="bx  x" class={`${boxClass} sm:flex-2 m-2 w-4/5 sm:w-[300px]`} />
+		<enhanced:img
+			src="$lib/assets/box.png"
+			alt="box"
+			class={`${boxClass} sm:flex-2 m-2 w-4/5 sm:w-[300px]`}
+		/>
 	</div>
 	<footer
 		class="fixed bottom-0 left-0 right-0 flex flex-col justify-between gap-4 bg-black p-6 sm:fixed sm:bottom-0 sm:top-auto sm:flex-row"
