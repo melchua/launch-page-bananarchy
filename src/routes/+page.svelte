@@ -28,6 +28,7 @@
 			src="$lib/assets/box.png"
 			alt="box"
 			class={`${boxClass} sm:flex-2 m-2 w-4/5 sm:w-[300px]`}
+			sizes="(min-width: 640px) 300px, 80vw"
 		/>
 	</div>
 	<footer

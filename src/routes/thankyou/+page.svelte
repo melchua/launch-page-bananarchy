@@ -4,7 +4,7 @@
   -->
 
 <script>
-	import cards from '$lib/assets/cards.png';
+	import cards from '$lib/assets/cards.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 
 	const benefits = [
@@ -43,7 +43,12 @@
 			🔓 Lock in your opportunity to get these <span class="text-white">exclusive</span> alternate-art
 			promos today!
 		</h2>
-		<img src={cards} alt="cards" class="animate-bounce-in m-6 w-1/2" />
+		<enhanced:img
+			src={cards}
+			alt="cards"
+			class="animate-bounce-in m-6 w-1/2"
+			sizes="(min-width: 640px) 300px, 80vw"
+		/>
 
 		<p class="px-4 pb-8 text-center text-sm">
 			To receive your Kickstarter VIP pass, simply place a $10 deposit and you will be locked into
