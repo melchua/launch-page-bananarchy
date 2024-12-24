@@ -7,8 +7,6 @@
 	import cards from '$lib/assets/cards.png';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 
-	export const prerender = true;
-
 	const benefits = [
 		{
 			title: '100% Refund Guarantee',

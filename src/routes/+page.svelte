@@ -3,8 +3,6 @@
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { onMount } from 'svelte';
 
-	export const prerender = true;
-
 	let boxClass = '';
 
 	onMount(() => {
