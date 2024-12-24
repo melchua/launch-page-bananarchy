@@ -1,3 +1,6 @@
+// Notes on how to deploy an SSG to Cloudflare Pages
+// https://developers.cloudflare.com/pages/framework-guides/deploy-a-svelte-site/
+
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
