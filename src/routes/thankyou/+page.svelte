@@ -46,7 +46,7 @@
 		<enhanced:img
 			src={cards}
 			alt="cards"
-			class="animate-bounce-in m-6 w-1/2"
+			class="animate-bounce-in m-6 flex w-1/2"
 			sizes="(min-width: 640px) 300px, 80vw"
 		/>
 

@@ -5,3 +5,8 @@
 body {
 	background-color: #ffc627; /* Replace with your desired color */
 }
+
+picture {
+	display: flex;
+	justify-content: center;
+}
