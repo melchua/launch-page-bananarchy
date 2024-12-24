@@ -3,6 +3,8 @@
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { onMount } from 'svelte';
 
+	export const prerender = true;
+
 	let boxClass = '';
 
 	onMount(() => {
@@ -16,7 +18,7 @@
 	<div
 		class="bg-primary mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 sm:flex-row sm:justify-between"
 	>
-		<div class="sm:w-[600px]">
+		<div class="sm:w-[750px]">
 			<h1 class="font-londrinaSolid text-center text-7xl sm:text-left">
 				This <span class="text-8xl text-white">SH$T</span> is BANANAS!
 			</h1>

@@ -7,6 +7,8 @@
 	import { beforeNavigate, afterNavigate } from '$app/navigation';
 	import { browser } from '$app/environment';
 
+	export const prerender = true;
+
 	export const load = async () => {
 		if (browser) {
 			posthog.init('phc_dQL4w1lcT9beEs5Dfpc6qt7vDez8OR4OombqZzu2cGl', {
