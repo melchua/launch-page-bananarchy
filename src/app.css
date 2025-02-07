@@ -3,10 +3,29 @@
 @import 'tailwindcss/utilities';
 
 body {
-	background-color: #ffc627; /* Replace with your desired color */
+	background-color: #f3941c; /* Replace with your desired color */
 }
 
 picture {
 	display: flex;
 	justify-content: center;
+}
+
+.oback {
+	/* background-color: #f3941c; Full opacity background color */
+	position: relative;
+}
+
+.oback::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url('$lib/assets/silhouettes.png'); /* Replace with your image path */
+	background-size: 900px; /* Adjust as needed */
+	background-repeat: repeat; /* Adjust as needed */
+	z-index: -1; /* Ensure it stays behind the content */
+	filter: opacity(15%);
 }

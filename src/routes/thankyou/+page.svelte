@@ -33,20 +33,20 @@
 	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </svelte:head>
 
-<div class="bg-primary flex flex-col items-center">
-	<div class="bg-secondary mb-6 w-full p-2 text-center text-white">
+<div class="flex flex-col items-center bg-herobg">
+	<div class="mb-6 w-full bg-secondary p-2 text-center text-white">
 		<h3 class="font-semibold">Thank you for signing up</h3>
 	</div>
 	<div class="m-4 flex flex-col items-center">
-		<h1 class="font-londrinaSolid text-center text-3xl">Bananarchy Kickstarter VIP pass</h1>
-		<h2 class="font-londrinaSolid text-center text-xl">
+		<h1 class="text-center font-londrinaSolid text-3xl">Bananarchy Kickstarter VIP pass</h1>
+		<h2 class="text-center font-londrinaSolid text-xl">
 			🔓 Lock in your opportunity to get these <span class="text-white">exclusive</span> alternate-art
 			promos today!
 		</h2>
 		<enhanced:img
 			src={cards}
 			alt="cards"
-			class="animate-bounce-in m-6 flex w-1/2"
+			class="m-6 flex w-1/2 animate-bounce-in"
 			sizes="(min-width: 640px) 300px, 80vw"
 		/>
 

@@ -1,6 +1,7 @@
 <script>
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { onMount } from 'svelte';
+	import ConcentricCircles from '../components/ConcentricCircles.svelte';
 
 	let boxClass = '';
 
@@ -11,28 +12,51 @@
 	});
 </script>
 
-<div class="flex flex-col pb-[250px] sm:mt-20 sm:pb-0">
+<div class="flex flex-col pb-[250px] sm:pb-0">
 	<div
-		class="bg-primary mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 sm:flex-row sm:justify-between"
+		class="absolute left-[-320px] top-[-40px] z-0 flex h-max justify-center p-10 opacity-60 sm:top-[-200px] md:left-[25%] lg:left-[32%] xl:left-[35%] 2xl:left-[38%]"
 	>
-		<div class="sm:w-[750px]">
-			<h1 class="font-londrinaSolid text-center text-7xl sm:text-left">
-				This <span class="text-8xl text-white">SH$T</span> is BANANAS!
+		<ConcentricCircles />
+	</div>
+	<div
+		class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 pt-20 sm:flex-row sm:justify-between"
+	>
+		<div class="flex flex-col gap-2 sm:w-[750px]">
+			<h1 class="text-center font-londrinaSolid text-7xl text-white sm:text-left">
+				Unleash your inner Chimpanze!
 			</h1>
-			<h2 class="font-londrinaSolid py-2 text-center text-xl sm:text-left">
-				<span class="text-2xl text-white/90">Snatch, Stash, Snack & Smash</span> your way to victory
-				in this fast-paced, mischievous party game.
+			<div class="relative sm:hidden">
+				<enhanced:img
+					src="$lib/assets/box-single.png"
+					alt="box"
+					class={`${boxClass} sm:flex-2 m-2 w-3/5 sm:w-[300px]`}
+					sizes="(min-width: 640px) 640px, 80vw"
+				/>
+			</div>
+			<h2 class="py-2 text-center font-londrinaSolid text-xl sm:text-left">
+				<span class="text-baorange-50 text-4xl"
+					>Snatch, Stash, Snack & Smash your way to victory in this fast-paced, mischievous party
+					game.</span
+				>
 			</h2>
+			<div class="text-browntext rounded-xl bg-white p-4 font-londrinaSolid text-2xl">
+				Dive into a world of clever strategies and mischief. Collect monkey cards, outsmart
+				opponents, and make wild moves to gain the upper hand. With unpredictable twists and plenty
+				of surprises, every round is a fresh challenge. Perfect for players who love a mix of
+				cunning strategy and all-out-laughter!
+			</div>
 		</div>
-		<enhanced:img
-			src="$lib/assets/box.png"
-			alt="box"
-			class={`${boxClass} sm:flex-2 m-2 w-4/5 sm:w-[300px]`}
-			sizes="(min-width: 640px) 300px, 80vw"
-		/>
+		<div class="relative hidden sm:block">
+			<enhanced:img
+				src="$lib/assets/box-single.png"
+				alt="box"
+				class={`${boxClass} sm:flex-2 m-2 w-3/5 sm:w-[300px]`}
+				sizes="(min-width: 640px) 640px, 80vw"
+			/>
+		</div>
 	</div>
 	<footer
-		class="fixed bottom-0 left-0 right-0 flex flex-col justify-between gap-4 bg-black p-6 sm:fixed sm:bottom-0 sm:top-auto sm:flex-row"
+		class="fixed bottom-0 left-0 right-0 z-10 flex flex-col justify-between gap-4 bg-black p-6 sm:fixed sm:bottom-0 sm:top-auto sm:flex-row"
 	>
 		<span
 			><h1 class="text-2xl text-white">We're launching soon</h1>

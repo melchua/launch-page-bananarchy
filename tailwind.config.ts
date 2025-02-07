@@ -11,11 +11,28 @@ export default {
 			animation: {
 				'bounce-in': 'bounceDown 800ms linear'
 			},
+			backgroundImage: {
+				'custom-image': "url('$lib/assets/background.jpg')",
+				silhouettes: "url('$lib/assets/silhouettes.png')"
+			},
 			colors: {
-				primary: '#FFC627',
+				primary: {
+					DEFAULT: '#FFC627',
+					100: '#FEDF23'
+				},
+				baorange: {
+					DEFAULT: '#F6A31A',
+					50: '#feee50',
+					100: '#FEDF23',
+					200: '#FAB718',
+					300: '#F6A31A',
+					400: '#F3941C'
+				},
 				secondary: '#61BD4F',
 				tertiary: '#0084D0',
-				herobg: '#F6A31A'
+				herobg: '#F6A31A',
+				offwhite: '#EDEBE9',
+				browntext: '#83796d'
 			},
 			fontFamily: {
 				londrinaSolid: ['Londrina Solid', 'system-ui'],

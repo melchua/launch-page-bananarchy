@@ -36,3 +36,15 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Installing fonts
+
+We use the fontsource package for easy installation of fonts.
+
+install
+
+```bash
+npm install @fontsource/open-sans
+```
+
+https://fontsource.org/docs/getting-started/install
