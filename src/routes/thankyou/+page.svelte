@@ -36,7 +36,7 @@
 	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </svelte:head>
 
-<div class="relative flex flex-col items-center overflow-hidden">
+<div class="relative flex min-h-screen flex-col items-center overflow-y-auto">
 	<div class="from-bapurple absolute inset-0 bg-gradient-to-r to-purple-700 opacity-50"></div>
 	<div
 		class="from-bapurple absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] via-purple-700/50 to-transparent"
@@ -98,7 +98,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mx-4 flex flex-col items-center gap-2 sm:flex-row">
+		<div class="mx-4 flex flex-col items-center gap-2 bg-black text-white sm:flex-row">
 			{#each benefits as benefit}
 				<div class="flex flex-col gap-2 p-2">
 					<div class="flex items-center justify-start gap-2">

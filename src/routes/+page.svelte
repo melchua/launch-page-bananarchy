@@ -12,7 +12,7 @@
 	});
 </script>
 
-<div class="oback flex h-full flex-col pb-[250px] sm:pb-0">
+<div class="oback flex min-h-screen flex-col pb-[250px] sm:pb-0">
 	<div
 		class="absolute left-[-320px] top-[-40px] z-0 flex h-max justify-center p-10 opacity-60 sm:top-[-200px] md:left-[25%] lg:left-[32%] xl:left-[35%] 2xl:left-[38%]"
 	>
