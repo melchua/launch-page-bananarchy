@@ -27,49 +27,89 @@
 			icon: ShieldCheck
 		}
 	];
+
+	const TITLE = 'Thanks for Signing Up!';
+	const SUBTITLE = 'Want exclusive cards included in your pledge?';
 </script>
 
 <svelte:head>
 	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </svelte:head>
 
-<div class="flex flex-col items-center bg-herobg">
-	<div class="mb-6 w-full bg-secondary p-2 text-center text-white">
-		<h3 class="font-semibold">Thank you for signing up</h3>
-	</div>
-	<div class="m-4 flex flex-col items-center">
-		<h1 class="text-center font-londrinaSolid text-3xl">Bananarchy Kickstarter VIP pass</h1>
-		<h2 class="text-center font-londrinaSolid text-xl">
-			🔓 Lock in your opportunity to get these <span class="text-white">exclusive</span> alternate-art
-			promos today!
-		</h2>
-		<enhanced:img
-			src={cards}
-			alt="cards"
-			class="m-6 flex w-1/2 animate-bounce-in"
-			sizes="(min-width: 640px) 300px, 80vw"
-		/>
-
-		<p class="px-4 pb-8 text-center text-sm">
-			To receive your Kickstarter VIP pass, simply place a $10 deposit and you will be locked into
-			these exclusive promos, yada yada yada...
-		</p>
-
-		<stripe-buy-button
-			buy-button-id="buy_btn_1QYjCkK03lCEYbx4HSstdsqW"
-			publishable-key="pk_test_1mjRyVDesrQP0cH8ezMwmoMJ"
+<div class="relative flex flex-col items-center overflow-hidden">
+	<div class="from-bapurple absolute inset-0 bg-gradient-to-r to-purple-700 opacity-50"></div>
+	<div
+		class="from-bapurple absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] via-purple-700/50 to-transparent"
+	></div>
+	<div class="relative w-full">
+		<div
+			class="sticky left-0 right-0 top-0 mb-6 flex w-full justify-end bg-black p-2 text-center text-white"
 		>
-		</stripe-buy-button>
-	</div>
-	<div class="mx-4 flex flex-col items-center gap-2">
-		{#each benefits as benefit}
-			<div class="flex items-center gap-2">
-				{#if benefit.icon}
-					<svelte:component this={benefit.icon} class="h-20 w-20" />
-				{/if}
-				<h3 class="text-2xl">{benefit.title}</h3>
+			<div class="flex w-full justify-center">
+				<stripe-buy-button
+					buy-button-id="buy_btn_1QYjCkK03lCEYbx4HSstdsqW"
+					publishable-key="pk_test_1mjRyVDesrQP0cH8ezMwmoMJ"
+				>
+				</stripe-buy-button>
 			</div>
-			<p class="mx-10 mb-6">{benefit.description}</p>
-		{/each}
+		</div>
+		<div class="m-4 flex flex-col items-center sm:flex-row">
+			<div class="p-4 font-londrinaSolid text-5xl text-white sm:hidden">
+				<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
+			</div>
+			<enhanced:img
+				src={cards}
+				alt="cards"
+				class="m-6 w-1/2 animate-bounce-in sm:hidden"
+				sizes="(min-width: 640px) 700px, 80vw"
+			/>
+
+			<div class="hidden h-full flex-1 font-londrinaSolid sm:block">
+				<enhanced:img
+					src={cards}
+					alt="cards"
+					class="m-6 w-1/2 animate-bounce-in"
+					sizes="(min-width: 640px) 700px, 80vw"
+				/>
+			</div>
+
+			<div class="flex flex-1 flex-col rounded-xl sm:items-start">
+				<div class="hidden p-4 font-londrinaSolid text-5xl text-white sm:flex">
+					<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
+				</div>
+
+				<p class="p-4 font-londrinaSolid text-xl text-white">
+					Place a <span class="font-bold text-baorange-50">$1 refundable deposit</span> now and you'll
+					receive two bonus Monkey Cards with your copy of Bananarchy! These add a unique twist to the
+					gameplay to interfere with your rivals' plans.
+				</p>
+				<p class="p-4 font-londrinaSolid text-xl text-white">
+					Lock in your <span class="font-bold text-baorange-50">Kickstarter price of $22.50</span>
+					(+ shipping) for Bananarchy, ahhhh let's say at
+					<span class="font-bold text-baorange-50">25% discount</span> off off the $30 MSRP.
+				</p>
+				<div class="flex w-full flex-col items-center justify-center">
+					<stripe-buy-button
+						buy-button-id="buy_btn_1QYjCkK03lCEYbx4HSstdsqW"
+						publishable-key="pk_test_1mjRyVDesrQP0cH8ezMwmoMJ"
+					>
+					</stripe-buy-button>
+					<a href="#" class="underline">No thanks! I'll just follow along</a>
+				</div>
+			</div>
+		</div>
+		<div class="mx-4 flex flex-col items-center gap-2 sm:flex-row">
+			{#each benefits as benefit}
+				<div class="flex flex-col gap-2 p-2">
+					<div class="flex items-center justify-start gap-2">
+						{#if benefit.icon}
+							<svelte:component this={benefit.icon} class="h-20 w-20" />
+						{/if}
+						<h3 class="text-2xl">{benefit.title}</h3>
+					</div>
+					<p class="mb-6">{benefit.description}</p>
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>

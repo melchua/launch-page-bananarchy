@@ -28,6 +28,9 @@ export default {
 					300: '#F6A31A',
 					400: '#F3941C'
 				},
+				bapurple: {
+					DEFAULT: '#A060AF'
+				},
 				secondary: '#61BD4F',
 				tertiary: '#0084D0',
 				herobg: '#F6A31A',

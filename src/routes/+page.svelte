@@ -12,7 +12,7 @@
 	});
 </script>
 
-<div class="flex flex-col pb-[250px] sm:pb-0">
+<div class="oback flex h-full flex-col pb-[250px] sm:pb-0">
 	<div
 		class="absolute left-[-320px] top-[-40px] z-0 flex h-max justify-center p-10 opacity-60 sm:top-[-200px] md:left-[25%] lg:left-[32%] xl:left-[35%] 2xl:left-[38%]"
 	>
@@ -34,12 +34,12 @@
 				/>
 			</div>
 			<h2 class="py-2 text-center font-londrinaSolid text-xl sm:text-left">
-				<span class="text-baorange-50 text-4xl"
+				<span class="text-4xl text-baorange-50"
 					>Snatch, Stash, Snack & Smash your way to victory in this fast-paced, mischievous party
 					game.</span
 				>
 			</h2>
-			<div class="text-browntext rounded-xl bg-white p-4 font-londrinaSolid text-2xl">
+			<div class="rounded-xl bg-white p-4 font-londrinaSolid text-2xl text-browntext">
 				Dive into a world of clever strategies and mischief. Collect monkey cards, outsmart
 				opponents, and make wild moves to gain the upper hand. With unpredictable twists and plenty
 				of surprises, every round is a fresh challenge. Perfect for players who love a mix of

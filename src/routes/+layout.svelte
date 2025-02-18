@@ -27,6 +27,6 @@
 	let { children } = $props();
 </script>
 
-<div class="oback h-[100vh] w-full">
+<div class="h-[100vh] w-full">
 	{@render children()}
 </div>
