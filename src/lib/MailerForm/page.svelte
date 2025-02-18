@@ -1,3 +1,16 @@
+<script>
+	import { onMount } from 'svelte';
+
+	let glowEffect = false;
+
+	// Restart animation every 2 seconds
+	onMount(() => {
+		setInterval(() => {
+			glowEffect = !glowEffect;
+		}, 2000);
+	});
+</script>
+
 <div id="mc_embed_shell">
 	<div id="mc_embed_signup">
 		<form
@@ -9,17 +22,17 @@
 			target="_self"
 		>
 			<div id="mc_embed_signup_scroll">
-				<div class="indicates-required">
+				<div class="indicates-required gap-2 md:flex md:flex-row md:items-center">
 					<div class="mc-field-group my-1">
 						<label for="mce-EMAIL"></label>
 						<input
 							type="email"
 							name="EMAIL"
-							class="required email w-full rounded-md"
+							class="required email w-full rounded-lg sm:w-auto"
 							id="mce-EMAIL"
 							required
 							value=""
-							placeholder="Email address"
+							placeholder="Email address 🍌"
 						/>
 					</div>
 					<div id="mce-responses" class="clear foot">
@@ -41,8 +54,8 @@
 							<button
 								type="submit"
 								name="subscribe"
-								class="button bg-secondary w-full rounded-lg p-2 text-white"
-								>Gimme early access!</button
+								class="button w-full whitespace-nowrap rounded-lg bg-secondary p-2 text-white hover:bg-secondary/80"
+								class:glow={glowEffect}>Gimme early access!</button
 							>
 						</div>
 					</div>
@@ -51,3 +64,15 @@
 		</form>
 	</div>
 </div>
+
+<style>
+	.glow {
+		transition: box-shadow 1s ease-in-out;
+		box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+	}
+
+	button {
+		transition: box-shadow 1s ease-in-out;
+		box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	}
+</style>

@@ -53,7 +53,7 @@
 				</stripe-buy-button>
 			</div>
 		</div>
-		<div class="m-4 flex flex-col items-center sm:flex-row">
+		<div class="mx-4 my-4 flex flex-col items-center sm:my-16 sm:flex-row">
 			<div class="p-4 font-londrinaSolid text-5xl text-white sm:hidden">
 				<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
 			</div>
@@ -94,11 +94,13 @@
 						publishable-key="pk_test_1mjRyVDesrQP0cH8ezMwmoMJ"
 					>
 					</stripe-buy-button>
-					<a href="#" class="underline">No thanks! I'll just follow along</a>
+					<a href="#" class="underline hover:text-gray-400">No thanks! I'll just follow along</a>
 				</div>
 			</div>
 		</div>
-		<div class="mx-4 flex flex-col items-center gap-2 bg-black text-white sm:flex-row">
+		<div
+			class="mx-4 my-4 flex flex-col items-center gap-2 rounded bg-black p-6 text-gray-300 sm:flex-row"
+		>
 			{#each benefits as benefit}
 				<div class="flex flex-col gap-2 p-2">
 					<div class="flex items-center justify-start gap-2">

@@ -13,6 +13,18 @@
 </script>
 
 <div class="oback flex min-h-screen flex-col pb-[250px] sm:pb-0">
+	<footer
+		class="fixed bottom-0 left-0 right-0 z-50 flex flex-col justify-between gap-4 bg-black p-6 sm:sticky sm:top-0 sm:flex-row"
+	>
+		<span
+			><h1 class="text-2xl text-white">We're launching soon</h1>
+			<p class="text-sm text-white">
+				Signup now to be the first to know when the Kickstarter launches and unlock the extra cards
+			</p></span
+		>
+		<MailerForm />
+	</footer>
+
 	<div
 		class="absolute left-[-320px] top-[-40px] z-0 flex h-max justify-center p-10 opacity-60 sm:top-[-200px] md:left-[25%] lg:left-[32%] xl:left-[35%] 2xl:left-[38%]"
 	>
@@ -55,15 +67,4 @@
 			/>
 		</div>
 	</div>
-	<footer
-		class="fixed bottom-0 left-0 right-0 z-10 flex flex-col justify-between gap-4 bg-black p-6 sm:fixed sm:bottom-0 sm:top-auto sm:flex-row"
-	>
-		<span
-			><h1 class="text-2xl text-white">We're launching soon</h1>
-			<p class="text-sm text-white">
-				Signup now to be the first to know when the Kickstarter launches and unlock the extra cards
-			</p></span
-		>
-		<MailerForm />
-	</footer>
 </div>
