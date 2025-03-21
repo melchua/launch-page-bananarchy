@@ -14,7 +14,7 @@
 <div id="mc_embed_shell">
 	<div id="mc_embed_signup">
 		<form
-			action="https://gmail.us12.list-manage.com/subscribe/post?u=3b7a59a13fedb255fa561a532&amp;id=106c54f5fe&amp;f_id=005509e9f0"
+			action="https://gmail.us20.list-manage.com/subscribe/post?u=4724152423d8e2b017711695a&amp;id=b51bb23d96&amp;f_id=007b98eef0"
 			method="post"
 			id="mc-embedded-subscribe-form"
 			name="mc-embedded-subscribe-form"
