@@ -37,9 +37,9 @@
 </svelte:head>
 
 <div class="relative flex min-h-screen flex-col items-center overflow-y-auto">
-	<div class="from-bapurple absolute inset-0 bg-gradient-to-r to-purple-700 opacity-50"></div>
+	<div class="absolute inset-0 bg-gradient-to-r from-bapurple to-purple-700 opacity-50"></div>
 	<div
-		class="from-bapurple absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] via-purple-700/50 to-transparent"
+		class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-bapurple via-purple-700/50 to-transparent"
 	></div>
 	<div class="relative w-full">
 		<div
@@ -47,8 +47,8 @@
 		>
 			<div class="flex w-full justify-center">
 				<stripe-buy-button
-					buy-button-id="buy_btn_1QYjCkK03lCEYbx4HSstdsqW"
-					publishable-key="pk_test_1mjRyVDesrQP0cH8ezMwmoMJ"
+					buy-button-id="buy_btn_1R4t7SPPIJAaixg8kKHFwSZm"
+					publishable-key="pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz"
 				>
 				</stripe-buy-button>
 			</div>
@@ -79,14 +79,15 @@
 				</div>
 
 				<p class="p-4 font-londrinaSolid text-xl text-white">
-					Place a <span class="font-bold text-baorange-50">$1 refundable deposit</span> now and you'll
-					receive two bonus Monkey Cards with your copy of Bananarchy! These add a unique twist to the
-					gameplay to interfere with your rivals' plans.
+					Place a <span class="font-bold text-baorange-50">$1 refundable deposit</span> and receive
+					two bonus cards with your copy of
+					<span class="font-bold text-baorange-50">Bananarchy</span>, adding a unique twist to mess
+					with your friends.
 				</p>
 				<p class="p-4 font-londrinaSolid text-xl text-white">
-					Lock in your <span class="font-bold text-baorange-50">Kickstarter price of $22.50</span>
-					(+ shipping) for Bananarchy, ahhhh let's say at
-					<span class="font-bold text-baorange-50">25% discount</span> off off the $30 MSRP.
+					Lock in <span class="font-bold text-baorange-50">Bananarchy</span> at the
+					<span class="font-bold text-baorange-50">Kickstarter price of $22.50</span> (+ shipping) ~
+					a banana-load 🍌 of savings!
 				</p>
 				<div class="flex w-full flex-col items-center justify-center">
 					<stripe-buy-button
@@ -98,8 +99,9 @@
 				</div>
 			</div>
 		</div>
+		<!-- // TODO: Lines between boxes, and margin between boxes for the text -->
 		<div
-			class="mx-4 my-4 flex flex-col items-center gap-2 rounded bg-black p-6 text-gray-300 sm:flex-row"
+			class="mx-4 my-4 flex flex-col items-start gap-2 rounded bg-black p-6 text-gray-300 md:flex-row"
 		>
 			{#each benefits as benefit}
 				<div class="flex flex-col gap-2 p-2">
