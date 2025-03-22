@@ -91,8 +91,8 @@
 				</p>
 				<div class="flex w-full flex-col items-center justify-center">
 					<stripe-buy-button
-						buy-button-id="buy_btn_1QYjCkK03lCEYbx4HSstdsqW"
-						publishable-key="pk_test_1mjRyVDesrQP0cH8ezMwmoMJ"
+						buy-button-id="buy_btn_1R4t7SPPIJAaixg8kKHFwSZm"
+						publishable-key="pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz"
 					>
 					</stripe-buy-button>
 					<a href="#" class="underline hover:text-gray-400">No thanks! I'll just follow along</a>
