@@ -51,7 +51,7 @@
 		</div>
 	</div>
 	<footer
-		class="fixed bottom-0 left-0 z-50 flex w-full flex-col justify-between gap-4 bg-black p-8 sm:flex-row"
+		class="sticky bottom-0 left-0 z-50 flex w-full flex-col justify-between gap-4 bg-black p-8 sm:fixed sm:flex-row"
 	>
 		<span
 			><h1 class="text-2xl text-white">We're launching soon</h1>
