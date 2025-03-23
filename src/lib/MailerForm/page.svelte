@@ -1,10 +1,14 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	let glowEffect = false;
+	let emailInput: HTMLInputElement;
 
 	// Restart animation every 2 seconds
 	onMount(() => {
+		// Focus the input when component mounts
+		emailInput?.focus();
+
 		setInterval(() => {
 			glowEffect = !glowEffect;
 		}, 2000);
@@ -26,6 +30,7 @@
 					<div class="mc-field-group my-1">
 						<label for="mce-EMAIL"></label>
 						<input
+							bind:this={emailInput}
 							type="email"
 							name="EMAIL"
 							class="required email w-full rounded-lg sm:w-[260px]"
