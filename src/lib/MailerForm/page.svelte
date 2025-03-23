@@ -22,13 +22,13 @@
 			target="_self"
 		>
 			<div id="mc_embed_signup_scroll">
-				<div class="indicates-required gap-2 md:flex md:flex-row md:items-center">
+				<div class="indicates-required gap-2">
 					<div class="mc-field-group my-1">
 						<label for="mce-EMAIL"></label>
 						<input
 							type="email"
 							name="EMAIL"
-							class="required email w-full rounded-lg sm:w-auto"
+							class="required email w-full rounded-lg sm:w-[260px]"
 							id="mce-EMAIL"
 							required
 							value=""

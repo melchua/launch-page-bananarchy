@@ -51,14 +51,17 @@
 		</div>
 	</div>
 	<footer
-		class="sticky bottom-0 left-0 z-50 flex w-full flex-col justify-between gap-4 bg-black p-8 sm:fixed sm:flex-row"
+		class="sticky bottom-0 left-0 z-50 flex w-full items-center justify-center bg-black p-8 sm:fixed sm:mx-auto sm:pb-20"
 	>
-		<span
-			><h1 class="text-2xl text-white">We're launching soon</h1>
-			<p class="text-sm text-white">
-				Signup now to be the first to know when the Kickstarter launches and unlock the extra cards
-			</p></span
-		>
-		<MailerForm />
+		<div class="flex flex-col justify-between gap-4 sm:w-full sm:flex-row lg:w-[90%] xl:w-[72%]">
+			<span
+				><h1 class="text-2xl text-white">We're launching soon</h1>
+				<p class="text-sm text-white">
+					Signup now to be the first to know when the Kickstarter launches and unlock the extra
+					cards
+				</p></span
+			>
+			<MailerForm />
+		</div>
 	</footer>
 </div>
