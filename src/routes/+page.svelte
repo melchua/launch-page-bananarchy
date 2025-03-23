@@ -12,14 +12,14 @@
 	});
 </script>
 
-<div class="oback pb-[250px]0 flex min-h-screen flex-col">
+<div class="oback flex min-h-screen flex-col">
 	<div
 		class="fixed left-[-320px] top-[-40px] z-0 flex h-max justify-center p-10 opacity-60 sm:top-[-200px] md:left-[25%] lg:left-[32%] xl:left-[35%] 2xl:left-[38%]"
 	>
 		<ConcentricCircles />
 	</div>
 	<div
-		class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 pt-20 sm:flex-row sm:justify-between"
+		class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 sm:flex-row sm:justify-between sm:pt-20"
 	>
 		<div class="flex flex-col gap-2 sm:w-[750px]">
 			<h1 class="text-center font-londrinaSolid text-7xl text-white sm:text-left">
