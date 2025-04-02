@@ -2,6 +2,7 @@
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { onMount } from 'svelte';
 	import ConcentricCircles from '../components/ConcentricCircles.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	let boxClass = '';
 
@@ -42,22 +43,9 @@
 			</div>
 		</div>
 	</div>
-	<footer
-		class="z-50 flex w-full items-center justify-center bg-black p-16 text-center sm:mx-auto sm:pb-20 sm:text-start"
-	>
-		<div class="flex flex-col justify-between gap-4 sm:w-full sm:flex-row lg:w-[90%] xl:w-[72%]">
-			<span
-				><h1 class="text-2xl text-white">We're launching soon!</h1>
-				<p class="w-full text-sm text-white">
-					Sign up now to be the first to know when the Kickstarter launches and unlock the extra
-					cards
-				</p></span
-			>
-			<MailerForm />
-		</div>
-	</footer>
+	<Footer />
 	<div class="full text-white">
-		<div class="flex flex-col gap-4 p-4 pt-10 lg:mx-24">
+		<div class="flex flex-col gap-4 p-4 pt-10 lg:mx-24 xl:mx-48">
 			<div class="w-full">
 				<div class="flex flex-col items-center gap-4 lg:flex-row">
 					<div class="flex-1 py-8">
@@ -71,9 +59,9 @@
 							there!
 						</p>
 					</div>
-					<div class="flex-1">
+					<div class="w-[100vw] flex-1">
 						<enhanced:img
-							src="$lib/assets/placeholder.png"
+							src="$lib/assets/shieldthejungle.png"
 							alt="placeholder"
 							class="w-full rounded-sm"
 							sizes="(min-width: 640px) 640px, 100vw"
@@ -83,7 +71,7 @@
 			</div>
 			<div class="w-full">
 				<div class="flex flex-col-reverse items-center gap-4 lg:flex-row">
-					<div class="flex-1 py-8">
+					<div class="w-[100vw] flex-1 py-8">
 						<enhanced:img
 							src="$lib/assets/placeholder.png"
 							alt="placeholder"
@@ -104,7 +92,7 @@
 				</div>
 			</div>
 			<div class="w-full">
-				<div class="flex flex-col items-center gap-4 md:flex-row">
+				<div class="flex flex-col items-center gap-4 lg:flex-row">
 					<div class="flex-1 py-8">
 						<h2 class="font-londrinaSolid text-3xl sm:px-10 lg:px-20">
 							A game where you don't have to wait your turn!
@@ -115,7 +103,7 @@
 							pace or just to keep the action going!
 						</p>
 					</div>
-					<div class="flex-1 py-8">
+					<div class="w-[100vw] flex-1 py-8">
 						<enhanced:img
 							src="$lib/assets/placeholder.png"
 							alt="placeholder"
@@ -127,4 +115,5 @@
 			</div>
 		</div>
 	</div>
+	<Footer />
 </div>
