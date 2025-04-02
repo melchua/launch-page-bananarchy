@@ -1,5 +1,4 @@
 <script>
-	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { onMount } from 'svelte';
 	import ConcentricCircles from '../components/ConcentricCircles.svelte';
 	import Footer from '../components/Footer.svelte';
@@ -73,7 +72,7 @@
 				<div class="flex flex-col-reverse items-center gap-4 lg:flex-row">
 					<div class="w-[100vw] flex-1 py-8">
 						<enhanced:img
-							src="$lib/assets/placeholder.png"
+							src="$lib/assets/surprisegorilla.png"
 							alt="placeholder"
 							class="w-full rounded-sm"
 							sizes="(min-width: 640px) 640px, 100vw"
