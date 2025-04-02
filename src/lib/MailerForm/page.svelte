@@ -7,7 +7,7 @@
 	// Restart animation every 2 seconds
 	onMount(() => {
 		// Focus the input when component mounts
-		emailInput?.focus();
+		// emailInput?.focus();
 
 		setInterval(() => {
 			glowEffect = !glowEffect;

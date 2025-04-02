@@ -27,5 +27,5 @@ picture {
 	background-size: 900px; /* Adjust as needed */
 	background-repeat: repeat; /* Adjust as needed */
 	z-index: -1; /* Ensure it stays behind the content */
-	filter: opacity(15%);
+	filter: opacity(9%);
 }

@@ -8,6 +8,11 @@ export default {
 
 	theme: {
 		extend: {
+			screens: {
+				'mobile-sm': '586px',
+				'mobile-xs': '459px',
+				'mobile-xxs': '430px'
+			},
 			animation: {
 				'bounce-in': 'bounceDown 800ms linear'
 			},
