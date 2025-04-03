@@ -23,13 +23,15 @@
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
-				<h1 class="font-londrinaSolid text-5xl text-white sm:text-left">
+				<h1
+					class="font-londrinaSolid text-5xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:text-left"
+				>
 					Bananarchy: The Mischievious Card Game You've Been Waiting For!
 				</h1>
 				<div class="rounded-xl bg-transparent text-lg sm:text-black">
-					<span class="text-bapurple">Snatch, Stash, Snack & Smash</span> your way to victory in this
-					fast-paced, mischievous party game. Collect bananas, outwit opponents, and make wild moves
-					that will have everyone laughing!
+					<span class="font-extrabold text-bapurple">Snatch, Stash, Snack & Smash</span> your way to
+					victory in this fast-paced, mischievous party game. Collect bananas, outwit opponents, and
+					make wild moves that will have everyone laughing!
 				</div>
 			</div>
 			<div class="relative">
@@ -48,7 +50,9 @@
 			<div class="w-full">
 				<div class="flex flex-col items-center gap-4 lg:flex-row">
 					<div class="flex-1 py-8">
-						<h2 class="font-londrinaSolid text-3xl sm:px-10 lg:px-20">
+						<h2
+							class="font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+						>
 							It's everyone for themselves in this Jungle!
 						</h2>
 						<p class="mt-2 sm:px-10 lg:px-20">
@@ -79,7 +83,9 @@
 						/>
 					</div>
 					<div class="flex-1 py-8">
-						<h2 class="font-londrinaSolid text-3xl sm:px-10 lg:px-20">
+						<h2
+							class="font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+						>
 							Relish in the cheeky humour and cute anthropomorphic monkeys.
 						</h2>
 						<p class="mt-2 sm:px-10 lg:px-20">
@@ -93,7 +99,9 @@
 			<div class="w-full">
 				<div class="flex flex-col items-center gap-4 lg:flex-row">
 					<div class="flex-1 py-8">
-						<h2 class="font-londrinaSolid text-3xl sm:px-10 lg:px-20">
+						<h2
+							class="font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+						>
 							A game where you don't have to wait your turn!
 						</h2>
 						<p class="mt-2 sm:px-10 lg:px-20">

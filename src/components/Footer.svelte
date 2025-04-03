@@ -9,7 +9,8 @@
 		<span>
 			<h1 class="text-2xl text-white">We're launching soon!</h1>
 			<p class="w-full text-sm text-white">
-				Sign up now to be the first to know when the Kickstarter launches and unlock the extra cards
+				Sign up now to be the <span>first to know</span> when we launch and receive a special offer for
+				our backers.
 			</p>
 		</span>
 		<MailerForm />
