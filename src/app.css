@@ -29,3 +29,9 @@ picture {
 	z-index: -1; /* Ensure it stays behind the content */
 	filter: opacity(9%);
 }
+
+.highlight-text {
+	color: #ffffff;
+	filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.8));
+	font-weight: 900;
+}
