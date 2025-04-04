@@ -3,7 +3,11 @@
   
   -->
 
-<script>
+<script context="module" lang="ts">
+	declare const fbq: (command: string, event: string, params?: Record<string, any>) => void;
+</script>
+
+<script lang="ts">
 	import cards from '$lib/assets/cards.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 
@@ -30,6 +34,17 @@
 
 	const TITLE = 'Thanks for Signing Up!';
 	const SUBTITLE = 'Want exclusive cards included in your pledge?';
+
+	function handleBuyButtonClick(location: 'header' | 'main') {
+		if (typeof fbq !== 'undefined') {
+			fbq('track', 'InitiateCheckout', {
+				content_name: 'Bananarchy VIP Bonus Cards',
+				value: 1.0,
+				currency: 'USD',
+				button_location: location
+			});
+		}
+	}
 </script>
 
 <svelte:head>
@@ -49,6 +64,10 @@
 				<stripe-buy-button
 					buy-button-id="buy_btn_1R4t7SPPIJAaixg8kKHFwSZm"
 					publishable-key="pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz"
+					on:click={() => handleBuyButtonClick('header')}
+					on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('header')}
+					role="button"
+					tabindex="0"
 				>
 				</stripe-buy-button>
 			</div>
@@ -93,6 +112,10 @@
 					<stripe-buy-button
 						buy-button-id="buy_btn_1R4t7SPPIJAaixg8kKHFwSZm"
 						publishable-key="pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz"
+						on:click={() => handleBuyButtonClick('main')}
+						on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
+						role="button"
+						tabindex="0"
 					>
 					</stripe-buy-button>
 					<a href="#" class="underline hover:text-gray-400">No thanks! I'll just follow along</a>
