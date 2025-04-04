@@ -1,9 +1,20 @@
+<script context="module" lang="ts">
+	declare const fbq: (command: string, event: string, params?: Record<string, any>) => void;
+</script>
+
 <script>
 	const TITLE = `Congrats, you're a VIP!`;
 </script>
 
 <svelte:head>
 	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+	<script>
+		fbq('track', 'Purchase', {
+			content_name: 'Bananarchy VIP Bonus',
+			value: 1.0,
+			currency: 'USD'
+		});
+	</script>
 </svelte:head>
 
 <div class="flex min-h-screen flex-col items-center overflow-y-auto pt-20">
