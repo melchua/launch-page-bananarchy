@@ -53,7 +53,7 @@
 						<h2
 							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
 						>
-							It's everyone for themselves in this Jungle!
+							It's everyone for themselves in this jungle!
 						</h2>
 						<p class="mt-2 text-black sm:px-10 lg:px-20">
 							Use a mixture of <span class="highlight-text">strategy</span>,
