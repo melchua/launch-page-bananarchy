@@ -66,7 +66,7 @@
 					</div>
 					<div class="w-[100vw] flex-1">
 						<enhanced:img
-							src="$lib/assets/shieldthejungle.png"
+							src="$lib/assets/shield-snatch-smash.png"
 							alt="placeholder"
 							class="w-full rounded-sm"
 							sizes="(min-width: 640px) 640px, 100vw"
@@ -78,7 +78,7 @@
 				<div class="flex flex-col-reverse items-center gap-4 lg:flex-row">
 					<div class="w-[100vw] flex-1 py-8">
 						<enhanced:img
-							src="$lib/assets/surprisegorilla.png"
+							src="$lib/assets/kitchen.png"
 							alt="placeholder"
 							class="w-full rounded-sm"
 							sizes="(min-width: 640px) 640px, 100vw"
@@ -114,7 +114,7 @@
 					</div>
 					<div class="w-[100vw] flex-1 py-8">
 						<enhanced:img
-							src="$lib/assets/placeholder.png"
+							src="$lib/assets/surprisegorilla.png"
 							alt="placeholder"
 							class="w-full rounded-sm"
 							sizes="(min-width: 640px) 640px, 100vw"
