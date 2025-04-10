@@ -97,21 +97,21 @@
 					<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
 				</div>
 
-				<p class="p-4 font-londrinaSolid text-xl text-white">
+				<p class="p-4 text-xl text-white">
 					Place a <span class="font-bold text-baorange-50">$1 refundable deposit</span> and receive
 					two bonus cards with your copy of
 					<span class="font-bold text-baorange-50">Bananarchy</span>, adding a unique twist to mess
 					with your friends.
 				</p>
-				<p class="p-4 font-londrinaSolid text-xl text-white">
+				<p class="p-4 text-xl text-white">
 					Lock in <span class="font-bold text-baorange-50">Bananarchy</span> at the
-					<span class="font-bold text-baorange-50">Kickstarter price of $22.50</span> (+ shipping) ~
-					a banana-load 🍌 of savings!
+					<span class="font-bold text-baorange-50">lowest possible price</span> (+ shipping) ~ a banana-load
+					🍌 of savings!
 				</p>
 				<div class="flex w-full flex-col items-center justify-center">
 					<stripe-buy-button
-						buy-button-id="buy_btn_1R4t7SPPIJAaixg8kKHFwSZm"
-						publishable-key="pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz"
+						buy-button-id="buy_btn_1RCB8XAsNXUFfbI0ZhPPYlfX"
+						publishable-key="pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W"
 						on:click={() => handleBuyButtonClick('main')}
 						on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
 						role="button"
