@@ -118,7 +118,9 @@
 						tabindex="0"
 					>
 					</stripe-buy-button>
-					<a href="#" class="underline hover:text-gray-400">No thanks! I'll just follow along</a>
+					<a href="https://www.facebook.com/bananarchygame" class="underline hover:text-gray-400"
+						>No thanks! I'll just follow along</a
+					>
 				</div>
 			</div>
 		</div>
