@@ -118,14 +118,9 @@
 						tabindex="0"
 					>
 					</stripe-buy-button>
-					<a
-						href="https://www.kickstarter.com/projects/pickupandplaygames/bananarchy"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="underline hover:text-gray-400"
+					<a href="https://www.facebook.com/bananarchygame" class="underline hover:text-gray-400"
+						>No thanks! I'll just follow along</a
 					>
-						No thanks! I'll just follow along
-					</a>
 				</div>
 			</div>
 		</div>

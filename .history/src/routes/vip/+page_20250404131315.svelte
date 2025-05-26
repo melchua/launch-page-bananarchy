@@ -42,18 +42,12 @@
 				> when you back Bananarchy on Kickstarter. Welcome to the troop! 🐵
 			</p>
 
-			<a
-				href="https://www.kickstarter.com/projects/pickupandplaygames/bananarchy"
-				target="_blank"
-				rel="noopener noreferrer"
+			<button
+				type="submit"
+				name="subscribe"
+				class="button w-full whitespace-nowrap rounded-lg bg-secondary p-2 text-white hover:bg-secondary/80"
+				>Follow on Kickstarter</button
 			>
-				<button
-					type="submit"
-					name="subscribe"
-					class="button w-full whitespace-nowrap rounded-lg bg-secondary p-2 text-white hover:bg-secondary/80"
-					>Follow on Kickstarter</button
-				>
-			</a>
 		</div>
 	</div>
 </div>
