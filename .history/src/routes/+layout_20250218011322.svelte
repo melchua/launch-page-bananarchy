@@ -27,19 +27,6 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRBBNH8JRZ"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'G-PRBBNH8JRZ');
-	</script>
-</svelte:head>
-
 <div class="h-[100vh] w-full">
 	{@render children()}
 </div>
