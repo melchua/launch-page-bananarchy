@@ -8,7 +8,7 @@
 </script>
 
 <script lang="ts">
-	import cards from '$lib/assets/cards.png?enhanced';
+	import cards from '$lib/assets/vip-2.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 
 	const benefits = [

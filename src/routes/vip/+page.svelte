@@ -27,7 +27,7 @@
 	>
 		<div class="flex-1">
 			<enhanced:img
-				src="$lib/assets/jungle-pile.jpg"
+				src="$lib/assets/coming-soon.png"
 				alt="row4cards"
 				class="m-6 min-w-[400px] animate-bounce-in rounded-xl"
 			/>
@@ -36,7 +36,7 @@
 		<div class="m-4 flex flex-1 flex-col gap-4 p-6 text-white">
 			<span class="font-londrinaSolid text-7xl">{TITLE}</span>
 
-			<p class="font-londrinaSolid text-xl">
+			<p class="text-xl text-white">
 				Thanks for reserving your exclusive VIP bonus! You're locked in to receive <span
 					class="text-baorange-50">two GMO-free Banana Cards 🍌</span
 				> when you back Bananarchy on Kickstarter. Welcome to the troop! 🐵
