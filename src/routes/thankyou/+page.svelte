@@ -8,7 +8,7 @@
 </script>
 
 <script lang="ts">
-	import cards from '$lib/assets/vip-2.png?enhanced';
+	import cards from '$lib/assets/vip-exclusive.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 
 	const benefits = [
@@ -72,36 +72,40 @@
 				</stripe-buy-button>
 			</div>
 		</div>
-		<div class="mx-4 my-4 flex flex-col items-center sm:my-16 sm:flex-row">
-			<div class="p-4 font-londrinaSolid text-5xl text-white sm:hidden">
+		<div class="mx-4 my-4 flex flex-col items-center md:my-16 md:flex-row">
+			<div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
 				<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
 			</div>
+			<!-- small screen image -->
 			<enhanced:img
 				src={cards}
 				alt="cards"
-				class="m-6 w-1/2 animate-bounce-in sm:hidden"
-				sizes="(min-width: 640px) 700px, 80vw"
+				class="m-6 w-2/3 animate-bounce-in p-4 sm:w-2/3 md:hidden"
+				sizes="80vw"
 			/>
 
-			<div class="hidden h-full flex-1 font-londrinaSolid sm:block">
+			<!-- medium screen image -->
+			<div class="hidden h-full flex-none p-4 font-londrinaSolid md:block">
 				<enhanced:img
 					src={cards}
 					alt="cards"
-					class="m-6 w-1/2 animate-bounce-in"
-					sizes="(min-width: 640px) 700px, 80vw"
+					class="m-6 w-2/3 min-w-[500px] animate-bounce-in"
+					sizes="500px"
 				/>
 			</div>
 
 			<div class="flex flex-1 flex-col rounded-xl sm:items-start">
-				<div class="hidden p-4 font-londrinaSolid text-5xl text-white sm:flex">
+				<div class="hidden p-4 font-londrinaSolid text-5xl text-white md:flex">
 					<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
 				</div>
 
 				<p class="p-4 text-xl text-white">
-					Place a <span class="font-bold text-baorange-50">$1 refundable deposit</span> and receive
-					two bonus cards with your copy of
-					<span class="font-bold text-baorange-50">Bananarchy</span>, adding a unique twist to mess
-					with your friends.
+					Want even more exclusive cards in your pledge? Place a <span
+						class="font-bold text-baorange-50">$1 refundable deposit</span
+					>
+					and get two bonus cards with your copy of
+					<span class="font-bold text-baorange-50">Bananarchy</span> — plus unlock a chance for even
+					more when the campaign goes live!
 				</p>
 				<p class="p-4 text-xl text-white">
 					Lock in <span class="font-bold text-baorange-50">Bananarchy</span> at the
