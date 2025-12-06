@@ -33,7 +33,7 @@
 	];
 
 	const TITLE = 'Thanks for Signing Up!';
-	const SUBTITLE = 'Want exclusive cards included in your pledge?';
+	const SUBTITLE = 'Claim your exclusive mini-expansion pack!';
 
 	function handleBuyButtonClick(location: 'header' | 'main') {
 		if (typeof fbq !== 'undefined') {
@@ -103,9 +103,9 @@
 					Want even more exclusive cards in your pledge? Place a <span
 						class="font-bold text-baorange-50">$1 refundable deposit</span
 					>
-					and get two bonus cards with your copy of
+					and get a limited edition mini-expansion with your copy of
 					<span class="font-bold text-baorange-50">Bananarchy</span> — plus unlock a chance for even
-					more when the campaign goes live!
+					more exclusive cards when the campaign goes live!
 				</p>
 				<p class="p-4 text-xl text-white">
 					Lock in <span class="font-bold text-baorange-50">Bananarchy</span> at the
