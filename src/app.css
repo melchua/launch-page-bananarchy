@@ -141,6 +141,57 @@ picture {
 		inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+.testimonial {
+	position: relative;
+	background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+	border-radius: 1rem;
+	padding: 2rem 2.5rem;
+	margin: 2rem auto;
+	max-width: 800px;
+	box-shadow: 
+		0 8px 32px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.testimonial::before {
+	content: '"';
+	position: absolute;
+	top: -0.5rem;
+	left: 1rem;
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: 6rem;
+	color: #F6A31A;
+	opacity: 0.4;
+	line-height: 1;
+}
+
+.testimonial-quote {
+	font-size: 1.15rem;
+	line-height: 1.7;
+	color: #4a3f35;
+	font-style: italic;
+	position: relative;
+	z-index: 1;
+}
+
+.testimonial-source {
+	margin-top: 1rem;
+	font-size: 0.95rem;
+	color: #83796d;
+	font-weight: 600;
+}
+
+.testimonial-source a {
+	color: #34a931;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.testimonial-source a:hover {
+	color: #7cb518;
+	text-decoration: underline;
+}
+
 
 .section {
 	padding: 2rem;

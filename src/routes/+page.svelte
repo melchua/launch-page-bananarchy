@@ -48,7 +48,7 @@
 				<div>
 					<button onclick={scrollToSignup} class="cta-button w-full sm:w-auto">Get Early Access</button>
 						<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4">
-							<li>⏰ Get notified the moment we go live</li>
+							<li>⏰ Get notified the moment we go  	live</li>
 							<li>🎥 Behind-the-scenes updates</li>
 							<li>🚀 Early access to back before the public</li>
 							<li>🍌 No spam, just bananas</li>
@@ -75,6 +75,16 @@
 			<li>😂 Loud, social, and unhinged fun</li>
 			<li>🎉 Perfect for parties, game nights, and friend betrayal</li>
 		</ul> -->
+
+		<!-- Testimonial -->
+		<div class="testimonial">
+			<p class="testimonial-quote">
+				Bananarchy knows exactly what it is: a loud, chaotic, take-that card game that thrives on unpredictability and shared table moments. If you enjoy the energy of games like UNO or Exploding Kittens, this will feel right at home and could easily become a family favourite.
+			</p>
+			<p class="testimonial-source">
+				— <a href="https://www.whatboardgame.com/post/bananarchy-card-game-review" target="_blank" rel="noopener noreferrer">WhatBoardGame</a>
+			</p>
+		</div>
 	</div>
 
 
@@ -148,5 +158,6 @@
 			</div>
 		</div>
 	</div>
+
 	<Footer />
 </div>
