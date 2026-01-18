@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import ConcentricCircles from '../components/ConcentricCircles.svelte';
 	import Footer from '../components/Footer.svelte';
@@ -10,6 +10,17 @@
 			boxClass = 'animate-bounce-in';
 		}, 300);
 	});
+
+	function scrollToSignup() {
+		const footer = document.getElementById('signup-form');
+		footer?.scrollIntoView({ behavior: 'smooth' });
+
+		// Wait for scroll to complete, then focus the MailerLite input
+		setTimeout(() => {
+			const emailInput = footer?.querySelector('input[type="email"]') as HTMLInputElement | null;
+			emailInput?.focus();
+		}, 500);
+	}
 </script>
 
 <div class="flex min-h-screen flex-col">
@@ -24,14 +35,24 @@
 		>
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
 				<h1
-					class="font-londrinaSolid text-5xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:text-left"
+					class="hero-headline"
 				>
-					Bananarchy: The Mischievious Card Game You've Been Waiting For!
+					UNO + Exploding Kittens <span class="highlight-text"><br/>had a monkey baby.</span>
 				</h1>
 				<div class="rounded-xl bg-transparent text-lg sm:text-black">
-					<span class="highlight-text">Snatch, Stash, Snack & Smash</span> your way to victory in this
-					fast-paced, mischievous party game. Collect bananas, outwit opponents, and make wild moves
-					that will have everyone laughing!
+					<span class="hero-subhead">A <span class="highlight-text hightlight-text-underline">fast, always-on</span> party card game where you can <span class="highlight-text hightlight-text-underline">interrupt</span> anyone. <span class="highlight-text">
+					<p><span class="highlight-text hightlight-text-underline">Cute</span> on the outside,
+					<span class="highlight-text hightlight-text-underline">savage</span> on the inside.</p></span>	
+					</span>
+				</div>
+				<div>
+					<button onclick={scrollToSignup} class="cta-button w-full sm:w-auto">Get Early Access</button>
+						<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4">
+							<li>⏰ Get notified the moment we go live</li>
+							<li>🎥 Behind-the-scenes updates</li>
+							<li>🚀 Early access to back before the public</li>
+							<li>🍌 No spam, just bananas</li>
+						</ul>
 				</div>
 			</div>
 			<div class="relative">
@@ -45,23 +66,30 @@
 		</div>
 	</div>
 	<Footer />
+
+	<div class="section">
+		<h1 class="section-headline ">Why People Lose Their Minds Over Bananarchy</h1>
+		<!-- <ul>
+			<li>🃏 Always-on gameplay — no waiting for your turn</li>
+			<li>💥 Interrupt, counter, and sabotage in real time</li>
+			<li>😂 Loud, social, and unhinged fun</li>
+			<li>🎉 Perfect for parties, game nights, and friend betrayal</li>
+		</ul> -->
+	</div>
+
+
 	<div class="full bg-baorange-300 text-white">
 		<div class="flex flex-col gap-4 p-4 pt-10 lg:mx-24 xl:mx-48">
 			<div class="w-full">
 				<div class="flex flex-col items-center gap-4 lg:flex-row">
 					<div class="flex-1 py-8">
 						<h2
-							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20"
 						>
-							It's everyone for themselves in this jungle!
+							Always-on gameplay — no waiting for your turn
 						</h2>
 						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Use a mixture of <span class="highlight-text">strategy</span>,
-							<span class="highlight-text">cunning tricks</span>
-							and <span class="highlight-text">social play</span> to ensure your victory in a game
-							that can change in a heartbeat.
-							<span class="highlight-text">Shield a competitor</span> to gain their trust before stealing
-							all their bananas on the very next turn. It's a Monkey eat banana world out there!
+							Anytime cards mean you almost never have to wait your turn.
 						</p>
 					</div>
 					<div class="w-[100vw] flex-1">
@@ -86,14 +114,12 @@
 					</div>
 					<div class="flex-1 py-8">
 						<h2
-							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20"
 						>
-							Relish in the cheeky humour and cute anthropomorphic monkeys.
+							Interrupt, counter, and sabotage in real time.
 						</h2>
 						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Monkey's in blue jeans, monkeys playing football, and even a Surprise Gorilla! This
-							jungle ain't no <span class="highlight-text">Banana Republic</span> but at least
-							you'll enjoy <span class="highlight-text">yoinking</span> your friend's fruit!
+							Pop in, cause a little chaos, and scamper away.
 						</p>
 					</div>
 				</div>
@@ -102,14 +128,12 @@
 				<div class="flex flex-col items-center gap-4 lg:flex-row">
 					<div class="flex-1 py-8">
 						<h2
-							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20"
 						>
-							A game where you don't have to wait your turn!
+						Perfect for parties, game nights, and friend betrayal
 						</h2>
 						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Tired of waiting for slowpoke McFly to trade his flipping sheep? In Bananarchy you can
-							play <span class="highlight-text">Anytime cards</span> pretty much anytime to encourage
-							those slowpokes to pick up the pace or just to keep the action going!
+							Cute chaos with a strong chance of emotional damage.
 						</p>
 					</div>
 					<div class="w-[100vw] flex-1 py-8">
