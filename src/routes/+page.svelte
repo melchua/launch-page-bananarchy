@@ -28,7 +28,7 @@
 		<div
 			class="absolute left-[-100%] z-[-1] flex h-[500px] justify-center p-10 opacity-60 mobile-xxs:left-[-85%] mobile-xs:left-[-55%] mobile-sm:left-[-50%] sm:left-[-34%] sm:top-[-4%] md:left-[-10%] lg:left-[32%] lg:top-[-35%] xl:left-[39%] 2xl:left-[42%]"
 		>
-			<ConcentricCircles />
+			<!-- <ConcentricCircles /> -->
 		</div>
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
@@ -57,9 +57,9 @@
 			</div>
 			<div class="relative">
 				<enhanced:img
-					src="$lib/assets/box-single.png"
+					src="$lib/assets/deluxe-box1.png"
 					alt="box"
-					class={`${boxClass} sm:flex-2 m-2 w-3/5 sm:w-[300px]`}
+					class={`${boxClass} sm:flex-2 m-2 w-3/5 sm:w-[675px]`}
 					sizes="(min-width: 640px) 640px, 80vw"
 				/>
 			</div>
@@ -79,7 +79,7 @@
 		<!-- Testimonial -->
 		<div class="testimonial">
 			<p class="testimonial-quote">
-				Bananarchy knows exactly what it is: a loud, chaotic, take-that card game that thrives on unpredictability and shared table moments. If you enjoy the energy of games like UNO or Exploding Kittens, this will feel right at home and could easily become a family favourite.
+				Bananarchy leans hard into fast, chaotic, always-on card play, and that's exactly where its appeal lies.
 			</p>
 			<p class="testimonial-source">
 				— <a href="https://www.whatboardgame.com/post/bananarchy-card-game-review" target="_blank" rel="noopener noreferrer">WhatBoardGame</a>
@@ -126,10 +126,10 @@
 						<h2
 							class="section-subheadline sm:px-10 lg:px-20"
 						>
-							Interrupt, counter, and sabotage in real time.
+						Strong “take that” energy and dramatic moments
 						</h2>
 						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Pop in, cause a little chaos, and scamper away.
+							Pop in, cause a little chaos, and scamper away. Interrupt, counter, and sabotage in real time.
 						</p>
 					</div>
 				</div>
