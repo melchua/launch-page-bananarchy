@@ -146,8 +146,8 @@ picture {
 	background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
 	border-radius: 1rem;
 	padding: 2rem 2.5rem;
-	margin: 2rem auto;
-	max-width: 800px;
+	margin: 1rem auto;
+	max-width: min(800px, 100% - 2rem); /* Shrinks to fit with margins */
 	box-shadow: 
 		0 8px 32px rgba(0, 0, 0, 0.1),
 		inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -192,18 +192,6 @@ picture {
 	text-decoration: underline;
 }
 
-
-.section {
-	padding: 2rem;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	background-color: #f6a31a;
-}
-
 .section-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
 	font-size: clamp(2.2rem, 5vw, 3.5rem);
@@ -224,7 +212,7 @@ picture {
 
 .section-subheadline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(1.2rem, 2.5vw, 3rem);
+	font-size: clamp(3rem, 2.5vw, 3rem);
 	line-height: 1.05;
 	color: #fff;
 	letter-spacing: 0.5px;
@@ -238,3 +226,14 @@ picture {
 	-1.5px  0   1px rgba(0,0,0,0.5),
 	 1.5px  0   1px rgba(0,0,0,0.5);
 }
+
+.overlay-panel {
+	max-width: 520px;
+	background: rgba(0, 0, 0, 0.25); /* adjust opacity */
+	padding: 1.5rem 1.75rem;
+	border-radius: 16px;
+	backdrop-filter: blur(2px); /* optional */
+	font-size: 1.1rem;
+	line-height: 1.7;
+}
+  
