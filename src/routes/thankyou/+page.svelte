@@ -15,25 +15,25 @@
 		{
 			title: '100% Refund Guarantee',
 			description:
-				'If you cancel your reservation, we guarantee you a full refund at any time before the project moves into production',
+				'Changed your mind? No problem. Get a full refund anytime before the Kickstarter campaign ends—no questions asked.',
 			icon: Award
 		},
 		{
 			title: 'Transparency Guarantee',
 			description:
-				'If you cancel your reservation, we guarantee you a full refund at any time before the project moves into production',
+				'We will keep you in the loop with regular updates on production, shipping timelines, and any bumps along the way. No surprises.',
 			icon: Handshake
 		},
 		{
 			title: 'Secure Payment',
 			description:
-				'If you cancel your reservation, we guarantee you a full refund at any time before the project moves into production',
+				'Payments are processed by Stripe. Your card details are encrypted and never stored on our servers.',
 			icon: ShieldCheck
 		}
 	];
 
-	const TITLE = 'Thanks for Signing Up!';
-	const SUBTITLE = 'Claim your exclusive mini-expansion pack!';
+	const SUBTITLE = 'You unlocked an exclusive mini-expansion!';
+	const TITLE = 'Claim your FREE $15 expansion — just $1 to reserve.';
 
 	function handleBuyButtonClick(location: 'header' | 'main') {
 		if (typeof fbq !== 'undefined') {
@@ -74,7 +74,8 @@
 		</div>
 		<div class="mx-4 my-4 flex flex-col items-center md:my-16 md:flex-row">
 			<div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
-				<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
+				<p>{TITLE}</p>
+				<p class="text-baorange-50 text-2xl">{SUBTITLE}</p>
 			</div>
 			<!-- small screen image -->
 			<enhanced:img
@@ -95,23 +96,17 @@
 			</div>
 
 			<div class="flex flex-1 flex-col rounded-xl sm:items-start">
-				<div class="hidden p-4 font-londrinaSolid text-5xl text-white md:flex">
-					<span>{TITLE} <span class="text-baorange-50">{SUBTITLE}</span></span>
+				<div class="hero-headline md:flex flex-col">
+					<p>🎉 You've unlocked a VIP-only mini-expansion
+					<p class="text-baorange-50 text-2xl">Get a 6-card Exclusive expansion (worth $15)</p>
+					<p>Reserve it today with a $1 fully refundable deposit</p>
 				</div>
 
 				<p class="p-4 text-xl text-white">
-					Want even more exclusive cards in your pledge? Place a <span
-						class="font-bold text-baorange-50">$1 refundable deposit</span
-					>
-					and get a limited edition mini-expansion with your copy of
-					<span class="font-bold text-baorange-50">Bananarchy</span> — plus unlock a chance for even
-					more exclusive cards when the campaign goes live!
+					Place a $1 deposit → Get the 6-card "Exclusive" mini-expansion FREE with your pledge (worth $15) 
 				</p>
 				<p class="p-4 text-xl text-white">
-					Lock in <span class="font-bold text-baorange-50">Bananarchy</span> at the
-					<span class="font-bold text-baorange-50">lowest possible price</span> ~ a banana-load 🍌 of
-					savings!
-				</p>
+					⚠️ Only 420 of 500 VIP slots available</p>
 				<div class="flex w-full flex-col items-center justify-center">
 					<stripe-buy-button
 						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1RCB8XAsNXUFfbI0ZhPPYlfX' : 'buy_btn_1R4t7SPPIJAaixg8kKHFwSZm'}`}
@@ -128,17 +123,17 @@
 						rel="noopener noreferrer"
 						class="underline hover:text-gray-400"
 					>
-						No thanks! I'll just follow along
+						No thanks, I don't want the free expansion
 					</a>
 				</div>
 			</div>
 		</div>
 		<!-- // TODO: Lines between boxes, and margin between boxes for the text -->
 		<div
-			class="mx-4 my-4 flex flex-col items-start gap-2 rounded bg-black p-6 text-gray-300 md:flex-row"
+			class="mx-4 my-4 flex flex-col items-start gap-2 rounded bg-purple-950/50 p-6 text-gray-300 backdrop-blur-sm md:flex-row md:divide-x md:divide-white/20"
 		>
 			{#each benefits as benefit}
-				<div class="flex flex-col gap-2 p-2">
+				<div class="flex flex-col gap-2 p-2 md:px-6 first:md:pl-2 last:md:pr-2">
 					<div class="flex items-center justify-start gap-2">
 						{#if benefit.icon}
 							<svelte:component this={benefit.icon} class="h-20 w-20" />

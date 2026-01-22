@@ -112,7 +112,7 @@
 					</div>
 					<div class="w-[100vw] flex-1">
 						<enhanced:img
-							src="$lib/assets/shield-snatch-smash.png"
+							src="$lib/assets/grab.png"
 							alt="placeholder"
 							class="w-full rounded-xl"
 							sizes="(min-width: 640px) 640px, 100vw"
@@ -122,37 +122,37 @@
 			</div>
 			<div class="w-full">
 				<div class="flex flex-col-reverse items-center gap-8 lg:flex-row">
-					<div class="w-[100vw] flex-1 py-8">
+					<div class="w-[100vw] flex-1 py-4">
 						<enhanced:img
-							src="$lib/assets/kitchen.png"
+							src="$lib/assets/betrayal.png"
 							alt="placeholder"
 							class="w-full rounded-xl"
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 py-8">
+					<div class="flex-1 py-4">
 						<h2
 							class="section-subheadline sm:px-10 lg:px-20"
 						>
-						Everyone plays on equal ground
+						Great for parties. Terrible for friendships.
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							Strategy won't save you here. Timing, luck, and opportunism matter more — which means kids can absolutely wreck adults. This is a family game where age doesn't give you an edge.
-						</p>
+							Don’t let the adorable art fool you. This game is built for mischievous moves, sudden reversals, 
+							and perfectly timed backstabs. It’s sweet, savage, and impossible to play just once.						</p>
 					</div>
 				</div>
 			</div>
 			<div class="w-full">
 				<div class="flex flex-col-reverse items-center gap-8 lg:flex-row">
-					<div class="w-[100vw] flex-1 py-8">
+					<div class="w-[100vw] flex-1 py-4">
 						<enhanced:img
-							src="$lib/assets/placeholder.png"
+							src="$lib/assets/artwork-bg.png"
 							alt="Disney artist illustration"
 							class="w-full rounded-xl"
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 py-8">
+					<div class="flex-1 py-4">
 						<h2
 							class="section-subheadline sm:px-10 lg:px-20"
 						>
@@ -166,7 +166,7 @@
 			</div>
 			<div class="w-full">
 				<div class="flex flex-col items-center gap-8 lg:flex-row">
-					<div class="flex-1 py-8">
+					<div class="flex-1 py-4">
 						<h2
 							class="section-subheadline sm:px-10 lg:px-20"
 						>
@@ -177,7 +177,7 @@
 							Someone pulls the rug out. Steal bananas, flip them rotten, counter the counter. The lead changes constantly. No one runs away with it.
 						</p>
 					</div>
-					<div class="w-[100vw] flex-1 py-8">
+					<div class="w-[100vw] flex-1 py-4">
 						<enhanced:img
 							src="$lib/assets/surprisegorilla.png"
 							alt="placeholder"
