@@ -3,6 +3,9 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"engines": {
+		"node": ">=18.18.0"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -43,6 +46,7 @@
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
 		"lucide-svelte": "^0.469.0",
-		"posthog-js": "^1.203.1"
+		"posthog-js": "^1.203.1",
+		"svelte-confetti-explosion": "^0.4.0"
 	}
 }

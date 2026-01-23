@@ -36,7 +36,7 @@ export default {
 				bapurple: {
 					DEFAULT: '#A060AF'
 				},
-				secondary: '#61BD4F',
+				secondary: '#34a931',
 				tertiary: '#0084D0',
 				herobg: '#F6A31A',
 				offwhite: '#EDEBE9',

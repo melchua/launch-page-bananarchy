@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
-	import ConcentricCircles from '../components/ConcentricCircles.svelte';
 	import Footer from '../components/Footer.svelte';
 
 	let boxClass = '';
@@ -10,119 +9,280 @@
 			boxClass = 'animate-bounce-in';
 		}, 300);
 	});
+
+	function scrollToSignup() {
+		const footer = document.getElementById('signup-form');
+		footer?.scrollIntoView({ behavior: 'smooth' });
+
+		// Wait for scroll to complete, then focus the MailerLite input
+		setTimeout(() => {
+			const emailInput = footer?.querySelector('input[type="email"]') as HTMLInputElement | null;
+			emailInput?.focus();
+		}, 500);
+	}
 </script>
 
-<div class="flex min-h-screen flex-col">
-	<div class="oback relative h-[900px] overflow-hidden lg:h-[670px]">
-		<div
-			class="absolute left-[-100%] z-[-1] flex h-[500px] justify-center p-10 opacity-60 mobile-xxs:left-[-85%] mobile-xs:left-[-55%] mobile-sm:left-[-50%] sm:left-[-34%] sm:top-[-4%] md:left-[-10%] lg:left-[32%] lg:top-[-35%] xl:left-[39%] 2xl:left-[42%]"
-		>
-			<ConcentricCircles />
-		</div>
+<div class="flex min-h-screen flex-col oback">
+	<div class="relative h-[900px] overflow-hidden sm:h-[1000px] md:h-[1200px] lg:h-[850px]">
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
+			<!-- Left Column: All text content (desktop) -->
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
-				<h1
-					class="font-londrinaSolid text-5xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:text-left"
-				>
-					Bananarchy: The Mischievious Card Game You've Been Waiting For!
-				</h1>
-				<div class="rounded-xl bg-transparent text-lg sm:text-black">
-					<span class="highlight-text">Snatch, Stash, Snack & Smash</span> your way to victory in this
-					fast-paced, mischievous party game. Collect bananas, outwit opponents, and make wild moves
-					that will have everyone laughing!
+				<!-- Hero Text - order-1 on mobile -->
+				<div class="order-1">
+					<h1
+						class="hero-headline mb-4"
+					>
+						UNO + Exploding Kittens <span class="highlight-text"><br/>had a monkey baby.</span>
+					</h1>
+					<div class="mb-5 rounded-xl bg-transparent text-lg sm:text-black">
+						<span class="hero-subhead">
+							<span class="highlight-text hightlight-text-underline">
+								Bananarchy
+							</span>
+							is a
+							<span class="highlight-text hightlight-text-underline">
+								fast, always-on
+							</span>
+							party card game where you can
+								<span class="highlight-text hightlight-text-underline">deny
+								</span> anyone.
+							<span class="highlight-text">
+								<span class="highlight-text hightlight-text-underline">Cute</span> on the outside,
+								<span class="highlight-text hightlight-text-underline">savage</span> on the inside.
+							</span>
+							Can you grab all the bananas before your friends turn on you?
+						</span>
+					</div>
+				</div>
+
+				<!-- CTA Button - order-2 on mobile, order-4 on desktop (shown below stats) -->
+				<div class="order-2 lg:order-4">
+					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button>
+				</div>
+
+				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
+				<div class="relative order-3 lg:hidden">
+					<enhanced:img
+						src="$lib/assets/deluxe-box-2.png"
+						alt="box"
+						class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px]`}
+						sizes="(min-width: 640px) 640px, 80vw"
+					/>
+					<enhanced:img
+						src="$lib/assets/banana-peels.png"
+						alt="box"
+						class={`${boxClass} m-2 -mt-[80px] w-fit sm:w-[500px] md:w-[600px]`}
+						sizes="(min-width: 640px) 640px, 80vw"
+					/>
+				</div>
+
+				<!-- Game Stats - order-4 on mobile, order-2 on desktop -->
+				<div class="order-4 lg:order-2">
+					<!-- Game Stats: -->
+					<p class="text-sm font-semibold tracking-wide text-white/90 text-center lg:text-left">
+						<span class="inline-flex items-center gap-4">
+							<span>👥 3-8 players</span>
+							<span>⏱️ 15-30 mins</span>
+							<span>🎯 Ages 14+</span>
+						</span>
+					</p>
+				</div>
+
+				<!-- Early Access Benefits - order-5 on mobile, order-5 on desktop -->
+				<div class="order-5 space-y-4 mt-4 hidden lg:block">
+					<!-- Early Access Benefits -->
+					<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4 tracking-wide md:tracking-normal hidden md:block">
+						<li>⏰ Get notified the moment we go live</li>
+						<li>🎥 Behind-the-scenes updates</li>
+						<!-- <li>🚀 Early access to back before the public</li> -->
+						<li>🍌 No spam, just bananas</li>
+					</ul>
 				</div>
 			</div>
-			<div class="relative">
+
+			<!-- Right Column: Deluxe Box Images (desktop only) -->
+			<div class="relative hidden lg:block">
 				<enhanced:img
-					src="$lib/assets/box-single.png"
+					src="$lib/assets/deluxe-box-2.png"
 					alt="box"
-					class={`${boxClass} sm:flex-2 m-2 w-3/5 sm:w-[300px]`}
-					sizes="(min-width: 640px) 640px, 80vw"
+					class={`${boxClass} m-2 w-fit lg:w-[675px]`}
+					sizes="675px"
 				/>
+				<enhanced:img
+					src="$lib/assets/banana-peels.png"
+					alt="box"
+					class={`${boxClass} m-2 -mt-[80px] w-fit lg:w-[675px]`}
+					sizes="675px"
+				/>
+			</div>
+		</div>
+			<!-- Kickstarter Launch Badge -->
+		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-8">
+			<div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 rounded-2xl sm:rounded-full bg-black/25 backdrop-blur-lg px-4 py-2 sm:px-5 sm:py-2.5 border border-white/30 shadow-lg">
+				<span class="text-white text-sm font-semibold tracking-wide drop-shadow-sm hidden sm:block whitespace-nowrap">Launching on</span>
+				<enhanced:img
+					src="$lib/assets/kickstarter-full-logo.png"
+					alt="kickstarter logo"
+					sizes="(min-width: 100px) 100px"
+					class="h-3 sm:h-4 w-auto drop-shadow-md"
+				/>
+				<span class="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-sm whitespace-nowrap">
+					May 2026
+				</span>
 			</div>
 		</div>
 	</div>
 	<Footer />
-	<div class="full bg-baorange-300 text-white">
-		<div class="flex flex-col gap-4 p-4 pt-10 lg:mx-24 xl:mx-48">
+
+
+	<!-- Testimonial -->
+	<div class="relative mx-auto max-w-[850px]">
+		<div class="testimonial">
+			<p class="testimonial-quote">
+				Bananarchy leans hard into fast, chaotic, always-on card play, and that's exactly where its appeal lies.
+			</p>
+			<p class="testimonial-source">
+				— <a href="https://www.whatboardgame.com/post/bananarchy-card-game-review" target="_blank" rel="noopener noreferrer">WhatBoardGame</a>
+			</p>
+		</div>
+		<enhanced:img
+			src="$lib/assets/leaf-shadow2.png"
+			alt="leaf shadow"
+			class="absolute -bottom-4 -right-[-2px] md:-right-2 lg:-right-4 w-24 sm:w-32"
+			sizes="(min-width: 100px) 100px"
+		/>
+	</div>
+
+	<!-- How to Play Section -->
+	<div class="py-10">
+		<div class="mx-auto max-w-[850px] px-4">
+			<h2 class="section-headline mb-4 text-center sm:mb-6">
+				<span class="highlight-text">Learn to play</span> in 1 minute
+			</h2>
+			<div class="relative w-full" style="aspect-ratio: 16 / 9;">
+				<iframe
+					class="absolute inset-0 h-full w-full rounded-xl shadow-2xl"
+					src="https://www.youtube.com/embed/O-Nq7IjRo70"
+					title="How to Play Bananarchy"
+					frameborder="0"
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+			</div>
+			<!-- <p class="mx-auto mb-8 max-w-2xl p-2 text-base leading-relaxed text-white/90 sm:mb-10 sm:text-lg">
+				Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled. Every move counts.
+				Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on
+				their toes.
+			</p> -->
+		</div>
+	</div>
+
+	<div class="full text-white">
+		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
 			<div class="w-full">
-				<div class="flex flex-col items-center gap-4 lg:flex-row">
-					<div class="flex-1 py-8">
+				<div class="flex flex-col items-center sm:gap-4 xl:flex-row">
+					<div class="flex-1 py-4 items-center flex flex-col">
 						<h2
-							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
 						>
-							It's everyone for themselves in this jungle!
+						Waiting your turn is for other games.
 						</h2>
-						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Use a mixture of <span class="highlight-text">strategy</span>,
-							<span class="highlight-text">cunning tricks</span>
-							and <span class="highlight-text">social play</span> to ensure your victory in a game
-							that can change in a heartbeat.
-							<span class="highlight-text">Shield a competitor</span> to gain their trust before stealing
-							all their bananas on the very next turn. It's a Monkey eat banana world out there!
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+							<span class="desc-highlight">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
+							Interrupt. Counter. Sabotage. The table stays loud, tense, 
+							and <span class="desc-highlight">completely unhinged</span> until the final draw.
 						</p>
 					</div>
-					<div class="w-[100vw] flex-1">
+					<div class="w-[100vw] flex-1 sm:w-3/4">
 						<enhanced:img
-							src="$lib/assets/shield-snatch-smash.png"
+							src="$lib/assets/grab.png"
 							alt="placeholder"
-							class="w-full rounded-sm"
+							class="w-full rounded-xl"
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
 				</div>
 			</div>
-			<div class="w-full">
-				<div class="flex flex-col-reverse items-center gap-4 lg:flex-row">
-					<div class="w-[100vw] flex-1 py-8">
+			<div class="w-full pt-4">
+				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row">
+					<div class="w-[100vw] flex-1 sm:w-3/4">
 						<enhanced:img
-							src="$lib/assets/kitchen.png"
-							alt="placeholder"
-							class="w-full rounded-sm"
+							src="$lib/assets/artwork-bg.png"
+							alt="Disney artist illustration"
+							class="w-full rounded-xl"
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 py-8">
+					<div class="flex-1 py-4 items-center flex flex-col">
 						<h2
-							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
 						>
-							Relish in the cheeky humour and cute anthropomorphic monkeys.
+						Illustrated by a former Disney artist
 						</h2>
-						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Monkey's in blue jeans, monkeys playing football, and even a Surprise Gorilla! This
-							jungle ain't no <span class="highlight-text">Banana Republic</span> but at least
-							you'll enjoy <span class="highlight-text">yoinking</span> your friend's fruit!
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+							Every character is thoughtfully illustrated by a <span class="desc-highlight">real human artist</span>,
+							packed with charm, expression, and playful detail.
+							These characters may look friendly,
+							but they are <span class="desc-highlight">not on your side</span>.
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="w-full">
-				<div class="flex flex-col items-center gap-4 lg:flex-row">
-					<div class="flex-1 py-8">
+			<div class="w-full pt-4">
+				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row-reverse">
+					<div class="w-[100vw] flex-1 py-4 sm:w-3/4">
+						<enhanced:img
+							src="$lib/assets/betrayal.png"
+							alt="placeholder"
+							class="w-full rounded-xl"
+							sizes="(min-width: 640px) 640px, 100vw"
+						/>
+					</div>
+					<div class="flex-1 items-center flex flex-col">
 						<h2
-							class="pb-2 font-londrinaSolid text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
 						>
-							A game where you don't have to wait your turn!
+						Great for parties. Terrible for friendships.
 						</h2>
-						<p class="mt-2 text-black sm:px-10 lg:px-20">
-							Tired of waiting for slowpoke McFly to trade his flipping sheep? In Bananarchy you can
-							play <span class="highlight-text">Anytime cards</span> pretty much anytime to encourage
-							those slowpokes to pick up the pace or just to keep the action going!
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="desc-highlight">impossible to stop playing</span>,
+							this is the party game that tests friendships with every clever move,
+							every stolen banana, and every <span class="desc-highlight">unexpected betrayal</span>.
 						</p>
 					</div>
-					<div class="w-[100vw] flex-1 py-8">
+				</div>
+			</div>
+			
+			<!-- <div class="w-full">
+				<div class="flex flex-col items-center gap-8 lg:flex-row">
+					<div class="flex-1 py-4">
+						<h2
+							class="section-subheadline sm:px-10 lg:px-20"
+						>
+						Easy to learn. Quick to get going
+						</h2>
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
+							Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled—every move counts. 
+							Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on 
+							their toes.						
+						</p>
+					</div>
+					<div class="w-[100vw] flex-1 py-4">
 						<enhanced:img
 							src="$lib/assets/surprisegorilla.png"
 							alt="placeholder"
-							class="w-full rounded-sm"
+							class="w-full rounded-xl"
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
+
 	<Footer />
 </div>

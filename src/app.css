@@ -2,6 +2,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Load Londrina Solid with block display to prevent resize flicker */
+@font-face {
+	font-family: 'Londrina Solid';
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url('/fonts/londrina-solid-latin-400-normal.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 body {
 	background-color: #f3941c; /* Replace with your desired color */
 }
@@ -31,7 +40,247 @@ picture {
 }
 
 .highlight-text {
-	color: #ffffff;
-	filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.8));
+	color: #fdec96;
 	font-weight: 900;
+}
+
+.hightlight-text-underline {
+	text-decoration: underline;
+	text-decoration-color: #955400;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 1px;
+}
+
+.footer-headline {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	line-height: 1.05;
+	color: #fff;
+	letter-spacing: 0.5px;
+}
+
+.hero-headline {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2.2rem, 4.2vw, 6rem);
+	line-height: 1.05;
+	color: #fff;
+	letter-spacing: 0.5px;
+	
+	/* Soft dark outline effect */
+	text-shadow:
+	/* 2px even outline */
+	-1.5px -1.5px 1px rgba(0,0,0,0.5),
+	 1.5px -1.5px 1px rgba(0,0,0,0.5),
+	-1.5px  1.5px 1px rgba(94, 69, 69, 0.5),
+	 1.5px  1.5px 1px rgba(0,0,0,0.6),
+	 0   -1.5px 1px rgba(0,0,0,0.5),
+	 0    2.8px 2px rgba(0,0,0,1),
+	-1.5px  0   1px rgba(0,0,0,0.5),
+	 1.5px  0   1px rgba(0,0,0,0.5);
+}
+
+.hero-subhead {
+	font-size: clamp(1rem, 2.5vw, 1.5rem);
+	line-height: 1.4;
+	color: rgba(255,255,255,0.95);
+	max-width: 36ch;
+	text-shadow:
+	/* 2px even outline */
+	-1.5px -1.5px 0.5px rgba(0,0,0,0.2),
+	 1.5px -1.5px 0.5px rgba(0,0,0,0.2),
+	-1.5px  1.5px 0.5px rgba(94, 69, 69, 0.2),
+	 1.5px  1.5px 0.5px rgba(0,0,0,0.2),
+	 0   -1.5px 0.5px rgba(0,0,0,0.2),
+	 0    1.5px 0.5px rgba(0,0,0,0.2),
+	-1.5px  0   0.5px rgba(0,0,0,0.2),
+	 1.5px  0   0.5px rgba(0,0,0,0.2);
+}
+
+.hero-subhead-list {
+	gap: 0.5rem;
+	padding: .6rem 1rem;
+	color: rgba(255,255,255,0.95);
+	font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+	line-height: 1.4;
+	text-shadow:
+	/* 2px even outline */
+	-1px -1px 0.5px rgba(0,0,0,0.2),
+	 1px -1px 0.5px rgba(0,0,0,0.2),
+	-1px  1px 0.5px rgba(94, 69, 69, 0.2),
+	 1px  1px 0.5px rgba(0,0,0,0.2),
+	 0   -1px 0.5px rgba(0,0,0,0.2),
+	 0    1px 0.5px rgba(0,0,0,0.2),
+	-1px  0   0.5px rgba(0,0,0,0.2),
+	 1px  0   0.5px rgba(0,0,0,0.2);
+}
+
+.title {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(3rem, 4.4vw, 4rem);
+	line-height: 1.15;
+	color: #fff;
+	letter-spacing: 0.5px;
+	text-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-basic {
+	color: #FEDF23;
+}
+
+.title-subhead {
+	font-family: 'Poppins', sans-serif;
+	font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+	font-weight: 600;
+	line-height: 1.4;
+	color: #fff;
+	margin-top: 0.5rem;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.title-subsubhead {
+	font-family: 'Poppins', sans-serif;
+	font-size: clamp(0.95rem, 2vw, 1.15rem);
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.8);
+	margin-top: 0.25rem;
+}	
+
+.cta-button {
+	background: linear-gradient(180deg, #a4d037 0%, #05ce78 100%);
+	color: white;
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: 1.5rem;
+	letter-spacing: 0.5px;
+	padding: 0.75rem 2.5rem;
+	border-radius: 16px;
+	border: none;
+	border-bottom: 4px solid #4a7c0f;
+	box-shadow: 
+		0 4px 8px rgba(0, 0, 0, 0.25),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	text-shadow: 
+		0 2px 0 rgba(0, 0, 0, 0.3),
+		0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+	background: linear-gradient(180deg, #05ce78 0%, #05ce78 100%);
+	transform: translateY(-2px);
+	box-shadow: 
+		0 6px 12px rgba(0, 0, 0, 0.3),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.cta-button:active {
+	transform: translateY(2px);
+	border-bottom-width: 2px;
+	box-shadow: 
+		0 2px 4px rgba(0, 0, 0, 0.2),
+		inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.testimonial {
+	position: relative;
+	background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+	border-radius: 1rem;
+	padding: 2rem 2.5rem;
+	margin: 1rem auto;
+	max-width: min(800px, 100% - 2rem); /* Shrinks to fit with margins */
+	box-shadow: 
+		0 8px 32px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.testimonial::before {
+	content: '"';
+	position: absolute;
+	top: -0.5rem;
+	left: 1rem;
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: 6rem;
+	color: #F6A31A;
+	opacity: 0.4;
+	line-height: 1;
+}
+
+.testimonial-quote {
+	font-size: 1.15rem;
+	line-height: 1.7;
+	letter-spacing: 0.025em;
+	color: #4a3f35;
+	font-style: italic;
+	position: relative;
+	z-index: 1;
+}
+
+.testimonial-source {
+	margin-top: 1rem;
+	font-size: 0.95rem;
+	color: #83796d;
+	font-weight: 600;
+}
+
+.testimonial-source a {
+	color: #34a931;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.testimonial-source a:hover {
+	color: #7cb518;
+	text-decoration: underline;
+}
+
+.section-headline {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	line-height: 1.05;
+	color: #fff;
+	letter-spacing: 0.5px;
+	text-shadow:
+	/* 2px even outline */
+	-1.5px -1.5px 1px rgba(0,0,0,0.5),
+	 1.5px -1.5px 1px rgba(0,0,0,0.5),
+	-1.5px  1.5px 1px rgba(94, 69, 69, 0.5),
+	 1.5px  1.5px 1px rgba(0,0,0,0.6),
+	 0   -1.5px 1px rgba(0,0,0,0.5),
+	 0    2.8px 2px rgba(0,0,0,1),
+	-1.5px  0   1px rgba(0,0,0,0.5),
+	 1.5px  0   1px rgba(0,0,0,0.5);
+}
+
+.section-subheadline {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(3rem, 2.5vw, 3rem);
+	line-height: 1.05;
+	color: #fff;
+	letter-spacing: 0.5px;
+	text-shadow:
+	-1.5px -1.5px 1px rgba(0,0,0,0.5),
+	 1.5px -1.5px 1px rgba(0,0,0,0.5),
+	-1.5px  1.5px 1px rgba(94, 69, 69, 0.5),
+	 1.5px  1.5px 1px rgba(0,0,0,0.6),
+	 0   -1.5px 1px rgba(0,0,0,0.5),
+	 0    2.8px 2px rgba(0,0,0,1),
+	-1.5px  0   1px rgba(0,0,0,0.5),
+	 1.5px  0   1px rgba(0,0,0,0.5);
+}
+
+.overlay-panel {
+	background: rgba(0, 0, 0, 0.25); /* adjust opacity */
+	padding: 1.5rem 1.75rem;
+	border-radius: 16px;
+	font-size: 1.1rem;
+	line-height: 1.7;
+	letter-spacing: 0.025em;
+}
+
+/* Subtle highlight for description text */
+.desc-highlight {
+	color: #fdec96;
+	font-weight: 600;
 }
