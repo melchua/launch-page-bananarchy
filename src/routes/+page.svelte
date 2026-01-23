@@ -23,7 +23,7 @@
 </script>
 
 <div class="flex min-h-screen flex-col oback">
-	<div class="relative h-[900px] overflow-hidden sm:h-[1000px] md:h-[1300px] lg:h-[850px]">
+	<div class="relative h-[900px] overflow-hidden sm:h-[1000px] md:h-[1200px] lg:h-[850px]">
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
@@ -57,8 +57,13 @@
 					</div>
 				</div>
 
-				<!-- Deluxe Box Images - order-2 on mobile, hidden on desktop (shown in right column) -->
-				<div class="relative order-2 lg:hidden">
+				<!-- CTA Button - order-2 on mobile, order-4 on desktop (shown below stats) -->
+				<div class="order-2 lg:order-4">
+					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button>
+				</div>
+
+				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
+				<div class="relative order-3 lg:hidden">
 					<enhanced:img
 						src="$lib/assets/deluxe-box-2.png"
 						alt="box"
@@ -73,28 +78,27 @@
 					/>
 				</div>
 
-				<!-- Game Stats, CTA, and Benefits - order-3 on mobile -->
-				<div class="order-3">
+				<!-- Game Stats - order-4 on mobile, order-2 on desktop -->
+				<div class="order-4 lg:order-2">
 					<!-- Game Stats: -->
-					<p class="text-sm font-semibold tracking-wide text-white/90">
+					<p class="text-sm font-semibold tracking-wide text-white/90 text-center lg:text-left">
 						<span class="inline-flex items-center gap-4">
 							<span>👥 3-8 players</span>
 							<span>⏱️ 15-30 mins</span>
 							<span>🎯 Ages 14+</span>
 						</span>
 					</p>
+				</div>
 
-					<div class="space-y-4 mt-4">
-						<button onclick={scrollToSignup} class="cta-button w-full sm:w-auto">Get Early Access</button>
-
-						<!-- Early Access Benefits -->
-						<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4 tracking-wide md:tracking-normal">
-							<li>⏰ Get notified the moment we go live</li>
-							<li>🎥 Behind-the-scenes updates</li>
-							<!-- <li>🚀 Early access to back before the public</li> -->
-							<li>🍌 No spam, just bananas</li>
-						</ul>
-					</div>
+				<!-- Early Access Benefits - order-5 on mobile, order-5 on desktop -->
+				<div class="order-5 space-y-4 mt-4 hidden lg:block">
+					<!-- Early Access Benefits -->
+					<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4 tracking-wide md:tracking-normal hidden md:block">
+						<li>⏰ Get notified the moment we go live</li>
+						<li>🎥 Behind-the-scenes updates</li>
+						<!-- <li>🚀 Early access to back before the public</li> -->
+						<li>🍌 No spam, just bananas</li>
+					</ul>
 				</div>
 			</div>
 
@@ -117,14 +121,14 @@
 			<!-- Kickstarter Launch Badge -->
 		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-8">
 			<div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 rounded-2xl sm:rounded-full bg-black/25 backdrop-blur-lg px-4 py-2 sm:px-5 sm:py-2.5 border border-white/30 shadow-lg">
-				<span class="text-white text-sm font-semibold tracking-wide drop-shadow-sm hidden sm:block">Launching on</span>
+				<span class="text-white text-sm font-semibold tracking-wide drop-shadow-sm hidden sm:block whitespace-nowrap">Launching on</span>
 				<enhanced:img
 					src="$lib/assets/kickstarter-full-logo.png"
 					alt="kickstarter logo"
 					sizes="(min-width: 100px) 100px"
 					class="h-3 sm:h-4 w-auto drop-shadow-md"
 				/>
-				<span class="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-sm">
+				<span class="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-sm whitespace-nowrap">
 					May 2026
 				</span>
 			</div>
