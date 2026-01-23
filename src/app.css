@@ -202,6 +202,7 @@ picture {
 .testimonial-quote {
 	font-size: 1.15rem;
 	line-height: 1.7;
+	letter-spacing: 0.025em;
 	color: #4a3f35;
 	font-style: italic;
 	position: relative;
@@ -268,4 +269,11 @@ picture {
 	border-radius: 16px;
 	font-size: 1.1rem;
 	line-height: 1.7;
+	letter-spacing: 0.025em;
+}
+
+/* Subtle highlight for description text */
+.desc-highlight {
+	color: #fdec96;
+	font-weight: 600;
 }

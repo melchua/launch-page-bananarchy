@@ -135,9 +135,9 @@
 						Waiting your turn is for other games.
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							Anytime cards mean nobody is safe, even when it’s not your turn. 
+							<span class="desc-highlight">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
 							Interrupt. Counter. Sabotage. The table stays loud, tense, 
-							and completely unhinged until the final draw.
+							and <span class="desc-highlight">completely unhinged</span> until the final draw.
 						</p>
 					</div>
 					<div class="w-[100vw] flex-1">
@@ -167,9 +167,9 @@
 						Great for parties. Terrible for friendships.
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							It’s all fun and games until someone loses a banana. Sneaky, hilarious, and impossible to stop playing, 
+							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="desc-highlight">impossible to stop playing</span>, 
 							this is the party game that tests friendships with every clever move, 
-							every stolen banana, and every unexpected betrayal.					
+							every stolen banana, and every <span class="desc-highlight">unexpected betrayal</span>.					
 						</p>
 					</div>
 				</div>
@@ -191,10 +191,10 @@
 						Illustrated by a former Disney artist
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							Every character is thoughtfully illustrated by a real human artist, 
+							Every character is thoughtfully illustrated by a <span class="desc-highlight">real human artist</span>, 
 							packed with charm, expression, and playful detail. 
 							These characters may look friendly, 
-							but they are not on your side.
+							but they are <span class="desc-highlight">not on your side</span>.
 						</p>
 					</div>
 				</div>
@@ -208,8 +208,8 @@
 						Easy to learn. Quick to get going
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							Pick up the rules in minutes and start playing right away, but don’t be fooled—every move counts. 
-							Timing, strategy, and clever plays make this simple game surprisingly deep, keeping every player on 
+							Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled—every move counts. 
+							Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on 
 							their toes.						
 						</p>
 					</div>
