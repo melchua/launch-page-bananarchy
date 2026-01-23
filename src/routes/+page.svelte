@@ -27,61 +27,90 @@
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
+			<!-- Left Column: All text content (desktop) -->
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
-				<h1
-					class="hero-headline mb-4"
-				>
-					UNO + Exploding Kittens <span class="highlight-text"><br/>had a monkey baby.</span>
-				</h1>
-				<div class="mb-5 rounded-xl bg-transparent text-lg sm:text-black">
-					<span class="hero-subhead">
-						<span class="highlight-text hightlight-text-underline">
-							Bananarchy
-						</span> 
-						is a 
-						<span class="highlight-text hightlight-text-underline">
-							fast, always-on
-						</span> 
-						party card game where you can 
-							<span class="highlight-text hightlight-text-underline">deny
-							</span> anyone. 
-						<span class="highlight-text">
-							<span class="highlight-text hightlight-text-underline">Cute</span> on the outside,
-							<span class="highlight-text hightlight-text-underline">savage</span> on the inside.
-						</span>	
-						Can you grab all the bananas before your friends turn on you?
-					</span>
+				<!-- Hero Text - order-1 on mobile -->
+				<div class="order-1">
+					<h1
+						class="hero-headline mb-4"
+					>
+						UNO + Exploding Kittens <span class="highlight-text"><br/>had a monkey baby.</span>
+					</h1>
+					<div class="mb-5 rounded-xl bg-transparent text-lg sm:text-black">
+						<span class="hero-subhead">
+							<span class="highlight-text hightlight-text-underline">
+								Bananarchy
+							</span>
+							is a
+							<span class="highlight-text hightlight-text-underline">
+								fast, always-on
+							</span>
+							party card game where you can
+								<span class="highlight-text hightlight-text-underline">deny
+								</span> anyone.
+							<span class="highlight-text">
+								<span class="highlight-text hightlight-text-underline">Cute</span> on the outside,
+								<span class="highlight-text hightlight-text-underline">savage</span> on the inside.
+							</span>
+							Can you grab all the bananas before your friends turn on you?
+						</span>
+					</div>
+				</div>
 
-					<p class="mt-4 text-sm font-semibold tracking-wide text-white/90">
+				<!-- Deluxe Box Images - order-2 on mobile, hidden on desktop (shown in right column) -->
+				<div class="relative order-2 lg:hidden">
+					<enhanced:img
+						src="$lib/assets/deluxe-box-2.png"
+						alt="box"
+						class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px]`}
+						sizes="(min-width: 640px) 640px, 80vw"
+					/>
+					<enhanced:img
+						src="$lib/assets/banana-peels.png"
+						alt="box"
+						class={`${boxClass} m-2 -mt-[80px] w-fit sm:w-[500px] md:w-[600px]`}
+						sizes="(min-width: 640px) 640px, 80vw"
+					/>
+				</div>
+
+				<!-- Game Stats, CTA, and Benefits - order-3 on mobile -->
+				<div class="order-3">
+					<!-- Game Stats: -->
+					<p class="text-sm font-semibold tracking-wide text-white/90">
 						<span class="inline-flex items-center gap-4">
 							<span>👥 3-8 players</span>
 							<span>⏱️ 15-30 mins</span>
 							<span>🎯 Ages 14+</span>
 						</span>
 					</p>
-				</div>
-				<div class="space-y-4">
-					<button onclick={scrollToSignup} class="cta-button w-full sm:w-auto">Get Early Access</button>
+
+					<div class="space-y-4 mt-4">
+						<button onclick={scrollToSignup} class="cta-button w-full sm:w-auto">Get Early Access</button>
+
+						<!-- Early Access Benefits -->
 						<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4 tracking-wide md:tracking-normal">
 							<li>⏰ Get notified the moment we go live</li>
 							<li>🎥 Behind-the-scenes updates</li>
 							<!-- <li>🚀 Early access to back before the public</li> -->
 							<li>🍌 No spam, just bananas</li>
 						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="relative">
+
+			<!-- Right Column: Deluxe Box Images (desktop only) -->
+			<div class="relative hidden lg:block">
 				<enhanced:img
 					src="$lib/assets/deluxe-box-2.png"
 					alt="box"
-					class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px] lg:w-[675px]`}
-					sizes="(min-width: 640px) 640px, 80vw"
+					class={`${boxClass} m-2 w-fit lg:w-[675px]`}
+					sizes="675px"
 				/>
 				<enhanced:img
 					src="$lib/assets/banana-peels.png"
 					alt="box"
-					class={`${boxClass} m-2 -mt-[80px] w-fit sm:w-[500px] md:w-[600px] lg:w-[675px]`}
-					sizes="(min-width: 640px) 640px, 80vw"
+					class={`${boxClass} m-2 -mt-[80px] w-fit lg:w-[675px]`}
+					sizes="675px"
 				/>
 			</div>
 		</div>
