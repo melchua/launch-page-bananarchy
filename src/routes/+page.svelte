@@ -122,19 +122,43 @@
 		/>
 	</div>
 
-
+	<!-- How to Play Section -->
+	<div class="py-10">
+		<div class="mx-auto max-w-[850px] px-4">
+			<h2 class="section-headline mb-4 text-center sm:mb-6">
+				<span class="highlight-text">Learn to play</span> in 1 minute
+			</h2>
+			<div class="relative w-full" style="aspect-ratio: 16 / 9;">
+				<iframe
+					class="absolute inset-0 h-full w-full rounded-xl shadow-2xl"
+					src="https://www.youtube.com/embed/O-Nq7IjRo70"
+					title="How to Play Bananarchy"
+					frameborder="0"
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+			</div>
+			<!-- <p class="mx-auto mb-8 max-w-2xl p-2 text-base leading-relaxed text-white/90 sm:mb-10 sm:text-lg">
+				Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled. Every move counts.
+				Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on
+				their toes.
+			</p> -->
+		</div>
+	</div>
 
 	<div class="full text-white">
 		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
 			<div class="w-full">
-				<div class="flex flex-col items-center gap-8 xl:flex-row">
+				<div class="flex flex-col items-center sm:gap-4 xl:flex-row">
 					<div class="flex-1 py-4 items-center flex flex-col">
 						<h2
 							class="section-subheadline sm:px-10 lg:px-20 text-center"
 						>
 						Waiting your turn is for other games.
 						</h2>
-						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
 							<span class="desc-highlight">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
 							Interrupt. Counter. Sabotage. The table stays loud, tense, 
 							and <span class="desc-highlight">completely unhinged</span> until the final draw.
@@ -150,33 +174,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-full">
-				<div class="flex flex-col-reverse items-center gap-8 lg:flex-row">
-					<div class="w-[100vw] flex-1 py-4">
-						<enhanced:img
-							src="$lib/assets/betrayal.png"
-							alt="placeholder"
-							class="w-full rounded-xl"
-							sizes="(min-width: 640px) 640px, 100vw"
-						/>
-					</div>
-					<div class="flex-1 py-4">
-						<h2
-							class="section-subheadline sm:px-10 lg:px-20"
-						>
-						Great for parties. Terrible for friendships.
-						</h2>
-						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="desc-highlight">impossible to stop playing</span>, 
-							this is the party game that tests friendships with every clever move, 
-							every stolen banana, and every <span class="desc-highlight">unexpected betrayal</span>.					
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="w-full">
-				<div class="flex flex-col-reverse items-center gap-8 lg:flex-row">
-					<div class="w-[100vw] flex-1 py-4">
+			<div class="w-full pt-4">
+				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row">
+					<div class="w-[100vw] flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/artwork-bg.png"
 							alt="Disney artist illustration"
@@ -184,21 +184,46 @@
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 py-4">
+					<div class="flex-1 py-4 items-center flex flex-col">
 						<h2
-							class="section-subheadline sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
 						>
 						Illustrated by a former Disney artist
 						</h2>
-						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							Every character is thoughtfully illustrated by a <span class="desc-highlight">real human artist</span>, 
-							packed with charm, expression, and playful detail. 
-							These characters may look friendly, 
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+							Every character is thoughtfully illustrated by a <span class="desc-highlight">real human artist</span>,
+							packed with charm, expression, and playful detail.
+							These characters may look friendly,
 							but they are <span class="desc-highlight">not on your side</span>.
 						</p>
 					</div>
 				</div>
 			</div>
+			<div class="w-full pt-4">
+				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row-reverse">
+					<div class="w-[100vw] flex-1 py-4 sm:w-3/4">
+						<enhanced:img
+							src="$lib/assets/betrayal.png"
+							alt="placeholder"
+							class="w-full rounded-xl"
+							sizes="(min-width: 640px) 640px, 100vw"
+						/>
+					</div>
+					<div class="flex-1 items-center flex flex-col">
+						<h2
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
+						>
+						Great for parties. Terrible for friendships.
+						</h2>
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="desc-highlight">impossible to stop playing</span>,
+							this is the party game that tests friendships with every clever move,
+							every stolen banana, and every <span class="desc-highlight">unexpected betrayal</span>.
+						</p>
+					</div>
+				</div>
+			</div>
+			
 			<!-- <div class="w-full">
 				<div class="flex flex-col items-center gap-8 lg:flex-row">
 					<div class="flex-1 py-4">
@@ -223,32 +248,6 @@
 					</div>
 				</div>
 			</div> -->
-		</div>
-	</div>
-
-	<!-- How to Play Section -->
-	<div class="py-12 sm:py-16 lg:py-20">
-		<div class="mx-auto max-w-[850px] px-4">
-			<h2 class="section-headline mb-4 text-center sm:mb-6">
-				<span class="highlight-text">Learn to play</span> in 1 minute
-			</h2>
-			<p class="mx-auto mb-8 max-w-2xl text-center text-base leading-relaxed text-white/90 sm:mb-10 sm:text-lg">
-				Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled—every move counts.
-				Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on
-				their toes.
-			</p>
-			<div class="relative w-full" style="aspect-ratio: 16 / 9;">
-				<iframe
-					class="absolute inset-0 h-full w-full rounded-xl shadow-2xl"
-					src="https://www.youtube.com/embed/O-Nq7IjRo70"
-					title="How to Play Bananarchy"
-					frameborder="0"
-					loading="lazy"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-				></iframe>
-			</div>
 		</div>
 	</div>
 

@@ -102,23 +102,23 @@
 				<enhanced:img
 					src={cards}
 					alt="cards"
-					class="m-6 w-2/3 min-w-[500px] animate-bounce-in"
+					class="m-6 w-2/3 min-w-[420px] animate-bounce-in"
 					sizes="500px"
 				/>
 			</div>
 
 			<div class="flex flex-1 flex-col gap-6 rounded-xl p-4 sm:items-start sm:p-6">
 				<div class="title md:flex flex-col text-center">
-					<p>🎉 Now claim your VIP Banana expansion
+					<p>Now claim your <span class="highlight-basic">VIP Banana</span> expansion</p>
 					<p class="title-subhead">Get a 6-card exclusive expansion (worth $15)</p>
 					<p class="title-subsubhead">Reserve it today with a $1 fully refundable deposit</p>
 				</div>
 
-		
+
 				<div class="flex w-full flex-col items-center justify-center gap-4">
-					<p class="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-200">
+					<!-- <p class="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-200">
 						<span class="animate-pulse">⚠️</span> Only 420 of 500 VIP slots available
-					</p>
+					</p> -->
 					
 					<stripe-buy-button
 						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1RCB8XAsNXUFfbI0ZhPPYlfX' : 'buy_btn_1R4t7SPPIJAaixg8kKHFwSZm'}`}
