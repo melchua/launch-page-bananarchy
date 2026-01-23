@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Override font-display to prevent swap/flash on scroll */
+@font-face {
+	font-family: 'Londrina Solid';
+	font-display: block;
+}
+
 body {
 	background-color: #f3941c; /* Replace with your desired color */
 }
@@ -105,8 +111,36 @@ picture {
 	 1px  0   0.5px rgba(0,0,0,0.2);
 }
 
+.title {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(1.75rem, 4vw, 3rem);
+	line-height: 1.15;
+	color: #fff;
+	letter-spacing: 0.5px;
+	text-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.title-subhead {
+	font-family: 'Poppins', sans-serif;
+	font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+	font-weight: 600;
+	line-height: 1.4;
+	color: #FEDF23;
+	margin-top: 0.5rem;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.title-subsubhead {
+	font-family: 'Poppins', sans-serif;
+	font-size: clamp(0.95rem, 2vw, 1.15rem);
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.8);
+	margin-top: 0.25rem;
+}	
+
 .cta-button {
-	background: linear-gradient(180deg, #a4d037 0%, #7cb518 100%);
+	background: linear-gradient(180deg, #a4d037 0%, #05ce78 100%);
 	color: white;
 	font-family: 'Londrina Solid', system-ui, sans-serif;
 	font-size: 1.5rem;
@@ -126,7 +160,7 @@ picture {
 }
 
 .cta-button:hover {
-	background: linear-gradient(180deg, #b5e038 0%, #8dc619 100%);
+	background: linear-gradient(180deg, #05ce78 0%, #05ce78 100%);
 	transform: translateY(-2px);
 	box-shadow: 
 		0 6px 12px rgba(0, 0, 0, 0.3),
@@ -228,12 +262,10 @@ picture {
 }
 
 .overlay-panel {
-	max-width: 520px;
+	max-width: 550px;
 	background: rgba(0, 0, 0, 0.25); /* adjust opacity */
 	padding: 1.5rem 1.75rem;
 	border-radius: 16px;
-	backdrop-filter: blur(2px); /* optional */
 	font-size: 1.1rem;
 	line-height: 1.7;
 }
-  

@@ -12,7 +12,7 @@
 		<span>
 			<h1 class="py-2 footer-headline"><span class="highlight-text">Get in</span> before <span class="highlight-text">the chaos</span> begins.</h1>
 			<p class="w-full text-lg text-white">
-				Join <span class="highlight-text font-bold">free</span> for early access, sneak peaks, and <span class="highlight-text font-bold">first dibs</span> on our <span class="highlight-text font-bold">$1 VIP expansion</span>.
+				Join <span class="highlight-text font-bold">free</span> for early access, sneak peaks, and <span class="highlight-text font-bold">first dibs</span> on our <span class="highlight-text font-bold">$1 VIP Banana expansion</span>.
 			</p>
 		</span>
 		<MailerForm />

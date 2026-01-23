@@ -10,6 +10,9 @@
 <script lang="ts">
 	import cards from '$lib/assets/vip-exclusive.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
+	import { ConfettiExplosion } from 'svelte-confetti-explosion';
+
+	let showConfetti = true;
 
 	const benefits = [
 		{
@@ -52,6 +55,15 @@
 </svelte:head>
 
 <div class="relative flex min-h-screen flex-col items-center overflow-y-auto">
+	{#if showConfetti}
+		<div class="fixed left-1/2 top-1/3 z-50">
+			<ConfettiExplosion 
+				particleCount={150}
+				duration={4000}
+				colors={['#FFC627', '#F6A31A', '#A060AF', '#34a931', '#FEDF23']}
+			/>
+		</div>
+	{/if}
 	<div class="absolute inset-0 bg-gradient-to-r from-bapurple to-purple-700 opacity-50"></div>
 	<div
 		class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-bapurple via-purple-700/50 to-transparent"
@@ -73,10 +85,10 @@
 			</div>
 		</div>
 		<div class="mx-4 my-4 flex flex-col items-center md:my-16 md:flex-row">
-			<div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
+			<!-- <div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
 				<p>{TITLE}</p>
 				<p class="text-baorange-50 text-2xl">{SUBTITLE}</p>
-			</div>
+			</div> -->
 			<!-- small screen image -->
 			<enhanced:img
 				src={cards}
@@ -95,19 +107,19 @@
 				/>
 			</div>
 
-			<div class="flex flex-1 flex-col rounded-xl sm:items-start">
-				<div class="hero-headline md:flex flex-col">
-					<p>🎉 You've unlocked a VIP-only mini-expansion
-					<p class="text-baorange-50 text-2xl">Get a 6-card Exclusive expansion (worth $15)</p>
-					<p>Reserve it today with a $1 fully refundable deposit</p>
+			<div class="flex flex-1 flex-col gap-6 rounded-xl p-4 sm:items-start sm:p-6">
+				<div class="title md:flex flex-col text-center">
+					<p>🎉 Now claim your VIP Banana expansion
+					<p class="title-subhead">Get a 6-card exclusive expansion (worth $15)</p>
+					<p class="title-subsubhead">Reserve it today with a $1 fully refundable deposit</p>
 				</div>
 
-				<p class="p-4 text-xl text-white">
-					Place a $1 deposit → Get the 6-card "Exclusive" mini-expansion FREE with your pledge (worth $15) 
-				</p>
-				<p class="p-4 text-xl text-white">
-					⚠️ Only 420 of 500 VIP slots available</p>
-				<div class="flex w-full flex-col items-center justify-center">
+		
+				<div class="flex w-full flex-col items-center justify-center gap-4">
+					<p class="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-200">
+						<span class="animate-pulse">⚠️</span> Only 420 of 500 VIP slots available
+					</p>
+					
 					<stripe-buy-button
 						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1RCB8XAsNXUFfbI0ZhPPYlfX' : 'buy_btn_1R4t7SPPIJAaixg8kKHFwSZm'}`}
 						publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
