@@ -84,18 +84,13 @@
 				</stripe-buy-button>
 			</div>
 		</div>
-		<div class="mx-4 my-4 flex flex-col items-center md:my-16 md:flex-row">
+		<div class="mx-4 my-4 flex justify-center flex-col items-center md:my-16 md:flex-row">
 			<!-- <div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
 				<p>{TITLE}</p>
 				<p class="text-baorange-50 text-2xl">{SUBTITLE}</p>
 			</div> -->
 			<!-- small screen image -->
-			<enhanced:img
-				src={cards}
-				alt="cards"
-				class="m-6 w-2/3 animate-bounce-in p-4 sm:w-2/3 md:hidden"
-				sizes="80vw"
-			/>
+
 
 			<!-- medium screen image -->
 			<div class="hidden h-full flex-none p-4 font-londrinaSolid md:block">
@@ -107,15 +102,21 @@
 				/>
 			</div>
 
-			<div class="flex flex-1 flex-col gap-6 rounded-xl p-4 sm:items-start sm:p-6">
-				<div class="title md:flex flex-col text-center">
-					<p>Now claim your <span class="highlight-basic">VIP Banana</span> expansion</p>
-					<p class="title-subhead">Get a 6-card exclusive expansion (worth $15)</p>
-					<p class="title-subsubhead">Reserve it today with a $1 fully refundable deposit</p>
+			<div class="flex flex-col gap-6 rounded-xl p-4 sm:items-start sm:p-6">
+				<div class="title flex flex-col items-center">
+					<p class="text-center">🎉 Now claim your <span class="highlight-basic">VIP Banana</span> expansion</p>
+					<p class="title-subhead">Get a 6-card <span class="highlight-basic">Exclusive expansion</span>  (worth $15)</p>
+					<enhanced:img
+						src={cards}
+						alt="cards"
+						class="m-6 w-2/3 animate-bounce-in p-4 sm:w-2/3 md:hidden"
+						sizes="85vw"
+					/>
+					<p class="title-subsubhead">Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span> </p>
 				</div>
 
 
-				<div class="flex w-full flex-col items-center justify-center gap-4">
+				<div class="flex w-full flex-col items-center gap-4">
 					<!-- <p class="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-200">
 						<span class="animate-pulse">⚠️</span> Only 420 of 500 VIP slots available
 					</p> -->

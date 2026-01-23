@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import '@fontsource/londrina-solid';
+	// Londrina Solid is loaded via @font-face in app.css with font-display: block
 	import '@fontsource/poppins';
 
 	// import posthog from 'posthog-js';
