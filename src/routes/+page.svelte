@@ -23,7 +23,7 @@
 </script>
 
 <div class="flex min-h-screen flex-col oback">
-	<div class="relative h-[900px] overflow-hidden sm:h-[1000px] md:h-[1300px] lg:h-[800px]">
+	<div class="relative h-[900px] overflow-hidden sm:h-[1000px] md:h-[1300px] lg:h-[850px]">
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
@@ -127,10 +127,10 @@
 	<div class="full text-white">
 		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
 			<div class="w-full">
-				<div class="flex flex-col items-center gap-8 lg:flex-row">
-					<div class="flex-1 py-4">
+				<div class="flex flex-col items-center gap-8 xl:flex-row">
+					<div class="flex-1 py-4 items-center flex flex-col">
 						<h2
-							class="section-subheadline sm:px-10 lg:px-20"
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
 						>
 						Waiting your turn is for other games.
 						</h2>
@@ -140,7 +140,7 @@
 							and <span class="desc-highlight">completely unhinged</span> until the final draw.
 						</p>
 					</div>
-					<div class="w-[100vw] flex-1">
+					<div class="w-[100vw] flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/grab.png"
 							alt="placeholder"
@@ -199,7 +199,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-full">
+			<!-- <div class="w-full">
 				<div class="flex flex-col items-center gap-8 lg:flex-row">
 					<div class="flex-1 py-4">
 						<h2
@@ -222,6 +222,32 @@
 						/>
 					</div>
 				</div>
+			</div> -->
+		</div>
+	</div>
+
+	<!-- How to Play Section -->
+	<div class="py-12 sm:py-16 lg:py-20">
+		<div class="mx-auto max-w-[850px] px-4">
+			<h2 class="section-headline mb-4 text-center sm:mb-6">
+				<span class="highlight-text">Learn to play</span> in 1 minute
+			</h2>
+			<p class="mx-auto mb-8 max-w-2xl text-center text-base leading-relaxed text-white/90 sm:mb-10 sm:text-lg">
+				Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled—every move counts.
+				Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on
+				their toes.
+			</p>
+			<div class="relative w-full" style="aspect-ratio: 16 / 9;">
+				<iframe
+					class="absolute inset-0 h-full w-full rounded-xl shadow-2xl"
+					src="https://www.youtube.com/embed/O-Nq7IjRo70"
+					title="How to Play Bananarchy"
+					frameborder="0"
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
 			</div>
 		</div>
 	</div>
