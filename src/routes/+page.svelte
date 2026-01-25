@@ -56,7 +56,7 @@
 
 				<!-- CTA Button - order-2 on mobile, order-4 on desktop (shown below stats) -->
 				<div class="order-2 lg:order-4">
-					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get VIP Access</button>
+					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button>
 				</div>
 
 				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
