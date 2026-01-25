@@ -102,17 +102,17 @@
 				/>
 			</div>
 
-			<div class="flex flex-col gap-6 rounded-xl p-4 sm:items-start sm:p-6">
-				<div class="title flex flex-col items-center">
-					<p class="text-center">🎉 Now claim your <span class="highlight-basic">VIP Banana</span> expansion</p>
-					<p class="title-subhead">Get a 6-card <span class="highlight-basic">Exclusive expansion</span>  (worth $15)</p>
+			<div class="flex flex-col gap-6 rounded-xl p-2 sm:items-start sm:p-6">
+				<div class="flex flex-col items-center">
+					<p class="text-center title">🎉 Now claim your <span class="highlight-basic">free VIP Banana</span> expansion</p>
+					<p class="title-subhead text-center">Get a 6-card <span class="highlight-basic">Exclusive mini-expansion</span>  (worth $15)</p>
 					<enhanced:img
 						src={cards}
 						alt="cards"
-						class="m-6 w-2/3 animate-bounce-in p-4 sm:w-2/3 md:hidden"
+						class="m-6 w-full animate-bounce-in p-4 sm:w-2/3 md:hidden"
 						sizes="85vw"
 					/>
-					<p class="title-subsubhead">Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span> </p>
+					<p class="title-subsubhead text-center">Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span> </p>
 				</div>
 
 

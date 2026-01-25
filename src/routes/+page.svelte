@@ -23,7 +23,7 @@
 </script>
 
 <div class="flex min-h-screen flex-col oback">
-	<div class="relative h-[900px] overflow-hidden sm:h-[1000px] md:h-[1200px] lg:h-[850px]">
+	<div class="relative h-[800px] overflow-hidden sm:h-[1000px] md:h-[1200px] lg:h-[850px]">
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
@@ -32,34 +32,31 @@
 				<!-- Hero Text - order-1 on mobile -->
 				<div class="order-1">
 					<h1
-						class="hero-headline mb-4"
+						class="hero-headline mb-4 text-center md:text-left"
 					>
-						UNO + Exploding Kittens <span class="highlight-text"><br/>had a monkey baby.</span>
+					<span class="whitespace-nowrap">UNO + Exploding Kittens =</span> <span class="highlight-text"><br/> Bananarchy</span>
 					</h1>
 					<div class="mb-5 rounded-xl bg-transparent text-lg sm:text-black">
 						<span class="hero-subhead">
+						
 							<span class="highlight-text hightlight-text-underline">
-								Bananarchy
-							</span>
-							is a
-							<span class="highlight-text hightlight-text-underline">
-								fast, always-on
+								A fast, always-on
 							</span>
 							party card game where you can
 								<span class="highlight-text hightlight-text-underline">deny
 								</span> anyone.
-							<span class="highlight-text">
+							<!-- <span class="highlight-text">
 								<span class="highlight-text hightlight-text-underline">Cute</span> on the outside,
 								<span class="highlight-text hightlight-text-underline">savage</span> on the inside.
-							</span>
-							Can you grab all the bananas before your friends turn on you?
+							</span> -->
+							Can you <span class="highlight-text hightlight-text-underline">grab all the bananas</span> before your friends <span class="highlight-text hightlight-text-underline">turn on you</span>?
 						</span>
 					</div>
 				</div>
 
 				<!-- CTA Button - order-2 on mobile, order-4 on desktop (shown below stats) -->
 				<div class="order-2 lg:order-4">
-					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button>
+					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get VIP Access</button>
 				</div>
 
 				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
@@ -85,7 +82,7 @@
 						<span class="inline-flex items-center gap-4">
 							<span>👥 3-8 players</span>
 							<span>⏱️ 15-30 mins</span>
-							<span>🎯 Ages 14+</span>
+							<span>🎯 Ages 8+</span>
 						</span>
 					</p>
 				</div>
