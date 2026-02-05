@@ -25,7 +25,7 @@
 <div class="flex min-h-screen flex-col oback">
 	<div class="relative">
 		<div
-			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 py-4 px-8 lg:flex-row lg:justify-between lg:pt-20"
+			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 pt-0 pb-0 px-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
 			<!-- Left Column: All text content (desktop) -->
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
@@ -39,7 +39,7 @@
 					>
 					<span>Easy to learn. Don't trust anyone.</span>
 					</h1>
-					<div class="rounded-xl bg-transparent text-lg sm:text-black">
+					<div class="rounded-xl bg-transparent text-lg sm:text-black text-center md:text-left">
 						<span class="hero-subhead">
 							Think UNO meets Exploding Kittens — with way more betrayal... and monkeys.
 							<span class="highlight-text">A fast, chaotic party card game.</span>
@@ -61,10 +61,10 @@
 						sizes="(min-width: 640px) 640px, 80vw"
 					/>
 					<enhanced:img
-						src="$lib/assets/banana-peels.png"
+						src="$lib/assets/peel_1.png"
 						alt="box"
-						class={`${boxClass} m-2 -mt-[80px] w-fit sm:w-[500px] md:w-[600px]`}
-						sizes="(min-width: 640px) 640px, 80vw"
+						class={`${boxClass} sm:m-2 -ml-[100px] -mt-[75px] sm:-mt-[80px] w-[50vw]`}
+						sizes="(min-width: 400px), 50vw"
 					/>
 				</div>
 

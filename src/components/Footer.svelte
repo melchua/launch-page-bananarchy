@@ -10,8 +10,8 @@
 		class="flex flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
 	>
 		<!-- Left column: headline + description -->
-		<div class="flex flex-col gap-2 md:flex-1">
-			<h1 class="py-2 footer-headline whitespace-nowrap" id="footer-headline">Play <span class="highlight-text">today</span> for <span class="highlight-text">free</span>.</h1>
+		<div class="flex flex-col gap-1 md:flex-1">
+			<h1 class="footer-headline whitespace-nowrap" id="footer-headline">Play <span class="highlight-text">today</span> for <span class="highlight-text">free</span>.</h1>
 			
 			<!-- Mobile only: form between headline and description -->
 			<div class="w-full md:hidden">
