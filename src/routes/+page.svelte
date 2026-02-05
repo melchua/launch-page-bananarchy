@@ -37,7 +37,7 @@
 					<h1
 						class="hero-headline mb-4 text-center md:text-left"
 					>
-					<span>Easy to learn. Impossible to trust anyone.</span>
+					<span>Easy to learn. Don't trust anyone.</span>
 					</h1>
 					<div class="rounded-xl bg-transparent text-lg sm:text-black">
 						<span class="hero-subhead">
