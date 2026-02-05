@@ -83,9 +83,9 @@
 				<div class="order-5 space-y-4 mt-4 hidden lg:block">
 					<!-- Early Access Benefits -->
 					<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4 tracking-wide md:tracking-normal hidden md:block">
-						<li>⏰ Get notified the moment we go live</li>
-						<li>🎥 Behind-the-scenes updates</li>
-						<!-- <li>🚀 Early access to back before the public</li> -->
+						<li>🆓 Free Print & Play PDF — play tonight</li>
+						<li>🚀 Launch day alert + early bird access</li>
+						<li>🍌 First dibs on $1 VIP Banana Expansion</li>
 						<li>🍌 No spam, just bananas</li>
 					</ul>
 				</div>
