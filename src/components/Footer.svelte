@@ -12,14 +12,20 @@
 		<!-- Left column: headline + description -->
 		<div class="flex flex-col gap-2 md:flex-1">
 			<h1 class="py-2 footer-headline whitespace-nowrap" id="footer-headline">Play <span class="highlight-text">today</span> for <span class="highlight-text">free</span>.</h1>
+			
+			<!-- Mobile only: form between headline and description -->
+			<div class="w-full md:hidden">
+				<MailerForm />
+			</div>
+
 			<p class="w-full text-lg text-white" id="footer-description">
 				<span class="highlight-text font-bold">Instant</span> Print & Play PDF with all <span class="highlight-text font-bold">108 cards</span>, rules, and art.
 				Plus <span class="highlight-text font-bold">early access</span> & <span class="highlight-text font-bold">first dibs</span> on our <span class="highlight-text font-bold">$1 VIP Banana Expansion</span>.
 			</p>
 		</div>
 
-		<!-- Right column: signup form -->
-		<div class="w-full md:flex-1">
+		<!-- Right column: signup form (desktop only) -->
+		<div class="hidden md:block md:flex-1">
 			<MailerForm />
 		</div>
 	</div>
