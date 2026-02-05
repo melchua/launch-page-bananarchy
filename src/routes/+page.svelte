@@ -41,7 +41,7 @@
 					</h1>
 					<div class="rounded-xl bg-transparent text-lg sm:text-black text-center md:text-left">
 						<span class="hero-subhead">
-							Think UNO meets Exploding Kittens — with way more betrayal... and monkeys.
+							Think UNO meets Exploding Kittens with way more betrayal... and monkeys.
 							<span class="highlight-text">A fast, chaotic party card game.</span>
 						</span>
 					</div>
