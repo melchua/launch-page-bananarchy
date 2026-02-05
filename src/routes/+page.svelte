@@ -23,46 +23,39 @@
 </script>
 
 <div class="flex min-h-screen flex-col oback">
-	<div class="relative h-[800px] overflow-hidden sm:h-[1000px] md:h-[1200px] lg:h-[850px]">
+	<div class="relative">
 		<div
-			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 p-8 lg:flex-row lg:justify-between lg:pt-20"
+			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 py-4 px-8 lg:flex-row lg:justify-between lg:pt-20"
 		>
 			<!-- Left Column: All text content (desktop) -->
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
 				<!-- Hero Text - order-1 on mobile -->
 				<div class="order-1">
+					<h3 class="text-2xl font-bold text-center md:text-left uppercase tracking-widest">
+						Bananarchy
+					</h3>
 					<h1
 						class="hero-headline mb-4 text-center md:text-left"
 					>
-					<span class="whitespace-nowrap">UNO + Exploding Kittens =</span> <span class="highlight-text"><br/> Bananarchy</span>
+					<span>Easy to learn. Impossible to trust anyone.</span>
 					</h1>
-					<div class="mb-5 rounded-xl bg-transparent text-lg sm:text-black">
+					<div class="rounded-xl bg-transparent text-lg sm:text-black">
 						<span class="hero-subhead">
-						
-							<span class="highlight-text hightlight-text-underline">
-								A fast, always-on
-							</span>
-							party card game where you can
-								<span class="highlight-text hightlight-text-underline">deny
-								</span> anyone.
-							<!-- <span class="highlight-text">
-								<span class="highlight-text hightlight-text-underline">Cute</span> on the outside,
-								<span class="highlight-text hightlight-text-underline">savage</span> on the inside.
-							</span> -->
-							Can you <span class="highlight-text hightlight-text-underline">grab all the bananas</span> before your friends <span class="highlight-text hightlight-text-underline">turn on you</span>?
+							Think UNO meets Exploding Kittens — with way more betrayal... and monkeys.
+							<span class="highlight-text">A fast, chaotic party card game.</span>
 						</span>
 					</div>
 				</div>
 
 				<!-- CTA Button - order-2 on mobile, order-4 on desktop (shown below stats) -->
-				<div class="order-2 lg:order-4">
-					<button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button>
+				<div class="order-3 lg:order-4">
+					<!-- <button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button> -->
 				</div>
 
 				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
-				<div class="relative order-3 lg:hidden">
+				<div class="relative order-2 lg:hidden">
 					<enhanced:img
-						src="$lib/assets/deluxe-box-2.png"
+						src="$lib/assets/deluxe-box-3.png"
 						alt="box"
 						class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px]`}
 						sizes="(min-width: 640px) 640px, 80vw"
@@ -76,8 +69,7 @@
 				</div>
 
 				<!-- Game Stats - order-4 on mobile, order-2 on desktop -->
-				<div class="order-4 lg:order-2">
-					<!-- Game Stats: -->
+				<!-- <div class="order-4 lg:order-2">
 					<p class="text-sm font-semibold tracking-wide text-white/90 text-center lg:text-left">
 						<span class="inline-flex items-center gap-4">
 							<span>👥 3-8 players</span>
@@ -85,7 +77,7 @@
 							<span>🎯 Ages 8+</span>
 						</span>
 					</p>
-				</div>
+				</div> -->
 
 				<!-- Early Access Benefits - order-5 on mobile, order-5 on desktop -->
 				<div class="order-5 space-y-4 mt-4 hidden lg:block">
@@ -102,7 +94,7 @@
 			<!-- Right Column: Deluxe Box Images (desktop only) -->
 			<div class="relative hidden lg:block">
 				<enhanced:img
-					src="$lib/assets/deluxe-box-2.png"
+					src="$lib/assets/deluxe-box-3.png"
 					alt="box"
 					class={`${boxClass} m-2 w-fit lg:w-[675px]`}
 					sizes="675px"
@@ -115,8 +107,9 @@
 				/>
 			</div>
 		</div>
+		<Footer />
 			<!-- Kickstarter Launch Badge -->
-		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-8">
+		<!-- <div class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-8">
 			<div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 rounded-2xl sm:rounded-full bg-black/25 backdrop-blur-lg px-4 py-2 sm:px-5 sm:py-2.5 border border-white/30 shadow-lg">
 				<span class="text-white text-sm font-semibold tracking-wide drop-shadow-sm hidden sm:block whitespace-nowrap">Launching on</span>
 				<enhanced:img
@@ -129,9 +122,8 @@
 					May 2026
 				</span>
 			</div>
-		</div>
+		</div> -->
 	</div>
-	<Footer />
 
 
 	<!-- Testimonial -->
@@ -181,30 +173,6 @@
 	<div class="full text-white">
 		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
 			<div class="w-full">
-				<div class="flex flex-col items-center sm:gap-4 xl:flex-row">
-					<div class="flex-1 py-4 items-center flex flex-col">
-						<h2
-							class="section-subheadline sm:px-10 lg:px-20 text-center"
-						>
-						Waiting your turn is for other games.
-						</h2>
-						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
-							<span class="desc-highlight">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
-							Interrupt. Counter. Sabotage. The table stays loud, tense, 
-							and <span class="desc-highlight">completely unhinged</span> until the final draw.
-						</p>
-					</div>
-					<div class="w-[100vw] flex-1 sm:w-3/4">
-						<enhanced:img
-							src="$lib/assets/grab.png"
-							alt="placeholder"
-							class="w-full rounded-xl"
-							sizes="(min-width: 640px) 640px, 100vw"
-						/>
-					</div>
-				</div>
-			</div>
-			<div class="w-full pt-4">
 				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row">
 					<div class="w-[100vw] flex-1 sm:w-3/4">
 						<enhanced:img
@@ -252,6 +220,32 @@
 						</p>
 					</div>
 				</div>
+			<div class="w-full pt-4 pb-10">
+				<div class="flex flex-col items-center sm:gap-4 xl:flex-row-reverse">
+					<div class="flex-1 py-4 items-center flex flex-col">
+						<h2
+							class="section-subheadline sm:px-10 lg:px-20 text-center"
+						>
+						Waiting your turn is for other games.
+						</h2>
+						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+							<span class="desc-highlight">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
+							Interrupt. Counter. Sabotage. The table stays loud, tense, 
+							and <span class="desc-highlight">completely unhinged</span> until the final draw.
+						</p>
+					</div>
+					<div class="w-[100vw] flex-1 sm:w-3/4">
+						<enhanced:img
+							src="$lib/assets/grab.png"
+							alt="placeholder"
+							class="w-full rounded-xl"
+							sizes="(min-width: 640px) 640px, 100vw"
+						/>
+					</div>
+				</div>
+			</div>
+			
+			
 			</div>
 			
 			<!-- <div class="w-full">
