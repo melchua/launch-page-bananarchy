@@ -10,10 +10,13 @@
 		class="flex flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
 	>
 		<!-- Left column: headline + description -->
-		<div class="flex flex-col gap-1 md:flex-1">
-			<h1 class="footer-headline whitespace-nowrap inline-flex relative items-center gap-2" id="footer-headline"><enhanced:img src="$lib/assets/arrow-down.png" class="w-[50px] -mb-[38px] sm:hidden" alt="arrow down"/> Play 
+		<div class="flex flex-col gap-1 md:flex-1 items-center md:items-start">
+			<h1 class="footer-headline whitespace-nowrap inline-flex relative items-center gap-2" id="footer-headline">
+				<enhanced:img src="$lib/assets/arrow-down.png" class="w-[40px] -mb-[25px] md:hidden animate-arrow-bounce" alt="arrow down"/> 
+				Play 
 				<span class="highlight-text">today</span> for <span class="highlight-text">free</span>
-				<enhanced:img src="$lib/assets/arrow-right.png" class="hidden sm:inline-block w-[100px]" alt="arrow right"/>
+				
+				<enhanced:img src="$lib/assets/arrow-right.png" class="hidden md:inline-block w-[100px] min-w-[80px] animate-arrow-bounce-right" alt="arrow right"/>
 			</h1>
 			
 			<!-- Mobile only: form between headline and description -->
