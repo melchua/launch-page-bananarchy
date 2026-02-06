@@ -280,10 +280,46 @@ picture {
 	letter-spacing: 0.025em;
 }
 
-/* Subtle highlight for description text */
-.desc-highlight {
-	color: #fdec96;
-	font-weight: 600;
+.description-box {
+	align-self: start;
+	background: transparent;
+	border: 4px solid #fdec96;
+	border-radius: 24px;
+	padding: 4px;
+	box-shadow:
+		0 8px 24px rgba(0, 0, 0, 0.2),
+		inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.description-box-inner {
+	text-align: center;
+	background: linear-gradient(180deg, #fed93a 0%, #fed93a 10%, transparent 50%);
+	border-radius: 19px;
+	padding: 1rem 1.2rem;
+}
+
+/* Text styling for use inside description box */
+.description-text, .description-text-clear {
+	color: #60220c;
+	font-size: clamp(1.125rem, 2.3vw, 1.5rem);
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.5px;
+	font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.description-text-clear {
+	color: #fff;
+	font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.description-text-bold {
+	font-weight: 800;
+}
+
+.description-divider {
+	border: 1px solid #fed93a;
+	margin: 1rem 0;
 }
 
 /* Subtle bounce animation for arrows */

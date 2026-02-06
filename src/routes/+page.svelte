@@ -152,7 +152,7 @@
 			<h2 class="section-headline text-center mb-8">
 				About <span class="highlight-text">Bananarchy</span>
 			</h2>
-			<div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+			<div class="flex flex-col md:flex-row items-center md:gap-12">
 				<!-- Card fan -->
 				<div 
 					bind:this={cardFanElement}
@@ -184,14 +184,22 @@
 					/>
 				</div>
 				<!-- Description -->
-				<div class="text-white text-center md:text-left">
-					<p class="text-lg md:text-xl leading-relaxed">
-						In Bananarchy, <span class="desc-highlight">cheeky monkeys</span> steal bananas and disrupt each other at every turn. 
-						Play cards to <span class="desc-highlight">act, interrupt, and react</span> as chaos unfolds, then score when the moment is right.
-					</p>
-					<p class="text-lg md:text-xl leading-relaxed mt-4">
-						Your goal: <span class="desc-highlight">collect the most bananas</span> to win.
-					</p>
+				<div class="description-box">
+
+					<div class="description-box-inner">
+						<p class="description-text">
+							<span class="description-text-bold">In Bananarchy</span>, cheeky monkeys steal bananas and disrupt each other at every turn.
+						</p>
+
+						<hr class="description-divider">
+						
+						<p class="description-text-clear mt-4">
+							Play cards to <span class="highlight-text">act, interrupt, and react</span> as chaos unfolds, then score when the moment is right.
+						</p>
+						<p class="description-text-clear mt-4">
+							Your mission: <span class="highlight-text">Collect the most bananas to win.</span>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -211,8 +219,8 @@
 					<enhanced:img 
 						src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
 						alt="Pick & Pluck card"
-						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl -rotate-1 mb-4"
-						sizes="(min-width: 768px) 200px, 280px"
+						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl -rotate-1 mb-4"
+						sizes="(min-width: 768px) 280px, 280px"
 					/>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">1</div>
@@ -228,8 +236,8 @@
 					<enhanced:img 
 						src="$lib/assets/cards/card_action_banana_split.jpg"
 						alt="Banana Split card"
-						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl rotate-1 mb-4"
-						sizes="(min-width: 768px) 200px, 280px"
+						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl rotate-1 mb-4"
+						sizes="(min-width: 768px) 280px, 280px"
 					/>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">2</div>
@@ -245,8 +253,8 @@
 					<enhanced:img 
 						src="$lib/assets/cards/card_anytime_smash.jpg"
 						alt="Smash card"
-						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl -rotate-1 mb-4"
-						sizes="(min-width: 768px) 200px, 280px"
+						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl -rotate-1 mb-4"
+						sizes="(min-width: 768px) 280px, 280px"
 					/>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#4CAF50] text-white font-bold text-lg shadow-lg flex-shrink-0">3</div>
@@ -262,8 +270,8 @@
 					<enhanced:img 
 						src="$lib/assets/cards/card_reaction_yoink.jpg"
 						alt="Yoink card"
-						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl rotate-1 mb-4"
-						sizes="(min-width: 768px) 200px, 280px"
+						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl rotate-1 mb-4"
+						sizes="(min-width: 768px) 280px, 280px"
 					/>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#2196F3] text-white font-bold text-lg shadow-lg flex-shrink-0">4</div>
@@ -279,8 +287,8 @@
 					<enhanced:img 
 						src="$lib/assets/cards/card_scoring_banana_manifesto.jpg"
 						alt="Banana Manifesto card"
-						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl -rotate-1 mb-4"
-						sizes="(min-width: 768px) 200px, 280px"
+						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl -rotate-1 mb-4"
+						sizes="(min-width: 768px) 280px, 280px"
 					/>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#FFC107] text-white font-bold text-lg shadow-lg flex-shrink-0">5</div>
