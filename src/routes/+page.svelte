@@ -226,13 +226,15 @@
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">1</div>
 						<h3 class="step-title">Collect Bananas</h3>
 					</div>
-					<p class="text-white/90 leading-relaxed text-lg">
-						The goal of Bananarchy is simple: <span class="desc-highlight">collect the most bananas</span> to win.
+					<div class="description-box-inner">
+					<p class="description-text">
+						Whoever has <span class="description-text-bold">the most bananas</span> wins!
 					</p>
 				</div>
+			</div>
 
-				<!-- Step 2: Sabotage friends -->
-				<div class="flex flex-col items-center text-center px-2 md:p-4">
+			<!-- Step 2: Sabotage friends -->
+			<div class="flex flex-col items-center text-center px-2 md:p-4">
 					<enhanced:img 
 						src="$lib/assets/cards/card_action_banana_split.jpg"
 						alt="Banana Split card"
@@ -243,13 +245,15 @@
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">2</div>
 						<h3 class="step-title">Sabotage Friends</h3>
 					</div>
-					<p class="text-white/90 leading-relaxed text-lg">
-						On your turn use powerful <span class="desc-highlight">Action Cards</span> to steal bananas and bamboozle your friends.
+					<div class="description-box-inner">
+					<p class="description-text">
+						Use <span class="description-text-bold">Action Cards</span> to bamboozle your friends.
 					</p>
 				</div>
+			</div>
 
-				<!-- Step 3: Play anytime -->
-				<div class="flex flex-col items-center text-center px-2 md:p-4">
+			<!-- Step 3: Play anytime -->
+			<div class="flex flex-col items-center text-center px-2 md:p-4">
 					<enhanced:img 
 						src="$lib/assets/cards/card_anytime_smash.jpg"
 						alt="Smash card"
@@ -260,13 +264,15 @@
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#4CAF50] text-white font-bold text-lg shadow-lg flex-shrink-0">3</div>
 						<h3 class="step-title">Play Anytime</h3>
 					</div>
-					<p class="text-white/90 leading-relaxed text-lg">
-						Beware! Other players can use <span class="desc-highlight">Anytime Cards</span> to sabotage you even when it's your turn!
+					<div class="description-box-inner">
+					<p class="description-text">
+						Players can use <span class="description-text-bold">Anytime Cards</span> to sabotage you even when it's your turn!
 					</p>
 				</div>
+			</div>
 
-				<!-- Step 4: Chain reactions -->
-				<div class="flex flex-col items-center text-center px-2 md:p-4">
+			<!-- Step 4: Chain reactions -->
+			<div class="flex flex-col items-center text-center px-2 md:p-4">
 					<enhanced:img 
 						src="$lib/assets/cards/card_reaction_yoink.jpg"
 						alt="Yoink card"
@@ -277,13 +283,15 @@
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#2196F3] text-white font-bold text-lg shadow-lg flex-shrink-0">4</div>
 						<h3 class="step-title">Chain Reactions</h3>
 					</div>
-					<p class="text-white/90 leading-relaxed text-lg">
-						Chain cards together or use <span class="desc-highlight">Reaction Cards</span> to interrupt the best laid plans.
+					<div class="description-box-inner">
+					<p class="description-text">
+						Chain cards together or use <span class="description-text-bold">Reaction Cards</span> to interrupt the best laid plans.
 					</p>
 				</div>
+			</div>
 
-				<!-- Step 5: Score points -->
-				<div class="flex flex-col items-center text-center px-2 md:p-4 md:col-span-2 md:max-w-md md:mx-auto">
+			<!-- Step 5: Score points -->
+			<div class="flex flex-col items-center text-center px-2 md:p-4 md:col-span-2 md:max-w-md md:mx-auto">
 					<enhanced:img 
 						src="$lib/assets/cards/card_scoring_banana_manifesto.jpg"
 						alt="Banana Manifesto card"
@@ -294,53 +302,17 @@
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#FFC107] text-white font-bold text-lg shadow-lg flex-shrink-0">5</div>
 						<h3 class="step-title">Score Points</h3>
 					</div>
-					<p class="text-white/90 leading-relaxed text-lg">
-						Bananarchy ends immediately when the last Banana Card is drawn. Add your <span class="desc-highlight">Scoring Cards</span> to secure your victory.
+					<div class="description-box-inner">
+					<p class="description-text">
+						Bananarchy ends immediately when the last Banana Card is drawn. Add your <span class="description-text-bold">Scoring Cards</span> to secure your victory.
 					</p>
 				</div>
 			</div>
 		</div>
+		</div>
 	</div>
 
-	<!-- Testimonial -->
-	<!-- <div class="relative mx-auto max-w-[850px]">
-		<div class="testimonial">
-			<p class="testimonial-quote">
-				Bananarchy leans hard into fast, chaotic, always-on card play, and that's exactly where its appeal lies.
-			</p>
-			<p class="testimonial-source">
-				— <a href="https://www.whatboardgame.com/post/bananarchy-card-game-review" target="_blank" rel="noopener noreferrer">WhatBoardGame</a>
-			</p>
-		</div>
-		<enhanced:img
-			src="$lib/assets/leaf-shadow2.png"
-			alt="leaf shadow"
-			class="absolute -bottom-4 -right-[-2px] md:-right-2 lg:-right-4 w-24 sm:w-32"
-			sizes="(min-width: 100px) 100px"
-		/>
-	</div> -->
-
-	<!-- How to Play Section -->
-	<!-- <div class="py-10">
-		<div class="mx-auto max-w-[850px] px-4">
-			<h2 class="section-headline mb-4 text-center sm:mb-6">
-				<span class="highlight-text">Learn to play</span> in 1 minute
-			</h2>
-			<div class="relative w-full" style="aspect-ratio: 16 / 9;">
-				<iframe
-					class="absolute inset-0 h-full w-full rounded-xl shadow-2xl"
-					src="https://www.youtube.com/embed/O-Nq7IjRo70"
-					title="How to Play Bananarchy"
-					frameborder="0"
-					loading="lazy"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-				></iframe>
-			</div>
-		</div>
-	</div> -->
-
+	<Footer />
 	<div class="full text-white">
 		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
 			<div class="w-full">
@@ -360,10 +332,10 @@
 						Illustrated by a former Disney artist
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
-							Every character is thoughtfully illustrated by a <span class="desc-highlight">real human artist</span>,
+							Every character is thoughtfully illustrated by a <span class="highlight-text">real human artist</span>,
 							packed with charm, expression, and playful detail.
 							These characters may look friendly,
-							but they are <span class="desc-highlight">not on your side</span>.
+							but they are <span class="highlight-text">not on your side</span>.
 						</p>
 					</div>
 				</div>
@@ -385,9 +357,9 @@
 						Great for parties. Terrible for friendships.
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
-							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="desc-highlight">impossible to stop playing</span>,
+							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="highlight-text">impossible to stop playing</span>,
 							this is the party game that tests friendships with every clever move,
-							every stolen banana, and every <span class="desc-highlight">unexpected betrayal</span>.
+							every stolen banana, and every <span class="highlight-text">unexpected betrayal</span>.
 						</p>
 					</div>
 				</div>
@@ -400,9 +372,9 @@
 						Waiting your turn is for other games.
 						</h2>
 						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
-							<span class="desc-highlight">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
+							<span class="highlight-text">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
 							Interrupt. Counter. Sabotage. The table stays loud, tense, 
-							and <span class="desc-highlight">completely unhinged</span> until the final draw.
+							and <span class="highlight-text">completely unhinged</span> until the final draw.
 						</p>
 					</div>
 					<div class="w-[100vw] flex-1 sm:w-3/4">
@@ -418,31 +390,6 @@
 			
 			
 			</div>
-			
-			<!-- <div class="w-full">
-				<div class="flex flex-col items-center gap-8 lg:flex-row">
-					<div class="flex-1 py-4">
-						<h2
-							class="section-subheadline sm:px-10 lg:px-20"
-						>
-						Easy to learn. Quick to get going
-						</h2>
-						<p class="mt-6 overlay-panel sm:mx-10 lg:mx-20 leading-relaxed">
-							Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled—every move counts. 
-							Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on 
-							their toes.						
-						</p>
-					</div>
-					<div class="w-[100vw] flex-1 py-4">
-						<enhanced:img
-							src="$lib/assets/surprisegorilla.png"
-							alt="placeholder"
-							class="w-full rounded-xl"
-							sizes="(min-width: 640px) 640px, 100vw"
-						/>
-					</div>
-				</div>
-			</div> -->
 		</div>
 	</div>
 
