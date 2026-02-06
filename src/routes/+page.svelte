@@ -3,11 +3,32 @@
 	import Footer from '../components/Footer.svelte';
 
 	let boxClass = '';
+	let cardFanVisible = false;
+	let cardFanElement: HTMLElement;
 
 	onMount(() => {
 		setTimeout(() => {
 			boxClass = 'animate-bounce-in';
 		}, 300);
+
+		// Intersection Observer for card fan animation
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						cardFanVisible = true;
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.3 }
+		);
+
+		if (cardFanElement) {
+			observer.observe(cardFanElement);
+		}
+
+		return () => observer.disconnect();
 	});
 
 	function scrollToSignup() {
@@ -131,14 +152,35 @@
 			<h2 class="section-headline text-center mb-8">
 				About <span class="highlight-text">Bananarchy</span>
 			</h2>
-			<div class="flex flex-col md:flex-row items-center gap-8">
-				<!-- Card image -->
-				<div class="flex-shrink-0">
+			<div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+				<!-- Card fan -->
+				<div 
+					bind:this={cardFanElement}
+					class="relative flex-shrink-0 w-[320px] h-[340px] md:w-[400px] md:h-[420px]"
+				>
 					<enhanced:img 
-						src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
-						alt="Pick & Pluck card"
-						class="w-[220px] md:w-[280px] rounded-xl shadow-2xl -rotate-3"
-						sizes="(min-width: 768px) 280px, 220px"
+						src="$lib/assets/cards/card_action_banana_republic.jpg"
+						alt="Banana Republic card"
+						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-1' : ''}"
+						sizes="(min-width: 768px) 216px, 168px"
+					/>
+					<enhanced:img 
+						src="$lib/assets/cards/card_anytime_toss.jpg"
+						alt="Toss card"
+						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-2' : ''}"
+						sizes="(min-width: 768px) 216px, 168px"
+					/>
+					<enhanced:img 
+						src="$lib/assets/cards/card_reaction_denied.jpg"
+						alt="Denied card"
+						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-3' : ''}"
+						sizes="(min-width: 768px) 216px, 168px"
+					/>
+					<enhanced:img 
+						src="$lib/assets/cards/card_scoring_banana_smoothie.jpg"
+						alt="Banana Smoothie card"
+						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-4' : ''}"
+						sizes="(min-width: 768px) 216px, 168px"
 					/>
 				</div>
 				<!-- Description -->

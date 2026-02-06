@@ -328,3 +328,44 @@ picture {
 		1.5px 1.5px 1px rgba(0,0,0,0.5),
 		0 3px 6px rgba(0,0,0,0.5);
 }
+
+/* Card fan animation for About section */
+@keyframes fan-out {
+	0% {
+		opacity: 0;
+		transform: rotate(0deg) translateX(0) scale(0.8);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.card-fan {
+	position: absolute;
+	transform-origin: bottom center;
+	opacity: 0;
+}
+
+.card-fan-1 {
+	animation: fan-out 0.5s ease-out 0.1s forwards;
+	transform: rotate(-24deg) translateX(-70px);
+	z-index: 1;
+}
+
+.card-fan-2 {
+	animation: fan-out 0.5s ease-out 0.2s forwards;
+	transform: rotate(-8deg) translateX(-25px);
+	z-index: 2;
+}
+
+.card-fan-3 {
+	animation: fan-out 0.5s ease-out 0.3s forwards;
+	transform: rotate(8deg) translateX(25px);
+	z-index: 3;
+}
+
+.card-fan-4 {
+	animation: fan-out 0.5s ease-out 0.4s forwards;
+	transform: rotate(24deg) translateX(70px);
+	z-index: 4;
+}
