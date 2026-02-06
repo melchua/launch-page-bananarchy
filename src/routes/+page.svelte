@@ -155,6 +155,103 @@
 		</div>
 	</div>
 
+	<!-- How to Play Section -->
+	<div class="py-12 px-2 md:px-4">
+		<div class="mx-auto max-w-5xl">
+			<h2 class="section-headline text-center mb-10">
+				How to <span class="highlight-text">Play</span>
+			</h2>
+			
+			<!-- Steps grid -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8">
+				<!-- Step 1: Collect Bananas -->
+				<div class="flex flex-col items-center text-center px-2 md:p-4">
+					<enhanced:img 
+						src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
+						alt="Pick & Pluck card"
+						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl -rotate-1 mb-4"
+						sizes="(min-width: 768px) 200px, 280px"
+					/>
+					<div class="flex items-center justify-center gap-3 mb-2">
+						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">1</div>
+						<h3 class="step-title">Collect Bananas</h3>
+					</div>
+					<p class="text-white/90 leading-relaxed text-lg">
+						The goal of Bananarchy is simple: <span class="desc-highlight">collect the most bananas</span> to win.
+					</p>
+				</div>
+
+				<!-- Step 2: Sabotage friends -->
+				<div class="flex flex-col items-center text-center px-2 md:p-4">
+					<enhanced:img 
+						src="$lib/assets/cards/card_action_banana_split.jpg"
+						alt="Banana Split card"
+						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl rotate-1 mb-4"
+						sizes="(min-width: 768px) 200px, 280px"
+					/>
+					<div class="flex items-center justify-center gap-3 mb-2">
+						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">2</div>
+						<h3 class="step-title">Sabotage Friends</h3>
+					</div>
+					<p class="text-white/90 leading-relaxed text-lg">
+						On your turn use powerful <span class="desc-highlight">Action Cards</span> to steal bananas and bamboozle your friends.
+					</p>
+				</div>
+
+				<!-- Step 3: Play anytime -->
+				<div class="flex flex-col items-center text-center px-2 md:p-4">
+					<enhanced:img 
+						src="$lib/assets/cards/card_anytime_smash.jpg"
+						alt="Smash card"
+						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl -rotate-1 mb-4"
+						sizes="(min-width: 768px) 200px, 280px"
+					/>
+					<div class="flex items-center justify-center gap-3 mb-2">
+						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#4CAF50] text-white font-bold text-lg shadow-lg flex-shrink-0">3</div>
+						<h3 class="step-title">Play Anytime</h3>
+					</div>
+					<p class="text-white/90 leading-relaxed text-lg">
+						Beware! Other players can use <span class="desc-highlight">Anytime Cards</span> to sabotage you even when it's your turn!
+					</p>
+				</div>
+
+				<!-- Step 4: Chain reactions -->
+				<div class="flex flex-col items-center text-center px-2 md:p-4">
+					<enhanced:img 
+						src="$lib/assets/cards/card_reaction_yoink.jpg"
+						alt="Yoink card"
+						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl rotate-1 mb-4"
+						sizes="(min-width: 768px) 200px, 280px"
+					/>
+					<div class="flex items-center justify-center gap-3 mb-2">
+						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#2196F3] text-white font-bold text-lg shadow-lg flex-shrink-0">4</div>
+						<h3 class="step-title">Chain Reactions</h3>
+					</div>
+					<p class="text-white/90 leading-relaxed text-lg">
+						Chain cards together or use <span class="desc-highlight">Reaction Cards</span> to interrupt the best laid plans.
+					</p>
+				</div>
+
+				<!-- Step 5: Score points -->
+				<div class="flex flex-col items-center text-center px-2 md:p-4 md:col-span-2 md:max-w-md md:mx-auto">
+					<enhanced:img 
+						src="$lib/assets/cards/card_scoring_banana_manifesto.jpg"
+						alt="Banana Manifesto card"
+						class="w-full max-w-[280px] md:w-[200px] rounded-xl shadow-2xl -rotate-1 mb-4"
+						sizes="(min-width: 768px) 200px, 280px"
+					/>
+					<div class="flex items-center justify-center gap-3 mb-2">
+						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#FFC107] text-white font-bold text-lg shadow-lg flex-shrink-0">5</div>
+						<h3 class="step-title">Score Points</h3>
+					</div>
+					<p class="text-white/90 leading-relaxed text-lg">
+						Bananarchy ends immediately when the last Banana Card is drawn. Add your <span class="desc-highlight">Scoring Cards</span> to secure your victory.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Testimonial -->
 	<!-- <div class="relative mx-auto max-w-[850px]">
 		<div class="testimonial">

@@ -238,20 +238,20 @@ picture {
 
 .section-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	font-size: clamp(3rem, 12vw, 5rem);
 	line-height: 1.05;
 	color: #fff;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	text-shadow:
 	/* 2px even outline */
-	-1.5px -1.5px 1px rgba(0,0,0,0.5),
-	 1.5px -1.5px 1px rgba(0,0,0,0.5),
-	-1.5px  1.5px 1px rgba(94, 69, 69, 0.5),
-	 1.5px  1.5px 1px rgba(0,0,0,0.6),
-	 0   -1.5px 1px rgba(0,0,0,0.5),
-	 0    2.8px 2px rgba(0,0,0,1),
-	-1.5px  0   1px rgba(0,0,0,0.5),
-	 1.5px  0   1px rgba(0,0,0,0.5);
+	-2px -2px 1px rgba(0,0,0,0.5),
+	 2px -2px 1px rgba(0,0,0,0.5),
+	-2px  2px 1px rgba(94, 69, 69, 0.5),
+	 2px  2px 1px rgba(0,0,0,0.6),
+	 0   -2px 1px rgba(0,0,0,0.5),
+	 0    3px 3px rgba(0,0,0,1),
+	-2px  0   1px rgba(0,0,0,0.5),
+	 2px  0   1px rgba(0,0,0,0.5);
 }
 
 .section-subheadline {
@@ -311,4 +311,20 @@ picture {
 
 .animate-arrow-bounce-right {
 	animation: arrow-bounce-right 1.2s ease-in-out infinite;
+}
+
+/* Step titles for How to Play section */
+.step-title {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2rem, 8vw, 2.75rem);
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 1;
+	text-shadow:
+		-1.5px -1.5px 1px rgba(0,0,0,0.4),
+		1.5px -1.5px 1px rgba(0,0,0,0.4),
+		-1.5px 1.5px 1px rgba(0,0,0,0.4),
+		1.5px 1.5px 1px rgba(0,0,0,0.5),
+		0 3px 6px rgba(0,0,0,0.5);
 }
