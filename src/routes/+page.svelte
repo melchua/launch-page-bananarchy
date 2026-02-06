@@ -125,9 +125,38 @@
 		</div> -->
 	</div>
 
+	<!-- About Bananarchy Section -->
+	<div class="py-12 px-4">
+		<div class="mx-auto max-w-4xl">
+			<h2 class="section-headline text-center mb-8">
+				About <span class="highlight-text">Bananarchy</span>
+			</h2>
+			<div class="flex flex-col md:flex-row items-center gap-8">
+				<!-- Card image -->
+				<div class="flex-shrink-0">
+					<enhanced:img 
+						src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
+						alt="Pick & Pluck card"
+						class="w-[220px] md:w-[280px] rounded-xl shadow-2xl -rotate-3"
+						sizes="(min-width: 768px) 280px, 220px"
+					/>
+				</div>
+				<!-- Description -->
+				<div class="text-white text-center md:text-left">
+					<p class="text-lg md:text-xl leading-relaxed">
+						In Bananarchy, <span class="desc-highlight">cheeky monkeys</span> steal bananas and disrupt each other at every turn. 
+						Play cards to <span class="desc-highlight">act, interrupt, and react</span> as chaos unfolds, then score when the moment is right.
+					</p>
+					<p class="text-lg md:text-xl leading-relaxed mt-4">
+						Your goal: <span class="desc-highlight">collect the most bananas</span> to win.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Testimonial -->
-	<div class="relative mx-auto max-w-[850px]">
+	<!-- <div class="relative mx-auto max-w-[850px]">
 		<div class="testimonial">
 			<p class="testimonial-quote">
 				Bananarchy leans hard into fast, chaotic, always-on card play, and that's exactly where its appeal lies.
@@ -142,10 +171,10 @@
 			class="absolute -bottom-4 -right-[-2px] md:-right-2 lg:-right-4 w-24 sm:w-32"
 			sizes="(min-width: 100px) 100px"
 		/>
-	</div>
+	</div> -->
 
 	<!-- How to Play Section -->
-	<div class="py-10">
+	<!-- <div class="py-10">
 		<div class="mx-auto max-w-[850px] px-4">
 			<h2 class="section-headline mb-4 text-center sm:mb-6">
 				<span class="highlight-text">Learn to play</span> in 1 minute
@@ -162,13 +191,8 @@
 					allowfullscreen
 				></iframe>
 			</div>
-			<!-- <p class="mx-auto mb-8 max-w-2xl p-2 text-base leading-relaxed text-white/90 sm:mb-10 sm:text-lg">
-				Pick up the rules in <span class="desc-highlight">minutes</span> and start playing right away, but don't be fooled. Every move counts.
-				Timing, strategy, and clever plays make this simple game <span class="desc-highlight">surprisingly deep</span>, keeping every player on
-				their toes.
-			</p> -->
 		</div>
-	</div>
+	</div> -->
 
 	<div class="full text-white">
 		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
