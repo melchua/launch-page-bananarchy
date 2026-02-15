@@ -15,7 +15,7 @@
 				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
 				<span>
 					Get a Free Taster: <br/>
-					<span class="highlight-text whitespace-nowrap sm:whitespace-normal">Print, Cut, Play Tonight</span>
+					<span class="whitespace-nowrap sm:whitespace-normal">Print, Cut, <span class="text-red-500">Play Tonight</span></span>
 				</span>
 				
 				<enhanced:img src="$lib/assets/arrow-right.png" class="hidden md:inline-block w-[100px] min-w-[80px] animate-arrow-bounce-right" alt="arrow right"/>

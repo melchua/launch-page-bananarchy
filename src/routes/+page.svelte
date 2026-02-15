@@ -62,7 +62,7 @@
 					</h1>
 					<div class="rounded-xl py-2 bg-transparent text-lg sm:text-black text-center md:text-left">
 						<span class="hero-subhead">
-							Learn in <span class="highlight-text">60 seconds</span>, play in <span class="highlight-text">20 minutes</span>, make <span class="highlight-text">friendships crumble</span> in real time
+							Learn in 60 seconds <br /> Play in 20 minutes <br /> Crumble friendships in real time
 						</span>
 					</div>
 				</div>
