@@ -55,6 +55,6 @@
 <!-- End MailerLite Universal -->
 </svelte:head>
 
-<div class="h-[100vh] w-full">
+<div class="min-h-screen w-full flex flex-col">
 	{@render children()}
 </div>

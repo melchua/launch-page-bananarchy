@@ -43,7 +43,7 @@
 	}
 </script>
 
-<div class="flex min-h-screen flex-col oback">
+<div class="flex flex-col oback flex-grow pb-64 md:pb-40">
 	<div class="relative">
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 pt-0 pb-0 px-8 lg:flex-row lg:justify-between lg:pt-20"
@@ -58,12 +58,11 @@
 					<h1
 						class="hero-headline mb-4 text-center md:text-left"
 					>
-					<span>Easy to learn. Don't trust anyone.</span>
+					<span>The Card Game That Ends in Screaming (the Good Kind)</span>
 					</h1>
-					<div class="rounded-xl bg-transparent text-lg sm:text-black text-center md:text-left">
+					<div class="rounded-xl py-2 bg-transparent text-lg sm:text-black text-center md:text-left">
 						<span class="hero-subhead">
-							Think UNO meets Exploding Kittens with way more betrayal... and monkeys.
-							<span class="highlight-text">A fast, chaotic party card game.</span>
+							Learn in <span class="highlight-text">60 seconds</span>, play in <span class="highlight-text">20 minutes</span>, make <span class="highlight-text">friendships crumble</span> in real time
 						</span>
 					</div>
 				</div>
@@ -101,15 +100,14 @@
 				</div> -->
 
 				<!-- Early Access Benefits - order-5 on mobile, order-5 on desktop -->
-				<div class="order-5 space-y-4 mt-4 hidden lg:block">
-					<!-- Early Access Benefits -->
+				<!-- <div class="order-5 space-y-4 mt-4 hidden lg:block">
 					<ul class="hero-subhead-list mx-auto w-fit sm:w-full sm:p-4 tracking-wide md:tracking-normal hidden md:block">
 						<li>🆓 Free Print & Play PDF — play tonight</li>
 						<li>🚀 Launch day alert + early bird access</li>
 						<li>🍌 First dibs on $1 VIP Banana Expansion</li>
 						<li>🍌 No spam, just bananas</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 
 			<!-- Right Column: Deluxe Box Images (desktop only) -->
@@ -128,7 +126,6 @@
 				/>
 			</div>
 		</div>
-		<Footer />
 			<!-- Kickstarter Launch Badge -->
 		<!-- <div class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-8">
 			<div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 rounded-2xl sm:rounded-full bg-black/25 backdrop-blur-lg px-4 py-2 sm:px-5 sm:py-2.5 border border-white/30 shadow-lg">
@@ -146,43 +143,45 @@
 		</div> -->
 	</div>
 
-	<!-- About Bananarchy Section -->
-	<div class="py-12 px-4">
-		<div class="mx-auto max-w-4xl">
-			<h2 class="section-headline text-center mb-8">
-				About <span class="highlight-text">Bananarchy</span>
-			</h2>
+	<!-- Taster Section-->
+	<div class="py-12 px-4 flex flex-col items-center justify-center">
+		<h2 class="section-headline text-center mb-8">
+			Your First <span class="highlight-text">Game Night</span> Starts Here
+		</h2>
+
+		<!-- Card fan -->
+		<div 
+		bind:this={cardFanElement}
+		class="relative flex-shrink-0 w-[320px] h-[340px] md:w-[400px] md:h-[420px]"
+		>
+			<enhanced:img 
+					src="$lib/assets/cards/card_action_banana_republic.jpg"
+					alt="Banana Republic card"
+					class="card-fan w-[150px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-1' : ''}"
+					sizes="(min-width: 768px) 216px, 150px"
+				/>
+				<enhanced:img 
+					src="$lib/assets/cards/card_anytime_toss.jpg"
+					alt="Toss card"
+					class="card-fan w-[150px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-2' : ''}"
+					sizes="(min-width: 768px) 216px, 150px"
+				/>
+				<enhanced:img 
+					src="$lib/assets/cards/card_reaction_denied.jpg"
+					alt="Denied card"
+					class="card-fan w-[150px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-3' : ''}"
+					sizes="(min-width: 768px) 216px, 150px"
+				/>
+				<enhanced:img 
+					src="$lib/assets/cards/card_scoring_banana_smoothie.jpg"
+					alt="Banana Smoothie card"
+					class="card-fan w-[150px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-4' : ''}"
+					sizes="(min-width: 768px) 216px, 150px"
+				/>
+			</div>
+
 			<div class="flex flex-col md:flex-row items-center md:gap-12">
-				<!-- Card fan -->
-				<div 
-					bind:this={cardFanElement}
-					class="relative flex-shrink-0 w-[320px] h-[340px] md:w-[400px] md:h-[420px]"
-				>
-					<enhanced:img 
-						src="$lib/assets/cards/card_action_banana_republic.jpg"
-						alt="Banana Republic card"
-						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-1' : ''}"
-						sizes="(min-width: 768px) 216px, 168px"
-					/>
-					<enhanced:img 
-						src="$lib/assets/cards/card_anytime_toss.jpg"
-						alt="Toss card"
-						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-2' : ''}"
-						sizes="(min-width: 768px) 216px, 168px"
-					/>
-					<enhanced:img 
-						src="$lib/assets/cards/card_reaction_denied.jpg"
-						alt="Denied card"
-						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-3' : ''}"
-						sizes="(min-width: 768px) 216px, 168px"
-					/>
-					<enhanced:img 
-						src="$lib/assets/cards/card_scoring_banana_smoothie.jpg"
-						alt="Banana Smoothie card"
-						class="card-fan w-[168px] md:w-[216px] rounded-xl shadow-2xl left-1/2 -ml-[84px] md:-ml-[108px] {cardFanVisible ? 'card-fan-4' : ''}"
-						sizes="(min-width: 768px) 216px, 168px"
-					/>
-				</div>
+			
 				<!-- Description -->
 				<div class="description-box">
 
@@ -202,9 +201,14 @@
 					</div>
 				</div>
 			</div>
-		</div>
+			
+			<!-- <p class="text-center text-lg leading-relaxed">
+				Your free taster includes everything you need for a full round of Bananarchy with 2-4 players. 
+				Just print, cut, and shuffle. You'll be backstabbing friends in under 10 minutes.
+			</p>
+		 -->
 	</div>
-
+	
 	<!-- How to Play Section -->
 	<div class="py-12 px-2 md:px-4">
 		<div class="mx-auto max-w-5xl">
@@ -312,7 +316,6 @@
 		</div>
 	</div>
 
-	<Footer />
 	<div class="full text-white">
 		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
 			<div class="w-full">

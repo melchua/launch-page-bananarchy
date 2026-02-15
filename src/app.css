@@ -52,16 +52,20 @@ picture {
 }
 
 .footer-headline {
-	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	font-family: 'Poppins', system-ui, sans-serif;
+	font-size: clamp(1.6rem, 2.5vw, 3rem);
+	text-align: left;
 	line-height: 1.05;
 	color: #fff;
 	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 0 1rem;
 }
 
 .hero-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2.2rem, 2.8vw, 6rem);
+	font-size: clamp(2.2rem, 4.5vw, 6rem);
 	line-height: 1.05;
 	color: #fff;
 	letter-spacing: 0.5px;
@@ -238,7 +242,7 @@ picture {
 
 .section-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(3rem, 12vw, 5rem);
+	font-size: clamp(3rem, 4vw, 5rem);
 	line-height: 1.05;
 	color: #fff;
 	letter-spacing: 1px;
@@ -323,6 +327,32 @@ picture {
 	margin: 1rem 0;
 }
 
+/* Simple info card styling */
+.info-card {
+	background: rgba(255, 255, 255, 0.95);
+	border: 3px solid #fff;
+	border-radius: 16px;
+	padding: 2rem 1.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	text-align: center;
+}
+
+.info-card-title {
+	color: #60220c;
+	font-size: 1.5rem;
+	font-weight: 700;
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	margin-bottom: 0.75rem;
+	letter-spacing: 0.5px;
+}
+
+.info-card-description {
+	color: #4a3f35;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 500;
+}
+
 /* Subtle bounce animation for arrows */
 @keyframes arrow-bounce {
 	0%, 100% {
@@ -335,6 +365,19 @@ picture {
 
 .animate-arrow-bounce {
 	animation: arrow-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes arrow-bounce-rotated {
+	0%, 100% {
+		transform: translateY(0) rotate(-15deg);
+	}
+	50% {
+		transform: translateY(6px) rotate(-15deg);
+	}
+}
+
+.animate-arrow-bounce-rotated {
+	animation: arrow-bounce-rotated 1.2s ease-in-out infinite;
 }
 
 @keyframes arrow-bounce-right {

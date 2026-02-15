@@ -4,17 +4,19 @@
 
 <footer
 	id="signup-form"
-	class="z-50 flex w-full items-center justify-center bg-black p-4 text-center sm:mx-auto sm:pb-20 sm:text-start"
+	class="fixed bottom-0 left-0 right-0 z-50 flex w-full items-cente justify-center bg-black p-2 sm:p-4 text-center sm:mx-auto sm:text-start"
 >
 	<div
-		class="flex flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
+		class="flex flex-col items-center w-full justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
 	>
 		<!-- Left column: headline + description -->
 		<div class="flex flex-col gap-1 md:flex-1 items-center md:items-start">
-			<h1 class="footer-headline whitespace-nowrap inline-flex relative items-center gap-2" id="footer-headline">
-				<enhanced:img src="$lib/assets/arrow-down.png" class="w-[40px] -mb-[25px] md:hidden animate-arrow-bounce" alt="arrow down"/> 
-				Play 
-				<span class="highlight-text">today</span> for <span class="highlight-text">free</span>
+			<h1 class="footer-headline inline-flex relative items-center gap-2" id="footer-headline">
+				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
+				<span>
+					Get a Free Taster: <br/>
+					<span class="highlight-text whitespace-nowrap sm:whitespace-normal">Print, Cut, Play Tonight</span>
+				</span>
 				
 				<enhanced:img src="$lib/assets/arrow-right.png" class="hidden md:inline-block w-[100px] min-w-[80px] animate-arrow-bounce-right" alt="arrow right"/>
 			</h1>
@@ -24,9 +26,8 @@
 				<MailerForm />
 			</div>
 
-			<p class="w-full text-lg text-white" id="footer-description">
-				<span class="highlight-text font-bold">Instant</span> Print & Play PDF with all <span class="highlight-text font-bold">108 cards</span>, rules, and art.
-				Plus <span class="highlight-text font-bold">early access</span> & <span class="highlight-text font-bold">first dibs</span> on our <span class="highlight-text font-bold">$1 VIP Banana Expansion</span>.
+			<p class="w-full py-0 px-4 pb-1 md:px-2 text-white text-xs leading-none" id="footer-description">
+				Free PDF delivered instantly. No credit card. No spam.
 			</p>
 		</div>
 
