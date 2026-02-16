@@ -27,11 +27,11 @@
 			if (isMobile && !hasScrolledBefore) {
 				setTimeout(() => {
 					window.scrollTo({
-						top: 14,
+						top: 24,
 						behavior: 'smooth'
 					});
 					sessionStorage.setItem('hasAutoScrolled', 'true');
-				}, 150);
+				}, 250);
 			}
 		}
 
