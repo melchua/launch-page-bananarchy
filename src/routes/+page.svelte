@@ -79,15 +79,15 @@
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
 				<!-- Hero Text - order-1 on mobile -->
 				<div class="order-1">
-					<h2 class="text-2xl pt-0 pb-1 font-bold text-center md:text-left uppercase tracking-widest">
+					<h2 class="text-2xl pt-0 pb-1 font-bold text-center lg:text-left uppercase tracking-widest">
 						Bananarchy
 					</h2>
 					<h1
-						class="hero-headline mb-4 text-center md:text-left"
+						class="hero-headline mb-4 text-center lg:text-left"
 					>
 					<span>The Card Game That Ends in <span class="highlight-text">Screaming</span> <span class="highlight-text">(the Good Kind)</span></span>
 					</h1>
-					<div class="rounded-xl py-2 bg-transparent text-lg sm:text-black text-center md:text-left">
+					<div class="rounded-xl py-2 bg-transparent text-lg sm:text-black text-center lg:text-left">
 						<span class="hero-subhead">
 							Learn in <span class="hero-feature-highlight">60 seconds</span> <br /> Done in <span class="hero-feature-highlight">30 minutes</span> <br /> Betray friends in <span class="hero-feature-highlight">real time</span>
 						</span>
