@@ -82,6 +82,7 @@
 					<h2 class="text-2xl pt-0 pb-1 font-bold text-center lg:text-left uppercase tracking-widest">
 						Bananarchy
 					</h2>
+					
 					<h1
 						class="hero-headline mb-4 text-center lg:text-left"
 					>
