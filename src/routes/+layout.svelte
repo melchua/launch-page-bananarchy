@@ -58,6 +58,6 @@
 <!-- End MailerLite Universal -->
 </svelte:head>
 
-<div class="min-h-screen w-full flex flex-col">
+<div class="min-h-screen w-full flex flex-col overflow-x-hidden">
 	{@render children()}
 </div>

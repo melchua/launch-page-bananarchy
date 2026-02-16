@@ -100,7 +100,7 @@
 				</div>
 
 				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
-				<div class="relative order-2 lg:hidden">
+				<div class="relative order-2 lg:hidden overflow-hidden">
 					<enhanced:img
 						src="$lib/assets/deluxe-box-render-kick.png"
 						alt="box"
@@ -110,7 +110,7 @@
 					<enhanced:img
 						src="$lib/assets/peel_1.png"
 						alt="box"
-						class={`${boxClass} sm:m-2 -ml-[100px] -mt-[75px] sm:-mt-[80px] w-[50vw]`}
+						class={`${boxClass} sm:m-2 -ml-[60px] -mt-[75px] sm:-mt-[80px] w-[45%] sm:w-[50vw]`}
 						sizes="(min-width: 400px), 50vw"
 					/>
 				</div>
