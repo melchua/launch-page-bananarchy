@@ -306,9 +306,9 @@ picture {
 
 /* Text styling for use inside description box */
 .description-text, .description-text-clear {
-	color: #60220c;
+	/* color: #60220c; */
 	font-weight: 500;
-	line-height: 1;
+	line-height: 1.3rem;
 	letter-spacing: 0.5px;
 	font-family: 'Poppins', system-ui, sans-serif;
 	padding: 0.5rem 0;

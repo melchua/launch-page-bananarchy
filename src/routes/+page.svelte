@@ -31,16 +31,6 @@
 		return () => observer.disconnect();
 	});
 
-	function scrollToSignup() {
-		const footer = document.getElementById('signup-form');
-		footer?.scrollIntoView({ behavior: 'smooth' });
-
-		// Wait for scroll to complete, then focus the MailerLite input
-		setTimeout(() => {
-			const emailInput = footer?.querySelector('input[type="email"]') as HTMLInputElement | null;
-			emailInput?.focus();
-		}, 500);
-	}
 </script>
 
 <div class="flex flex-col oback flex-grow pb-64 md:pb-40">
@@ -52,7 +42,7 @@
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
 				<!-- Hero Text - order-1 on mobile -->
 				<div class="order-1">
-					<h2 class="text-2xl font-bold text-center md:text-left uppercase tracking-widest">
+					<h2 class="text-2xl pt-0 pb-1 font-bold text-center md:text-left uppercase tracking-widest">
 						Bananarchy
 					</h2>
 					<h1
@@ -118,14 +108,14 @@
 		</div>
 	</div>
 
-	<div class="py-12 px-4 flex flex-col items-center justify-center">
+	<div class="py-8 px-4 flex flex-col items-center justify-center">
 		
 		<h2 class="text-center">Your Next Game Night Starts Here</h2>
 
 		<div class="flex flex-col items-center justify-center md:flex-row">
 
 			<!-- Card fan -->
-			<div bind:this={cardFanElement} class="relative flex-shrink-0 w-[320px] h-[300px] md:w-[400px] md:h-[420px]">
+			<div bind:this={cardFanElement} class="relative flex-shrink-0 w-[320px] h-[300px] md:w-[400px] md:h-[420px] pt-4 md:pt-8">
 				<enhanced:img 
 						src="$lib/assets/cards/card_action_banana_republic.jpg"
 						alt="Banana Republic card"
@@ -157,7 +147,7 @@
 					<div>
 						A <span class="font-bold">fast chaotic</span> card game about stealing bananas and ruining friendships.
 					</div>
-					<ul class="text-left p-6">
+					<ul class="text-left py-6 px-2 ">
 						<li class="flex flex-row items-center">
 							<enhanced:img src="$lib/assets/icons/monkeyhead-128x128.png" alt="Monkey Head" class="w-7 h-7 inline-block mr-2" /><span class="highlight-text">Steal &nbsp;</span> bananas
 						</li>
@@ -281,7 +271,7 @@
 		<div class="flex flex-col gap-4 px-4 py-0 lg:mx-24 xl:mx-48">
 			<div class="w-full">
 				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row">
-					<div class="w-[100vw] flex-1 sm:w-3/4">
+					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/artwork-bg.png"
 							alt="Disney artist illustration"
@@ -304,7 +294,7 @@
 			</div>
 			<div class="w-full pt-4">
 				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row-reverse">
-					<div class="w-[100vw] flex-1 sm:w-3/4">
+					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/betrayal.png"
 							alt="placeholder"
@@ -334,12 +324,12 @@
 						Waiting your turn is for other games.
 						</h3>
 						<p class="mt-6 sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
-							<span class="highlight-text">Anytime cards</span> mean nobody is safe, even when it's not your turn. 
-							Interrupt. Counter. Sabotage. The table stays loud, tense, 
+							<span class="highlight-text">Anytime cards</span> mean nobody is safe, even when it's not your turn.
+							Interrupt. Counter. Sabotage. The table stays loud, tense,
 							and <span class="highlight-text">completely unhinged</span> until the final draw.
 						</p>
 					</div>
-					<div class="w-[100vw] flex-1 sm:w-3/4">
+					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/grab.png"
 							alt="placeholder"
