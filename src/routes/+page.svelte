@@ -21,7 +21,7 @@
 					}
 				});
 			},
-			{ threshold: 0.3 }
+			{ threshold: 0.8 }
 		);
 
 		if (cardFanElement) {
@@ -268,9 +268,9 @@
 		<h2 class="text-center">
 			There's more...
 		</h2>
-		<div class="flex flex-col gap-4 px-4 py-0 lg:mx-24 xl:mx-48">
+		<div class="flex flex-col gap-4 px-4 py-0 sm:mx-36 xl:mx-48">
 			<div class="w-full">
-				<div class="flex flex-col-reverse pb-4 items-center sm:gap-4 xl:flex-row">
+				<div class="flex flex-col-reverse pb-4 items-center sm:gap-8 lg:flex-row">
 					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/artwork-bg.png"
@@ -279,11 +279,11 @@
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 pt-0 pb-4 items-center flex flex-col">
-						<h3 class="text-center md:text-left">
+					<div class="flex-1 pt-0 pb-4 flex flex-col">
+						<h3 class="text-center xl:text-left">
 						Illustrated by a former Disney artist
 						</h3>
-						<p class="mt-6 sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+						<p class="mt-6 leading-relaxed w-full">
 							Every character is thoughtfully illustrated by a <span class="highlight-text">real human artist</span>,
 							packed with charm, expression, and playful detail.
 							These characters may look friendly,
@@ -293,7 +293,7 @@
 				</div>
 			</div>
 			<div class="w-full pt-4">
-				<div class="flex flex-col-reverse pb-4 items-center sm:gap-4 xl:flex-row-reverse">
+				<div class="flex flex-col-reverse pb-4 items-center sm:gap-8 lg:flex-row-reverse">
 					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/betrayal.png"
@@ -302,13 +302,11 @@
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 items-center flex flex-col pt-0 pb-4">
-						<h3
-							class="text-center md:text-left"
-						>
+					<div class="flex-1 flex flex-col pt-0 pb-4">
+						<h3 class="text-center xl:text-left">
 						Great for parties. Terrible for friendships.
 						</h3>
-						<p class="mt-6 sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+						<p class="mt-6 leading-relaxed w-full">
 							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span class="highlight-text">impossible to stop playing</span>,
 							this is the party game that tests friendships with every clever move,
 							every stolen banana, and every <span class="highlight-text">unexpected betrayal</span>.
@@ -317,14 +315,12 @@
 				</div>
 			</div>
 			<div class="w-full pt-4">
-				<div class="flex flex-col pb-4 items-center sm:gap-4 xl:flex-row-reverse">
-					<div class="flex-1 pt-0 pb-4 items-center flex flex-col">
-						<h3
-							class="text-center md:text-left"
-						>
+				<div class="flex flex-col pb-4 items-center sm:gap-8 lg:flex-row-reverse">
+					<div class="flex-1 pt-0 pb-4 flex flex-col">
+						<h3 class="text-center xl:text-left">
 						Waiting your turn is for other games.
 						</h3>
-						<p class="mt-6 sm:mx-10 lg:mx-20 leading-relaxed sm:max-w-[80%] w-full">
+						<p class="mt-6 leading-relaxed w-full">
 							<span class="highlight-text">Anytime cards</span> mean nobody is safe, even when it's not your turn.
 							Interrupt. Counter. Sabotage. The table stays loud, tense,
 							and <span class="highlight-text">completely unhinged</span> until the final draw.
@@ -345,7 +341,7 @@
 			<!-- Try Before You Buy CTA Section -->
 			<div class="pt-6 md:pb-8 px-4 flex justify-center">
 				<div class="description-box max-w-3xl text-center">
-					<h2 class="mb-4 text-center">Try It Free—No Strings Attached</h2>
+					<h2 class="mb-4 text-center">Try It Free — <span class="highlight-text">No Strings Attached</span></h2>
 					<p class="description-text mb-6">
 						We believe in this game so much, we want you to <span class="description-text-bold">try it for free first</span>.
 						Sign up and get an instant print-at-home taster deck—no credit card, no strings attached,
