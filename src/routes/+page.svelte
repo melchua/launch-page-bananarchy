@@ -52,7 +52,7 @@
 				});
 			},
 			{
-				threshold: 0.3,
+				threshold: 0.5,
 				rootMargin: '0px 0px -180px 0px' // Account for fixed footer
 			}
 		);
