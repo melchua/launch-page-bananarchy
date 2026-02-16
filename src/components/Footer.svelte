@@ -4,7 +4,7 @@
 
 <footer
 	id="signup-form"
-	class="fixed bottom-0 left-0 right-0 z-50 flex w-full items-cente justify-center bg-black p-2 sm:p-4 text-center sm:mx-auto sm:text-start"
+	class="bg-opacity-90 fixed bottom-0 left-0 right-0 z-50 flex w-full items-center justify-center bg-black p-2 sm:p-4 text-center sm:mx-auto sm:text-start"
 >
 	<div
 		class="flex flex-col items-center w-full justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"

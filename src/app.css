@@ -15,6 +15,32 @@ body {
 	background-color: #f3941c;
 }
 
+h2 {
+	font-family: 'Poppins', system-ui, sans-serif;
+	font-size: clamp(2.1rem, 2.5vw, 3rem);
+	text-align: left;
+	line-height: 1.05;
+	letter-spacing: 0.5px;
+	/* text-transform: uppercase; */
+	font-weight: 600;
+	padding: 1rem 0 1.5rem;
+}
+
+h3 {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2rem, 4vw, 2.1rem);
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 1;
+	text-shadow:
+		-1.5px -1.5px 1px rgba(0,0,0,0.4),
+		1.5px -1.5px 1px rgba(0,0,0,0.4),
+		-1.5px 1.5px 1px rgba(0,0,0,0.4),
+		1.5px 1.5px 1px rgba(0,0,0,0.5),
+		0 3px 6px rgba(0,0,0,0.5);
+}
+
 picture {
 	display: flex;
 	justify-content: center;
@@ -89,16 +115,6 @@ picture {
 	font-weight: 500;
 	color: black;
 	max-width: 36ch;
-	/* text-shadow: */
-	/* 2px even outline */
-	/* -1.5px -1.5px 0.5px rgba(0,0,0,0.25),
-	 1.5px -1.5px 0.5px rgba(0,0,0,0.25),
-	-1.5px  1.5px 0.5px rgba(94, 69, 69, 0.25),
-	 1.5px  1.5px 0.5px rgba(0,0,0,0.25),
-	 0   -1.5px 0.5px rgba(0,0,0,0.25),
-	 0    1.5px 0.5px rgba(0,0,0,0.25),
-	-1.5px  0   0.5px rgba(0,0,0,0.25),
-	 1.5px  0   0.5px rgba(0,0,0,0.25); */
 }
 
 .hero-feature-highlight {
@@ -246,7 +262,7 @@ picture {
 
 .section-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(3rem, 4vw, 5rem);
+	font-size: clamp(2.1rem, 3vw, 4rem);
 	line-height: 1.05;
 	color: #fff;
 	letter-spacing: 1px;
@@ -288,32 +304,14 @@ picture {
 	letter-spacing: 0.025em;
 }
 
-.description-box {
-	align-self: start;
-	background: transparent;
-	border: 4px solid #fdec96;
-	border-radius: 24px;
-	padding: 4px;
-	box-shadow:
-		0 8px 24px rgba(0, 0, 0, 0.2),
-		inset 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-.description-box-inner {
-	text-align: center;
-	background: linear-gradient(180deg, #fed93a 0%, #fed93a 10%, transparent 50%);
-	border-radius: 19px;
-	padding: 1rem 1.2rem;
-}
-
 /* Text styling for use inside description box */
 .description-text, .description-text-clear {
 	color: #60220c;
-	font-size: clamp(1.125rem, 2.3vw, 1.5rem);
 	font-weight: 500;
 	line-height: 1;
 	letter-spacing: 0.5px;
 	font-family: 'Poppins', system-ui, sans-serif;
+	padding: 0.5rem 0;
 }
 
 .description-text-clear {
@@ -395,22 +393,6 @@ picture {
 
 .animate-arrow-bounce-right {
 	animation: arrow-bounce-right 1.2s ease-in-out infinite;
-}
-
-/* Step titles for How to Play section */
-.step-title {
-	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2rem, 8vw, 2.75rem);
-	font-weight: 400;
-	color: #fff;
-	letter-spacing: 1px;
-	line-height: 1;
-	text-shadow:
-		-1.5px -1.5px 1px rgba(0,0,0,0.4),
-		1.5px -1.5px 1px rgba(0,0,0,0.4),
-		-1.5px 1.5px 1px rgba(0,0,0,0.4),
-		1.5px 1.5px 1px rgba(0,0,0,0.5),
-		0 3px 6px rgba(0,0,0,0.5);
 }
 
 /* Card fan animation for About section */
