@@ -65,7 +65,7 @@
 				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
 				<div class="relative order-2 lg:hidden">
 					<enhanced:img
-						src="$lib/assets/deluxe-box-3.png"
+						src="$lib/assets/deluxe-box-render-kick.png"
 						alt="box"
 						class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px]`}
 						sizes="(min-width: 640px) 640px, 80vw"
@@ -93,7 +93,7 @@
 			<!-- Right Column: Deluxe Box Images (desktop only) -->
 			<div class="relative hidden lg:block">
 				<enhanced:img
-					src="$lib/assets/deluxe-box-3.png"
+					src="$lib/assets/deluxe-box-render-kick.png"
 					alt="box"
 					class={`${boxClass} m-2 w-fit lg:w-[675px]`}
 					sizes="675px"
@@ -270,7 +270,7 @@
 		</h2>
 		<div class="flex flex-col gap-4 px-4 py-0 lg:mx-24 xl:mx-48">
 			<div class="w-full">
-				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row">
+				<div class="flex flex-col-reverse pb-4 items-center sm:gap-4 xl:flex-row">
 					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/artwork-bg.png"
@@ -293,7 +293,7 @@
 				</div>
 			</div>
 			<div class="w-full pt-4">
-				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row-reverse">
+				<div class="flex flex-col-reverse pb-4 items-center sm:gap-4 xl:flex-row-reverse">
 					<div class="w-full flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/betrayal.png"
@@ -315,8 +315,9 @@
 						</p>
 					</div>
 				</div>
+			</div>
 			<div class="w-full pt-4">
-				<div class="flex flex-col items-center sm:gap-4 xl:flex-row-reverse">
+				<div class="flex flex-col pb-4 items-center sm:gap-4 xl:flex-row-reverse">
 					<div class="flex-1 pt-0 pb-4 items-center flex flex-col">
 						<h3
 							class="text-center md:text-left"
@@ -342,7 +343,7 @@
 
 
 			<!-- Try Before You Buy CTA Section -->
-			<div class="pt-6 pb-0 px-4 flex justify-center">
+			<div class="pt-6 md:pb-8 px-4 flex justify-center">
 				<div class="description-box max-w-3xl text-center">
 					<h2 class="mb-4 text-center">Try It Free—No Strings Attached</h2>
 					<p class="description-text mb-6">
@@ -351,9 +352,6 @@
 						just pure <span class="description-text-bold">banana-stealing chaos</span>.
 					</p>
 				</div>
-			</div>
-			
-			
 			</div>
 		</div>
 	</div>
