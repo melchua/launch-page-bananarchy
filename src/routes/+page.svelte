@@ -18,6 +18,23 @@
 			boxClass = 'animate-bounce-in';
 		}, 300);
 
+		// Auto-scroll on mobile to trigger browser full-screen mode (hide address bar)
+		// Only execute once per session and only on mobile devices
+		if (typeof window !== 'undefined') {
+			const isMobile = window.innerWidth < 768;
+			const hasScrolledBefore = sessionStorage.getItem('hasAutoScrolled');
+
+			if (isMobile && !hasScrolledBefore) {
+				setTimeout(() => {
+					window.scrollTo({
+						top: 14,
+						behavior: 'smooth'
+					});
+					sessionStorage.setItem('hasAutoScrolled', 'true');
+				}, 150);
+			}
+		}
+
 		// Intersection Observer for card fan animation
 		const observer = new IntersectionObserver(
 			(entries) => {
