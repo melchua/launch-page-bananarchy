@@ -2,9 +2,16 @@
 	import { onMount } from 'svelte';
 	import Footer from '../components/Footer.svelte';
 
-	let boxClass = '';
-	let cardFanVisible = false;
+	let boxClass = $state('');
+	let cardFanVisible = $state(false);
 	let cardFanElement: HTMLElement;
+	let stepCardsVisible = $state({
+		step1: false,
+		step2: false,
+		step3: false,
+		step4: false,
+		step5: false
+	});
 
 	onMount(() => {
 		setTimeout(() => {
@@ -21,14 +28,44 @@
 					}
 				});
 			},
-			{ threshold: 0.8 }
+			{
+				threshold: 0.7,
+				rootMargin: '0px 0px -180px 0px' // Account for fixed footer
+			}
 		);
 
 		if (cardFanElement) {
 			observer.observe(cardFanElement);
 		}
 
-		return () => observer.disconnect();
+		// Intersection Observer for step card flip animation
+		const cardObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const stepNum = (entry.target as HTMLElement).dataset.step;
+						if (stepNum) {
+							stepCardsVisible[`step${stepNum}` as keyof typeof stepCardsVisible] = true;
+						}
+						cardObserver.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.3,
+				rootMargin: '0px 0px -180px 0px' // Account for fixed footer
+			}
+		);
+
+		// Observe all step cards
+		document.querySelectorAll('[data-step-card]').forEach(el => {
+			cardObserver.observe(el);
+		});
+
+		return () => {
+			observer.disconnect();
+			cardObserver.disconnect();
+		};
 	});
 
 </script>
@@ -175,13 +212,27 @@
 			<!-- Steps grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8">
 				<!-- Step 1: Collect Bananas -->
-				<div class="flex flex-col items-center text-center px-2 py-4 md:p-4">
-					<enhanced:img 
-						src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
-						alt="Pick & Pluck card"
-						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl -rotate-1 mb-4"
-						sizes="(min-width: 768px) 280px, 280px"
-					/>
+				<div class="flex flex-col items-center text-center px-2 py-4 md:p-4" data-step-card data-step="1">
+					<div class="card-flip-container max-w-[280px] md:w-[280px] mb-4">
+						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step1 ? 'flipped' : ''}">
+							<div class="card-back">
+								<enhanced:img
+									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									alt="Card back"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+							<div class="card-front">
+								<enhanced:img
+									src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
+									alt="Pick & Pluck card"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+						</div>
+					</div>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">1</div>
 						<h3 class="step-title">Collect Bananas</h3>
@@ -192,13 +243,27 @@
 				</div>
 
 			<!-- Step 2: Sabotage friends -->
-			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4">
-					<enhanced:img 
-						src="$lib/assets/cards/card_action_banana_split.jpg"
-						alt="Banana Split card"
-						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl rotate-1 mb-4"
-						sizes="(min-width: 768px) 280px, 280px"
-					/>
+			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4" data-step-card data-step="2">
+					<div class="card-flip-container max-w-[280px] md:w-[280px] mb-4">
+						<div class="card-flip-inner rotate-1 {stepCardsVisible.step2 ? 'flipped' : ''}">
+							<div class="card-back">
+								<enhanced:img
+									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									alt="Card back"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+							<div class="card-front">
+								<enhanced:img
+									src="$lib/assets/cards/card_action_banana_split.jpg"
+									alt="Banana Split card"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+						</div>
+					</div>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#f26b4e] text-white font-bold text-lg shadow-lg flex-shrink-0">2</div>
 						<h3 class="step-title">Sabotage Friends</h3>
@@ -210,31 +275,59 @@
 		
 
 			<!-- Step 3: Play anytime -->
-			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4">
-					<enhanced:img 
-						src="$lib/assets/cards/card_anytime_smash.jpg"
-						alt="Smash card"
-						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl -rotate-1 mb-4"
-						sizes="(min-width: 768px) 280px, 280px"
-					/>
+			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4" data-step-card data-step="3">
+					<div class="card-flip-container max-w-[280px] md:w-[280px] mb-4">
+						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step3 ? 'flipped' : ''}">
+							<div class="card-back">
+								<enhanced:img
+									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									alt="Card back"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+							<div class="card-front">
+								<enhanced:img
+									src="$lib/assets/cards/card_anytime_smash.jpg"
+									alt="Smash card"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+						</div>
+					</div>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#4CAF50] text-white font-bold text-lg shadow-lg flex-shrink-0">3</div>
 						<h3 class="step-title">Play Anytime</h3>
 					</div>
-		
+
 					<p class="description-text">
 						Players can use <span class="description-text-bold">Anytime Cards</span> to sabotage you even when it's your turn!
 					</p>
 				</div>
 
 			<!-- Step 4: Chain reactions -->
-			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4">
-					<enhanced:img 
-						src="$lib/assets/cards/card_reaction_yoink.jpg"
-						alt="Yoink card"
-						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl rotate-1 mb-4"
-						sizes="(min-width: 768px) 280px, 280px"
-					/>
+			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4" data-step-card data-step="4">
+					<div class="card-flip-container max-w-[280px] md:w-[280px] mb-4">
+						<div class="card-flip-inner rotate-1 {stepCardsVisible.step4 ? 'flipped' : ''}">
+							<div class="card-back">
+								<enhanced:img
+									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									alt="Card back"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+							<div class="card-front">
+								<enhanced:img
+									src="$lib/assets/cards/card_reaction_yoink.jpg"
+									alt="Yoink card"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+						</div>
+					</div>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#2196F3] text-white font-bold text-lg shadow-lg flex-shrink-0">4</div>
 						<h3 class="step-title">Chain Reactions</h3>
@@ -245,13 +338,27 @@
 			</div>
 
 			<!-- Step 5: Score points -->
-			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4 md:col-span-2 md:max-w-md md:mx-auto">
-					<enhanced:img 
-						src="$lib/assets/cards/card_scoring_banana_manifesto.jpg"
-						alt="Banana Manifesto card"
-						class="w-full max-w-[280px] md:w-[280px] rounded-xl shadow-2xl -rotate-1 mb-4"
-						sizes="(min-width: 768px) 280px, 280px"
-					/>
+			<div class="flex flex-col items-center text-center px-2 py-4 md:p-4 md:col-span-2 md:max-w-md md:mx-auto" data-step-card data-step="5">
+					<div class="card-flip-container max-w-[280px] md:w-[280px] mb-4">
+						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step5 ? 'flipped' : ''}">
+							<div class="card-back">
+								<enhanced:img
+									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									alt="Card back"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+							<div class="card-front">
+								<enhanced:img
+									src="$lib/assets/cards/card_scoring_banana_manifesto.jpg"
+									alt="Banana Manifesto card"
+									class="w-full rounded-xl shadow-2xl"
+									sizes="(min-width: 768px) 280px, 280px"
+								/>
+							</div>
+						</div>
+					</div>
 					<div class="flex items-center justify-center gap-3 mb-2">
 						<div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#FFC107] text-white font-bold text-lg shadow-lg flex-shrink-0">5</div>
 						<h3 class="step-title">Score Points</h3>
