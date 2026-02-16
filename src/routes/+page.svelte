@@ -274,11 +274,11 @@
 		</div>
 	</div>
 
-	<div class="full ">
+	<div class="full">
 		<h2 class="text-center">
 			There's more...
 		</h2>
-		<div class="flex flex-col gap-4 p-4 lg:mx-24 xl:mx-48">
+		<div class="flex flex-col gap-4 px-4 py-0 lg:mx-24 xl:mx-48">
 			<div class="w-full">
 				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row">
 					<div class="w-[100vw] flex-1 sm:w-3/4">
@@ -289,7 +289,7 @@
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 py-4 items-center flex flex-col">
+					<div class="flex-1 pt-0 pb-4 items-center flex flex-col">
 						<h3 class="text-center md:text-left">
 						Illustrated by a former Disney artist
 						</h3>
@@ -304,7 +304,7 @@
 			</div>
 			<div class="w-full pt-4">
 				<div class="flex flex-col-reverse items-center sm:gap-4 xl:flex-row-reverse">
-					<div class="w-[100vw] flex-1 py-4 sm:w-3/4">
+					<div class="w-[100vw] flex-1 sm:w-3/4">
 						<enhanced:img
 							src="$lib/assets/betrayal.png"
 							alt="placeholder"
@@ -312,7 +312,7 @@
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
-					<div class="flex-1 items-center flex flex-col">
+					<div class="flex-1 items-center flex flex-col pt-0 pb-4">
 						<h3
 							class="text-center md:text-left"
 						>
@@ -327,7 +327,7 @@
 				</div>
 			<div class="w-full pt-4">
 				<div class="flex flex-col items-center sm:gap-4 xl:flex-row-reverse">
-					<div class="flex-1 py-4 items-center flex flex-col">
+					<div class="flex-1 pt-0 pb-4 items-center flex flex-col">
 						<h3
 							class="text-center md:text-left"
 						>
@@ -347,6 +347,19 @@
 							sizes="(min-width: 640px) 640px, 100vw"
 						/>
 					</div>
+				</div>
+			</div>
+
+
+			<!-- Try Before You Buy CTA Section -->
+			<div class="pt-6 pb-0 px-4 flex justify-center">
+				<div class="description-box max-w-3xl text-center">
+					<h2 class="mb-4 text-center">Try It Free—No Strings Attached</h2>
+					<p class="description-text mb-6">
+						We believe in this game so much, we want you to <span class="description-text-bold">try it for free first</span>.
+						Sign up and get an instant print-at-home taster deck—no credit card, no strings attached,
+						just pure <span class="description-text-bold">banana-stealing chaos</span>.
+					</p>
 				</div>
 			</div>
 			
