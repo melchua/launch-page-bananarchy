@@ -58,11 +58,11 @@
 					<h1
 						class="hero-headline mb-4 text-center md:text-left"
 					>
-					<span>The Card Game That Ends in Screaming (the Good Kind)</span>
+					<span>The Card Game That Ends in <span class="highlight-text">Screaming</span> <span class="highlight-text">(the Good Kind)</span></span>
 					</h1>
 					<div class="rounded-xl py-2 bg-transparent text-lg sm:text-black text-center md:text-left">
 						<span class="hero-subhead">
-							Learn in 60 seconds <br /> Play in 20 minutes <br /> Crumble friendships in real time
+							Learn in <span class="hero-feature-highlight">60 seconds</span> <br /> Done in <span class="hero-feature-highlight">30 minutes</span> <br /> Betray friends in <span class="hero-feature-highlight">real time</span>
 						</span>
 					</div>
 				</div>
@@ -146,13 +146,13 @@
 	<!-- Taster Section-->
 	<div class="py-12 px-4 flex flex-col items-center justify-center">
 		<h2 class="section-headline text-center mb-8">
-			Your First <span class="highlight-text">Game Night</span> Starts Here
+			Your Next <span class="highlight-text">Game Night</span> Starts Here
 		</h2>
 
 		<!-- Card fan -->
 		<div 
 		bind:this={cardFanElement}
-		class="relative flex-shrink-0 w-[320px] h-[340px] md:w-[400px] md:h-[420px]"
+		class="relative flex-shrink-0 w-[320px] h-[300px] md:w-[400px] md:h-[420px]"
 		>
 			<enhanced:img 
 					src="$lib/assets/cards/card_action_banana_republic.jpg"
@@ -180,26 +180,22 @@
 				/>
 			</div>
 
-			<div class="flex flex-col md:flex-row items-center md:gap-12">
+			<div class="flex flex-col md:flex-row items-center md:gap-12 text-center">
 			
-				<!-- Description -->
-				<div class="description-box">
+					A fast chaotic card game about stealing bananas and ruining friendships.
+					<ul class="text-left">
+						<li>
+							Steal Bananas
+						</li>
+						<li>
+							Interrupting anyone, anytime
+						</li>
+						<li>
+							Score big when the moment's right
+						</li>
+					</ul>
 
-					<div class="description-box-inner">
-						<p class="description-text">
-							<span class="description-text-bold">In Bananarchy</span>, cheeky monkeys steal bananas and disrupt each other at every turn.
-						</p>
-
-						<hr class="description-divider">
-						
-						<p class="description-text-clear mt-4">
-							Play cards to <span class="highlight-text">act, interrupt, and react</span> as chaos unfolds, then score when the moment is right.
-						</p>
-						<p class="description-text-clear mt-4">
-							Your mission: <span class="highlight-text">Collect the most bananas to win.</span>
-						</p>
-					</div>
-				</div>
+					Win by collecting the most bananas.
 			</div>
 			
 			<!-- <p class="text-center text-lg leading-relaxed">

@@ -14,7 +14,7 @@
 			<h1 class="footer-headline inline-flex relative items-center gap-2" id="footer-headline">
 				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
 				<span>
-					Get a Free Taster: <br/>
+					Get My Free Taster: <br/>
 					<span class="whitespace-nowrap sm:whitespace-normal">Print, Cut, <span class="text-red-500">Play Tonight</span></span>
 				</span>
 				
