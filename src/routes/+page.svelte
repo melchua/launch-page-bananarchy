@@ -99,7 +99,7 @@
 					<h2 class="text-2xl pt-0 pb-1 font-bold text-center lg:text-left uppercase tracking-widest">
 						Bananarchy
 					</h2>
-					
+
 					<h1
 						class="hero-headline mb-4 text-center lg:text-left"
 					>
@@ -169,7 +169,7 @@
 
 		<div class="flex flex-col items-center justify-center md:flex-row">
 
-			<!-- Card fan -->
+			<!-- Card fan animation -->
 			<div bind:this={cardFanElement} class="relative flex-shrink-0 w-[320px] h-[300px] md:w-[400px] md:h-[420px] pt-4 md:pt-8">
 				<enhanced:img 
 						src="$lib/assets/cards/card_action_banana_republic.jpg"
