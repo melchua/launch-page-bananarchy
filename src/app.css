@@ -104,7 +104,7 @@ picture {
 	font-size: clamp(2.5rem, 4.5vw, 6rem);
 	line-height: 1.05;
 	color: #fff;
-	letter-spacing: 0.5px;
+	/* letter-spacing: 0.7px; */
 	
 	/* Soft dark outline effect */
 	text-shadow:

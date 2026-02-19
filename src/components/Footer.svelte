@@ -15,7 +15,7 @@
 				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
 				<span>
 					Get My Free Mini-Game: <br/>
-					<span class="whitespace-nowrap sm:whitespace-normal">Print, Cut, <span class="text-red-500">Play Tonight</span></span>
+					<span class="whitespace-nowrap sm:whitespace-normal">	 <span class="text-red-500">Play Tonight</span></span>
 				</span>
 				
 				<enhanced:img src="$lib/assets/arrow-right.png" class="hidden md:inline-block w-[100px] min-w-[80px] animate-arrow-bounce-right" alt="arrow right"/>
@@ -27,7 +27,7 @@
 			</div>
 
 			<p class="w-full py-0 px-4 pb-1 md:px-2 text-white text-xs leading-none" id="footer-description">
-				Join 200+ early monkeys. Free PDF delivered instantly.
+				237 founding monkeys and counting. Instant download. Early access disappears once we launch.
 			</p>
 		</div>
 
