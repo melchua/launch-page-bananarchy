@@ -73,7 +73,7 @@
 <div class="flex flex-col oback flex-grow pb-64 md:pb-40">
 	<div class="relative">
 		<div
-			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 pt-0 pb-0 px-8 lg:flex-row lg:justify-between lg:pt-20"
+			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 pt-0 pb-0 px-8 lg:flex-row lg:justify-between lg:pt-8"
 		>
 			<!-- Left Column: All text content (desktop) -->
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
@@ -86,21 +86,14 @@
 					<h1
 						class="hero-headline mb-4 text-center lg:text-left"
 					>
-					<span>The Card Game That Ends in <span class="highlight-text">Screaming</span> <span class="highlight-text">(the Good Kind)</span></span>
+					<span><span class="highlight-text">Cute</span> Monkeys. <br /><span class="highlight-text">Clever</span> Tricks. <br /><span class="highlight-text">Wild</span> Plays.</span>
 					</h1>
-					<div class="rounded-xl py-2 bg-transparent text-lg sm:text-black text-center lg:text-left">
-						<span class="hero-subhead">
-							Learn in <span class="hero-feature-highlight">60 seconds</span> <br /> Done in <span class="hero-feature-highlight">30 minutes</span> <br /> Betray friends in <span class="hero-feature-highlight">real time</span>
-						</span>
-					</div>
+					<h4 class="text-center lg:text-left">
+						A fast, strategic party game where every move matters.
+					</h4>
 				</div>
 
-				<!-- CTA Button - order-2 on mobile, order-4 on desktop (shown below stats) -->
-				<div class="order-3 lg:order-4">
-					<!-- <button onclick={scrollToSignup} class="cta-button w-full lg:w-auto">Get Early Access</button> -->
-				</div>
-
-				<!-- Deluxe Box Images - order-3 on mobile, hidden on desktop (shown in right column) -->
+				<!-- Deluxe Box Images - order-2 on mobile, hidden on desktop (shown in right column) -->
 				<div class="relative order-2 lg:hidden overflow-hidden">
 					<enhanced:img
 						src="$lib/assets/deluxe-box-render-kick.png"
@@ -114,6 +107,13 @@
 						class={`${boxClass} sm:m-2 -ml-[60px] -mt-[75px] sm:-mt-[80px] w-[45%] sm:w-[50vw]`}
 						sizes="(min-width: 400px), 50vw"
 					/>
+				</div>
+
+				<!-- Hero subhead - order-3 on mobile (below image), visible inline on desktop -->
+				<div class="order-3 lg:order-2 rounded-xl pt-4 pb-2 bg-transparent text-center lg:text-left">
+					<span class="hero-subhead">
+						⚡️ Learn in <span class="hero-feature-highlight">60 seconds</span> <br /> ⏰ Done in <span class="hero-feature-highlight">30 minutes</span> <br /> 💔 Betray friends in <span class="hero-feature-highlight">real time</span>
+					</span>
 				</div>
 
 				<!-- Game Stats - order-4 on mobile, order-2 on desktop -->

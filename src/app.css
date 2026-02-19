@@ -15,6 +15,16 @@ body {
 	background-color: #f3941c;
 }
 
+h4 {
+	font-family: 'Poppins', system-ui, sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	/* text-transform: uppercase; */
+	font-weight: 600;
+	padding: 0 0 1rem;
+}
+
 h2 {
 	font-family: 'Poppins', system-ui, sans-serif;
 	font-size: clamp(2.1rem, 2.5vw, 3rem);
@@ -110,7 +120,7 @@ picture {
 }
 
 .hero-subhead {
-	font-size: clamp(1rem);
+	/* font-size: clamp(1rem); */
 	line-height: 1.4;
 	font-weight: 500;
 	color: black;

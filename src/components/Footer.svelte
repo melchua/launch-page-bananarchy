@@ -27,7 +27,7 @@
 			</div>
 
 			<p class="w-full py-0 px-4 pb-1 md:px-2 text-white text-xs leading-none" id="footer-description">
-				Free PDF delivered instantly. No credit card. No spam.
+				Join 200+ satified monkeys. Free PDF delivered instantly.
 			</p>
 		</div>
 
