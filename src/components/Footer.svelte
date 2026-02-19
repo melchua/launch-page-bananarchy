@@ -14,7 +14,7 @@
 			<h1 class="footer-headline inline-flex relative items-center gap-2" id="footer-headline">
 				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
 				<span>
-					Get My Free Taster: <br/>
+					Get My Free Mini-Game: <br/>
 					<span class="whitespace-nowrap sm:whitespace-normal">Print, Cut, <span class="text-red-500">Play Tonight</span></span>
 				</span>
 				
@@ -27,7 +27,7 @@
 			</div>
 
 			<p class="w-full py-0 px-4 pb-1 md:px-2 text-white text-xs leading-none" id="footer-description">
-				Join 200+ satified monkeys. Free PDF delivered instantly.
+				Join 200+ early monkeys. Free PDF delivered instantly.
 			</p>
 		</div>
 

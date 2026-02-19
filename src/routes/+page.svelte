@@ -29,7 +29,7 @@
 				});
 			},
 			{
-				threshold: 0.7,
+				threshold: 0.3,
 				rootMargin: '0px 0px -180px 0px' // Account for fixed footer
 			}
 		);
@@ -183,22 +183,25 @@
 			<!-- Game description -->
 			<div class="flex flex-col items-center md:gap-8 text-center md:items-start md:text-left md:ml-24 md:w-[400px]">
 					<div>
-						A <span class="font-bold">fast chaotic</span> card game about stealing bananas and ruining friendships.
+						A deceptively cute card game where banana theft leads to betrayal, backstabbing, and hysterical laughter.
+						Short, vicious rounds of high-energy chaos: the kind that ruins alliances and makes you beg for “just one more game.”
 					</div>
-					<ul class="text-left py-6 px-2 ">
-						<li class="flex flex-row items-center">
-							<enhanced:img src="$lib/assets/icons/monkeyhead-128x128.png" alt="Monkey Head" class="w-7 h-7 inline-block mr-2" /><span class="highlight-text">Steal &nbsp;</span> bananas
-						</li>
-						<li class="flex flex-row items-center">
-							<enhanced:img src="$lib/assets/icons/denied-icon-128x128.png" alt="Denied" class="w-7 h-7 inline-block mr-2" /><span class="highlight-text">Interrupt &nbsp;</span> anyone, anytime
-						</li>
-						<li class="flex flex-row items-center">
-							<enhanced:img src="$lib/assets/icons/banana-icon-128x128.png" alt="Banana" class="w-7 h-7 inline-block mr-2" />
-							<span class="highlight-text">Score &nbsp;</span> big when the moment's right
-						</li>
-					</ul>
+				<ul class="text-left py-6 px-2 space-y-2">
+					<li class="flex items-start gap-2">
+						<enhanced:img src="$lib/assets/icons/monkeyhead-128x128.png" alt="Monkey Head" class="w-7 h-7 flex-shrink-0 mt-0.5" />
+						<span><span class="highlight-text">Steal</span> bananas from your friends (and don't get caught!)</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<enhanced:img src="$lib/assets/icons/denied-icon-128x128.png" alt="Denied" class="w-7 h-7 flex-shrink-0 mt-0.5" />
+						<span><span class="highlight-text">Interrupt</span> anyone, anytime, for maximum chaos</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<enhanced:img src="$lib/assets/icons/banana-icon-128x128.png" alt="Banana" class="w-7 h-7 flex-shrink-0 mt-0.5" />
+						<span><span class="highlight-text">Score big</span> when the moment's right—plan carefully or lose it all</span>
+					</li>
+				</ul>
 
-					<div class="font-bold">Win by collecting the most bananas.</div>
+					<div class="font-bold">Win by collecting the most bananas... if you survive the chaos</div>
 			</div>
 		</div>
 	</div>
@@ -452,7 +455,7 @@
 					<h2 class="mb-4 text-center">Try It Free — <span class="highlight-text">No Strings Attached</span></h2>
 					<p class="description-text mb-6">
 						We believe in this game so much, we want you to <span class="description-text-bold">try it for free first</span>.
-						Sign up and get an instant print-at-home taster deck—no credit card, no strings attached,
+						Sign up and get an instant print-at-home mini-game. No credit card, no strings attached,
 						just pure <span class="description-text-bold">banana-stealing chaos</span>.
 					</p>
 				</div>
