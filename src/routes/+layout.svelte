@@ -2,6 +2,9 @@
 	import '../app.css';
 	// Londrina Solid is loaded via @font-face in app.css with font-display: block
 	import '@fontsource/poppins';
+	import '@fontsource/poppins/800.css';
+	import '@fontsource/poppins/600.css';
+	import '@fontsource/poppins/500.css';
 
 	// import posthog from 'posthog-js';
 	// import { beforeNavigate, afterNavigate } from '$app/navigation';
@@ -55,6 +58,6 @@
 <!-- End MailerLite Universal -->
 </svelte:head>
 
-<div class="h-[100vh] w-full">
+<div class="min-h-screen w-full flex flex-col overflow-x-hidden">
 	{@render children()}
 </div>

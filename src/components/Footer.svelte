@@ -4,17 +4,36 @@
 
 <footer
 	id="signup-form"
-	class="z-50 flex w-full items-center justify-center bg-black p-16 text-center sm:mx-auto sm:pb-20 sm:text-start"
+	class="bg-opacity-90 fixed bottom-0 left-0 right-0 z-50 flex w-full items-center justify-center bg-black p-2 sm:p-4 text-center sm:mx-auto sm:text-start"
 >
 	<div
-		class="flex flex-col items-center justify-between gap-4 text-center md:w-full md:flex-row md:text-start lg:w-[90%] xl:w-[72%]"
+		class="flex flex-col items-center w-full justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
 	>
-		<span>
-			<h1 class="py-2 footer-headline"><span class="highlight-text">Get in</span> before <span class="highlight-text">the chaos</span> begins.</h1>
-			<p class="w-full text-lg text-white">
-				Join <span class="highlight-text font-bold">free</span> for early access, sneak peaks, and <span class="highlight-text font-bold">first dibs</span> on our <span class="highlight-text font-bold">$1 VIP Banana expansion</span>.
+		<!-- Left column: headline + description -->
+		<div class="flex flex-col gap-1 md:flex-1 items-center md:items-start">
+			<h1 class="footer-headline inline-flex relative items-center gap-2" id="footer-headline">
+				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
+				<span>
+					Get My Free Mini-Game: <br/>
+					<span class="whitespace-nowrap sm:whitespace-normal">	 <span class="text-red-500">Play Tonight</span></span>
+				</span>
+				
+				<enhanced:img src="$lib/assets/arrow-right.png" class="hidden md:inline-block w-[100px] min-w-[80px] animate-arrow-bounce-right" alt="arrow right"/>
+			</h1>
+			
+			<!-- Mobile only: form between headline and description -->
+			<div class="w-full md:hidden">
+				<MailerForm />
+			</div>
+
+			<p class="w-full py-0 px-4 pb-1 md:px-2 text-white text-xs leading-none" id="footer-description">
+				237 founding monkeys and counting. Instant download. Early access disappears once we launch.
 			</p>
-		</span>
-		<MailerForm />
+		</div>
+
+		<!-- Right column: signup form (desktop only) -->
+		<div class="hidden md:block md:flex-1">
+			<MailerForm />
+		</div>
 	</div>
 </footer>

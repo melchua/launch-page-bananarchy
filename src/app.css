@@ -12,7 +12,43 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 body {
-	background-color: #f3941c; /* Replace with your desired color */
+	background-color: #f3941c;
+}
+
+h4 {
+	font-family: 'Poppins', system-ui, sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	/* text-transform: uppercase; */
+	font-weight: 600;
+	padding: 0 0 1rem;
+}
+
+h2 {
+	font-family: 'Poppins', system-ui, sans-serif;
+	font-size: clamp(2.1rem, 2.5vw, 3rem);
+	text-align: left;
+	line-height: 1.05;
+	letter-spacing: 0.5px;
+	/* text-transform: uppercase; */
+	font-weight: 600;
+	padding: 1rem 0 1.5rem;
+}
+
+h3 {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2rem, 4vw, 2.1rem);
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 1;
+	text-shadow:
+		-1.5px -1.5px 1px rgba(0,0,0,0.4),
+		1.5px -1.5px 1px rgba(0,0,0,0.4),
+		-1.5px 1.5px 1px rgba(0,0,0,0.4),
+		1.5px 1.5px 1px rgba(0,0,0,0.5),
+		0 3px 6px rgba(0,0,0,0.5);
 }
 
 picture {
@@ -41,7 +77,7 @@ picture {
 
 .highlight-text {
 	color: #fdec96;
-	font-weight: 900;
+	font-weight: 700;
 }
 
 .hightlight-text-underline {
@@ -52,19 +88,23 @@ picture {
 }
 
 .footer-headline {
-	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	font-family: 'Poppins', system-ui, sans-serif;
+	font-size: clamp(1.6rem, 2.5vw, 3rem);
+	text-align: left;
 	line-height: 1.05;
 	color: #fff;
 	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 0 1rem;
 }
 
 .hero-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2.2rem, 4.2vw, 6rem);
+	font-size: clamp(2.5rem, 4.5vw, 6rem);
 	line-height: 1.05;
 	color: #fff;
-	letter-spacing: 0.5px;
+	/* letter-spacing: 0.7px; */
 	
 	/* Soft dark outline effect */
 	text-shadow:
@@ -80,20 +120,15 @@ picture {
 }
 
 .hero-subhead {
-	font-size: clamp(1rem, 2.5vw, 1.5rem);
+	/* font-size: clamp(1rem); */
 	line-height: 1.4;
-	color: rgba(255,255,255,0.95);
+	font-weight: 500;
+	color: black;
 	max-width: 36ch;
-	text-shadow:
-	/* 2px even outline */
-	-1.5px -1.5px 0.5px rgba(0,0,0,0.2),
-	 1.5px -1.5px 0.5px rgba(0,0,0,0.2),
-	-1.5px  1.5px 0.5px rgba(94, 69, 69, 0.2),
-	 1.5px  1.5px 0.5px rgba(0,0,0,0.2),
-	 0   -1.5px 0.5px rgba(0,0,0,0.2),
-	 0    1.5px 0.5px rgba(0,0,0,0.2),
-	-1.5px  0   0.5px rgba(0,0,0,0.2),
-	 1.5px  0   0.5px rgba(0,0,0,0.2);
+}
+
+.hero-feature-highlight {
+	font-weight: 800;
 }
 
 .hero-subhead-list {
@@ -116,7 +151,7 @@ picture {
 
 .title {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(3rem, 4.4vw, 4rem);
+	font-size: clamp(2.9rem, 4.4vw, 4rem);
 	line-height: 1.15;
 	color: #fff;
 	letter-spacing: 0.5px;
@@ -237,20 +272,20 @@ picture {
 
 .section-headline {
 	font-family: 'Londrina Solid', system-ui, sans-serif;
-	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	font-size: clamp(2.1rem, 3vw, 4rem);
 	line-height: 1.05;
 	color: #fff;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	text-shadow:
 	/* 2px even outline */
-	-1.5px -1.5px 1px rgba(0,0,0,0.5),
-	 1.5px -1.5px 1px rgba(0,0,0,0.5),
-	-1.5px  1.5px 1px rgba(94, 69, 69, 0.5),
-	 1.5px  1.5px 1px rgba(0,0,0,0.6),
-	 0   -1.5px 1px rgba(0,0,0,0.5),
-	 0    2.8px 2px rgba(0,0,0,1),
-	-1.5px  0   1px rgba(0,0,0,0.5),
-	 1.5px  0   1px rgba(0,0,0,0.5);
+	-2px -2px 1px rgba(0,0,0,0.5),
+	 2px -2px 1px rgba(0,0,0,0.5),
+	-2px  2px 1px rgba(94, 69, 69, 0.5),
+	 2px  2px 1px rgba(0,0,0,0.6),
+	 0   -2px 1px rgba(0,0,0,0.5),
+	 0    3px 3px rgba(0,0,0,1),
+	-2px  0   1px rgba(0,0,0,0.5),
+	 2px  0   1px rgba(0,0,0,0.5);
 }
 
 .section-subheadline {
@@ -279,8 +314,169 @@ picture {
 	letter-spacing: 0.025em;
 }
 
-/* Subtle highlight for description text */
-.desc-highlight {
-	color: #fdec96;
-	font-weight: 600;
+/* Text styling for use inside description box */
+.description-text, .description-text-clear {
+	/* color: #60220c; */
+	font-weight: 500;
+	line-height: 1.3rem;
+	letter-spacing: 0.5px;
+	font-family: 'Poppins', system-ui, sans-serif;
+	padding: 0.5rem 0;
+}
+
+.description-text-clear {
+	color: #fff;
+	font-size: clamp(1rem, 2.5vw, 1.25rem);
+	line-height: 1.6;
+}
+
+.description-text-bold {
+	font-weight: 800;
+}
+
+.description-divider {
+	border: 1px solid #fed93a;
+	margin: 1rem 0;
+}
+
+/* Simple info card styling */
+.info-card {
+	background: rgba(255, 255, 255, 0.95);
+	border: 3px solid #fff;
+	border-radius: 16px;
+	padding: 2rem 1.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	text-align: center;
+}
+
+.info-card-title {
+	color: #60220c;
+	font-size: 1.5rem;
+	font-weight: 700;
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	margin-bottom: 0.75rem;
+	letter-spacing: 0.5px;
+}
+
+.info-card-description {
+	color: #4a3f35;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 500;
+}
+
+/* Subtle bounce animation for arrows */
+@keyframes arrow-bounce {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(6px);
+	}
+}
+
+.animate-arrow-bounce {
+	animation: arrow-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes arrow-bounce-rotated {
+	0%, 100% {
+		transform: translateY(0) rotate(-15deg);
+	}
+	50% {
+		transform: translateY(6px) rotate(-15deg);
+	}
+}
+
+.animate-arrow-bounce-rotated {
+	animation: arrow-bounce-rotated 1.2s ease-in-out infinite;
+}
+
+@keyframes arrow-bounce-right {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(8px);
+	}
+}
+
+.animate-arrow-bounce-right {
+	animation: arrow-bounce-right 1.2s ease-in-out infinite;
+}
+
+/* 3D Card flip animation for How to Play section */
+.card-flip-container {
+	perspective: 1000px;
+	position: relative;
+	width: 100%;
+}
+
+.card-flip-inner {
+	position: relative;
+	width: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.card-flip-inner.flipped {
+	transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.card-back {
+	transform: rotateY(0deg);
+}
+
+.card-front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(180deg);
+}
+
+/* Card fan animation for About section */
+@keyframes fan-out {
+	0% {
+		opacity: 0;
+		transform: rotate(0deg) translateX(0) scale(0.8);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.card-fan {
+	position: absolute;
+	transform-origin: bottom center;
+	opacity: 0;
+}
+
+.card-fan-1 {
+	animation: fan-out 0.5s ease-out 0.1s forwards;
+	transform: rotate(-24deg) translateX(-52px);
+	z-index: 1;
+}
+
+.card-fan-2 {
+	animation: fan-out 0.5s ease-out 0.2s forwards;
+	transform: rotate(-8deg) translateX(-25px);
+	z-index: 2;
+}
+
+.card-fan-3 {
+	animation: fan-out 0.5s ease-out 0.3s forwards;
+	transform: rotate(8deg) translateX(25px);
+	z-index: 3;
+}
+
+.card-fan-4 {
+	animation: fan-out 0.5s ease-out 0.4s forwards;
+	transform: rotate(24deg) translateX(70px);
+	z-index: 4;
 }
