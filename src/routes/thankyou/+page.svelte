@@ -85,13 +85,6 @@
 			</div>
 		</div>
 		<div class="mx-4 my-4 flex flex-col items-center justify-center md:my-16 md:flex-row">
-			<!-- <div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
-				<p>{TITLE}</p>
-				<p class="text-baorange-50 text-2xl">{SUBTITLE}</p>
-			</div> -->
-			<!-- small screen image -->
-
-			<!-- medium screen image -->
 			<div class="hidden h-full flex-none p-4 font-londrinaSolid md:block">
 				<enhanced:img
 					src={cards}
