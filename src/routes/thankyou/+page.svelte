@@ -57,7 +57,7 @@
 <div class="relative flex min-h-screen flex-col items-center overflow-y-auto">
 	{#if showConfetti}
 		<div class="fixed left-1/2 top-1/3 z-50">
-			<ConfettiExplosion 
+			<ConfettiExplosion
 				particleCount={150}
 				duration={4000}
 				colors={['#FFC627', '#F6A31A', '#A060AF', '#34a931', '#FEDF23']}
@@ -74,25 +74,17 @@
 		>
 			<div class="flex w-full justify-center">
 				<stripe-buy-button
-					buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1RCB8XAsNXUFfbI0ZhPPYlfX' : 'buy_btn_1R4t7SPPIJAaixg8kKHFwSZm'}`}
+					buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
 					publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
-					on:click={() => handleBuyButtonClick('header')}
-					on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('header')}
+					on:click={() => handleBuyButtonClick('main')}
+					on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
 					role="button"
 					tabindex="0"
 				>
 				</stripe-buy-button>
 			</div>
 		</div>
-		<div class="mx-4 my-4 flex justify-center flex-col items-center md:my-16 md:flex-row">
-			<!-- <div class="p-4 font-londrinaSolid text-5xl text-white md:hidden">
-				<p>{TITLE}</p>
-				<p class="text-baorange-50 text-2xl">{SUBTITLE}</p>
-			</div> -->
-			<!-- small screen image -->
-
-
-			<!-- medium screen image -->
+		<div class="mx-4 my-4 flex flex-col items-center justify-center md:my-16 md:flex-row">
 			<div class="hidden h-full flex-none p-4 font-londrinaSolid md:block">
 				<enhanced:img
 					src={cards}
@@ -104,25 +96,28 @@
 
 			<div class="flex flex-col gap-6 rounded-xl p-2 sm:items-start sm:p-6">
 				<div class="flex flex-col items-center">
-					<p class="text-center title">🎉 Now claim your <span class="highlight-basic">free VIP Banana</span> expansion</p>
-					<p class="title-subhead text-center">Get a 6-card <span class="highlight-basic">Exclusive mini-expansion</span>  (worth $15)</p>
+					<p class="title text-center">
+						🎉 Now claim your <span class="highlight-basic">free VIP Banana</span> expansion
+					</p>
+					<p class="title-subhead text-center">
+						Get a 6-card <span class="highlight-basic">Exclusive mini-expansion</span> (worth $15)
+					</p>
 					<enhanced:img
 						src={cards}
 						alt="cards"
 						class="m-6 w-full animate-bounce-in p-4 sm:w-2/3 md:hidden"
 						sizes="85vw"
 					/>
-					<p class="title-subsubhead text-center">Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span> </p>
+					<p class="title-subsubhead text-center">
+						Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span>
+					</p>
 				</div>
-
+				<script async src="https://js.stripe.com/v3/buy-button.js">
+				</script>
 
 				<div class="flex w-full flex-col items-center gap-4">
-					<!-- <p class="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-200">
-						<span class="animate-pulse">⚠️</span> Only 420 of 500 VIP slots available
-					</p> -->
-					
 					<stripe-buy-button
-						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1RCB8XAsNXUFfbI0ZhPPYlfX' : 'buy_btn_1R4t7SPPIJAaixg8kKHFwSZm'}`}
+						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
 						publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
 						on:click={() => handleBuyButtonClick('main')}
 						on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}

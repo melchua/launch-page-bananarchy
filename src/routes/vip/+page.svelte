@@ -3,18 +3,45 @@
 </script>
 
 <script>
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
+
 	const TITLE = `Congrats, you're a VIP!`;
+
+	onMount(() => {
+		if (!browser) return;
+
+		// Check if this is a fresh purchase (coming from Stripe checkout)
+		// Stripe adds session_id to the success URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const sessionId = urlParams.get('session_id');
+
+		// Check if we've already tracked this session
+		const trackedKey = 'vip_purchase_tracked';
+		const alreadyTracked = sessionStorage.getItem(trackedKey);
+
+		// Only track if there's a session_id (indicating successful Stripe checkout)
+		// AND we haven't tracked this session yet
+		if (sessionId && !alreadyTracked) {
+			if (typeof fbq !== 'undefined') {
+				fbq('track', 'Purchase', {
+					content_name: 'Bananarchy VIP Bonus',
+					value: 1.0,
+					currency: 'USD',
+					transaction_id: sessionId
+				});
+				console.log('Meta Pixel: Purchase event tracked for session', sessionId);
+
+				// Mark this session as tracked to prevent duplicate tracking on refresh
+				sessionStorage.setItem(trackedKey, sessionId);
+			}
+		}
+	});
 </script>
 
 <svelte:head>
 	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-	<script>
-		fbq('track', 'Purchase', {
-			content_name: 'Bananarchy VIP Bonus',
-			value: 1.0,
-			currency: 'USD'
-		});
-	</script>
 </svelte:head>
 
 <div class="flex min-h-screen flex-col items-center overflow-y-auto pt-20">
@@ -38,7 +65,7 @@
 
 			<p class="text-xl text-white">
 				Thanks for reserving your exclusive VIP bonus! You're locked in to receive <span
-					class="text-baorange-50">two GMO-free Banana Cards 🍌</span
+					class="text-baorange-50">your exclusive mini-expansion 🍌</span
 				> when you back Bananarchy on Kickstarter. Welcome to the troop! 🐵
 			</p>
 
