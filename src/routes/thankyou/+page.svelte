@@ -8,6 +8,8 @@
 </script>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	import cards from '$lib/assets/vip-exclusive.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 	import { ConfettiExplosion } from 'svelte-confetti-explosion';
@@ -38,9 +40,42 @@
 	const SUBTITLE = 'You unlocked an exclusive mini-expansion!';
 	const TITLE = 'Claim your FREE $15 expansion — just $1 to reserve.';
 
+	// Track Lead event when landing on thank you page (means they signed up)
+	onMount(() => {
+		if (!browser) return;
+
+		// Only track Lead once per session to prevent duplicate tracking on page refresh
+		const leadTrackedKey = 'lead_tracked';
+		const alreadyTracked = sessionStorage.getItem(leadTrackedKey);
+
+		if (!alreadyTracked) {
+			// Wait for window.fbq to be available (handles race condition with layout onMount)
+			let attempts = 0;
+			const maxAttempts = 20; // 2 seconds max (20 * 100ms)
+
+			const checkFbq = setInterval(() => {
+				attempts++;
+
+				if (typeof window.fbq !== 'undefined') {
+					// fbq is ready - track the Lead event
+					clearInterval(checkFbq);
+					window.fbq('track', 'Lead');
+					console.log('Meta Pixel: Lead event tracked (email signup confirmed)');
+					sessionStorage.setItem(leadTrackedKey, 'true');
+				} else if (attempts >= maxAttempts) {
+					// Timeout - fbq didn't load
+					clearInterval(checkFbq);
+					console.warn('Meta Pixel: Timeout waiting for fbq to load');
+				}
+			}, 100); // Check every 100ms
+		} else {
+			console.log('Meta Pixel: Lead already tracked this session (skipping duplicate)');
+		}
+	});
+
 	function handleBuyButtonClick(location: 'header' | 'main') {
-		if (typeof fbq !== 'undefined') {
-			fbq('track', 'InitiateCheckout', {
+		if (typeof window.fbq !== 'undefined') {
+			window.fbq('track', 'InitiateCheckout', {
 				content_name: 'Bananarchy VIP Bonus Cards',
 				value: 1.0,
 				currency: 'USD',
@@ -112,8 +147,6 @@
 						Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span>
 					</p>
 				</div>
-				<script async src="https://js.stripe.com/v3/buy-button.js">
-				</script>
 
 				<div class="flex w-full flex-col items-center gap-4">
 					<stripe-buy-button
