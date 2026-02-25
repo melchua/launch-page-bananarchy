@@ -5,7 +5,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
 
 	const TITLE = `Congrats, you're a VIP!`;
 
@@ -24,18 +23,32 @@
 		// Only track if there's a session_id (indicating successful Stripe checkout)
 		// AND we haven't tracked this session yet
 		if (sessionId && !alreadyTracked) {
-			if (typeof fbq !== 'undefined') {
-				fbq('track', 'Purchase', {
-					content_name: 'Bananarchy VIP Bonus',
-					value: 1.0,
-					currency: 'USD',
-					transaction_id: sessionId
-				});
-				console.log('Meta Pixel: Purchase event tracked for session', sessionId);
+			// Wait for window.fbq to be available (handles race condition with layout onMount)
+			let attempts = 0;
+			const maxAttempts = 20; // 2 seconds max (20 * 100ms)
 
-				// Mark this session as tracked to prevent duplicate tracking on refresh
-				sessionStorage.setItem(trackedKey, sessionId);
-			}
+			const checkFbq = setInterval(() => {
+				attempts++;
+
+				if (typeof window.fbq !== 'undefined') {
+					// fbq is ready - track the Purchase event
+					clearInterval(checkFbq);
+					window.fbq('track', 'Purchase', {
+						content_name: 'Bananarchy VIP Bonus',
+						value: 1.0,
+						currency: 'USD',
+						transaction_id: sessionId
+					});
+					console.log('Meta Pixel: Purchase event tracked for session', sessionId);
+
+					// Mark this session as tracked to prevent duplicate tracking on refresh
+					sessionStorage.setItem(trackedKey, sessionId);
+				} else if (attempts >= maxAttempts) {
+					// Timeout - fbq didn't load
+					clearInterval(checkFbq);
+					console.warn('Meta Pixel: Timeout waiting for fbq to load');
+				}
+			}, 100); // Check every 100ms
 		}
 	});
 </script>
