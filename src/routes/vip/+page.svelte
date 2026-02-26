@@ -39,14 +39,14 @@
 						currency: 'USD',
 						transaction_id: sessionId
 					});
-					console.log('Meta Pixel: Purchase event tracked for session', sessionId);
+					// console.log('Meta Pixel: Purchase event tracked for session', sessionId);
 
 					// Mark this session as tracked to prevent duplicate tracking on refresh
 					sessionStorage.setItem(trackedKey, sessionId);
 				} else if (attempts >= maxAttempts) {
 					// Timeout - fbq didn't load
 					clearInterval(checkFbq);
-					console.warn('Meta Pixel: Timeout waiting for fbq to load');
+					// console.warn('Meta Pixel: Timeout waiting for fbq to load');
 				}
 			}, 100); // Check every 100ms
 		}

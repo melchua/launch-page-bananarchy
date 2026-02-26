@@ -60,16 +60,16 @@
 					// fbq is ready - track the Lead event
 					clearInterval(checkFbq);
 					window.fbq('track', 'Lead');
-					console.log('Meta Pixel: Lead event tracked (email signup confirmed)');
+					// console.log('Meta Pixel: Lead event tracked (email signup confirmed)');
 					sessionStorage.setItem(leadTrackedKey, 'true');
 				} else if (attempts >= maxAttempts) {
 					// Timeout - fbq didn't load
 					clearInterval(checkFbq);
-					console.warn('Meta Pixel: Timeout waiting for fbq to load');
+					// console.warn('Meta Pixel: Timeout waiting for fbq to load');
 				}
 			}, 100); // Check every 100ms
 		} else {
-			console.log('Meta Pixel: Lead already tracked this session (skipping duplicate)');
+			// console.log('Meta Pixel: Lead already tracked this session (skipping duplicate)');
 		}
 	});
 

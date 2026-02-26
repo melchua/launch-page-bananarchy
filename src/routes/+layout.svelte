@@ -62,7 +62,7 @@
 			})(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 			window.fbq('init', '1177216143869570');
 			window.fbq('track', 'PageView');
-			console.log('Meta Pixel: Initialized (production)');
+			// console.log('Meta Pixel: Initialized (production)');
 		}
 
 		// Initialize MailerLite Universal
