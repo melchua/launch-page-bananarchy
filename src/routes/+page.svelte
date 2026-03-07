@@ -168,7 +168,7 @@
 				class="relative h-[300px] w-[280px] flex-shrink-0 pt-4 mobile-xxs:w-[300px] mobile-sm:w-[320px] md:h-[420px] md:w-[400px] md:pt-8"
 			>
 				<enhanced:img
-					src="$lib/assets/cards/card_action_banana_republic.jpg"
+					src="$lib/assets/cards/card_action_banana_republic.jpg?w=280;240;160;120"
 					alt="Banana Republic card"
 					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-1'
@@ -177,7 +177,7 @@
 					loading="lazy"
 				/>
 				<enhanced:img
-					src="$lib/assets/cards/card_anytime_toss.jpg"
+					src="$lib/assets/cards/card_anytime_toss.jpg?w=280;240;160;120"
 					alt="Toss card"
 					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-2'
@@ -186,7 +186,7 @@
 					loading="lazy"
 				/>
 				<enhanced:img
-					src="$lib/assets/cards/card_reaction_denied.jpg"
+					src="$lib/assets/cards/card_reaction_denied.jpg?w=280;240;160;120"
 					alt="Denied card"
 					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-3'
@@ -195,7 +195,7 @@
 					loading="lazy"
 				/>
 				<enhanced:img
-					src="$lib/assets/cards/card_scoring_banana_smoothie.jpg"
+					src="$lib/assets/cards/card_scoring_banana_smoothie.jpg?w=280;240;160;120"
 					alt="Banana Smoothie card"
 					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-4'
@@ -276,7 +276,7 @@
 						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step1 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -285,7 +285,7 @@
 							</div>
 							<div class="card-front">
 								<enhanced:img
-									src="$lib/assets/cards/card_action_pick_&_pluck.jpg"
+									src="$lib/assets/cards/card_action_pick_&_pluck.jpg?w=360;280;260;240"
 									alt="Pick & Pluck card"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -317,7 +317,7 @@
 						<div class="card-flip-inner rotate-1 {stepCardsVisible.step2 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -326,7 +326,7 @@
 							</div>
 							<div class="card-front">
 								<enhanced:img
-									src="$lib/assets/cards/card_action_banana_split.jpg"
+									src="$lib/assets/cards/card_action_banana_split.jpg?w=360;280;260;240"
 									alt="Banana Split card"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -358,7 +358,7 @@
 						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step3 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -367,7 +367,7 @@
 							</div>
 							<div class="card-front">
 								<enhanced:img
-									src="$lib/assets/cards/card_anytime_smash.jpg"
+									src="$lib/assets/cards/card_anytime_smash.jpg?w=360;280;260;240"
 									alt="Smash card"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -401,7 +401,7 @@
 						<div class="card-flip-inner rotate-1 {stepCardsVisible.step4 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -410,7 +410,7 @@
 							</div>
 							<div class="card-front">
 								<enhanced:img
-									src="$lib/assets/cards/card_reaction_yoink.jpg"
+									src="$lib/assets/cards/card_reaction_yoink.jpg?w=360;280;260;240"
 									alt="Yoink card"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -443,7 +443,7 @@
 						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step5 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg"
+									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -452,7 +452,7 @@
 							</div>
 							<div class="card-front">
 								<enhanced:img
-									src="$lib/assets/cards/card_scoring_banana_manifesto.jpg"
+									src="$lib/assets/cards/card_scoring_banana_manifesto.jpg?w=360;280;260;240"
 									alt="Banana Manifesto card"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
