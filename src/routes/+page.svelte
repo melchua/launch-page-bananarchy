@@ -284,7 +284,7 @@
 							</div>
 							<div class="card-front">
 								<enhanced:img
-									src="$lib/assets/cards/card_action_pick_&_pluck.jpg?w=360;280;260;240"
+									src="$lib/assets/cards/card_action_pick_and_pluck.jpg?w=360;280;260;240"
 									alt="Pick & Pluck card"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
