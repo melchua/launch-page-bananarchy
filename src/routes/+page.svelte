@@ -165,12 +165,12 @@
 			<!-- Card fan animation -->
 			<div
 				bind:this={cardFanElement}
-				class="relative h-[300px] w-[280px] mobile-xxs:w-[300px] mobile-sm:w-[320px] flex-shrink-0 pt-4 md:h-[420px] md:w-[400px] md:pt-8"
+				class="relative h-[300px] w-[280px] flex-shrink-0 pt-4 mobile-xxs:w-[300px] mobile-sm:w-[320px] md:h-[420px] md:w-[400px] md:pt-8"
 			>
 				<enhanced:img
 					src="$lib/assets/cards/card_action_banana_republic.jpg"
 					alt="Banana Republic card"
-					class="card-fan left-1/2 -ml-[84px] w-[120px] mobile-xxs:w-[140px] mobile-sm:w-[150px] rounded-xl shadow-2xl md:-ml-[108px] md:w-[216px] {cardFanVisible
+					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-1'
 						: ''}"
 					sizes="(max-width: 430px) 120px, (max-width: 586px) 140px, (min-width: 768px) 216px, 150px"
@@ -179,7 +179,7 @@
 				<enhanced:img
 					src="$lib/assets/cards/card_anytime_toss.jpg"
 					alt="Toss card"
-					class="card-fan left-1/2 -ml-[84px] w-[120px] mobile-xxs:w-[140px] mobile-sm:w-[150px] rounded-xl shadow-2xl md:-ml-[108px] md:w-[216px] {cardFanVisible
+					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-2'
 						: ''}"
 					sizes="(max-width: 430px) 120px, (max-width: 586px) 140px, (min-width: 768px) 216px, 150px"
@@ -188,7 +188,7 @@
 				<enhanced:img
 					src="$lib/assets/cards/card_reaction_denied.jpg"
 					alt="Denied card"
-					class="card-fan left-1/2 -ml-[84px] w-[120px] mobile-xxs:w-[140px] mobile-sm:w-[150px] rounded-xl shadow-2xl md:-ml-[108px] md:w-[216px] {cardFanVisible
+					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-3'
 						: ''}"
 					sizes="(max-width: 430px) 120px, (max-width: 586px) 140px, (min-width: 768px) 216px, 150px"
@@ -197,7 +197,7 @@
 				<enhanced:img
 					src="$lib/assets/cards/card_scoring_banana_smoothie.jpg"
 					alt="Banana Smoothie card"
-					class="card-fan left-1/2 -ml-[84px] w-[120px] mobile-xxs:w-[140px] mobile-sm:w-[150px] rounded-xl shadow-2xl md:-ml-[108px] md:w-[216px] {cardFanVisible
+					class="card-fan left-1/2 -ml-[64px] w-[120px] rounded-xl shadow-2xl mobile-xxs:-ml-[74px] mobile-xxs:w-[140px] mobile-sm:-ml-[79px] mobile-sm:w-[150px] md:-ml-[108px] md:w-[216px] {cardFanVisible
 						? 'card-fan-4'
 						: ''}"
 					sizes="(max-width: 430px) 120px, (max-width: 586px) 140px, (min-width: 768px) 216px, 150px"
