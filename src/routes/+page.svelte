@@ -17,8 +17,7 @@
 		setTimeout(() => {
 			boxClass = 'animate-bounce-in';
 		}, 300);
-
-		// Intersection Observer for card fan animation
+		// Card fan observer
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
