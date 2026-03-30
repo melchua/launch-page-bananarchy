@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Footer from '../components/Footer.svelte';
+	import { useVariant } from '$lib/useVariant.svelte';
+
+	// Initialize variant for A/B testing
+	const { variant, source, isReady } = useVariant();
 
 	let boxClass = $state('');
 	let cardFanVisible = $state(false);
@@ -84,15 +88,24 @@
 					</h2>
 
 					<h1 class="hero-headline mb-4 text-center lg:text-left">
-						<span
-							><span class="highlight-text">Cute</span> Monkeys. <br /><span class="highlight-text"
-								>Clever</span
+						{#if isReady}
+							<span>{@html variant.headline}</span>
+						{:else}
+							<!-- Fallback while loading -->
+							<span
+								><span class="highlight-text">Cute</span> Monkeys. <br /><span class="highlight-text"
+									>Clever</span
+								>
+								Tricks. <br /><span class="highlight-text">Wild</span> Plays.</span
 							>
-							Tricks. <br /><span class="highlight-text">Wild</span> Plays.</span
-						>
+						{/if}
 					</h1>
 					<h4 class="text-center lg:text-left">
-						A fast, strategic party game where every move matters.
+						{#if isReady}
+							{variant.subheadline}
+						{:else}
+							A fast, strategic party game where every move matters.
+						{/if}
 					</h4>
 				</div>
 
