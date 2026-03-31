@@ -70,9 +70,9 @@
 </script>
 
 <div class="oback flex flex-grow flex-col">
-	<div class="relative">
+	<div class="relative bg-white/80">
 		<div
-			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
+			class="mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
 		>
 			<!-- Left Column: All text content (desktop) -->
 			<div class="flex flex-col gap-2 md:px-24 lg:w-[75%]">
@@ -86,14 +86,14 @@
 
 					<h1 class="hero-headline mb-4 text-center lg:text-left">
 						<span
-							><span class="highlight-text">Cute</span> Monkeys. <br /><span class="highlight-text"
-								>Clever</span
-							>
-							Tricks. <br /><span class="highlight-text">Wild</span> Plays.</span
+							><span class="highlight-text">Steal</span> Bananas. <br />
+							<span class="highlight-text">Betray</span>
+							Your Friends. <br />
+							<span class="highlight-text">Win</span> Anyway.</span
 						>
 					</h1>
 					<h4 class="text-center lg:text-left">
-						A fast, strategic party game where every move matters.
+						A fast, chaotic card game where you can interupt anytime and steal everything.
 					</h4>
 				</div>
 
@@ -121,9 +121,9 @@
 				>
 					<div class="hero-subhead pb-4">
 						<div class="pb-1 text-lg font-semibold">Join 528+ Founding Monkeys</div>
-						<div class="text-base opacity-90">
+						<!-- <div class="text-base opacity-90">
 							🆓 Free Print2Play Mini-Game • 🔓 Early access • ⏰ Limited time
-						</div>
+						</div> -->
 					</div>
 
 					<MailerForm />

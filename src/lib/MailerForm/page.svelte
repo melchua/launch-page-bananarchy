@@ -94,7 +94,7 @@
 			</button>
 		</div>
 
-		<p class="text-center text-xs text-white/70 sm:text-left">
+		<p class="text-center text-xs text-black/70 sm:text-left">
 			Instant download. No credit card needed. Early access disappears once we launch.
 		</p>
 
