@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { MAILERLITE_API_KEY, GROUP_ID } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
@@ -18,7 +18,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		// Check if API key is configured
-		if (!MAILERLITE_API_KEY) {
+		if (!env.MAILERLITE_API_KEY) {
 			console.error('MAILERLITE_API_KEY is not configured');
 			return json({ error: 'Server configuration error' }, { status: 500 });
 		}
@@ -28,13 +28,13 @@ export const POST: RequestHandler = async ({ request }) => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${MAILERLITE_API_KEY}`,
+				Authorization: `Bearer ${env.MAILERLITE_API_KEY}`,
 				Accept: 'application/json'
 			},
 			body: JSON.stringify({
 				email,
 				status: 'active', // Mark subscriber as active (bypasses double opt-in)
-				groups: [GROUP_ID] // Add subscriber to the main group (non-vip)
+				groups: [env.GROUP_ID] // Add subscriber to the main group (non-vip)
 			})
 		});
 
