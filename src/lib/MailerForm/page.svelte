@@ -89,7 +89,7 @@
 				{:else if submitStatus === 'success'}
 					Subscribed!
 				{:else}
-					Get Free Mini-Game
+					Get My Free Mini-Game
 				{/if}
 			</button>
 		</div>

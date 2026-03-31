@@ -120,24 +120,14 @@
 					class="order-3 flex flex-col items-center rounded-xl bg-transparent pt-2 text-center lg:order-2 lg:items-start lg:text-left"
 				>
 					<div class="hero-subhead pb-4">
-						⚡️ Learn in <span class="hero-feature-highlight">60 seconds</span> <br /> ⏰ Done in
-						<span class="hero-feature-highlight">30 minutes</span> <br /> 💔 Betray friends in
-						<span class="hero-feature-highlight">real time</span>
+						<div class="pb-1 text-lg font-semibold">Join 528+ Founding Monkeys</div>
+						<div class="text-base opacity-90">
+							🎮 Instant download • 🔓 Early access • ⏰ Limited time
+						</div>
 					</div>
 
 					<MailerForm />
 				</div>
-
-				<!-- Game Stats - order-4 on mobile, order-2 on desktop -->
-				<!-- <div class="order-4 lg:order-2">
-					<p class="text-sm font-semibold tracking-wide text-white/90 text-center lg:text-left">
-						<span class="inline-flex items-center gap-4">
-							<span>👥 3-8 players</span>
-							<span>⏱️ 15-30 mins</span>
-							<span>🎯 Ages 8+</span>
-						</span>
-					</p>
-				</div> -->
 			</div>
 
 			<!-- Right Column: Deluxe Box Images (desktop only) -->
@@ -257,9 +247,22 @@
 				</ul>
 
 				<div class="font-bold">Win by collecting the most bananas... if you survive the chaos</div>
+
+				<!-- Game Stats -->
+				<div class="pt-4">
+					<p class="text-sm font-semibold tracking-wide text-white/90">
+						<span class="inline-flex flex-wrap items-center justify-center gap-4 md:justify-start">
+							<span>👥 3-8 players</span>
+							<span>⏱️ 15-30 mins</span>
+							<span>🎯 Ages 8+</span>
+						</span>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<Footer />
 
 	<!-- How to Play Section -->
 	<div class="px-2 py-6 md:px-4">
