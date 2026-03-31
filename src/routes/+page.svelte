@@ -70,7 +70,10 @@
 </script>
 
 <div class="oback flex flex-grow flex-col">
-	<div class="relative bg-white/80">
+	<div
+		class="relative pb-8"
+		style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 95%, transparent 100%);"
+	>
 		<div
 			class="mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
 		>
