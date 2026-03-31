@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import Footer from '../components/Footer.svelte';
 	import MailerForm from '$lib/MailerForm/page.svelte';
+	import { subscriberCount, fetchSubscriberCount } from '$lib/stores/subscriberCount';
 
 	let boxClass = $state('');
 	let cardFanVisible = $state(false);
@@ -15,6 +16,9 @@
 	});
 
 	onMount(() => {
+		// Fetch the latest subscriber count
+		fetchSubscriberCount();
+
 		setTimeout(() => {
 			boxClass = 'animate-bounce-in';
 		}, 300);
@@ -123,7 +127,7 @@
 					class="order-3 flex flex-col items-center rounded-xl bg-transparent pt-2 text-center lg:order-2 lg:items-start lg:text-left"
 				>
 					<div class="hero-subhead pb-4">
-						<div class="pb-1 text-lg font-semibold">Join 528+ Founding Monkeys</div>
+						<div class="pb-1 text-lg font-semibold">Join {$subscriberCount}+ Founding Monkeys</div>
 						<!-- <div class="text-base opacity-90">
 							🆓 Free Print2Play Mini-Game • 🔓 Early access • ⏰ Limited time
 						</div> -->

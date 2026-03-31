@@ -1,4 +1,6 @@
 <script>
+	import { subscriberCount } from '$lib/stores/subscriberCount';
+
 	// State management using Svelte 5 runes
 	let email = $state('');
 	let isSubmitting = $state(false);
@@ -48,6 +50,9 @@
 			// Success!
 			submitStatus = 'success';
 			email = '';
+
+			// Increment subscriber count for instant feedback
+			subscriberCount.update(n => n + 1);
 
 			// Track form submission with Meta Pixel
 			if (typeof window.fbq === 'function') {
