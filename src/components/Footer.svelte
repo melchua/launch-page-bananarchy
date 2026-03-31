@@ -36,7 +36,7 @@
 				class="w-full px-4 py-0 pb-1 text-xs leading-none text-white md:px-2"
 				id="footer-description"
 			>
-				264 founding monkeys and counting. Instant download. Early access disappears once we launch.
+				528 founding monkeys and counting. Instant download. Early access disappears once we launch.
 			</p>
 		</div>
 

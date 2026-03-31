@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Footer from '../components/Footer.svelte';
+	import MailerForm from '$lib/MailerForm/page.svelte';
 
 	let boxClass = $state('');
 	let cardFanVisible = $state(false);
@@ -116,13 +117,15 @@
 
 				<!-- Hero subhead - order-3 on mobile (below image), visible inline on desktop -->
 				<div
-					class="order-3 rounded-xl bg-transparent pb-2 pt-4 text-center lg:order-2 lg:text-left"
+					class="order-3 flex flex-col items-center rounded-xl bg-transparent pt-2 text-center lg:order-2 lg:items-start lg:text-left"
 				>
-					<span class="hero-subhead">
+					<div class="hero-subhead pb-4">
 						⚡️ Learn in <span class="hero-feature-highlight">60 seconds</span> <br /> ⏰ Done in
 						<span class="hero-feature-highlight">30 minutes</span> <br /> 💔 Betray friends in
 						<span class="hero-feature-highlight">real time</span>
-					</span>
+					</div>
+
+					<MailerForm />
 				</div>
 
 				<!-- Game Stats - order-4 on mobile, order-2 on desktop -->
@@ -563,6 +566,4 @@
 			</div>
 		</div>
 	</div>
-
-	<Footer />
 </div>

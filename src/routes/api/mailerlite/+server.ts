@@ -1,24 +1,14 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { MAILERLITE_API_KEY } from '$env/static/private';
-
-// Form ID to Group ID mapping
-const FORM_TO_GROUP_MAP: Record<string, string> = {
-	PpGtBJ: '139476093355732942', // Dev form group ID
-	'6rXIiU': '139476095146813403' // Production form group ID
-};
+import { MAILERLITE_API_KEY, GROUP_ID } from '$env/static/private';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
-		const { email, formId } = await request.json();
+		const { email } = await request.json();
 
 		// Validate input
 		if (!email || typeof email !== 'string') {
 			return json({ error: 'Email is required' }, { status: 400 });
-		}
-
-		if (!formId || !FORM_TO_GROUP_MAP[formId]) {
-			return json({ error: 'Invalid form ID' }, { status: 400 });
 		}
 
 		// Validate email format
@@ -33,8 +23,6 @@ export const POST: RequestHandler = async ({ request }) => {
 			return json({ error: 'Server configuration error' }, { status: 500 });
 		}
 
-		const groupId = FORM_TO_GROUP_MAP[formId];
-
 		// Submit to MailerLite API
 		const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
 			method: 'POST',
@@ -45,11 +33,12 @@ export const POST: RequestHandler = async ({ request }) => {
 			},
 			body: JSON.stringify({
 				email,
-				groups: [groupId],
-				status: 'active' // 'active' for double opt-in disabled
+				status: 'active', // Mark subscriber as active (bypasses double opt-in)
+				groups: [GROUP_ID] // Add subscriber to the main group (non-vip)
 			})
 		});
 
+		console.log('MailerLite API response:', response);
 		const data = await response.json();
 
 		if (!response.ok) {
@@ -60,10 +49,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				return json({ error: 'This email is already subscribed' }, { status: 400 });
 			}
 
-			return json(
-				{ error: data.message || 'Failed to subscribe' },
-				{ status: response.status }
-			);
+			return json({ error: data.message || 'Failed to subscribe' }, { status: response.status });
 		}
 
 		// Success!

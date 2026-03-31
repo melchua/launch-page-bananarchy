@@ -1,9 +1,4 @@
 <script>
-	import { dev } from '$app/environment';
-
-	// Form IDs for dev and production
-	const formId = dev ? 'PpGtBJ' : '6rXIiU';
-
 	// State management using Svelte 5 runes
 	let email = $state('');
 	let isSubmitting = $state(false);
@@ -33,15 +28,14 @@
 		isSubmitting = true;
 
 		try {
-			// Submit to Cloudflare Function
+			// Submit to MailerLite API
 			const response = await fetch('/api/mailerlite', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					email,
-					formId
+					email
 				})
 			});
 
@@ -61,10 +55,8 @@
 				console.log('Meta Pixel: Lead event tracked');
 			}
 
-			// Redirect to thank you page after a brief delay
-			setTimeout(() => {
-				window.location.href = '/thankyou';
-			}, 1500);
+			// Redirect to thank you page
+			window.location.href = '/thankyou';
 		} catch (error) {
 			console.error('Form submission error:', error);
 			submitStatus = 'error';
@@ -90,7 +82,7 @@
 			<button
 				type="submit"
 				disabled={isSubmitting || submitStatus === 'success'}
-				class="whitespace-nowrap rounded-md bg-baorange px-6 py-2 text-sm font-semibold text-white transition-all hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-baorange focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+				class="whitespace-nowrap rounded-md bg-secondary px-6 py-2 text-sm font-semibold text-white transition-all hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-baorange focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
 			>
 				{#if isSubmitting}
 					Sending...
@@ -109,9 +101,7 @@
 		{/if}
 
 		{#if submitStatus === 'success'}
-			<p class="text-sm text-green-400" role="status">
-				Success! Redirecting to your download...
-			</p>
+			<p class="text-sm text-green-400" role="status">Success! Redirecting to your download...</p>
 		{/if}
 	</form>
 </div>
