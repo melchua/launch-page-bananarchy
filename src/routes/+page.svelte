@@ -69,7 +69,7 @@
 	});
 </script>
 
-<div class="oback flex flex-grow flex-col pb-64 md:pb-40">
+<div class="oback flex flex-grow flex-col">
 	<div class="relative">
 		<div
 			class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
@@ -122,7 +122,7 @@
 					<div class="hero-subhead pb-4">
 						<div class="pb-1 text-lg font-semibold">Join 528+ Founding Monkeys</div>
 						<div class="text-base opacity-90">
-							🎮 Instant download • 🔓 Early access • ⏰ Limited time
+							🆓 Free Print2Play Mini-Game • 🔓 Early access • ⏰ Limited time
 						</div>
 					</div>
 
@@ -554,7 +554,7 @@
 			</div>
 
 			<!-- Try Before You Buy CTA Section -->
-			<div class="flex justify-center px-4 pt-6 md:pb-8">
+			<div class="flex justify-center px-4 pt-6">
 				<div class="description-box max-w-3xl text-center">
 					<h2 class="mb-4 text-center">
 						Try It Free — <span class="highlight-text">No Strings Attached</span>
@@ -568,5 +568,6 @@
 				</div>
 			</div>
 		</div>
+		<Footer />
 	</div>
 </div>

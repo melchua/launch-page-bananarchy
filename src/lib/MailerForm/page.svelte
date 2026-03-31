@@ -89,10 +89,14 @@
 				{:else if submitStatus === 'success'}
 					Subscribed!
 				{:else}
-					Get My Free Mini-Game
+					➡ Send Me The Free Game
 				{/if}
 			</button>
 		</div>
+
+		<p class="text-center text-xs text-white/70 sm:text-left">
+			Instant download. No credit card needed. Early access disappears once we launch.
+		</p>
 
 		{#if submitStatus === 'error'}
 			<p class="text-sm text-red-500" role="alert">
