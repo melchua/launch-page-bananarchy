@@ -1,40 +1,4 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
-
-	let isVisible = $state(false);
-	let sectionElement: HTMLElement;
-
-	onMount(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						isVisible = true;
-						observer.unobserve(entry.target);
-					}
-				});
-			},
-			{
-				threshold: 0.2
-			}
-		);
-
-		if (sectionElement) {
-			observer.observe(sectionElement);
-		}
-
-		return () => {
-			observer.disconnect();
-		};
-	});
-</script>
-
-<div
-	bind:this={sectionElement}
-	class="social-proof-section transition-opacity duration-700 {isVisible
-		? 'opacity-100'
-		: 'opacity-0'}"
->
+<div class="social-proof-section transition-opacity duration-700">
 	<!-- Layer 1: Eyebrow line -->
 	<div class="eyebrow-line bg-[#2d2d2d] px-4 py-3 text-center">
 		<p class="text-xs font-semibold uppercase tracking-widest text-white/80 md:text-sm">
