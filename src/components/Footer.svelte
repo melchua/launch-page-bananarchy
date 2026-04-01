@@ -7,7 +7,7 @@
 	class="z-10 flex w-full items-center justify-center bg-black p-2 text-center sm:mx-auto sm:p-4 sm:text-start"
 >
 	<div
-		class="flex w-full flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
+		class="flex w-full flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row lg:w-[90%] xl:w-[72%]"
 	>
 		<!-- Left column: headline + description -->
 		<div class="flex flex-col items-center gap-1 md:flex-1 md:items-start">

@@ -275,7 +275,7 @@
 			<h2 class="text-center">Learn in 60 Seconds</h2>
 
 			<!-- Steps grid -->
-			<div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-8">
+			<div class="grid grid-cols-2 gap-8 md:grid-cols-3 md:gap-8">
 				<!-- Step 1: Collect Bananas -->
 				<div
 					class="flex flex-col items-center px-2 py-4 text-center md:p-4"
@@ -401,12 +401,14 @@
 					</p>
 				</div>
 
-				<!-- Step 4: Chain reactions -->
-				<div
-					class="flex flex-col items-center px-2 py-4 text-center md:p-4"
-					data-step-card
-					data-step="4"
-				>
+				<!-- Steps 4 & 5 wrapper for centering on desktop -->
+				<div class="contents md:col-span-3 md:flex md:justify-center md:gap-8">
+					<!-- Step 4: Chain reactions -->
+					<div
+						class="flex flex-col items-center px-2 py-4 text-center md:p-4"
+						data-step-card
+						data-step="4"
+					>
 					<div class="card-flip-container mb-4 max-w-[280px] md:w-[280px]">
 						<div class="card-flip-inner rotate-1 {stepCardsVisible.step4 ? 'flipped' : ''}">
 							<div class="card-back">
@@ -443,12 +445,12 @@
 					</p>
 				</div>
 
-				<!-- Step 5: Score points -->
-				<div
-					class="flex flex-col items-center px-2 py-4 text-center md:col-span-2 md:mx-auto md:max-w-md md:p-4"
-					data-step-card
-					data-step="5"
-				>
+					<!-- Step 5: Score points -->
+					<div
+						class="col-span-2 flex flex-col items-center px-2 py-4 text-center md:col-span-1 md:p-4"
+						data-step-card
+						data-step="5"
+					>
 					<div class="card-flip-container mb-4 max-w-[280px] md:w-[280px]">
 						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step5 ? 'flipped' : ''}">
 							<div class="card-back">
@@ -484,6 +486,7 @@
 							class="description-text-bold">Scoring Cards</span
 						> to secure your victory.
 					</p>
+					</div>
 				</div>
 			</div>
 		</div>
