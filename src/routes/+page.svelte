@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Footer from '../components/Footer.svelte';
+	import SocialProofBar from '../components/SocialProofBar.svelte';
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { subscriberCount, fetchSubscriberCount } from '$lib/stores/subscriberCount';
 
@@ -72,7 +73,7 @@
 </script>
 
 <div class="oback flex flex-grow flex-col">
-	<div class="white-gradient-bg relative pb-8">
+	<div class="relative bg-white/80 pb-8">
 		<div
 			class="mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
 		>
@@ -155,6 +156,9 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Social Proof Bar -->
+	<SocialProofBar />
 
 	<div class="flex flex-col items-center justify-center px-4 py-8">
 		<h2 class="text-center">Can you read? Then you can play.</h2>
@@ -492,7 +496,7 @@
 		</div>
 	</div>
 
-	<div class="full z-10">
+	<div class="full z-10 bg-white/85">
 		<h2 class="text-center">There's more...</h2>
 		<div class="flex flex-col gap-4 px-4 py-0 sm:mx-36 xl:mx-48">
 			<div class="w-full">
@@ -509,10 +513,11 @@
 					<div class="flex flex-1 flex-col pb-4 pt-0">
 						<h3 class="text-center xl:text-left">Illustrated by a former Disney artist</h3>
 						<p class="mt-6 w-full leading-relaxed">
-							Every character is thoughtfully illustrated by a <span class="highlight-text"
-								>real human artist</span
+							Every character is thoughtfully illustrated by a <span
+								class="highlight-text-light-mode">real human artist</span
 							>, packed with charm, expression, and playful detail. These characters may look
-							friendly, but they are <span class="highlight-text">not on your side</span>.
+							friendly, but they are
+							<span class="highlight-text-light-mode">not on your side</span>.
 						</p>
 					</div>
 				</div>
@@ -532,9 +537,9 @@
 						<h3 class="text-center xl:text-left">Great for parties. Terrible for friendships.</h3>
 						<p class="mt-6 w-full leading-relaxed">
 							It's all fun and games until someone loses a banana. Sneaky, hilarious, and <span
-								class="highlight-text">impossible to stop playing</span
+								class="highlight-text-light-mode">impossible to stop playing</span
 							>, this is the party game that tests friendships with every clever move, every stolen
-							banana, and every <span class="highlight-text">unexpected betrayal</span>.
+							banana, and every <span class="highlight-text-light-mode">unexpected betrayal</span>.
 						</p>
 					</div>
 				</div>
@@ -544,9 +549,10 @@
 					<div class="flex flex-1 flex-col pb-4 pt-0">
 						<h3 class="text-center xl:text-left">Waiting your turn is for other games.</h3>
 						<p class="mt-6 w-full leading-relaxed">
-							<span class="highlight-text">Anytime cards</span> mean nobody is safe, even when it's
-							not your turn. Interrupt. Counter. Sabotage. The table stays loud, tense, and
-							<span class="highlight-text">completely unhinged</span> until the final draw.
+							<span class="highlight-text-light-mode">Anytime cards</span> mean nobody is safe, even
+							when it's not your turn. Interrupt. Counter. Sabotage. The table stays loud, tense,
+							and
+							<span class="highlight-text-light-mode">completely unhinged</span> until the final draw.
 						</p>
 					</div>
 					<div class="w-full flex-1 sm:w-3/4">
@@ -565,7 +571,7 @@
 			<div class="flex justify-center px-4 pt-6">
 				<div class="description-box max-w-3xl text-center">
 					<h2 class="mb-4 text-center">
-						Try It Free — <span class="highlight-text">No Strings Attached</span>
+						Try It Free — <span class="highlight-text-light-mode">No Strings Attached</span>
 					</h2>
 					<p class="description-text mb-6">
 						We believe in this game so much, we want you to <span class="description-text-bold"

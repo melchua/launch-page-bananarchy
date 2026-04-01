@@ -91,11 +91,9 @@ picture {
 	font-weight: 700;
 }
 
-.hightlight-text-underline {
-	text-decoration: underline;
-	text-decoration-color: #955400;
-	text-decoration-thickness: 1px;
-	text-underline-offset: 1px;
+.highlight-text-light-mode {
+	color: #955400;
+	font-weight: 700;
 }
 
 .footer-headline {
