@@ -95,7 +95,7 @@
 						>
 					</h1>
 					<h4 class="text-center lg:text-left">
-						A fast, chaotic card game where you can interupt anytime and steal everything.
+						A fast, chaotic card game where you can interrupt anytime and steal everything.
 					</h4>
 				</div>
 
@@ -128,7 +128,7 @@
 						<div class="text-xs text-gray-500">
 							🎁 Get the Free Print & Play Mini-Game<br /> 🔓 Early access + exclusive launch
 							rewards
-							<br /> ⏳ Only available before launch
+							<br /> ⏳ Only {900 - $subscriberCount} spots left.
 						</div>
 					</div>
 
@@ -409,41 +409,41 @@
 						data-step-card
 						data-step="4"
 					>
-					<div class="card-flip-container mb-4 max-w-[280px] md:w-[280px]">
-						<div class="card-flip-inner rotate-1 {stepCardsVisible.step4 ? 'flipped' : ''}">
-							<div class="card-back">
-								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
-									alt="Card back"
-									class="w-full rounded-xl shadow-2xl"
-									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
-									loading="lazy"
-								/>
-							</div>
-							<div class="card-front">
-								<enhanced:img
-									src="$lib/assets/cards/card_reaction_yoink.jpg?w=360;280;260;240"
-									alt="Yoink card"
-									class="w-full rounded-xl shadow-2xl"
-									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
-									loading="lazy"
-								/>
+						<div class="card-flip-container mb-4 max-w-[280px] md:w-[280px]">
+							<div class="card-flip-inner rotate-1 {stepCardsVisible.step4 ? 'flipped' : ''}">
+								<div class="card-back">
+									<enhanced:img
+										src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+										alt="Card back"
+										class="w-full rounded-xl shadow-2xl"
+										sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
+										loading="lazy"
+									/>
+								</div>
+								<div class="card-front">
+									<enhanced:img
+										src="$lib/assets/cards/card_reaction_yoink.jpg?w=360;280;260;240"
+										alt="Yoink card"
+										class="w-full rounded-xl shadow-2xl"
+										sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
+										loading="lazy"
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="mb-2 flex items-center justify-center gap-3">
-						<div
-							class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#2196F3] text-lg font-bold text-white shadow-lg"
-						>
-							4
+						<div class="mb-2 flex items-center justify-center gap-3">
+							<div
+								class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#2196F3] text-lg font-bold text-white shadow-lg"
+							>
+								4
+							</div>
+							<h3 class="step-title">Chain Reactions</h3>
 						</div>
-						<h3 class="step-title">Chain Reactions</h3>
+						<p class="description-text">
+							Chain cards together or use <span class="description-text-bold">Reaction Cards</span> to
+							interrupt the best laid plans.
+						</p>
 					</div>
-					<p class="description-text">
-						Chain cards together or use <span class="description-text-bold">Reaction Cards</span> to
-						interrupt the best laid plans.
-					</p>
-				</div>
 
 					<!-- Step 5: Score points -->
 					<div
@@ -451,41 +451,41 @@
 						data-step-card
 						data-step="5"
 					>
-					<div class="card-flip-container mb-4 max-w-[280px] md:w-[280px]">
-						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step5 ? 'flipped' : ''}">
-							<div class="card-back">
-								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
-									alt="Card back"
-									class="w-full rounded-xl shadow-2xl"
-									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
-									loading="lazy"
-								/>
-							</div>
-							<div class="card-front">
-								<enhanced:img
-									src="$lib/assets/cards/card_scoring_banana_manifesto.jpg?w=360;280;260;240"
-									alt="Banana Manifesto card"
-									class="w-full rounded-xl shadow-2xl"
-									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
-									loading="lazy"
-								/>
+						<div class="card-flip-container mb-4 max-w-[280px] md:w-[280px]">
+							<div class="card-flip-inner -rotate-1 {stepCardsVisible.step5 ? 'flipped' : ''}">
+								<div class="card-back">
+									<enhanced:img
+										src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+										alt="Card back"
+										class="w-full rounded-xl shadow-2xl"
+										sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
+										loading="lazy"
+									/>
+								</div>
+								<div class="card-front">
+									<enhanced:img
+										src="$lib/assets/cards/card_scoring_banana_manifesto.jpg?w=360;280;260;240"
+										alt="Banana Manifesto card"
+										class="w-full rounded-xl shadow-2xl"
+										sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
+										loading="lazy"
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="mb-2 flex items-center justify-center gap-3">
-						<div
-							class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#FFC107] text-lg font-bold text-white shadow-lg"
-						>
-							5
+						<div class="mb-2 flex items-center justify-center gap-3">
+							<div
+								class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#FFC107] text-lg font-bold text-white shadow-lg"
+							>
+								5
+							</div>
+							<h3 class="step-title">Score Points</h3>
 						</div>
-						<h3 class="step-title">Score Points</h3>
-					</div>
-					<p class="description-text">
-						Bananarchy ends immediately when the last Banana Card is drawn. Add your <span
-							class="description-text-bold">Scoring Cards</span
-						> to secure your victory.
-					</p>
+						<p class="description-text">
+							Bananarchy ends immediately when the last Banana Card is drawn. Add your <span
+								class="description-text-bold">Scoring Cards</span
+							> to secure your victory.
+						</p>
 					</div>
 				</div>
 			</div>

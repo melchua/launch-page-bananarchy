@@ -107,8 +107,8 @@
 			</button>
 		</div>
 
-		<p class="text-center text-xs {darkMode ? 'text-white/85' : 'text-black/70'} md:text-left">
-			Instant download. No credit card needed. Only available before launch.
+		<p class="text-center text-xs {darkMode ? 'text-white/85' : 'text-black/70'}">
+			Instant download. No credit card needed. Only {900 - $subscriberCount} spots left.
 		</p>
 
 		{#if submitStatus === 'error'}
