@@ -1,10 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-	// Londrina Solid is loaded via @font-face in app.css with font-display: block
-	import '@fontsource/poppins';
-	import '@fontsource/poppins/800.css';
-	import '@fontsource/poppins/600.css';
-	import '@fontsource/poppins/500.css';
+	// Fonts are loaded via @font-face in app.css:
+	// - Londrina Solid: font-display: block (hero headlines)
+	// - Poppins: font-display: optional (body text, zero CLS)
 
 	import { onMount } from 'svelte';
 	import { dev, browser } from '$app/environment';
@@ -65,10 +63,17 @@
 </script>
 
 <svelte:head>
-	<!-- Preload Londrina Solid font to prevent FOUT/swap lag -->
+	<!-- Preload critical fonts for optimal performance -->
 	<link
 		rel="preload"
 		href="/fonts/londrina-solid-latin-400-normal.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="/fonts/poppins-latin-600-normal.woff2"
 		as="font"
 		type="font/woff2"
 		crossorigin="anonymous"
