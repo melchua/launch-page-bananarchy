@@ -87,33 +87,3 @@
 		</div>
 	</div>
 </div>
-
-<style>
-	.social-proof-section {
-		width: 100%;
-	}
-
-	.stat-number {
-		font-family: 'Londrina Solid', system-ui, sans-serif;
-		line-height: 1;
-	}
-
-	.stat-label {
-		font-family: 'Poppins', sans-serif;
-		font-weight: 500;
-	}
-
-	.testimonial-card {
-		transition: transform 0.2s ease;
-	}
-
-	.testimonial-card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-	}
-
-	.featured-logo {
-		font-family: 'Poppins', sans-serif;
-		letter-spacing: 0.5px;
-	}
-</style>
