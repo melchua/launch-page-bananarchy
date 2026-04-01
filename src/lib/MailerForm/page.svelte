@@ -1,6 +1,9 @@
 <script>
 	import { subscriberCount } from '$lib/stores/subscriberCount';
 
+	// Props
+	let { disablePulse = false, darkMode = false } = $props();
+
 	// State management using Svelte 5 runes
 	let email = $state('');
 	let isSubmitting = $state(false);
@@ -12,6 +15,9 @@
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(email);
 	}
+
+	// Reactive state for progressive glow
+	let isEmailValid = $derived(email.length > 0);
 
 	async function handleSubmit(event) {
 		event.preventDefault();
@@ -52,7 +58,7 @@
 			email = '';
 
 			// Increment subscriber count for instant feedback
-			subscriberCount.update(n => n + 1);
+			subscriberCount.update((n) => n + 1);
 
 			// Track form submission with Meta Pixel
 			if (typeof window.fbq === 'function') {
@@ -80,14 +86,16 @@
 				bind:value={email}
 				placeholder="Enter your email"
 				disabled={isSubmitting || submitStatus === 'success'}
-				class="flex-1 rounded-md border-2 border-gray-300 px-4 py-2 text-sm text-black placeholder-gray-500 focus:border-baorange focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+				class="flex-1 rounded-md border-2 border-gray-300 px-4 py-2 text-sm text-black placeholder-gray-500 transition-all focus:border-green-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 {!isEmailValid
+					? `shadow-[0_0_5px_rgba(52,169,49,0.6)] ${!disablePulse ? 'animate-pulse-glow' : ''}`
+					: ''}"
 				aria-label="Email address"
 				required
 			/>
 			<button
 				type="submit"
 				disabled={isSubmitting || submitStatus === 'success'}
-				class="whitespace-nowrap rounded-md bg-secondary px-6 py-2 text-sm font-semibold text-white transition-all hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-baorange focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+				class="whitespace-nowrap rounded-md bg-secondary px-6 py-2 text-sm font-semibold text-white transition-all hover:bg-[#1f8a38] focus:outline-none focus:ring-2 focus:ring-[#1f8a38] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
 			>
 				{#if isSubmitting}
 					Sending...
@@ -99,8 +107,8 @@
 			</button>
 		</div>
 
-		<p class="text-center text-xs text-black/70 sm:text-left">
-			Instant download. No credit card needed. Early access disappears once we launch.
+		<p class="text-center text-xs {darkMode ? 'text-white/85' : 'text-black/70'} md:text-left">
+			Instant download. No credit card needed. Only available before launch.
 		</p>
 
 		{#if submitStatus === 'error'}

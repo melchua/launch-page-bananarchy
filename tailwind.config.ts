@@ -14,7 +14,8 @@ export default {
 				'mobile-xxs': '430px'
 			},
 			animation: {
-				'bounce-in': 'bounceDown 800ms linear'
+				'bounce-in': 'bounceDown 800ms linear',
+				'pulse-glow': 'pulseGlow 4s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'custom-image': "url('$lib/assets/background.jpg')",
@@ -59,6 +60,14 @@ export default {
 					},
 					'100%': {
 						transform: 'translateY(0)'
+					}
+				},
+				pulseGlow: {
+					'0%, 100%': {
+						opacity: '0.4'
+					},
+					'50%': {
+						opacity: '0.7'
 					}
 				}
 			}

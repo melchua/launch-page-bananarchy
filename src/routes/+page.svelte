@@ -33,8 +33,7 @@
 				});
 			},
 			{
-				threshold: 0.3,
-				rootMargin: '0px 0px -180px 0px' // Account for fixed footer
+				threshold: 0.3
 			}
 		);
 
@@ -56,8 +55,7 @@
 				});
 			},
 			{
-				threshold: 0.5,
-				rootMargin: '0px 0px -180px 0px' // Account for fixed footer
+				threshold: 0.3
 			}
 		);
 
@@ -74,10 +72,7 @@
 </script>
 
 <div class="oback flex flex-grow flex-col">
-	<div
-		class="relative pb-8"
-		style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 95%, transparent 100%);"
-	>
+	<div class="white-gradient-bg relative pb-8">
 		<div
 			class="mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
 		>
@@ -162,7 +157,7 @@
 	</div>
 
 	<div class="flex flex-col items-center justify-center px-4 py-8">
-		<h2 class="text-center">Your Next Game Night Starts Here</h2>
+		<h2 class="text-center">Can you read? Then you can play.</h2>
 
 		<div class="flex flex-col items-center justify-center md:flex-row">
 			<!-- Card fan animation -->
@@ -213,9 +208,8 @@
 				class="flex flex-col items-center text-center md:ml-24 md:w-[400px] md:items-start md:gap-8 md:text-left"
 			>
 				<div>
-					A deceptively cute card game where banana theft leads to betrayal, backstabbing, and
-					hysterical laughter. Short, vicious rounds of high-energy chaos: the kind that ruins
-					alliances and makes you beg for “just one more game.”
+					This deceptively cute card game is designed for adults but loved by everyone. Expect
+					banana theft, betrayal, backstabbing, and laughter for the whole family.
 				</div>
 				<ul class="space-y-2 px-2 py-6 text-left">
 					<li class="flex items-start gap-2">
@@ -495,7 +489,7 @@
 		</div>
 	</div>
 
-	<div class="full">
+	<div class="full z-10">
 		<h2 class="text-center">There's more...</h2>
 		<div class="flex flex-col gap-4 px-4 py-0 sm:mx-36 xl:mx-48">
 			<div class="w-full">
