@@ -23,10 +23,6 @@
 	onMount(() => {
 		// Fetch the latest subscriber count
 		fetchSubscriberCount();
-
-		setTimeout(() => {
-			boxClass = 'animate-bounce-in';
-		}, 300);
 		// Card fan observer
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -109,14 +105,14 @@
 					<enhanced:img
 						src={deluxeBox}
 						alt="box"
-						class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px]`}
+						class={`m-2 w-fit sm:w-[500px] md:w-[600px]`}
 						sizes="(max-width: 430px) 320px, (max-width: 586px) 400px, (min-width: 640px) 640px, 80vw"
 						fetchpriority="high"
 					/>
 					<enhanced:img
 						src="$lib/assets/peel_1.png"
 						alt="box"
-						class={`${boxClass} -ml-[60px] -mt-[75px] w-[45%] sm:m-2 sm:-mt-[80px] sm:w-[50vw]`}
+						class={`-ml-[60px] -mt-[75px] w-[45%] sm:m-2 sm:-mt-[80px] sm:w-[50vw]`}
 						sizes="(max-width: 430px) 180px, (max-width: 586px) 240px, 50vw"
 						fetchpriority="high"
 					/>
