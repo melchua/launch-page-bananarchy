@@ -5,6 +5,10 @@
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { subscriberCount, fetchSubscriberCount } from '$lib/stores/subscriberCount';
 
+	// Import images once to avoid race conditions when used multiple times
+	import cardBack from '$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240&enhanced';
+	import deluxeBox from '$lib/assets/deluxe-box-render-kick.png?enhanced';
+
 	let boxClass = $state('');
 	let cardFanVisible = $state(false);
 	let cardFanElement: HTMLElement;
@@ -103,7 +107,7 @@
 				<!-- Deluxe Box Images - order-2 on mobile, hidden on desktop (shown in right column) -->
 				<div class="relative order-2 overflow-hidden lg:hidden">
 					<enhanced:img
-						src="$lib/assets/deluxe-box-render-kick-mobile.png"
+						src={deluxeBox}
 						alt="box"
 						class={`${boxClass} m-2 w-fit sm:w-[500px] md:w-[600px]`}
 						sizes="(max-width: 430px) 320px, (max-width: 586px) 400px, (min-width: 640px) 640px, 80vw"
@@ -140,7 +144,7 @@
 			<!-- Right Column: Deluxe Box Images (desktop only) -->
 			<div class="relative hidden lg:block">
 				<enhanced:img
-					src="$lib/assets/deluxe-box-render-kick.png"
+					src={deluxeBox}
 					alt="box"
 					class={`${boxClass} m-2 w-fit lg:w-[675px]`}
 					sizes="675px"
@@ -290,7 +294,7 @@
 						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step1 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+									src={cardBack}
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -331,7 +335,7 @@
 						<div class="card-flip-inner rotate-1 {stepCardsVisible.step2 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+									src={cardBack}
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -372,7 +376,7 @@
 						<div class="card-flip-inner -rotate-1 {stepCardsVisible.step3 ? 'flipped' : ''}">
 							<div class="card-back">
 								<enhanced:img
-									src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+									src={cardBack}
 									alt="Card back"
 									class="w-full rounded-xl shadow-2xl"
 									sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -417,7 +421,7 @@
 							<div class="card-flip-inner rotate-1 {stepCardsVisible.step4 ? 'flipped' : ''}">
 								<div class="card-back">
 									<enhanced:img
-										src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+										src={cardBack}
 										alt="Card back"
 										class="w-full rounded-xl shadow-2xl"
 										sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
@@ -459,7 +463,7 @@
 							<div class="card-flip-inner -rotate-1 {stepCardsVisible.step5 ? 'flipped' : ''}">
 								<div class="card-back">
 									<enhanced:img
-										src="$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240"
+										src={cardBack}
 										alt="Card back"
 										class="w-full rounded-xl shadow-2xl"
 										sizes="(max-width: 430px) 240px, (max-width: 586px) 260px, 280px"
