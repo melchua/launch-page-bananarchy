@@ -13,7 +13,7 @@
 		U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 body {
-	background-color: #f3941c;
+	background-color: #ffffff;
 }
 
 h4 {
@@ -58,8 +58,8 @@ picture {
 }
 
 .oback {
-	/* background-color: #f3941c; Full opacity background color */
 	position: relative;
+	background-color: #f3941c; /* Full opacity orange background */
 }
 
 .oback::before {
@@ -72,8 +72,8 @@ picture {
 	background-image: url('$lib/assets/silhouettes.png'); /* Replace with your image path */
 	background-size: 900px; /* Adjust as needed */
 	background-repeat: repeat; /* Adjust as needed */
-	z-index: -1; /* Ensure it stays behind the content */
-	filter: opacity(9%);
+	opacity: 0.09; /* 9% opacity for the pattern only */
+	pointer-events: none; /* Allow clicks to pass through */
 }
 
 .highlight-text {

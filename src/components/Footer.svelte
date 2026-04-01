@@ -5,7 +5,7 @@
 
 <footer
 	id="signup-form"
-	class="flex w-full items-center justify-center bg-black bg-opacity-90 p-2 text-center sm:mx-auto sm:p-4 sm:text-start"
+	class="z-10 flex w-full items-center justify-center bg-black bg-opacity-90 p-2 text-center sm:mx-auto sm:p-4 sm:text-start"
 >
 	<div
 		class="flex w-full flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row md:items-start md:text-start lg:w-[90%] xl:w-[72%]"
@@ -37,7 +37,8 @@
 				class="w-full px-4 py-0 pb-1 text-xs leading-none text-white md:px-2"
 				id="footer-description"
 			>
-				{$subscriberCount} founding monkeys and counting. Instant download. Early access disappears once we launch.
+				{$subscriberCount} founding monkeys and counting. Instant download. Early access disappears once
+				we launch.
 			</p>
 		</div>
 
