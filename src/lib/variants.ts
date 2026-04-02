@@ -74,7 +74,8 @@ export const variantsConfig: VariantsConfig = {
 			headline:
 				'You are the most <span class="highlight-text">mischievous</span> monkey at the card table',
 			subheadline:
-				'You do NOT wait your turn. You make them fear you by yoinking, snatching, and smashing their precious bananas. YOU are BANANARCHY.'
+				'You do NOT wait your turn. You make them fear you by yoinking, snatching, and smashing their precious bananas. YOU are BANANARCHY.',
+			lifestyle: 'The action never stops. Neither do your friends.'
 		}
 	],
 
