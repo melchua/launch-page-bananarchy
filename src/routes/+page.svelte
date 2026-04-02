@@ -4,7 +4,7 @@
 	import SocialProofBar from '../components/SocialProofBar.svelte';
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { subscriberCount, fetchSubscriberCount } from '$lib/stores/subscriberCount';
-
+	import LifestyleBar from '../components/LifestyleBar.svelte';
 	// Import images once to avoid race conditions when used multiple times
 	import cardBack from '$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240&enhanced';
 	import deluxeBox from '$lib/assets/deluxe-box-render-kick.png?enhanced';
@@ -194,6 +194,8 @@
 			</div>
 		</div>
 	</div>
+
+	<LifestyleBar />
 
 	<!-- Social Proof Bar -->
 	<SocialProofBar />
