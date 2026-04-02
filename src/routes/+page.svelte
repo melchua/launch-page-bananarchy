@@ -20,9 +20,47 @@
 		step5: false
 	});
 
-	onMount(() => {
+	// Count-up animation state
+	let displayCount = $state(0);
+
+	// Easing function for smooth animation (ease-out cubic)
+	function easeOutCubic(t: number): number {
+		return 1 - Math.pow(1 - t, 3);
+	}
+
+	// Count-up animation function
+	function animateCount(target: number, duration: number = 1500) {
+		const startTime = performance.now();
+		const startValue = 0;
+
+		function updateCount(currentTime: number) {
+			const elapsed = currentTime - startTime;
+			const progress = Math.min(elapsed / duration, 1);
+			const easedProgress = easeOutCubic(progress);
+
+			displayCount = Math.floor(startValue + (target - startValue) * easedProgress);
+
+			if (progress < 1) {
+				requestAnimationFrame(updateCount);
+			} else {
+				displayCount = target;
+			}
+		}
+
+		requestAnimationFrame(updateCount);
+	}
+
+	onMount(async () => {
 		// Fetch the latest subscriber count
-		fetchSubscriberCount();
+		await fetchSubscriberCount();
+
+		// Trigger count-up animation with the fetched value
+		const unsubscribe = subscriberCount.subscribe((count) => {
+			animateCount(count);
+		});
+
+		// Clean up subscription immediately after triggering animation
+		unsubscribe();
 		// Card fan observer
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -89,9 +127,9 @@
 
 					<h1 class="hero-headline mb-4 text-center lg:text-left">
 						<span
-							><span class="highlight-text">Steal</span> Bananas. <br />
+							><span class="highlight-text">Steal</span> Bananas.
 							<span class="highlight-text">Betray</span>
-							Your Friends. <br />
+							Friends.
 							<span class="highlight-text">Win</span> Anyway.</span
 						>
 					</h1>
@@ -123,13 +161,13 @@
 					class="order-3 flex flex-col items-center rounded-xl bg-transparent pt-2 text-center lg:order-2 lg:items-start lg:text-left"
 				>
 					<div class="hero-subhead pb-4">
-						<div class="pb-1 text-lg font-semibold">
-							Join {$subscriberCount}+ monkeys already playing
+						<div class="text-md pb-1 font-semibold">
+							Join {displayCount}+ monkeys already playing
 						</div>
 						<div class="text-xs text-gray-500">
 							🎁 Get the Free Print & Play Mini-Game<br /> 🔓 Early access + exclusive launch
 							rewards
-							<br /> ⏳ Only {900 - $subscriberCount} spots left.
+							<br /> ⏳ Only {900 - displayCount} spots left.
 						</div>
 					</div>
 

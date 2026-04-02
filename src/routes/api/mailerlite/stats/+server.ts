@@ -31,7 +31,7 @@ export const GET: RequestHandler = async () => {
 
 		// Return the total count from MailerLite, fallback to 528 if not present
 		return json({
-			count: data.total || 528
+			count: data.total > 528 ? data.total : 528
 		});
 	} catch (error) {
 		console.error('Error fetching subscriber count:', error);
