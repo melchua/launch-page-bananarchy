@@ -8,6 +8,10 @@
 	// Import images once to avoid race conditions when used multiple times
 	import cardBack from '$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240&enhanced';
 	import deluxeBox from '$lib/assets/deluxe-box-render-kick.png?enhanced';
+	import { useVariant } from '$lib/useVariant.svelte';
+
+	// Initialize variant for A/B testing
+	const { variant, isReady } = useVariant();
 
 	let boxClass = $state('');
 	let cardFanVisible = $state(false);
@@ -50,18 +54,14 @@
 		requestAnimationFrame(updateCount);
 	}
 
-	onMount(async () => {
-		// Fetch the latest subscriber count
-		await fetchSubscriberCount();
-
-		// Trigger count-up animation with the fetched value
-		const unsubscribe = subscriberCount.subscribe((count) => {
-			animateCount(count);
+	onMount(() => {
+		void fetchSubscriberCount().then(() => {
+			const unsubscribe = subscriberCount.subscribe((count) => {
+				animateCount(count);
+			});
+			unsubscribe();
 		});
 
-		// Clean up subscription immediately after triggering animation
-		unsubscribe();
-		// Card fan observer
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -111,7 +111,7 @@
 </script>
 
 <div class="oback flex flex-grow flex-col">
-	<div class="relative bg-white/80 pb-8">
+	<div class="relative bg-white/80 pb-12">
 		<div
 			class="mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-8 pb-0 pt-0 lg:flex-row lg:justify-between lg:pt-8"
 		>
@@ -126,15 +126,24 @@
 					</h2>
 
 					<h1 class="hero-headline mb-4 text-center lg:text-left">
-						<span
-							><span class="highlight-text">Steal</span> Bananas.
-							<span class="highlight-text">Betray</span>
-							Friends.
-							<span class="highlight-text">Win</span> Anyway.</span
-						>
+						{#if isReady}
+							<span>{@html variant.headline}</span>
+						{:else}
+							<!-- Fallback while loading -->
+							<span
+								><span class="highlight-text">Cute</span> Monkeys. <br /><span
+									class="highlight-text">Clever</span
+								>
+								Tricks. <br /><span class="highlight-text">Wild</span> Plays.</span
+							>
+						{/if}
 					</h1>
 					<h4 class="text-center lg:text-left">
-						A fast, chaotic card game where you can interrupt anytime and steal everything.
+						{#if isReady}
+							{variant.subheadline}
+						{:else}
+							A fast, strategic party game where every move matters.
+						{/if}
 					</h4>
 				</div>
 
@@ -160,14 +169,14 @@
 				<div
 					class="order-3 flex flex-col items-center rounded-xl bg-transparent pt-2 text-center lg:order-2 lg:items-start lg:text-left"
 				>
-					<div class="hero-subhead pb-4">
+					<div class="hero-subhead py-4">
 						<div class="text-md pb-1 font-semibold">
 							Join {displayCount}+ monkeys already playing
 						</div>
 						<div class="text-xs text-gray-500">
 							🎁 Get the Free Print & Play Mini-Game<br /> 🔓 Early access + exclusive launch
 							rewards
-							<br /> ⏳ Only {900 - displayCount} spots left.
+							<!-- <br /> ⏳ Only {900 - displayCount} spots left. -->
 						</div>
 					</div>
 

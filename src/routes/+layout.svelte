@@ -30,6 +30,19 @@
 	onMount(() => {
 		if (!browser) return;
 
+		// Initialize Google Analytics (only in production)
+		if (dev) {
+			// Mock gtag function in development to prevent tracking test events
+			window.gtag = function () {
+				console.log('🚫 Google Analytics (DEV - not tracked):', ...arguments);
+			};
+			console.log('Google Analytics: Disabled (development mode)');
+		} else {
+			// Google Analytics is loaded via script tag in <svelte:head>
+			// Just log that it's initialized
+			console.log('Google Analytics: Initialized (production)');
+		}
+
 		// Initialize Meta Pixel (only in production)
 		if (dev) {
 			// Mock fbq function in development to prevent tracking test events
@@ -78,6 +91,18 @@
 		type="font/woff2"
 		crossorigin="anonymous"
 	/>
+	<!-- Google tag (gtag.js) - production only -->
+	{#if !dev}
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRBBNH8JRZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-PRBBNH8JRZ');
+		</script>
+	{/if}
 	<!-- Meta Pixel noscript fallback (production only) -->
 	{#if !dev}
 		<noscript>
@@ -90,16 +115,6 @@
 			/>
 		</noscript>
 	{/if}
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRBBNH8JRZ"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'G-PRBBNH8JRZ');
-	</script>
 </svelte:head>
 
 <div class="flex min-h-screen w-full flex-col overflow-x-hidden">

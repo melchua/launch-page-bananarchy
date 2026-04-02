@@ -102,7 +102,7 @@
 				{:else if submitStatus === 'success'}
 					Subscribed!
 				{:else}
-					➡ Send Me The Free Game
+					➡ Claim My Free Print & Play
 				{/if}
 			</button>
 		</div>

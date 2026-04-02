@@ -72,7 +72,7 @@
 	</div>
 
 	<!-- Layer 4: As Featured In -->
-	<div class="featured-section bg-[#3a3a3a] px-4 pb-8 pt-4 md:pb-12">
+	<!-- <div class="featured-section bg-[#3a3a3a] px-4 pb-8 pt-4 md:pb-12">
 		<div class="mx-auto max-w-5xl text-center">
 			<p class="mb-4 text-xs font-semibold uppercase tracking-widest text-white/50 md:text-sm">
 				As Featured In
@@ -85,5 +85,5 @@
 				<div class="featured-logo text-base font-bold md:text-lg">The Cosy Gamer</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
