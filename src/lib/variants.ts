@@ -31,7 +31,8 @@ export const variantsConfig: VariantsConfig = {
 				'You are the most <span class="highlight-text">mischievous</span> monkey at the card table',
 			subheadline:
 				'You do NOT wait your turn. You make them fear you by yoinking, snatching, and smashing their precious bananas. YOU are BANANARCHY.',
-			lifestyle: "Put down your phone. In Bananarchy, you're always in the game."
+			lifestyle:
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like Uno or Exploding Kittens, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'archived',

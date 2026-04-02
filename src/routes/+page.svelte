@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Footer from '../components/Footer.svelte';
-	import SocialProofBar from '../components/SocialProofBar.svelte';
+	import ThinSocialProofBar from '../components/ThinSocialProofBar.svelte';
 	import MailerForm from '$lib/MailerForm/page.svelte';
 	import { subscriberCount, fetchSubscriberCount } from '$lib/stores/subscriberCount';
 	import LifestyleBar from '../components/LifestyleBar.svelte';
@@ -206,11 +206,11 @@
 
 	<LifestyleBar />
 
-	<!-- Social Proof Bar -->
-	<SocialProofBar />
+	<!-- Thin Social Proof Bar -->
+	<ThinSocialProofBar />
 
-	<div class="flex flex-col items-center justify-center px-4 py-8">
-		<h2 class="text-center">Can you read? Then you can play.</h2>
+	<div class="flex flex-col items-center justify-center px-4 py-14">
+		<h2 class="text-center">Designed for Adults, Loved by Everyone.</h2>
 
 		<div class="flex flex-col items-center justify-center md:flex-row">
 			<!-- Card fan animation -->
@@ -260,10 +260,7 @@
 			<div
 				class="flex flex-col items-center text-center md:ml-24 md:w-[400px] md:items-start md:gap-8 md:text-left"
 			>
-				<div>
-					This deceptively cute card game is designed for adults but loved by everyone. Expect
-					banana theft, betrayal, backstabbing, and laughter for the whole family.
-				</div>
+				<div>Expect banana theft, betrayal, backstabbing, and laughter for the whole family.</div>
 				<ul class="space-y-2 px-2 py-6 text-left">
 					<li class="flex items-start gap-2">
 						<enhanced:img
@@ -631,6 +628,7 @@
 				</div>
 			</div>
 		</div>
+
 		<Footer />
 	</div>
 </div>

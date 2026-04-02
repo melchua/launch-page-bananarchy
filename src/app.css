@@ -548,13 +548,53 @@ picture {
 	font-weight: 500;
 }
 
+/* Testimonial Carousel Styles */
+.testimonial-carousel {
+	position: relative;
+	min-height: 150px;
+}
+
 .testimonial-card {
 	transition: transform 0.2s ease;
 }
 
-.testimonial-card:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+/* Fade in animation for carousel testimonials */
+@keyframes testimonial-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.testimonial-fade-in {
+	animation: testimonial-fade-in 0.5s ease-out;
+}
+
+/* Carousel dot indicators */
+.carousel-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	padding: 0;
+}
+
+.carousel-dot:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	transform: scale(1.2);
+}
+
+.carousel-dot.active {
+	background-color: #f6a31a;
+	width: 24px;
+	border-radius: 5px;
 }
 
 .featured-logo {
