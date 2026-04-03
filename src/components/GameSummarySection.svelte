@@ -91,8 +91,11 @@
 						loading="lazy"
 					/>
 					<span
-						><span class="highlight-text">Steal</span> bananas from your friends (and don't get caught!)</span
-					>
+						><span class="highlight-text">Hand-drawn Illustrations by a former Disney artist</span>
+						Every character is thoughtfully illustrated by a
+						<span class="highlight-text-light-mode">real human artist</span>, packed with charm,
+						expression, and playful detail.
+					</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<enhanced:img
@@ -115,9 +118,10 @@
 						loading="lazy"
 					/>
 					<span
-						><span class="highlight-text">Score big</span> when the moment's right—plan carefully or
-						lose it all</span
-					>
+						><span class="highlight-text">Great for parties. Terrible for friendships.</span> It's
+						all fun and games until someone loses a banana. Sneaky, hilarious, and
+						<span class="highlight-text-light-mode">impossible to stop playing</span>
+					</span>
 				</li>
 			</ul>
 

@@ -142,14 +142,10 @@
 			<div class="mb-20 last:mb-0 lg:mb-32">
 				<!-- Centered Headline - always first -->
 				<div class="mb-8 flex items-center justify-center gap-4 lg:mb-12 lg:gap-6">
-					<div
-						class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full text-4xl lg:h-16 lg:w-16 lg:text-5xl"
-					>
-						{section.emoji}
-					</div>
 					<h3
 						class="story-headline max-w-2xl text-center font-londrinaSolid text-3xl leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
 					>
+						{section.emoji}
 						{section.title}
 					</h3>
 				</div>
