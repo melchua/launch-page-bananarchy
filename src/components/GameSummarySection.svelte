@@ -1,8 +1,46 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import monkeyhead from '$lib/assets/icons/monkeyhead-128x128.png?enhanced';
+	import deniedIcon from '$lib/assets/icons/denied-icon-128x128.png?enhanced';
+	import bananaIcon from '$lib/assets/icons/banana-icon-128x128.png?enhanced';
+
+	import type { Picture } from 'vite-imagetools';
 
 	let cardFanVisible = $state(false);
 	let cardFanElement: HTMLElement;
+
+	interface Feature {
+		icon: Picture;
+		alt: string;
+		title: string;
+		description: string;
+		highlight?: string;
+		descriptionEnd?: string;
+	}
+
+	const features: Feature[] = [
+		{
+			icon: monkeyhead,
+			alt: 'Monkey Head',
+			title: 'Hand-drawn Illustrations by a former Disney artist',
+			description: 'Every character is thoughtfully illustrated by a',
+			highlight: 'real human artist',
+			descriptionEnd: ', packed with charm, expression, and playful detail.'
+		},
+		{
+			icon: deniedIcon,
+			alt: 'Denied',
+			title: 'Interrupt',
+			description: 'Anyone, anytime, for maximum chaos'
+		},
+		{
+			icon: bananaIcon,
+			alt: 'Banana',
+			title: 'Great for parties. Terrible for friendships.',
+			description: "It's all fun and games until someone loses a banana. Sneaky, hilarious, and",
+			highlight: 'impossible to stop playing'
+		}
+	];
 
 	onMount(() => {
 		const observer = new IntersectionObserver(
@@ -78,54 +116,35 @@
 
 		<!-- Game description -->
 		<div
-			class="text-md flex flex-col items-center text-center md:ml-24 md:w-[400px] md:items-start md:gap-8 md:text-left"
+			class="text-md z-10 flex flex-col items-center text-center md:ml-24 md:w-[400px] md:items-start md:py-4 md:text-left"
 		>
-			<div class="text-center text-xl font-semibold">
-				Expect banana theft, betrayal, backstabbing, and laughter for the whole family.
+			<div
+				class="highlight-text-light-mode z-10 text-center text-xl font-bold italic drop-shadow-lg md:py-4"
+			>
+				"Expect banana theft, betrayal, backstabbing, and laughter for the whole family.""
 			</div>
-			<ul class="text-bold space-y-2 px-2 py-6 text-left">
-				<li class="flex items-start gap-2">
-					<enhanced:img
-						src="$lib/assets/icons/monkeyhead-128x128.png"
-						alt="Monkey Head"
-						class="mt-0.5 h-7 w-7 flex-shrink-0"
-						sizes="28px"
-						loading="lazy"
-					/>
-					<span
-						><div class="text-xl font-bold">Hand-drawn Illustrations by a former Disney artist</div>
-						Every character is thoughtfully illustrated by a
-						<span class="highlight-text-light-mode">real human artist</span>, packed with charm,
-						expression, and playful detail.
-					</span>
-				</li>
-				<li class="flex items-start gap-2">
-					<enhanced:img
-						src="$lib/assets/icons/denied-icon-128x128.png"
-						alt="Denied"
-						class="mt-0.5 h-7 w-7 flex-shrink-0"
-						sizes="28px"
-						loading="lazy"
-					/>
-					<span
-						><div class="text-xl font-bold">Interrupt</div>
-						Anyone, anytime, for maximum chaos</span
-					>
-				</li>
-				<li class="flex items-start gap-2">
-					<enhanced:img
-						src="$lib/assets/icons/banana-icon-128x128.png"
-						alt="Banana"
-						class="mt-0.5 h-7 w-7 flex-shrink-0"
-						sizes="28px"
-						loading="lazy"
-					/>
-					<span
-						><div class="text-xl font-bold">Great for parties. Terrible for friendships.</div>
-						It's all fun and games until someone loses a banana. Sneaky, hilarious, and
-						<span class="highlight-text-light-mode">impossible to stop playing</span>
-					</span>
-				</li>
+			<ul class="text-bold my-6 gap-4 space-y-2 px-2 text-left">
+				{#each features as feature}
+					<li class="flex items-start gap-2 pb-2">
+						<enhanced:img
+							src={feature.icon}
+							alt={feature.alt}
+							class="mt-0.5 h-7 w-7 flex-shrink-0"
+							sizes="28px"
+							loading="lazy"
+						/>
+						<span>
+							<div class="text-xl font-bold">{feature.title}</div>
+							{feature.description}
+							{#if feature.highlight}
+								<span class="highlight-text-light-mode">{feature.highlight}</span>
+							{/if}
+							{#if feature.descriptionEnd}
+								{feature.descriptionEnd}
+							{/if}
+						</span>
+					</li>
+				{/each}
 			</ul>
 		</div>
 	</div>

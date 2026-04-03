@@ -7,8 +7,13 @@
 		},
 		{
 			quote:
-				'10/10. When you think you have a gameplan to win it all, only to be betrayed by the sweet looking girl beside you.',
-			author: '— Eric A.'
+				'Ridiculously fun! When you think you have a gameplan to win it all, only to be betrayed by the sweet looking girl beside you. 10/10',
+			author: '— Elvis Amisi, Playtester'
+		},
+		{
+			quote:
+				"This game nails it in terms of being both easy to learn and chaotic enough to keep things interesting each time you play! Highly recommend - I'd give it ⭐️⭐️⭐️⭐️⭐️ but let's go with 🍌🍌🍌🍌🍌 to stay on theme.",
+			author: '— Laine Anderson, Playtester'
 		},
 		{
 			quote:
@@ -17,46 +22,26 @@
 		},
 		{
 			quote:
-				'The perfect mix of strategy and chaos. Just when you think you have it figured out, someone plays an Anytime card and everything falls apart!',
-			author: '— Sarah M.'
+				'It kept my whole family involved from start to finish, with plenty of sudden turnarounds. A great fit for groups that enjoy lively, unpredictable games.',
+			author: '— The Howling Meeple'
 		},
 		{
 			quote:
-				'We laughed so hard we had tears streaming down our faces. This is our new go-to party game.',
-			author: '— David K., Board Game Enthusiast'
-		},
-		{
-			quote:
-				'Simple to learn but with enough depth to keep things interesting. My kids keep asking to play "one more round".',
-			author: '— Jennifer L.'
-		},
-		{
-			quote:
-				'The artwork is absolutely adorable and the gameplay is sneaky fun. Love how you can never feel safe!',
-			author: '— Alex R., Game Night Host'
-		},
-		{
-			quote:
-				'Finally, a card game where waiting for your turn is NOT boring. The Anytime cards keep everyone engaged the whole time.',
-			author: '— Marcus T.'
-		},
-		{
-			quote:
-				'Brought this to family game night and it was an instant hit. Even my teenager put down their phone to play!',
-			author: '— Patricia S., Mom of 3'
+				'Chaotic and engaging party game for those who enjoy a frentic play style in their card games. The clever cards create lots of humorous and unexpected momennts.',
+			author: '— Board Game Bite'
 		}
 	];
 </script>
 
-<div class="social-proof-section transition-opacity duration-700">
+<div class="social-proof-section bg-[#3a3a3a] transition-opacity duration-700">
 	<!-- Layer 1: Eyebrow line -->
-	<div class="eyebrow-line bg-[#2d2d2d] px-4 py-3 text-center">
-		<p class="text-xs font-semibold uppercase tracking-widest text-white/80 md:text-sm">
+	<div class="px-4 pb-0 pt-12 text-center">
+		<p class="stat-number mb-1 text-4xl font-bold text-[#F6A31A] md:text-5xl">
 			Already getting rave reviews:
 		</p>
 	</div>
 	<!-- Layer 3: Testimonial Cards -->
-	<div class="testimonials-section bg-[#3a3a3a] px-4 py-8 md:py-12">
+	<div class="testimonials-section px-4 py-8 md:py-12">
 		<div class="mx-auto max-w-6xl">
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
 				{#each testimonials as testimonial}
