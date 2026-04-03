@@ -71,7 +71,7 @@
 						Bananarchy
 					</h2>
 
-					<h1 class="hero-headline mb-4 text-center lg:text-left">
+					<h1 class="hero-headline mb-3 text-center lg:text-left">
 						{#if isReady}
 							<span>{@html variant.headline}</span>
 						{:else}
