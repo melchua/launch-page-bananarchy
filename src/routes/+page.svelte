@@ -86,7 +86,7 @@
 					</h1>
 					<h4 class="text-center lg:text-left">
 						{#if isReady}
-							{variant.subheadline}
+							{@html variant.subheadline}
 						{:else}
 							A fast, strategic party game where every move matters.
 						{/if}
