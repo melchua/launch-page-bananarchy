@@ -42,6 +42,26 @@
 		}
 	];
 
+	interface GameStat {
+		iconType: 'calendar' | 'users' | 'clock';
+		label: string;
+	}
+
+	const gameStats: GameStat[] = [
+		{
+			iconType: 'calendar',
+			label: 'Ages 8+'
+		},
+		{
+			iconType: 'users',
+			label: 'Players 3-8'
+		},
+		{
+			iconType: 'clock',
+			label: 'Playtime 25 mins'
+		}
+	];
+
 	onMount(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -149,5 +169,69 @@
 				{/each}
 			</ul>
 		</div>
+	</div>
+
+	<!-- Game Stats Section -->
+	<div class="mt-8 flex items-center justify-center gap-8 md:gap-12">
+		{#each gameStats as stat}
+			<div class="flex flex-col items-center gap-2">
+				<div class="h-9 w-9 md:h-10 md:w-10">
+					{#if stat.iconType === 'calendar'}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-full w-full"
+						>
+							<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+							<line x1="16" y1="2" x2="16" y2="6"></line>
+							<line x1="8" y1="2" x2="8" y2="6"></line>
+							<line x1="3" y1="10" x2="21" y2="10"></line>
+							<path d="M8 14h.01"></path>
+							<path d="M12 14h.01"></path>
+							<path d="M16 14h.01"></path>
+							<path d="M8 18h.01"></path>
+							<path d="M12 18h.01"></path>
+							<path d="M16 18h.01"></path>
+						</svg>
+					{:else if stat.iconType === 'users'}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-full w-full"
+						>
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+							<circle cx="9" cy="7" r="4"></circle>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+							<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+						</svg>
+					{:else if stat.iconType === 'clock'}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-full w-full"
+						>
+							<circle cx="12" cy="12" r="10"></circle>
+							<polyline points="12 6 12 12 16 14"></polyline>
+						</svg>
+					{/if}
+				</div>
+				<span class="text-center text-sm font-semibold md:text-base">{stat.label}</span>
+			</div>
+		{/each}
 	</div>
 </div>

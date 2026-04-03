@@ -10,10 +10,10 @@
 		class="flex w-full flex-col items-center justify-between gap-6 text-center md:w-full md:flex-row lg:w-[90%] xl:w-[72%]"
 	>
 		<!-- Left column: headline + description -->
-		<div class="flex flex-col items-center gap-1 md:flex-1 md:items-start">
+		<div class="flex flex-col items-center gap-1 py-4 md:flex-1 md:items-start">
 			<h1 class="footer-headline relative inline-flex items-center gap-2" id="footer-headline">
 				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
-				<span class="text-white">
+				<span class="text-center text-white">
 					Get My Free Mini-Game:
 					<span class="whitespace-nowrap sm:whitespace-normal">
 						<span class="text-red-500">Play Now</span></span
