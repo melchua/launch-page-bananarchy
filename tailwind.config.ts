@@ -64,10 +64,10 @@ export default {
 				},
 				pulseGlow: {
 					'0%, 100%': {
-						opacity: '0.4'
+						boxShadow: '0 0 6px rgba(52, 169, 49, 0.4), 0 0 16px rgba(52, 169, 49, 0.2)'
 					},
 					'50%': {
-						opacity: '0.7'
+						boxShadow: '0 0 10px rgba(52, 169, 49, 0.8), 0 0 24px rgba(52, 169, 49, 0.4)'
 					}
 				}
 			}

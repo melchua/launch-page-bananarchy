@@ -1,143 +1,243 @@
 <script lang="ts">
+	import monkeymayhem from '$lib/assets/storysection/monkey_mayhem_fire.png?enhanced';
+	import bananaSplitCartoon from '$lib/assets/storysection/banana_split_cartoon.png?enhanced';
+	import smash from '$lib/assets/storysection/smash.png?enhanced';
+	import grab from '$lib/assets/storysection/grab_glow.png?enhanced';
+	import shield from '$lib/assets/storysection/shield.png?enhanced';
+	import slip from '$lib/assets/storysection/slip.png?enhanced';
+	import bakeBananaBread from '$lib/assets/storysection/bake_banana_bread.png?enhanced';
+	import bananaManifesto from '$lib/assets/storysection/banana_manifesto.png?enhanced';
+
+	import type { Picture } from 'vite-imagetools';
+
+	type TextSegment = { text: string; bold?: boolean; color?: string };
+	type Paragraph = TextSegment[];
+
+	interface Section {
+		emoji: string;
+		title: string;
+		paragraphs: Paragraph[];
+		image1Color: string;
+		image2Color: string;
+		image1: Picture;
+		image2: Picture;
+	}
+
 	// Placeholder data structure - images will be replaced later
-	const sections = [
+	const sections: Section[] = [
 		{
-			number: 1,
+			emoji: '🔄',
 			title: 'Flip the table on your rival monkeys',
 			paragraphs: [
-				'Monkeys are not to be trusted. Play powerful action cards to distribute the banana wealth evenly using the Bolshevik Banana card, or just disrupt your neighbours with a Banana split!',
-				'Luck got you down? Play Monkey Mayhem and rotate the hoard of bananas to yourself right before the end of the game.'
+				[{ text: 'Monkeys are ' }, { text: 'not to be trusted', bold: true }, { text: '.' }],
+				[
+					{ text: 'Play ' },
+					{ text: 'powerful action cards', bold: true },
+					{ text: ' to distribute the banana wealth evenly using the ' },
+					{ text: 'Bolshevik Banana', bold: true, color: '#f26b4e' },
+					{ text: ' card, or just disrupt your neighbours with a ' },
+					{ text: 'Banana Split', bold: true, color: '#f26b4e' },
+					{ text: '!' }
+				],
+				[
+					{ text: 'Luck got you down? Play ' },
+					{ text: 'Monkey Mayhem', bold: true, color: '#f26b4e' },
+					{ text: ' and ' },
+					{ text: 'rotate the hoard of bananas', bold: true },
+					{ text: ' to yourself right before the end of the game.' }
+				]
 			],
-			imageLeft: true
+			image1Color: '#F6A31A',
+			image2Color: '#A060AF',
+			image1: monkeymayhem,
+			image2: bananaSplitCartoon
 		},
 		{
-			number: 2,
+			emoji: '⚡',
 			title: "Interrupt their turn. It's your turn now.",
 			paragraphs: [
-				"Play an Anytime Card to smash a rival's bananas, snatch them mid-turn, or just toss them around the table for fun. No permission needed. No mercy required. Chaos doesn't happen to you - YOU happen to chaos."
+				[
+					{ text: 'Play an ' },
+					{ text: 'Anytime Card', bold: true, color: '#05ce78' },
+					{ text: ' to ' },
+					{ text: 'smash', bold: true },
+					{ text: " a rival's bananas, " },
+					{ text: 'snatch them mid-turn', bold: true },
+					{ text: ', or just toss them around the table for fun.' }
+				],
+				[{ text: 'No permission needed. No mercy required.', bold: true }],
+				[
+					{ text: "Chaos doesn't happen to you - " },
+					{ text: 'YOU happen to chaos', bold: true, color: '#05ce78' },
+					{ text: '.' }
+				]
 			],
-			imageLeft: false
+			image1Color: '#05ce78',
+			image2Color: '#FFC627',
+			image1: grab,
+			image2: smash
 		},
 		{
-			number: 3,
+			emoji: '🛡️',
 			title: 'Protect your friends… and punish the rest',
 			paragraphs: [
-				'Play reaction cards to shield your neighbours to build new alliances, or to block your own banana collection from being smashed.',
-				"Toss ripe bananas from your foes to the cute monkey across the table… or toss a rotten one to that monkey that's been mean to the whole night."
+				[
+					{ text: 'Play ' },
+					{ text: 'Reaction Cards', bold: true, color: '#2196F3' },
+					{ text: ' to ' },
+					{ text: 'shield your neighbours', bold: true },
+					{ text: ' and build new alliances, or to ' },
+					{ text: 'block your own banana collection', bold: true },
+					{ text: ' from being smashed.' }
+				],
+				[
+					{ text: 'Used banana peels are perfect traps for rivals to ' },
+					{ text: 'slip', bold: true, color: '#FFD700' },
+					{ text: " on. It's a TRAP!" }
+				]
 			],
-			imageLeft: true
+			image1Color: '#2196F3',
+			image2Color: '#FF5722',
+			image1: shield,
+			image2: slip
 		},
 		{
-			number: 4,
+			emoji: '🍌',
 			title: 'Collect bananas and special scoring cards',
 			paragraphs: [
-				'Been dealt a rotten hand (of bananas)? No problem! Collect special scoring cards like Bake Banana bread to turn all your rotten bananas into yummy Banana bread to enhance your score!',
-				'Use scoring cards to play possum, and then surprise the room by doubling your points at the end of the game!'
+				[{ text: 'Been dealt a rotten hand (of bananas)? ' }, { text: 'No problem!', bold: true }],
+				[
+					{ text: 'Collect ' },
+					{ text: 'special scoring cards', bold: true, color: '#9C27B0' },
+					{ text: ' like ' },
+					{ text: 'Bake Banana Bread', bold: true, color: '#9C27B0' },
+					{ text: ' to turn all your rotten bananas into yummy banana bread and ' },
+					{ text: 'enhance your score', bold: true },
+					{ text: '!' }
+				],
+				[
+					{ text: 'Use scoring cards to ' },
+					{ text: 'play possum' },
+					{ text: ', and then ' },
+					{ text: 'surprise the room', bold: true, color: '#9C27B0' },
+					{
+						text: ' by writing your '
+					},
+					{ text: 'Banana Manifesto', bold: true, color: '#9C27B0' },
+					{ text: ' which doubles your points at the end of the game!' }
+				]
 			],
-			imageLeft: false
+			image1Color: '#9C27B0',
+			image2Color: '#FFEB3B',
+			image1: bakeBananaBread,
+			image2: bananaManifesto
 		}
 	];
-
-	// Color palette for placeholder images
-	const placeholderColors = ['#F6A31A', '#A060AF', '#05ce78', '#FFC627'];
 </script>
 
-<div class="story-section-wrapper bg-white/85 px-4 py-12 sm:px-8">
+<div class="story-section-wrapper z-10 bg-white/80 px-4 py-12 sm:px-8 lg:py-16">
 	<div class="mx-auto max-w-7xl">
 		<!-- Sections -->
 		{#each sections as section, index}
-			<div class="mb-16 last:mb-0 lg:mb-24">
-				<!-- Mobile Layout: Stacked -->
-				<div class="flex flex-col gap-6 lg:hidden">
-					<!-- Centered Headline (mobile) -->
-					<div class="flex items-center justify-center gap-3">
-						<div
-							class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#f26b4e] text-xl font-bold text-white shadow-lg"
-						>
-							{section.number}
-						</div>
-						<h3 class="text-2xl">{section.title}</h3>
-					</div>
-
-					<!-- First placeholder image (mobile) -->
+			<div class="mb-20 last:mb-0 lg:mb-32">
+				<!-- Centered Headline - always first -->
+				<div class="mb-8 flex items-center justify-center gap-4 lg:mb-12 lg:gap-6">
 					<div
-						class="aspect-[2/3] w-full max-w-[280px] self-center rounded-xl shadow-lg"
-						style="background: linear-gradient(135deg, {placeholderColors[
-							index
-						]} 0%, {placeholderColors[(index + 1) % 4]} 100%);"
+						class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full text-4xl lg:h-16 lg:w-16 lg:text-5xl"
 					>
-						<div class="flex h-full items-center justify-center text-white/30">
-							<enhanced:img
-								src="$lib/assets/storysection/monkeymayhem.jpg"
-								alt="Monkey Mayhem"
-								class="h-full w-full object-cover"
-							/>
-						</div>
+						{section.emoji}
 					</div>
-
-					<!-- Text content (mobile) -->
-					<div class="text-center">
-						{#each section.paragraphs as paragraph}
-							<p class="description-text mb-4 text-left">{paragraph}</p>
-						{/each}
-					</div>
-
-					<!-- Second placeholder image (mobile) -->
-					<div
-						class="aspect-[2/3] w-full max-w-[280px] self-center rounded-xl shadow-lg"
-						style="background: linear-gradient(135deg, {placeholderColors[
-							(index + 2) % 4
-						]} 0%, {placeholderColors[(index + 3) % 4]} 100%);"
+					<h3
+						class="story-headline max-w-2xl text-center font-londrinaSolid text-3xl leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
 					>
+						{section.title}
+					</h3>
+				</div>
+
+				<!-- First Image (mobile only - above text) -->
+				<div class="mb-8 flex justify-center lg:hidden">
+					<div class="aspect-[3/3] w-full max-w-[500px] rounded-xl">
 						<div class="flex h-full items-center justify-center text-white/30">
-							<span class="text-sm font-semibold">Placeholder Image 2</span>
+							{#if section.image1}
+								<enhanced:img
+									src={section.image1}
+									alt={section.title}
+									class="h-full w-full rounded-xl object-cover"
+								/>
+							{:else}
+								<span class="text-xs font-semibold">Image {index * 2 + 1}</span>
+							{/if}
 						</div>
 					</div>
 				</div>
 
-				<!-- Desktop Layout: Alternating -->
-				<div class="hidden lg:block">
-					<!-- Centered Headline -->
-					<div class="mb-6 flex items-center justify-center gap-3">
-						<div
-							class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#f26b4e] text-xl font-bold text-white shadow-lg"
-						>
-							{section.number}
+				<!-- Desktop layout with text between images -->
+				<div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10">
+					<!-- First Image (desktop only) -->
+					<div class="hidden w-1/4 rounded-xl lg:block">
+						<div class="flex h-full items-center justify-center text-white/30">
+							{#if section.image1}
+								<enhanced:img
+									src={section.image1}
+									alt={section.title}
+									class="h-full w-full rounded-xl object-cover"
+								/>
+							{:else}
+								<span class="text-sm font-semibold">Image {index * 2 + 1}</span>
+							{/if}
 						</div>
-						<h3 class="text-2xl">{section.title}</h3>
 					</div>
 
-					<!-- Images and Text Row -->
-					<div class="flex items-center gap-8">
-						<!-- Left Image -->
-						<div
-							class="aspect-[2/3] w-1/4 flex-shrink-0 rounded-xl shadow-lg"
-							style="background: linear-gradient(135deg, {placeholderColors[
-								index
-							]} 0%, {placeholderColors[(index + 1) % 4]} 100%);"
-						>
-							<div class="flex h-full items-center justify-center text-white/30">
-								<span class="text-sm font-semibold">Placeholder 1</span>
-							</div>
-						</div>
+					<!-- Text Content -->
+					<div class="lg:flex-1">
+						{#each section.paragraphs as paragraph}
+							<p
+								class="mb-6 px-4 text-left text-base leading-relaxed text-gray-800 sm:px-6 sm:text-lg sm:leading-loose lg:px-0 lg:text-xl lg:leading-loose"
+							>
+								{#each paragraph as segment}
+									{#if segment.bold && segment.color}
+										<strong class="font-bold" style="color: {segment.color}">{segment.text}</strong>
+									{:else if segment.bold}
+										<strong class="font-bold">{segment.text}</strong>
+									{:else if segment.color}
+										<span style="color: {segment.color}">{segment.text}</span>
+									{:else}
+										{segment.text}
+									{/if}
+								{/each}
+							</p>
+						{/each}
+					</div>
 
-						<!-- Text column (middle) -->
-						<div class="flex-1">
-							{#each section.paragraphs as paragraph}
-								<p class="description-text mb-4">{paragraph}</p>
-							{/each}
+					<!-- Second Image (desktop only) -->
+					<div class="hidden aspect-[3/3] w-1/4 rounded-xl lg:block">
+						<div class="flex h-full items-center justify-center text-white/30">
+							{#if section.image2}
+								<enhanced:img
+									src={section.image2}
+									alt={section.title}
+									class="h-full w-full rounded-xl object-cover"
+								/>
+							{:else}
+								<span class="text-sm font-semibold">Image {index * 2 + 2}</span>
+							{/if}
 						</div>
+					</div>
+				</div>
 
-						<!-- Right Image -->
-						<div
-							class="aspect-[2/3] w-1/4 flex-shrink-0 rounded-xl shadow-lg"
-							style="background: linear-gradient(135deg, {placeholderColors[
-								(index + 2) % 4
-							]} 0%, {placeholderColors[(index + 3) % 4]} 100%);"
-						>
-							<div class="flex h-full items-center justify-center text-white/30">
-								<span class="text-sm font-semibold">Placeholder 2</span>
-							</div>
+				<!-- Second Image (mobile only - below text) -->
+				<div class="mt-8 flex justify-center lg:hidden">
+					<div class="w-full max-w-[500px] rounded-xl">
+						<div class="flex h-full items-center justify-center text-white/30">
+							{#if section.image2}
+								<enhanced:img
+									src={section.image2}
+									alt={section.title}
+									class="h-full w-full rounded-xl object-cover"
+								/>
+							{:else}
+								<span class="text-xs font-semibold">Image {index * 2 + 2}</span>
+							{/if}
 						</div>
 					</div>
 				</div>
@@ -145,10 +245,24 @@
 		{/each}
 
 		<!-- Closing statement -->
-		<div class="mt-12 text-center">
-			<p class="description-text text-xl font-bold">
+		<div class="mt-16 text-center lg:mt-20">
+			<p
+				class="description-text font-londrinaSolid text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl"
+			>
 				When the bananas are gone, one monkey will rule the Bananarchy. Will it be you?
 			</p>
 		</div>
 	</div>
 </div>
+
+<style>
+	.story-headline {
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+		letter-spacing: -0.02em;
+	}
+
+	.description-text {
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+		letter-spacing: -0.01em;
+	}
+</style>

@@ -86,8 +86,9 @@
 				bind:value={email}
 				placeholder="Enter your email"
 				disabled={isSubmitting || submitStatus === 'success'}
-				class="flex-1 rounded-md border-2 border-gray-300 px-4 py-2 text-sm text-black placeholder-gray-500 transition-all focus:border-green-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 {!isEmailValid
-					? `shadow-[0_0_5px_rgba(52,169,49,0.6)] ${!disablePulse ? 'animate-pulse-glow' : ''}`
+				class="flex-1 rounded-md border-2 border-gray-300 px-4 py-2 text-sm text-black placeholder-gray-500 transition-all focus:border-green-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 {!isEmailValid &&
+				!disablePulse
+					? 'animate-pulse-glow'
 					: ''}"
 				aria-label="Email address"
 				required
