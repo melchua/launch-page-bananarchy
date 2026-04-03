@@ -152,7 +152,7 @@
 
 				<!-- First Image (mobile only - above text) -->
 				<div class="mb-8 flex justify-center lg:hidden">
-					<div class="aspect-[3/3] w-full max-w-[500px] rounded-xl">
+					<div class="w-full max-w-[500px] rounded-xl">
 						<div class="flex h-full items-center justify-center text-white/30">
 							{#if section.image1}
 								<enhanced:img
