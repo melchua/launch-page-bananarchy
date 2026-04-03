@@ -68,7 +68,9 @@
 </script>
 
 <div class="flex flex-col items-center justify-center px-4 py-14">
-	<h2 class="text-center">Designed for Adults, Loved by Everyone.</h2>
+	<h2 class="text-center font-londrinaSolid text-5xl font-semibold">
+		Designed for Adults, Loved by Everyone.
+	</h2>
 
 	<div class="flex flex-col items-center justify-center md:flex-row">
 		<!-- Card fan animation -->

@@ -144,7 +144,7 @@
 				<!-- Centered Headline - always first -->
 				<div class="mb-8 flex items-center justify-center gap-4 lg:mb-12 lg:gap-6">
 					<h3
-						class="story-headline max-w-2xl text-center font-londrinaSolid text-3xl leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
+						class="story-headline max-w-2xl text-center font-londrinaSolid text-3xl leading-tight tracking-wide text-gray-900 sm:text-4xl lg:text-5xl"
 					>
 						{section.emoji}
 						{section.title}
@@ -252,15 +252,3 @@
 		</div>
 	</div>
 </div>
-
-<style>
-	.story-headline {
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-		letter-spacing: -0.02em;
-	}
-
-	.description-text {
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-		letter-spacing: -0.01em;
-	}
-</style>

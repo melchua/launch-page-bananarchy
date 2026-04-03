@@ -12,7 +12,7 @@
 	/>
 
 	<!-- Text overlay -->
-	<div class="absolute inset-0 flex items-center justify-center">
+	<div class="absolute inset-0 flex items-center justify-center bg-black/20">
 		<h3 class="p-6 text-center text-xl font-bold text-white sm:text-4xl md:text-5xl">
 			{@html variant.lifestyle}
 		</h3>
