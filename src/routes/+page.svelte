@@ -9,6 +9,7 @@
 	import cardBack from '$lib/assets/cards/card_back_monkey_card.jpg?w=360;280;260;240&enhanced';
 	import deluxeBox from '$lib/assets/deluxe-box-render-kick.png?enhanced';
 	import { useVariant } from '$lib/useVariant.svelte';
+	import StorySection from '../components/StorySection.svelte';
 
 	// Initialize variant for A/B testing
 	const { variant, isReady } = useVariant();
@@ -208,6 +209,8 @@
 
 	<!-- Thin Social Proof Bar -->
 	<ThinSocialProofBar />
+
+	<StorySection />
 
 	<div class="flex flex-col items-center justify-center px-4 py-14">
 		<h2 class="text-center">Designed for Adults, Loved by Everyone.</h2>
