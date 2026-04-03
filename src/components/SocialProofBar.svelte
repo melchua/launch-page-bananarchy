@@ -1,9 +1,29 @@
 <script lang="ts">
+	import whatBoardGameLogo from '$lib/assets/logos/what_board_game_logo.png?enhanced';
+	import boardGameBiteLogo from '$lib/assets/logos/board_game_bite_logo.png?enhanced';
+	import theHowlingMeepleLogo from '$lib/assets/logos/the_howling_meeple_logo.png?enhanced';
+
 	const testimonials = [
 		{
 			quote:
 				'If you enjoy the energy of games like Uno or Exploding Kittens, this will feel right at home and could easily become a family favourite.',
-			author: '— Jim Cohen, What Board Game'
+			author: '— Jim Cohen, What Board Game',
+			logo: whatBoardGameLogo,
+			logoAlt: 'What Board Game logo'
+		},
+		{
+			quote:
+				'It kept my whole family involved from start to finish, with plenty of sudden turnarounds. A great fit for groups that enjoy lively, unpredictable games.',
+			author: '— The Howling Meeple',
+			logo: theHowlingMeepleLogo,
+			logoAlt: 'The Howling Meeple logo'
+		},
+		{
+			quote:
+				'Chaotic and engaging party game for those who enjoy a frentic play style in their card games. The clever cards create lots of humorous and unexpected momennts.',
+			author: '— Board Game Bite',
+			logo: boardGameBiteLogo,
+			logoAlt: 'Board Game Bite logo'
 		},
 		{
 			quote:
@@ -19,16 +39,6 @@
 			quote:
 				"Honestly, we kept saying the same thing over and over while we played: 'this game is so much fun!'.",
 			author: '- Nicole, The Cozy Gamer.'
-		},
-		{
-			quote:
-				'It kept my whole family involved from start to finish, with plenty of sudden turnarounds. A great fit for groups that enjoy lively, unpredictable games.',
-			author: '— The Howling Meeple'
-		},
-		{
-			quote:
-				'Chaotic and engaging party game for those who enjoy a frentic play style in their card games. The clever cards create lots of humorous and unexpected momennts.',
-			author: '— Board Game Bite'
 		}
 	];
 </script>
@@ -46,6 +56,15 @@
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
 				{#each testimonials as testimonial}
 					<div class="testimonial-card rounded-lg bg-white/95 p-5 shadow-md">
+						{#if testimonial.logo}
+							<div class="mb-4">
+								<enhanced:img
+									src={testimonial.logo}
+									alt={testimonial.logoAlt || ''}
+									class="h-10 w-auto object-contain opacity-70 grayscale transition-opacity hover:opacity-100 md:h-12"
+								/>
+							</div>
+						{/if}
 						<p class="mb-3 text-sm italic leading-relaxed text-gray-800 md:text-base">
 							"{testimonial.quote}"
 						</p>

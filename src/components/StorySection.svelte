@@ -7,6 +7,7 @@
 	import slip from '$lib/assets/storysection/slip.png?enhanced';
 	import bakeBananaBread from '$lib/assets/storysection/bake_banana_bread.png?enhanced';
 	import bananaManifesto from '$lib/assets/storysection/banana_manifesto.png?enhanced';
+	import monkeyKing from '$lib/assets/monkey_king.png?enhanced';
 
 	import type { Picture } from 'vite-imagetools';
 
@@ -241,12 +242,13 @@
 		{/each}
 
 		<!-- Closing statement -->
-		<div class="mt-16 text-center lg:mt-20">
-			<p
-				class="description-text font-londrinaSolid text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl"
-			>
-				When the bananas are gone, one monkey will rule the Bananarchy. Will it be you?
+		<div class="mt-16 text-center text-2xl lg:mt-20">
+			<p class=" ont-bold text-gray-900 sm:text-3xl lg:text-4xl">
+				When the bananas are gone, one monkey will rule the Bananarchy.
 			</p>
+
+			<enhanced:img src={monkeyKing} alt="Monkey King" class="mt-4 rounded-xl p-4" />
+			<p class="mt-4 font-bold text-gray-900">Will it be you?</p>
 		</div>
 	</div>
 </div>
