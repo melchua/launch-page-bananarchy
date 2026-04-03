@@ -151,7 +151,7 @@
 						<enhanced:img
 							src={feature.icon}
 							alt={feature.alt}
-							class="mt-0.5 h-7 w-7 flex-shrink-0"
+							class="mt-0.5 h-7 w-7 min-h-7 min-w-7 flex-shrink-0"
 							sizes="28px"
 							loading="lazy"
 						/>
