@@ -95,7 +95,7 @@ export const variantsConfig: VariantsConfig = {
 			headline:
 				'You are the most <span class="text-red-500">mischievous</span> monkey at the card table',
 			subheadline:
-				'You make them fear you by yoinking, snatching, and smashing their precious bananas. YOU are BANANARCHY.',
+				'You make them fear you by yoinking, snatching, and smashing their bananas. YOU are BANANARCHY.',
 			lifestyle:
 				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		}
