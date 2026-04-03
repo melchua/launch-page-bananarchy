@@ -13,7 +13,7 @@
 		<div class="flex flex-col items-center gap-1 py-4 md:flex-1 md:items-start">
 			<h1 class="footer-headline relative inline-flex items-center gap-2" id="footer-headline">
 				<!-- <enhanced:img src="$lib/assets/arrow-down.png" class="absolute z-10 top-11 -left-6 w-[40px] md:hidden animate-arrow-bounce-rotated" alt="arrow down"/>  -->
-				<span class="text-center text-white">
+				<span class="pb-2 text-center text-white">
 					Get My Free Mini-Game:
 					<span class="whitespace-nowrap sm:whitespace-normal">
 						<span class="text-red-500">Play Now</span></span
