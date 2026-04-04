@@ -152,6 +152,8 @@
 
 	<GameSummarySection />
 
+	<Footer />
+
 	<StorySection />
 
 	<Footer />
