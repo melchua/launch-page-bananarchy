@@ -159,27 +159,6 @@ export function useVariant() {
 	let variantSource = $state<'utm' | 'ab_test'>('ab_test');
 	let isReady = $state(false);
 
-	// Initialize on mount (client-side only)
-	if (browser) {
-		const { variant, source } = determineVariant();
-		currentVariant = variant;
-		variantSource = source;
-		isReady = true;
-
-		// Track variant view in analytics
-		trackVariantView(variant.id, source);
-
-		// Debug logging in development
-		if (import.meta.env.DEV) {
-			console.log('[useVariant] Variant selected:', {
-				id: variant.id,
-				source,
-				headline: variant.headline,
-				subheadline: variant.subheadline
-			});
-		}
-	}
-
 	return {
 		get variant() {
 			return currentVariant;
@@ -189,6 +168,30 @@ export function useVariant() {
 		},
 		get isReady() {
 			return isReady;
+		},
+		/**
+		 * Initialize variant (should be called from onMount)
+		 */
+		initialize() {
+			if (!browser || isReady) return;
+
+			const { variant, source } = determineVariant();
+			currentVariant = variant;
+			variantSource = source;
+			isReady = true;
+
+			// Track variant view in analytics
+			trackVariantView(variant.id, source);
+
+			// Debug logging in development
+			if (import.meta.env.DEV) {
+				console.log('[useVariant] Variant selected:', {
+					id: variant.id,
+					source,
+					headline: variant.headline,
+					subheadline: variant.subheadline
+				});
+			}
 		}
 	};
 }

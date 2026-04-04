@@ -13,7 +13,7 @@
 	import CopyrightFooter from '../components/CopyrightFooter.svelte';
 
 	// Initialize variant for A/B testing
-	const { variant, isReady } = useVariant();
+	const variantState = useVariant();
 
 	let boxClass = $state('');
 
@@ -48,6 +48,9 @@
 	}
 
 	onMount(() => {
+		// Initialize variant detection (must run in onMount to access URL params)
+		variantState.initialize();
+
 		void fetchSubscriberCount().then(() => {
 			const unsubscribe = subscriberCount.subscribe((count) => {
 				animateCount(count);
@@ -72,25 +75,17 @@
 						Bananarchy
 					</h2>
 
-					<h1 class="hero-headline mb-3 text-center lg:text-left">
-						{#if isReady}
-							<span>{@html variant.headline}</span>
-						{:else}
-							<!-- Fallback while loading -->
-							<span
-								><span class="highlight-text">Cute</span> Monkeys. <br /><span
-									class="highlight-text">Clever</span
-								>
-								Tricks. <br /><span class="highlight-text">Wild</span> Plays.</span
-							>
-						{/if}
+					<h1
+						class="hero-headline mb-3 text-center transition-opacity duration-300 lg:text-left"
+						class:opacity-0={!variantState.isReady}
+					>
+						<span>{@html variantState.variant.headline}</span>
 					</h1>
-					<h4 class="text-center lg:text-left">
-						{#if isReady}
-							{@html variant.subheadline}
-						{:else}
-							A fast, strategic party game where every move matters.
-						{/if}
+					<h4
+						class="text-center transition-opacity duration-300 lg:text-left"
+						class:opacity-0={!variantState.isReady}
+					>
+						{@html variantState.variant.subheadline}
 					</h4>
 				</div>
 
@@ -151,7 +146,7 @@
 		</div>
 	</div>
 
-	<LifestyleBar />
+	<LifestyleBar variant={variantState.variant} />
 
 	<ThinSocialProofBar />
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { useVariant } from '$lib/useVariant.svelte';
+	import type { HeadlineVariant } from '$lib/variants';
 
-	const { variant } = useVariant();
+	let { variant }: { variant: HeadlineVariant } = $props();
 </script>
 
 <div class="lifestyle-bar relative">
