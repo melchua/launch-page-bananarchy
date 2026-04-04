@@ -73,6 +73,9 @@ function getStoredVariant(): string | null {
 			return stored;
 		}
 
+		// Variant no longer exists - clean up localStorage
+		localStorage.removeItem(STORAGE_KEY);
+		localStorage.removeItem(STORAGE_EXPIRY_KEY);
 		return null;
 	} catch (e) {
 		console.error('[useVariant] Error reading localStorage:', e);
