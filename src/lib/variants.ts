@@ -39,7 +39,7 @@ export const variantsConfig: VariantsConfig = {
 				'<span class="highlight-text">Cute</span> Monkeys. <br /><span class="highlight-text">Clever</span> Tricks. <br /><span class="highlight-text">Wild</span> Plays.',
 			subheadline: 'A fast, strategic party game where every move matters.',
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'short',
@@ -47,7 +47,7 @@ export const variantsConfig: VariantsConfig = {
 				'<span class="highlight-text">Fast Fun.</span> <br /><span class="highlight-text">Big Laughs.</span> <br /><span class="highlight-text">Zero Mercy.</span>',
 			subheadline: 'The party game that ruins friendships in 30 minutes.',
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'strategic',
@@ -55,7 +55,7 @@ export const variantsConfig: VariantsConfig = {
 				'<span class="highlight-text">Outsmart</span> Friends. <br /><span class="highlight-text">Steal</span> Bananas. <br /><span class="highlight-text">Win</span> Big.',
 			subheadline: 'A deceptively simple game with endless strategic depth.',
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'chaos',
@@ -63,7 +63,7 @@ export const variantsConfig: VariantsConfig = {
 				'<span class="highlight-text">Steal.</span> <br /><span class="highlight-text">Sabotage.</span> <br /><span class="highlight-text">Survive.</span>',
 			subheadline: 'Pure chaos. Maximum betrayal. Instant laughter.',
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'instigator',
@@ -71,7 +71,7 @@ export const variantsConfig: VariantsConfig = {
 				'The turn-based game where <span class="highlight-text">no one waits their turn.</span>',
 			subheadline: 'All fun and games until someone loses a banana.',
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'storyteller',
@@ -79,7 +79,7 @@ export const variantsConfig: VariantsConfig = {
 			subheadline:
 				"You never have been. You slam down Anytime Cards at any time, to anyone. You've earned it my friend.",
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'monkey-king',
@@ -88,7 +88,7 @@ export const variantsConfig: VariantsConfig = {
 			subheadline:
 				'<span class="text-sm">You do NOT wait your turn. You make them fear you by yoinking, snatching, and smashing their precious bananas. YOU are BANANARCHY.</span>',
 			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-lg font-normal opacity-80">— Jim Cohen, What Board Game</span>'
+				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
 			id: 'monkey-king-short',
