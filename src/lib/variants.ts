@@ -34,63 +34,6 @@ export const variantsConfig: VariantsConfig = {
 				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
 		},
 		{
-			id: 'archived',
-			headline:
-				'<span class="highlight-text">Cute</span> Monkeys. <br /><span class="highlight-text">Clever</span> Tricks. <br /><span class="highlight-text">Wild</span> Plays.',
-			subheadline: 'A fast, strategic party game where every move matters.',
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
-			id: 'short',
-			headline:
-				'<span class="highlight-text">Fast Fun.</span> <br /><span class="highlight-text">Big Laughs.</span> <br /><span class="highlight-text">Zero Mercy.</span>',
-			subheadline: 'The party game that ruins friendships in 30 minutes.',
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
-			id: 'strategic',
-			headline:
-				'<span class="highlight-text">Outsmart</span> Friends. <br /><span class="highlight-text">Steal</span> Bananas. <br /><span class="highlight-text">Win</span> Big.',
-			subheadline: 'A deceptively simple game with endless strategic depth.',
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
-			id: 'chaos',
-			headline:
-				'<span class="highlight-text">Steal.</span> <br /><span class="highlight-text">Sabotage.</span> <br /><span class="highlight-text">Survive.</span>',
-			subheadline: 'Pure chaos. Maximum betrayal. Instant laughter.',
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
-			id: 'instigator',
-			headline:
-				'The turn-based game where <span class="highlight-text">no one waits their turn.</span>',
-			subheadline: 'All fun and games until someone loses a banana.',
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
-			id: 'storyteller',
-			headline: 'You are NOT a <span class="highlight-text">wait your turn</span> kind of monkey',
-			subheadline:
-				"You never have been. You slam down Anytime Cards at any time, to anyone. You've earned it my friend.",
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
-			id: 'monkey-king',
-			headline:
-				'You are the most <span class="text-red-500">mischievous</span> monkey at the card table',
-			subheadline:
-				'<span class="text-sm">You do NOT wait your turn. You make them fear you by yoinking, snatching, and smashing their precious bananas. YOU are BANANARCHY.</span>',
-			lifestyle:
-				'<span class="italic leading-relaxed">"If you enjoy the energy of games like <span class="text-[#F6A31A]">Uno</span> or <span class="text-[#F6A31A]">Exploding Kittens</span>, this will feel right at home."</span><br /><span class="mt-2 block text-sm font-normal opacity-80">— Jim Cohen, What Board Game</span>'
-		},
-		{
 			id: 'monkey-king-short',
 			headline:
 				'You are the most <span class="text-red-500">mischievous</span> monkey at the card table',
@@ -102,13 +45,14 @@ export const variantsConfig: VariantsConfig = {
 
 	// Map specific UTM campaigns to variants
 	// Example: ?utm_campaign=facebook → uses 'short' variant
-	campaignMapping: {
-		facebook: 'short',
-		instagram: 'short',
-		google: 'strategic',
-		twitter: 'chaos',
-		reddit: 'default'
-	},
+	// Comment out campaignMapping to disable UTM targeting
+	// campaignMapping: {
+	// 	facebook: 'short',
+	// 	instagram: 'short',
+	// 	google: 'strategic',
+	// 	twitter: 'chaos',
+	// 	reddit: 'default'
+	// },
 
 	// Default variant (used when A/B testing is disabled or as fallback)
 	defaultVariantId: 'default',
@@ -116,7 +60,7 @@ export const variantsConfig: VariantsConfig = {
 	// Enable/disable random A/B testing
 	// true = visitors without UTM params get randomly assigned variants
 	// false = all visitors without UTM params see the defaultVariantId
-	enableRandomABTesting: false
+	enableRandomABTesting: true
 };
 
 /**
