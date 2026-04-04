@@ -10,6 +10,7 @@
 	import StorySection from '../components/StorySection.svelte';
 	import GameSummarySection from '../components/GameSummarySection.svelte';
 	import SocialProofBar from '../components/SocialProofBar.svelte';
+	import CopyrightFooter from '../components/CopyrightFooter.svelte';
 
 	// Initialize variant for A/B testing
 	const { variant, isReady } = useVariant();
@@ -180,4 +181,6 @@
 
 		<Footer />
 	</div>
+
+	<CopyrightFooter />
 </div>
