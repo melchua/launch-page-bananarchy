@@ -6,9 +6,11 @@
 
 <div class="lifestyle-bar relative">
 	<enhanced:img
-		src="$lib/assets/banana-spread-web.jpg"
+		src="$lib/assets/banana-spread-web.jpg?w=1920;1600;1280;960;720;480;360"
 		alt="lifestyle bar"
 		class="h-full w-full object-cover"
+		sizes="100vw"
+		loading="lazy"
 	/>
 
 	<!-- Text overlay -->
