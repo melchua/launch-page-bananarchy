@@ -14,7 +14,8 @@ export default {
 				'mobile-xxs': '430px'
 			},
 			animation: {
-				'bounce-in': 'bounceDown 800ms linear'
+				'bounce-in': 'bounceDown 800ms linear',
+				'pulse-glow': 'pulseGlow 4s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'custom-image': "url('$lib/assets/background.jpg')",
@@ -59,6 +60,14 @@ export default {
 					},
 					'100%': {
 						transform: 'translateY(0)'
+					}
+				},
+				pulseGlow: {
+					'0%, 100%': {
+						boxShadow: '0 0 6px rgba(52, 169, 49, 0.4), 0 0 16px rgba(52, 169, 49, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 10px rgba(52, 169, 49, 0.8), 0 0 24px rgba(52, 169, 49, 0.4)'
 					}
 				}
 			}
