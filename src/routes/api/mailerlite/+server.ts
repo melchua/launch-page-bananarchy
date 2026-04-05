@@ -27,7 +27,7 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 		// When deployed to Cloudflare Pages, platform.cf contains request metadata
 		// Fallback to headers for local development or non-Cloudflare environments
 		const ip =
-			platform?.cf?.['connecting-ip'] || // Cloudflare platform (production)
+			(platform?.cf as { connectingIp?: string })?.connectingIp || // Cloudflare platform (production)
 			request.headers.get('cf-connecting-ip') || // Header fallback
 			request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
 			request.headers.get('x-real-ip') ||
@@ -35,16 +35,12 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 
 		const country = platform?.cf?.country || null; // Direct country from Cloudflare (available on all plans)
 
-		console.log('Extracted IP address:', ip);
-		console.log('Extracted country:', country);
-
 		// Submit to MailerLite API
 		const requestBody: {
 			email: string;
 			status: string;
 			groups: string[];
 			ip_address?: string;
-			optin_ip?: string;
 			fields?: {
 				country?: string;
 			};
@@ -57,7 +53,6 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 		// Include IP address if available (MailerLite will use this to determine location)
 		if (ip) {
 			requestBody.ip_address = ip;
-			requestBody.optin_ip = ip;
 		}
 
 		// Include country field if available (direct from Cloudflare)
