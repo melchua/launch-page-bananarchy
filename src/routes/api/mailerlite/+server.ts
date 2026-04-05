@@ -72,7 +72,6 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 			body: JSON.stringify(requestBody)
 		});
 
-		console.log('MailerLite API response:', response);
 		const data = await response.json();
 
 		if (!response.ok) {
