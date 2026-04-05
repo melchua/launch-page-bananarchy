@@ -23,7 +23,35 @@ export const POST: RequestHandler = async ({ request }) => {
 			return json({ error: 'Server configuration error' }, { status: 500 });
 		}
 
+		// Extract user's IP address from request headers
+		// Cloudflare Pages uses CF-Connecting-IP header
+		const ip =
+			request.headers.get('cf-connecting-ip') ||
+			request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+			request.headers.get('x-real-ip') ||
+			null;
+
+		console.log('Extracted IP address:', ip);
+
 		// Submit to MailerLite API
+		const requestBody: {
+			email: string;
+			status: string;
+			groups: string[];
+			ip_address?: string;
+			optin_ip?: string;
+		} = {
+			email,
+			status: 'active', // Mark subscriber as active (bypasses double opt-in)
+			groups: [env.GROUP_ID] // Add subscriber to the main group (non-vip)
+		};
+
+		// Include IP address if available (MailerLite will use this to determine location)
+		if (ip) {
+			requestBody.ip_address = ip;
+			requestBody.optin_ip = ip;
+		}
+
 		const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
 			method: 'POST',
 			headers: {
@@ -31,11 +59,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				Authorization: `Bearer ${env.MAILERLITE_API_KEY}`,
 				Accept: 'application/json'
 			},
-			body: JSON.stringify({
-				email,
-				status: 'active', // Mark subscriber as active (bypasses double opt-in)
-				groups: [env.GROUP_ID] // Add subscriber to the main group (non-vip)
-			})
+			body: JSON.stringify(requestBody)
 		});
 
 		console.log('MailerLite API response:', response);
