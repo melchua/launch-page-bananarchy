@@ -18,6 +18,7 @@
 		"test": "npm run test:unit -- --run"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20260405.1",
 		"@eslint/compat": "^1.2.3",
 		"@sveltejs/adapter-cloudflare": "^7.2.8",
 		"@sveltejs/enhanced-img": "^0.4.4",
