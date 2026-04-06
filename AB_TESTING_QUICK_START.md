@@ -17,10 +17,15 @@ defaultVariantId: 'default'   // ← Everyone sees this variant
 *"A fast, strategic party game where every move matters."*
 
 ### Except When Using UTM Parameters:
-- `?utm_variant=short` → Shows "short" variant
-- `?utm_variant=strategic` → Shows "strategic" variant
-- `?utm_campaign=facebook` → Shows "short" variant (mapped)
-- `?utm_campaign=google` → Shows "strategic" variant (mapped)
+- `?utm_variant=default` → Shows "default" variant
+- `?utm_variant=monkey-king-short` → Shows "monkey-king-short" variant
+
+⚠️ **Important:** For paid social campaigns, you MUST use complete UTM parameters:
+```
+?utm_source=facebook&utm_medium=paid-social&utm_campaign=your_campaign&utm_variant=monkey-king-short
+```
+
+See **[UTM_TRACKING_GUIDE.md](UTM_TRACKING_GUIDE.md)** for proper GA4 attribution setup.
 
 ## How to Toggle A/B Testing
 
@@ -94,3 +99,4 @@ http://localhost:5173?utm_campaign=facebook    # Shows short (mapped)
 - **[src/lib/variants.ts](src/lib/variants.ts)** - Main configuration (edit this!)
 - **[AB_TESTING_GUIDE.md](AB_TESTING_GUIDE.md)** - Full documentation
 - **[VARIANT_EXAMPLES.md](VARIANT_EXAMPLES.md)** - Inspiration for new variants
+- **[UTM_TRACKING_GUIDE.md](UTM_TRACKING_GUIDE.md)** - Proper GA4 attribution setup

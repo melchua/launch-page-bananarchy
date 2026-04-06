@@ -15,10 +15,23 @@
 				console.log('🚫 Google Analytics (DEV - not tracked):', ...arguments);
 			};
 			console.log('Google Analytics: Disabled (development mode)');
+
+			// Validate UTM parameters in development mode
+			import('$lib/analytics').then(({ validateUTMParameters }) => {
+				validateUTMParameters();
+			});
 		} else {
 			// Google Analytics is loaded via script tag in <svelte:head>
 			// Just log that it's initialized
 			console.log('Google Analytics: Initialized (production)');
+
+			// Track campaign parameters on page load for proper attribution
+			import('$lib/analytics').then(({ trackCampaignParameters }) => {
+				// Wait for gtag to be fully loaded
+				setTimeout(() => {
+					trackCampaignParameters();
+				}, 100);
+			});
 		}
 
 		// Initialize Meta Pixel (only in production)
@@ -78,7 +91,14 @@
 				dataLayer.push(arguments);
 			}
 			gtag('js', new Date());
-			gtag('config', 'G-PRBBNH8JRZ');
+			gtag('config', 'G-PRBBNH8JRZ', {
+				// Enable automatic campaign parameter tracking
+				campaign_parameters: 'auto',
+				// Enable enhanced measurement for better attribution
+				enhanced_measurement: true,
+				// Allow linker for cross-domain tracking (if needed)
+				allow_linker: true
+			});
 		</script>
 	{/if}
 	<!-- Meta Pixel noscript fallback (production only) -->
