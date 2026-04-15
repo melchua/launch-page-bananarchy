@@ -116,8 +116,17 @@
 				</stripe-buy-button>
 			</div>
 		</div>
+
+		<!-- Thank you confirmation section -->
+		<div class="mx-auto w-full max-w-4xl px-4 pb-4 pt-20 text-center md:pb-8 md:pt-8">
+			<p class="text-2xl font-semibold text-white/80 md:text-3xl">🎉 You're In!</p>
+			<p class="mt-2 text-base text-white/70 md:text-lg">
+				Thanks for subscribing! Check your inbox for a welcome email.
+			</p>
+		</div>
+
 		<div
-			class="mx-auto my-8 flex max-w-7xl flex-col items-center justify-center gap-8 px-4 pt-20 md:my-16 md:flex-row md:items-start md:gap-12 md:pt-0"
+			class="mx-auto my-8 flex max-w-7xl flex-col items-center justify-center gap-8 px-4 md:my-16 md:flex-row md:items-start md:gap-12"
 		>
 			<div class="hidden flex-shrink-0 md:block">
 				<enhanced:img
@@ -126,12 +135,42 @@
 					class="w-full max-w-md animate-bounce-in"
 					sizes="500px"
 				/>
+
+				<!-- What You Get box - Desktop only (left column) -->
+				<div class="mt-6 w-full max-w-md rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+					<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
+					<ul class="space-y-3 text-left text-lg">
+						<li class="flex items-start gap-3">
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+							<span
+								>Monkey Business Mini-Expansion <span class="font-semibold text-primary-100"
+									>(6 cards, $10 value)</span
+								>
+								— <span class="font-bold text-white">FREE</span></span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+							<span>Priority Kickstarter access notification</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+							<span>Exclusive backer updates and behind-the-scenes content</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+							<span
+								><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
+							>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<div class="flex w-full max-w-2xl flex-col gap-4 p-2 sm:p-6">
 				<div class="flex flex-col items-center gap-3">
 					<p class="title text-center">
-						Claim your <span class="highlight-basic">FREE Monkey Business</span> expansion!
+						Now, Claim Your <span class="highlight-basic">FREE Monkey Business</span> expansion!
 					</p>
 					<p class="title-subhead px-10 text-center">
 						Get the exclusive Monkey Business mini-expansion — <span
@@ -151,7 +190,8 @@
 					</p>
 				</div>
 
-				<div class="mx-auto w-full max-w-xl rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+				<!-- What You Get box - Mobile only (right column) -->
+				<div class="mx-auto w-full max-w-xl rounded-lg bg-white/10 p-6 backdrop-blur-sm md:hidden">
 					<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
 					<ul class="space-y-3 text-left text-lg">
 						<li class="flex items-start gap-3">
