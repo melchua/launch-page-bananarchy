@@ -37,8 +37,8 @@
 		}
 	];
 
-	const SUBTITLE = 'You unlocked an exclusive mini-expansion!';
-	const TITLE = 'Claim your FREE $15 expansion — just $1 to reserve.';
+	const SUBTITLE = 'You unlocked the exclusive Monkey Business mini-expansion!';
+	const TITLE = 'Claim your FREE Monkey Business expansion — just $1 to reserve.';
 
 	// Track Lead event when landing on thank you page (means they signed up)
 	onMount(() => {
@@ -132,10 +132,10 @@
 			<div class="flex flex-col gap-6 rounded-xl p-2 sm:items-start sm:p-6">
 				<div class="flex flex-col items-center">
 					<p class="title text-center">
-						🎉 Now claim your <span class="highlight-basic">free VIP Banana</span> expansion
+						🎉 Claim your <span class="highlight-basic">FREE Monkey Business</span> expansion!
 					</p>
 					<p class="title-subhead text-center">
-						Get a 6-card <span class="highlight-basic">Exclusive mini-expansion</span> (worth $15)
+						Get the exclusive Monkey Business mini-expansion — <span class="line-through decoration-red-500 decoration-2">$10</span> <span class="highlight-basic text-green-400">FREE</span> when you pre-sign up!
 					</p>
 					<enhanced:img
 						src={cards}
@@ -143,9 +143,40 @@
 						class="m-6 w-full animate-bounce-in p-4 sm:w-2/3 md:hidden"
 						sizes="85vw"
 					/>
-					<p class="title-subsubhead text-center">
-						Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span>
+					<p class="mt-2 text-center text-lg font-semibold text-yellow-300">
+						⏰ Kickstarter launches in just over a month — secure yours now!
 					</p>
+					<p class="title-subsubhead text-center">
+						Reserve your Monkey Business expansion with just <span class="highlight-basic">$1 — fully refundable!</span>
+					</p>
+				</div>
+
+				<div class="mx-auto my-6 w-full max-w-xl rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+					<h3 class="mb-4 text-center text-2xl font-bold text-yellow-300">What You Get:</h3>
+					<ul class="space-y-3 text-left text-lg">
+						<li class="flex items-start gap-3">
+							<span class="text-2xl">✅</span>
+							<span
+								>Monkey Business Mini-Expansion <span class="text-yellow-300 font-semibold"
+									>(6 cards, $10 value)</span
+								> — <span class="text-green-400 font-bold">FREE</span></span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-2xl">✅</span>
+							<span>Priority Kickstarter access notification</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-2xl">✅</span>
+							<span>Exclusive backer updates and behind-the-scenes content</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-2xl">✅</span>
+							<span
+								><span class="text-green-400 font-semibold">100% refundable</span> $1 reservation</span
+							>
+						</li>
+					</ul>
 				</div>
 
 				<div class="flex w-full flex-col items-center gap-4">
@@ -164,7 +195,7 @@
 						rel="noopener noreferrer"
 						class="underline hover:text-gray-400"
 					>
-						No thanks, I don't want the free expansion
+						No thanks, I'll pay $10 later instead
 					</a>
 				</div>
 			</div>
