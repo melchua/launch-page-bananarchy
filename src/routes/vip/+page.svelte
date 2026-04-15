@@ -1,10 +1,7 @@
-<script context="module" lang="ts">
-	declare const fbq: (command: string, event: string, params?: Record<string, any>) => void;
-</script>
-
 <script>
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import { trackPurchase } from '$lib/analytics';
 
 	const TITLE = `Congrats, you're a VIP!`;
 
@@ -23,30 +20,26 @@
 		// Only track if there's a session_id (indicating successful Stripe checkout)
 		// AND we haven't tracked this session yet
 		if (sessionId && !alreadyTracked) {
-			// Wait for window.fbq to be available (handles race condition with layout onMount)
+			// Wait for tracking scripts to be available (handles race condition with layout onMount)
 			let attempts = 0;
 			const maxAttempts = 20; // 2 seconds max (20 * 100ms)
 
-			const checkFbq = setInterval(() => {
+			const checkTracking = setInterval(() => {
 				attempts++;
 
-				if (typeof window.fbq !== 'undefined') {
-					// fbq is ready - track the Purchase event
-					clearInterval(checkFbq);
-					window.fbq('track', 'Purchase', {
-						content_name: 'Bananarchy VIP Bonus',
-						value: 1.0,
-						currency: 'USD',
-						transaction_id: sessionId
-					});
-					// console.log('Meta Pixel: Purchase event tracked for session', sessionId);
+				// Check if either fbq or gtag is available (at least one tracking script loaded)
+				if (typeof window.fbq !== 'undefined' || typeof window.gtag !== 'undefined') {
+					clearInterval(checkTracking);
+
+					// Track purchase using helper function (handles both Meta Pixel and GA4)
+					trackPurchase(sessionId, 1.0);
 
 					// Mark this session as tracked to prevent duplicate tracking on refresh
 					sessionStorage.setItem(trackedKey, sessionId);
 				} else if (attempts >= maxAttempts) {
-					// Timeout - fbq didn't load
-					clearInterval(checkFbq);
-					// console.warn('Meta Pixel: Timeout waiting for fbq to load');
+					// Timeout - tracking scripts didn't load
+					clearInterval(checkTracking);
+					// console.warn('Analytics: Timeout waiting for tracking scripts to load');
 				}
 			}, 100); // Check every 100ms
 		}

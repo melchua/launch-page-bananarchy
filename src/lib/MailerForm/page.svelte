@@ -1,5 +1,6 @@
 <script>
 	import { subscriberCount } from '$lib/stores/subscriberCount';
+	import { trackLead } from '$lib/analytics';
 
 	// Props
 	let { disablePulse = false, darkMode = false } = $props();
@@ -60,11 +61,8 @@
 			// Increment subscriber count for instant feedback
 			subscriberCount.update((n) => n + 1);
 
-			// Track form submission with Meta Pixel
-			if (typeof window.fbq === 'function') {
-				window.fbq('track', 'Lead');
-				console.log('Meta Pixel: Lead event tracked');
-			}
+			// Track lead conversion using helper function (handles both Meta Pixel and GA4)
+			trackLead(0);
 
 			// Redirect to thank you page
 			window.location.href = '/thankyou';

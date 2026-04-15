@@ -1,18 +1,13 @@
 <!-- After sucessful payment, we should redirect back to the final page in the funnel to get them to sign-up to facebook or discord
  exclusive VIP page. https://docs.stripe.com/payment-links/post-payment#:~:text=After%20a%20successful%20payment%2C%20your,or%20editing%20a%20payment%20link.
-  
+
   -->
 
-<script context="module" lang="ts">
-	declare const fbq: (command: string, event: string, params?: Record<string, any>) => void;
-</script>
-
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 	import cards from '$lib/assets/vip-exclusive.png?enhanced';
 	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
 	import { ConfettiExplosion } from 'svelte-confetti-explosion';
+	import { trackBeginCheckout } from '$lib/analytics';
 
 	let showConfetti = true;
 
@@ -37,51 +32,12 @@
 		}
 	];
 
-	const SUBTITLE = 'You unlocked an exclusive mini-expansion!';
-	const TITLE = 'Claim your FREE $15 expansion — just $1 to reserve.';
-
-	// Track Lead event when landing on thank you page (means they signed up)
-	onMount(() => {
-		if (!browser) return;
-
-		// Only track Lead once per session to prevent duplicate tracking on page refresh
-		const leadTrackedKey = 'lead_tracked';
-		const alreadyTracked = sessionStorage.getItem(leadTrackedKey);
-
-		if (!alreadyTracked) {
-			// Wait for window.fbq to be available (handles race condition with layout onMount)
-			let attempts = 0;
-			const maxAttempts = 20; // 2 seconds max (20 * 100ms)
-
-			const checkFbq = setInterval(() => {
-				attempts++;
-
-				if (typeof window.fbq !== 'undefined') {
-					// fbq is ready - track the Lead event
-					clearInterval(checkFbq);
-					window.fbq('track', 'Lead');
-					// console.log('Meta Pixel: Lead event tracked (email signup confirmed)');
-					sessionStorage.setItem(leadTrackedKey, 'true');
-				} else if (attempts >= maxAttempts) {
-					// Timeout - fbq didn't load
-					clearInterval(checkFbq);
-					// console.warn('Meta Pixel: Timeout waiting for fbq to load');
-				}
-			}, 100); // Check every 100ms
-		} else {
-			// console.log('Meta Pixel: Lead already tracked this session (skipping duplicate)');
-		}
-	});
+	// Note: Lead tracking now happens in MailerForm component (at form submission)
+	// This prevents double-tracking and tracks at the correct moment
 
 	function handleBuyButtonClick(location: 'header' | 'main') {
-		if (typeof window.fbq !== 'undefined') {
-			window.fbq('track', 'InitiateCheckout', {
-				content_name: 'Bananarchy VIP Bonus Cards',
-				value: 1.0,
-				currency: 'USD',
-				button_location: location
-			});
-		}
+		// Track checkout initiation using helper function (handles both Meta Pixel and GA4)
+		trackBeginCheckout(location, 1.0);
 	}
 </script>
 
