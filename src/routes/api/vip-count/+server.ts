@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { MAILERLITE_API_KEY, GROUP_ID } from '$env/static/private';
+import { MAILERLITE_API_KEY, VIP_GROUP_ID } from '$env/static/private';
 
 // Cache the count for 5 minutes to avoid excessive API calls
 let cachedCount: number | null = null;
@@ -16,7 +16,7 @@ export const GET: RequestHandler = async () => {
 	}
 
 	try {
-		const response = await fetch(`https://connect.mailerlite.com/api/groups/${GROUP_ID}`, {
+		const response = await fetch(`https://connect.mailerlite.com/api/groups/${VIP_GROUP_ID}`, {
 			headers: {
 				Authorization: `Bearer ${MAILERLITE_API_KEY}`,
 				'Content-Type': 'application/json',
