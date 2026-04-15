@@ -11,10 +11,13 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import cards from '$lib/assets/vip-exclusive.png?enhanced';
+	import monkeyHead from '$lib/assets/icons/monkeyhead-128x128.png';
 	import { Award, Handshake, ShieldCheck, CheckCircle2 } from 'lucide-svelte';
 	import { ConfettiExplosion } from 'svelte-confetti-explosion';
 
 	let showConfetti = true;
+	let vipCount = 0;
+	let loadingCount = true;
 
 	const benefits = [
 		{
@@ -38,8 +41,20 @@
 	];
 
 	// Track Lead event when landing on thank you page (means they signed up)
-	onMount(() => {
+	onMount(async () => {
 		if (!browser) return;
+
+		// Fetch VIP count from API
+		try {
+			const response = await fetch('/api/vip-count');
+			const data = await response.json();
+			vipCount = data.count || 200;
+		} catch (error) {
+			console.error('Error fetching VIP count:', error);
+			vipCount = 200; // Fallback
+		} finally {
+			loadingCount = false;
+		}
 
 		// Only track Lead once per session to prevent duplicate tracking on page refresh
 		const leadTrackedKey = 'lead_tracked';
@@ -135,8 +150,7 @@
 				<p class="title-subhead px-4">
 					Get the exclusive Monkey Business mini-expansion — <span
 						class="line-through decoration-red-500 decoration-2">$10</span
-					> <span class="highlight-basic font-bold text-secondary">FREE</span> when you sign up before
-					the Kickstarter launch in May!
+					> <span class="highlight-basic font-bold text-secondary">FREE</span> (with $1 refundable deposit)
 				</p>
 			</div>
 
@@ -153,7 +167,7 @@
 			<!-- Subhead -->
 			<div class="mb-8 text-center">
 				<p class="title-subsubhead px-4">
-					Reserve your free mini expansion with a <span class="highlight-basic">$1</span> deposit.
+					Reserve your VIP spot with a <span class="highlight-basic">$1</span> deposit.
 				</p>
 			</div>
 
@@ -180,8 +194,7 @@
 					</li>
 					<li class="flex items-start gap-3">
 						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-						<span
-							><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
+						<span><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
 						>
 					</li>
 				</ul>
@@ -206,6 +219,27 @@
 				>
 					No thanks, I'll pay $10 later instead
 				</a>
+
+				<!-- Social Proof Section -->
+				{#if !loadingCount}
+					<div class="mt-8 flex flex-col items-center justify-center gap-3 opacity-90">
+						<!-- Title -->
+						<p class="text-base font-semibold text-white/90 md:text-lg">Joined so far</p>
+						<!-- Avatar group - monkey heads with colored backgrounds -->
+						<div class="flex -space-x-3">
+							{#each ['bg-baorange', 'bg-primary-100', 'bg-secondary'] as bgColor}
+								<div class="rounded-full border-2 border-white shadow-md {bgColor} p-1 md:p-1.5">
+									<img src={monkeyHead} alt="Monkey avatar" class="h-8 w-8 md:h-9 md:w-9" />
+								</div>
+							{/each}
+						</div>
+						<!-- Count text -->
+						<p class="text-sm text-white/80 md:text-base">
+							<span class="font-semibold text-white">{vipCount}+ special monkeys</span> have already
+							reserved
+						</p>
+					</div>
+				{/if}
 			</div>
 		</div>
 		<div class="mx-auto my-8 w-full max-w-6xl px-4">
