@@ -145,9 +145,9 @@
 			<!-- Main headline -->
 			<div class="mb-6 flex flex-col items-center gap-3 text-center">
 				<p class="title">
-					Now, Claim Your <span class="highlight-basic">FREE Monkey Business</span> expansion!
+					Now, Claim Your <span class="highlight-basic">FREE Monkey Business</span> Expansion!
 				</p>
-				<p class="title-subhead px-4">
+				<p class="title-subhead px-4 sm:px-20">
 					Get the exclusive Monkey Business mini-expansion — <span
 						class="line-through decoration-red-500 decoration-2">$10</span
 					> <span class="highlight-basic font-bold text-secondary">FREE</span> (with $1 refundable deposit)
