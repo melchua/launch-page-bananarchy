@@ -11,7 +11,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import cards from '$lib/assets/vip-exclusive.png?enhanced';
-	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
+	import { Award, Handshake, ShieldCheck, CheckCircle2 } from 'lucide-svelte';
 	import { ConfettiExplosion } from 'svelte-confetti-explosion';
 
 	let showConfetti = true;
@@ -36,9 +36,6 @@
 			icon: ShieldCheck
 		}
 	];
-
-	const SUBTITLE = 'You unlocked the exclusive Monkey Business mini-expansion!';
-	const TITLE = 'Claim your FREE Monkey Business expansion — just $1 to reserve.';
 
 	// Track Lead event when landing on thank you page (means they signed up)
 	onMount(() => {
@@ -105,7 +102,7 @@
 	></div>
 	<div class="relative w-full">
 		<div
-			class="sticky left-0 right-0 top-0 mb-6 flex w-full justify-end bg-black p-2 text-center text-white"
+			class="fixed left-0 right-0 top-0 z-50 flex w-full justify-end bg-black/95 px-4 py-3 text-center text-white shadow-lg backdrop-blur-sm md:relative md:shadow-none"
 		>
 			<div class="flex w-full justify-center">
 				<stripe-buy-button
@@ -119,61 +116,65 @@
 				</stripe-buy-button>
 			</div>
 		</div>
-		<div class="mx-4 my-4 flex flex-col items-center justify-center md:my-16 md:flex-row">
-			<div class="hidden h-full flex-none p-4 font-londrinaSolid md:block">
+		<div
+			class="mx-auto my-8 flex max-w-7xl flex-col items-center justify-center gap-8 px-4 pt-20 md:my-16 md:flex-row md:items-start md:gap-12 md:pt-0"
+		>
+			<div class="hidden flex-shrink-0 md:block">
 				<enhanced:img
 					src={cards}
 					alt="cards"
-					class="m-6 w-2/3 min-w-[420px] animate-bounce-in"
+					class="w-full max-w-md animate-bounce-in"
 					sizes="500px"
 				/>
 			</div>
 
-			<div class="flex flex-col gap-6 rounded-xl p-2 sm:items-start sm:p-6">
-				<div class="flex flex-col items-center">
+			<div class="flex w-full max-w-2xl flex-col gap-4 p-2 sm:p-6">
+				<div class="flex flex-col items-center gap-3">
 					<p class="title text-center">
-						🎉 Claim your <span class="highlight-basic">FREE Monkey Business</span> expansion!
+						Claim your <span class="highlight-basic">FREE Monkey Business</span> expansion!
 					</p>
-					<p class="title-subhead text-center">
-						Get the exclusive Monkey Business mini-expansion — <span class="line-through decoration-red-500 decoration-2">$10</span> <span class="highlight-basic text-green-400">FREE</span> when you pre-sign up!
+					<p class="title-subhead px-10 text-center">
+						Get the exclusive Monkey Business mini-expansion — <span
+							class="line-through decoration-red-500 decoration-2">$10</span
+						> <span class="highlight-basic font-bold text-secondary">FREE</span> when you sign up before
+						the Kickstarter launch in May!
 					</p>
 					<enhanced:img
 						src={cards}
 						alt="cards"
-						class="m-6 w-full animate-bounce-in p-4 sm:w-2/3 md:hidden"
+						class="my-4 w-full animate-bounce-in sm:w-2/3 md:hidden"
 						sizes="85vw"
 					/>
-					<p class="mt-2 text-center text-lg font-semibold text-yellow-300">
-						⏰ Kickstarter launches in just over a month — secure yours now!
-					</p>
-					<p class="title-subsubhead text-center">
-						Reserve your Monkey Business expansion with just <span class="highlight-basic">$1 — fully refundable!</span>
+
+					<p class="title-subsubhead px-10 text-center">
+						Reserve your free mini expansion with a <span class="highlight-basic">$1</span> deposit.
 					</p>
 				</div>
 
-				<div class="mx-auto my-6 w-full max-w-xl rounded-lg bg-white/10 p-6 backdrop-blur-sm">
-					<h3 class="mb-4 text-center text-2xl font-bold text-yellow-300">What You Get:</h3>
+				<div class="mx-auto w-full max-w-xl rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+					<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
 					<ul class="space-y-3 text-left text-lg">
 						<li class="flex items-start gap-3">
-							<span class="text-2xl">✅</span>
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
 							<span
-								>Monkey Business Mini-Expansion <span class="text-yellow-300 font-semibold"
+								>Monkey Business Mini-Expansion <span class="font-semibold text-primary-100"
 									>(6 cards, $10 value)</span
-								> — <span class="text-green-400 font-bold">FREE</span></span
+								>
+								— <span class="font-bold text-white">FREE</span></span
 							>
 						</li>
 						<li class="flex items-start gap-3">
-							<span class="text-2xl">✅</span>
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
 							<span>Priority Kickstarter access notification</span>
 						</li>
 						<li class="flex items-start gap-3">
-							<span class="text-2xl">✅</span>
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
 							<span>Exclusive backer updates and behind-the-scenes content</span>
 						</li>
 						<li class="flex items-start gap-3">
-							<span class="text-2xl">✅</span>
+							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
 							<span
-								><span class="text-green-400 font-semibold">100% refundable</span> $1 reservation</span
+								><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
 							>
 						</li>
 					</ul>
@@ -200,21 +201,25 @@
 				</div>
 			</div>
 		</div>
-		<!-- // TODO: Lines between boxes, and margin between boxes for the text -->
-		<div
-			class="mx-4 my-4 flex flex-col items-start gap-2 rounded bg-purple-950/50 p-6 text-gray-300 backdrop-blur-sm md:flex-row md:divide-x md:divide-white/20"
-		>
-			{#each benefits as benefit}
-				<div class="flex flex-col gap-2 p-2 md:px-6 first:md:pl-2 last:md:pr-2">
-					<div class="flex items-center justify-start gap-2">
-						{#if benefit.icon}
-							<svelte:component this={benefit.icon} class="h-20 w-20" />
-						{/if}
-						<h3 class="text-2xl">{benefit.title}</h3>
+		<div class="mx-auto my-8 w-full max-w-6xl px-4">
+			<div
+				class="grid gap-6 rounded bg-purple-950/50 p-6 text-white/90 backdrop-blur-sm md:grid-cols-3 md:gap-8"
+			>
+				{#each benefits as benefit}
+					<div class="flex flex-col gap-3">
+						<div class="flex items-center gap-3">
+							{#if benefit.icon}
+								<svelte:component
+									this={benefit.icon}
+									class="h-12 w-12 flex-shrink-0 md:h-14 md:w-14"
+								/>
+							{/if}
+							<h3 class="benefit-title">{benefit.title}</h3>
+						</div>
+						<p class="text-sm leading-relaxed md:text-base">{benefit.description}</p>
 					</div>
-					<p class="mb-6">{benefit.description}</p>
-				</div>
-			{/each}
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>
