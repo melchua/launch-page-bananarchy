@@ -1,6 +1,6 @@
 <!-- After sucessful payment, we should redirect back to the final page in the funnel to get them to sign-up to facebook or discord
  exclusive VIP page. https://docs.stripe.com/payment-links/post-payment#:~:text=After%20a%20successful%20payment%2C%20your,or%20editing%20a%20payment%20link.
-  
+
   -->
 
 <script context="module" lang="ts">
@@ -118,127 +118,94 @@
 		</div>
 
 		<!-- Thank you confirmation section -->
-		<div class="mx-auto w-full max-w-4xl px-4 pb-4 pt-20 text-center md:pb-8 md:pt-8">
-			<p class="text-2xl font-semibold text-white/80 md:text-3xl">🎉 You're In!</p>
-			<p class="mt-2 text-base text-white/70 md:text-lg">
+		<div class="mx-auto w-full max-w-4xl px-4 pb-2 pt-20 text-center md:pb-4 md:pt-6">
+			<p class="text-xl font-semibold text-white/80 md:text-2xl">🎉 You're In!</p>
+			<p class="mt-1 text-sm text-white/70 md:text-base">
 				Thanks for subscribing! Check your inbox for a welcome email.
 			</p>
 		</div>
 
-		<div
-			class="mx-auto my-8 flex max-w-7xl flex-col items-center justify-center gap-8 px-4 md:my-16 md:flex-row md:items-start md:gap-12"
-		>
-			<div class="hidden flex-shrink-0 md:block">
-				<enhanced:img
-					src={cards}
-					alt="cards"
-					class="w-full max-w-md animate-bounce-in"
-					sizes="500px"
-				/>
-
-				<!-- What You Get box - Desktop only (left column) -->
-				<div class="mt-6 w-full max-w-md rounded-lg bg-white/10 p-6 backdrop-blur-sm">
-					<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
-					<ul class="space-y-3 text-left text-lg">
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span
-								>Monkey Business Mini-Expansion <span class="font-semibold text-primary-100"
-									>(6 cards, $10 value)</span
-								>
-								— <span class="font-bold text-white">FREE</span></span
-							>
-						</li>
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span>Priority Kickstarter access notification</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span>Exclusive backer updates and behind-the-scenes content</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span
-								><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
-							>
-						</li>
-					</ul>
-				</div>
+		<!-- Single column centered layout -->
+		<div class="mx-auto my-8 flex max-w-4xl flex-col items-center px-4 md:my-12">
+			<!-- Main headline -->
+			<div class="mb-6 flex flex-col items-center gap-3 text-center">
+				<p class="title">
+					Now, Claim Your <span class="highlight-basic">FREE Monkey Business</span> expansion!
+				</p>
+				<p class="title-subhead px-4">
+					Get the exclusive Monkey Business mini-expansion — <span
+						class="line-through decoration-red-500 decoration-2">$10</span
+					> <span class="highlight-basic font-bold text-secondary">FREE</span> when you sign up before
+					the Kickstarter launch in May!
+				</p>
 			</div>
 
-			<div class="flex w-full max-w-2xl flex-col gap-4 p-2 sm:p-6">
-				<div class="flex flex-col items-center gap-3">
-					<p class="title text-center">
-						Now, Claim Your <span class="highlight-basic">FREE Monkey Business</span> expansion!
-					</p>
-					<p class="title-subhead px-10 text-center">
-						Get the exclusive Monkey Business mini-expansion — <span
-							class="line-through decoration-red-500 decoration-2">$10</span
-						> <span class="highlight-basic font-bold text-secondary">FREE</span> when you sign up before
-						the Kickstarter launch in May!
-					</p>
-					<enhanced:img
-						src={cards}
-						alt="cards"
-						class="my-4 w-full animate-bounce-in sm:w-2/3 md:hidden"
-						sizes="85vw"
-					/>
+			<!-- Cards image - centered, larger -->
+			<div class="mb-6 w-full">
+				<enhanced:img
+					src={cards}
+					alt="Monkey Business expansion cards"
+					class="mx-auto w-full max-w-xl animate-bounce-in"
+					sizes="(min-width: 768px) 600px, 90vw"
+				/>
+			</div>
 
-					<p class="title-subsubhead px-10 text-center">
-						Reserve your free mini expansion with a <span class="highlight-basic">$1</span> deposit.
-					</p>
-				</div>
+			<!-- Subhead -->
+			<div class="mb-8 text-center">
+				<p class="title-subsubhead px-4">
+					Reserve your free mini expansion with a <span class="highlight-basic">$1</span> deposit.
+				</p>
+			</div>
 
-				<!-- What You Get box - Mobile only (right column) -->
-				<div class="mx-auto w-full max-w-xl rounded-lg bg-white/10 p-6 backdrop-blur-sm md:hidden">
-					<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
-					<ul class="space-y-3 text-left text-lg">
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span
-								>Monkey Business Mini-Expansion <span class="font-semibold text-primary-100"
-									>(6 cards, $10 value)</span
-								>
-								— <span class="font-bold text-white">FREE</span></span
+			<!-- What You Get box - single version, centered -->
+			<div class="mb-8 w-full max-w-2xl rounded-lg bg-white/10 p-6 backdrop-blur-sm md:p-8">
+				<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
+				<ul class="space-y-3 text-left text-lg">
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span
+							>Monkey Business Mini-Expansion <span class="font-semibold text-primary-100"
+								>(6 cards, $10 value)</span
 							>
-						</li>
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span>Priority Kickstarter access notification</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span>Exclusive backer updates and behind-the-scenes content</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
-							<span
-								><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
-							>
-						</li>
-					</ul>
-				</div>
+							— <span class="font-bold text-white">FREE</span></span
+						>
+					</li>
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span>Priority Kickstarter access notification</span>
+					</li>
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span>Exclusive backer updates and behind-the-scenes content</span>
+					</li>
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span
+							><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
+						>
+					</li>
+				</ul>
+			</div>
 
-				<div class="flex w-full flex-col items-center gap-4">
-					<stripe-buy-button
-						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
-						publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
-						on:click={() => handleBuyButtonClick('main')}
-						on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
-						role="button"
-						tabindex="0"
-					>
-					</stripe-buy-button>
-					<a
-						href="https://www.kickstarter.com/projects/pickupandplaygames/bananarchy"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="underline hover:text-gray-400"
-					>
-						No thanks, I'll pay $10 later instead
-					</a>
-				</div>
+			<!-- CTA section -->
+			<div class="flex w-full flex-col items-center gap-4">
+				<stripe-buy-button
+					buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
+					publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
+					on:click={() => handleBuyButtonClick('main')}
+					on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
+					role="button"
+					tabindex="0"
+				>
+				</stripe-buy-button>
+				<a
+					href="https://www.kickstarter.com/projects/pickupandplaygames/bananarchy"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="underline hover:text-gray-400"
+				>
+					No thanks, I'll pay $10 later instead
+				</a>
 			</div>
 		</div>
 		<div class="mx-auto my-8 w-full max-w-6xl px-4">
