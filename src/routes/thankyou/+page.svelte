@@ -127,16 +127,19 @@
 		<div class="mx-auto my-8 flex max-w-4xl flex-col items-center px-4 md:my-8">
 			<!-- Main headline -->
 			<div class="mb-6 flex flex-col items-center gap-3 text-center">
-				<p class="title">
+				<p class="title-small">
 					Now, Claim Your <span class="highlight-basic">FREE</span><span class="highlight-basic"
 						><br /> Monkey Business</span
 					> Expansion!
 				</p>
 				<p class="title-subhead px-4 sm:px-20">
-					Get the exclusive Monkey Business mini-expansion<br />
-					<span class="line-through decoration-red-500 decoration-2">$10</span>
-					<span class="highlight-basic font-bold text-secondary">FREE</span>
-					(with $1 refundable deposit)
+					Reserve your VIP spot — get this <span
+						class="line-through decoration-red-500 decoration-2">$10</span
+					>
+					expansion <span class="highlight-basic font-bold text-secondary">FREE</span><br />
+					<span class="text-sm font-normal text-white/80 md:text-base"
+						>Just a $1 refundable deposit</span
+					>
 				</p>
 				<div class="mt-4">
 					<stripe-buy-button
