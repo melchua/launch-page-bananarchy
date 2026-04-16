@@ -206,13 +206,24 @@ picture {
 		0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.title-small {
+	font-family: 'Londrina Solid', system-ui, sans-serif;
+	font-size: clamp(2.1rem, 4.4vw, 2.5rem);
+	line-height: 1;
+	color: #fff;
+	letter-spacing: 0.5px;
+	text-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.4),
+		0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 .highlight-basic {
 	color: #fedf23;
 }
 
 .title-subhead {
 	font-family: 'Poppins', sans-serif;
-	font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+	font-size: clamp(1rem, 2.2vw, 1.2rem);
 	font-weight: 600;
 	line-height: 1.4;
 	color: #fff;
@@ -604,4 +615,23 @@ picture {
 .featured-logo {
 	font-family: 'Poppins', sans-serif;
 	letter-spacing: 0.5px;
+}
+
+/* Value box heading for thank you page */
+.value-box-heading {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #fedf23;
+	letter-spacing: 0.5px;
+}
+
+/* Benefit card titles for thank you page */
+.benefit-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 0.3px;
+	line-height: 1.3;
 }

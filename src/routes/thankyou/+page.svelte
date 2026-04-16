@@ -1,6 +1,6 @@
 <!-- After sucessful payment, we should redirect back to the final page in the funnel to get them to sign-up to facebook or discord
  exclusive VIP page. https://docs.stripe.com/payment-links/post-payment#:~:text=After%20a%20successful%20payment%2C%20your,or%20editing%20a%20payment%20link.
-  
+
   -->
 
 <script context="module" lang="ts">
@@ -11,10 +11,13 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import cards from '$lib/assets/vip-exclusive.png?enhanced';
-	import { Award, Handshake, ShieldCheck } from 'lucide-svelte';
+	import monkeyHead from '$lib/assets/icons/monkeyhead-128x128.png';
+	import { Award, Handshake, ShieldCheck, CheckCircle2 } from 'lucide-svelte';
 	import { ConfettiExplosion } from 'svelte-confetti-explosion';
 
 	let showConfetti = true;
+	let vipCount = 0;
+	let loadingCount = true;
 
 	const benefits = [
 		{
@@ -37,12 +40,21 @@
 		}
 	];
 
-	const SUBTITLE = 'You unlocked an exclusive mini-expansion!';
-	const TITLE = 'Claim your FREE $15 expansion — just $1 to reserve.';
-
 	// Track Lead event when landing on thank you page (means they signed up)
-	onMount(() => {
+	onMount(async () => {
 		if (!browser) return;
+
+		// Fetch VIP count from API
+		try {
+			const response = await fetch('/api/vip-count');
+			const data = await response.json();
+			vipCount = data.count || 200;
+		} catch (error) {
+			console.error('Error fetching VIP count:', error);
+			vipCount = 200; // Fallback
+		} finally {
+			loadingCount = false;
+		}
 
 		// Only track Lead once per session to prevent duplicate tracking on page refresh
 		const leadTrackedKey = 'lead_tracked';
@@ -104,51 +116,33 @@
 		class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-bapurple via-purple-700/50 to-transparent"
 	></div>
 	<div class="relative w-full">
-		<div
-			class="sticky left-0 right-0 top-0 mb-6 flex w-full justify-end bg-black p-2 text-center text-white"
-		>
-			<div class="flex w-full justify-center">
-				<stripe-buy-button
-					buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
-					publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
-					on:click={() => handleBuyButtonClick('main')}
-					on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
-					role="button"
-					tabindex="0"
-				>
-				</stripe-buy-button>
-			</div>
+		<!-- Thank you confirmation section -->
+		<div class="mx-auto w-full max-w-4xl px-4 pt-2 text-center">
+			<p class="text-sm text-white/70 md:text-base">
+				🎉 You're subscribed! Check your inbox for a welcome email.
+			</p>
 		</div>
-		<div class="mx-4 my-4 flex flex-col items-center justify-center md:my-16 md:flex-row">
-			<div class="hidden h-full flex-none p-4 font-londrinaSolid md:block">
-				<enhanced:img
-					src={cards}
-					alt="cards"
-					class="m-6 w-2/3 min-w-[420px] animate-bounce-in"
-					sizes="500px"
-				/>
-			</div>
 
-			<div class="flex flex-col gap-6 rounded-xl p-2 sm:items-start sm:p-6">
-				<div class="flex flex-col items-center">
-					<p class="title text-center">
-						🎉 Now claim your <span class="highlight-basic">free VIP Banana</span> expansion
-					</p>
-					<p class="title-subhead text-center">
-						Get a 6-card <span class="highlight-basic">Exclusive mini-expansion</span> (worth $15)
-					</p>
-					<enhanced:img
-						src={cards}
-						alt="cards"
-						class="m-6 w-full animate-bounce-in p-4 sm:w-2/3 md:hidden"
-						sizes="85vw"
-					/>
-					<p class="title-subsubhead text-center">
-						Reserve it today with a <span class="highlight-basic">$1 fully refundable deposit</span>
-					</p>
-				</div>
-
-				<div class="flex w-full flex-col items-center gap-4">
+		<!-- Single column centered layout -->
+		<div class="mx-auto my-8 flex max-w-4xl flex-col items-center px-4 md:my-8">
+			<!-- Main headline -->
+			<div class="mb-6 flex flex-col items-center gap-3 text-center">
+				<p class="title-small">
+					Now, Claim Your <span class="highlight-basic">FREE</span><span class="highlight-basic"
+						><br /> Monkey Business</span
+					> Expansion!
+				</p>
+				<p class="title-subhead px-4 sm:px-20">
+					Reserve your VIP spot — get this <span
+						class="line-through decoration-red-500 decoration-2">$10</span
+					>
+					expansion <span class="highlight-basic font-bold text-secondary">FREE</span> with your
+					pledge<br />
+					<span class="text-sm font-normal text-white/80 md:text-base"
+						>Just a $1 refundable deposit</span
+					>
+				</p>
+				<div class="mt-4">
 					<stripe-buy-button
 						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
 						publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
@@ -158,32 +152,112 @@
 						tabindex="0"
 					>
 					</stripe-buy-button>
-					<a
-						href="https://www.kickstarter.com/projects/pickupandplaygames/bananarchy"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="underline hover:text-gray-400"
-					>
-						No thanks, I don't want the free expansion
-					</a>
 				</div>
 			</div>
-		</div>
-		<!-- // TODO: Lines between boxes, and margin between boxes for the text -->
-		<div
-			class="mx-4 my-4 flex flex-col items-start gap-2 rounded bg-purple-950/50 p-6 text-gray-300 backdrop-blur-sm md:flex-row md:divide-x md:divide-white/20"
-		>
-			{#each benefits as benefit}
-				<div class="flex flex-col gap-2 p-2 md:px-6 first:md:pl-2 last:md:pr-2">
-					<div class="flex items-center justify-start gap-2">
-						{#if benefit.icon}
-							<svelte:component this={benefit.icon} class="h-20 w-20" />
-						{/if}
-						<h3 class="text-2xl">{benefit.title}</h3>
+
+			<!-- Social Proof Section -->
+			{#if !loadingCount}
+				<div class="flex flex-col items-center justify-center gap-3 opacity-90">
+					<!-- Count text -->
+					<p class="text-sm text-white/80 md:text-base">
+						Join <span class="font-semibold text-white">{vipCount}+ early VIP monkeys</span>
+					</p>
+					<!-- Avatar group - monkey heads with colored backgrounds -->
+					<div class="flex -space-x-3">
+						{#each ['bg-baorange', 'bg-primary-100', 'bg-tertiary', 'bg-green-500'] as bgColor}
+							<div class="rounded-full border-2 border-white shadow-md {bgColor} p-1 md:p-1.5">
+								<img src={monkeyHead} alt="Monkey avatar" class="h-8 w-8 md:h-9 md:w-9" />
+							</div>
+						{/each}
 					</div>
-					<p class="mb-6">{benefit.description}</p>
 				</div>
-			{/each}
+			{/if}
+
+			<!-- Cards image - centered, larger -->
+			<div class="mb-6 w-full">
+				<enhanced:img
+					src={cards}
+					alt="Monkey Business expansion cards"
+					class="mx-auto w-full max-w-xl sm:animate-bounce-in"
+					sizes="(min-width: 768px) 600px, 90vw"
+				/>
+			</div>
+
+			<!-- Subhead -->
+			<div class="mb-8 text-center">
+				<p class="title-subsubhead px-4">
+					Reserve your VIP spot with a <span class="highlight-basic">$1</span> deposit.
+				</p>
+			</div>
+
+			<!-- What You Get box - single version, centered -->
+			<div class="mb-8 w-full max-w-2xl rounded-lg bg-white/10 p-6 backdrop-blur-sm md:p-8">
+				<h3 class="value-box-heading mb-4 text-center">What You Get:</h3>
+				<ul class="space-y-3 text-left text-lg">
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span
+							>Monkey Business Mini-Expansion <span class="font-bold text-white">FREE</span> with
+							your Kickstarter pledge
+							<span class="font-semibold text-primary-100">(6 cards, $10 value)</span></span
+						>
+					</li>
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span>Priority Kickstarter access notification</span>
+					</li>
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span>Exclusive backer updates and behind-the-scenes content</span>
+					</li>
+					<li class="flex items-start gap-3">
+						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
+						<span><span class="font-semibold text-white">100% refundable</span> $1 reservation</span
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- CTA section -->
+			<div class="flex w-full flex-col items-center gap-4">
+				<stripe-buy-button
+					buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
+					publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
+					on:click={() => handleBuyButtonClick('main')}
+					on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
+					role="button"
+					tabindex="0"
+				>
+				</stripe-buy-button>
+				<a
+					href="https://www.kickstarter.com/projects/pickupandplaygames/bananarchy"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="underline hover:text-gray-400"
+				>
+					Nah, I'll think about it
+				</a>
+			</div>
+		</div>
+		<div class="mx-auto my-8 w-full max-w-6xl px-4">
+			<div
+				class="grid gap-6 rounded bg-purple-950/50 p-6 text-white/90 backdrop-blur-sm md:grid-cols-3 md:gap-8"
+			>
+				{#each benefits as benefit}
+					<div class="flex flex-col gap-3">
+						<div class="flex items-center gap-3">
+							{#if benefit.icon}
+								<svelte:component
+									this={benefit.icon}
+									class="h-12 w-12 flex-shrink-0 md:h-14 md:w-14"
+								/>
+							{/if}
+							<h3 class="benefit-title">{benefit.title}</h3>
+						</div>
+						<p class="text-sm leading-relaxed md:text-base">{benefit.description}</p>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>
