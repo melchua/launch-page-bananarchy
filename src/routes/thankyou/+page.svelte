@@ -136,7 +136,8 @@
 					Reserve your VIP spot — get this <span
 						class="line-through decoration-red-500 decoration-2">$10</span
 					>
-					expansion <span class="highlight-basic font-bold text-secondary">FREE</span><br />
+					expansion <span class="highlight-basic font-bold text-secondary">FREE</span> with your
+					pledge<br />
 					<span class="text-sm font-normal text-white/80 md:text-base"
 						>Just a $1 refundable deposit</span
 					>
@@ -159,7 +160,7 @@
 				<div class="flex flex-col items-center justify-center gap-3 opacity-90">
 					<!-- Count text -->
 					<p class="text-sm text-white/80 md:text-base">
-						<span class="font-semibold text-white">{vipCount}+ special monkeys</span> have already reserved
+						Join <span class="font-semibold text-white">{vipCount}+ early VIP monkeys</span>
 					</p>
 					<!-- Avatar group - monkey heads with colored backgrounds -->
 					<div class="flex -space-x-3">
@@ -196,10 +197,9 @@
 					<li class="flex items-start gap-3">
 						<CheckCircle2 class="h-6 w-6 flex-shrink-0 text-primary-100" />
 						<span
-							>Monkey Business Mini-Expansion <span class="font-semibold text-primary-100"
-								>(6 cards, $10 value)</span
-							>
-							— <span class="font-bold text-white">FREE</span></span
+							>Monkey Business Mini-Expansion <span class="font-bold text-white">FREE</span> with
+							your Kickstarter pledge
+							<span class="font-semibold text-primary-100">(6 cards, $10 value)</span></span
 						>
 					</li>
 					<li class="flex items-start gap-3">
@@ -235,7 +235,7 @@
 					rel="noopener noreferrer"
 					class="underline hover:text-gray-400"
 				>
-					No thanks, I'll pay $10 later instead
+					Nah, I'll think about it
 				</a>
 			</div>
 		</div>
