@@ -116,9 +116,7 @@
 							Join {displayCount}+ monkeys already playing
 						</div>
 						<div class="text-xs text-gray-900">
-							🎁 Get the Free Print & Play Mini-Game<br /> 🔓 Early access + exclusive launch
-							rewards
-							<!-- <br /> ⏳ Only {900 - displayCount} spots left. -->
+							🎁 Get the Free Print & Play Mini-Game<br /> 🔓 Early access + exclusive launch rewards
 						</div>
 					</div>
 
