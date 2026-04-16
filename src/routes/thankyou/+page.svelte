@@ -116,8 +116,8 @@
 		class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-bapurple via-purple-700/50 to-transparent"
 	></div>
 	<div class="relative w-full">
-		<div
-			class="fixed left-0 right-0 top-0 z-50 flex w-full justify-end bg-black/95 px-4 py-3 text-center text-white shadow-lg backdrop-blur-sm md:relative md:shadow-none"
+		<!-- <div
+			class="fixed left-0 right-0 top-0 z-50 flex w-full justify-end bg-black/95 px-4 py-3 text-center text-white shadow-lg backdrop-blur-sm sm:hidden md:shadow-none"
 		>
 			<div class="flex w-full justify-center">
 				<stripe-buy-button
@@ -130,29 +130,60 @@
 				>
 				</stripe-buy-button>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Thank you confirmation section -->
-		<div class="mx-auto w-full max-w-4xl px-4 pb-2 pt-20 text-center md:pb-4 md:pt-6">
-			<p class="text-xl font-semibold text-white/80 md:text-2xl">🎉 You're In!</p>
-			<p class="mt-1 text-sm text-white/70 md:text-base">
-				Thanks for subscribing! Check your inbox for a welcome email.
+		<div class="mx-auto w-full max-w-4xl px-4 pt-2 text-center">
+			<p class="text-sm text-white/70 md:text-base">
+				🎉 You're subscribed! Check your inbox for a welcome email.
 			</p>
 		</div>
 
 		<!-- Single column centered layout -->
-		<div class="mx-auto my-8 flex max-w-4xl flex-col items-center px-4 md:my-12">
+		<div class="mx-auto my-8 flex max-w-4xl flex-col items-center px-4 md:my-8">
 			<!-- Main headline -->
 			<div class="mb-6 flex flex-col items-center gap-3 text-center">
 				<p class="title">
-					Now, Claim Your <span class="highlight-basic">FREE Monkey Business</span> Expansion!
+					Now, Claim Your <span class="highlight-basic">FREE</span><span class="highlight-basic"
+						><br /> Monkey Business</span
+					> Expansion!
 				</p>
 				<p class="title-subhead px-4 sm:px-20">
-					Get the exclusive Monkey Business mini-expansion — <span
-						class="line-through decoration-red-500 decoration-2">$10</span
-					> <span class="highlight-basic font-bold text-secondary">FREE</span> (with $1 refundable deposit)
+					Get the exclusive Monkey Business mini-expansion<br />
+					<span class="line-through decoration-red-500 decoration-2">$10</span>
+					<span class="highlight-basic font-bold text-secondary">FREE</span>
+					(with $1 refundable deposit)
 				</p>
+				<div class="mt-4">
+					<stripe-buy-button
+						buy-button-id={`${process.env.NODE_ENV === 'production' ? 'buy_btn_1T4GwKAsNXUFfbI0Q2bcV4Yt' : 'buy_btn_1T4H7GPPIJAaixg8JZXorcI7'}`}
+						publishable-key={`${process.env.NODE_ENV === 'production' ? 'pk_live_51R4sxhAsNXUFfbI0fAl27QrPAtQ2nvehYLChkv76Nc5C371lHgLn89PLXuqWToXANsCiMQNlgxvRkaAfZLSZRZDS00kRHtBo8W' : 'pk_test_51R4sxoPPIJAaixg8YvZtmNEcmVmzitoMlK9DAMS8LI7AwwlLs4F1w5usO9DUeqs8ifXZdDf2BRtMjDHUQlZZj24O00Cod4QbJz'}	`}
+						on:click={() => handleBuyButtonClick('main')}
+						on:keydown={(e: KeyboardEvent) => e.key === 'Enter' && handleBuyButtonClick('main')}
+						role="button"
+						tabindex="0"
+					>
+					</stripe-buy-button>
+				</div>
 			</div>
+
+			<!-- Social Proof Section -->
+			{#if !loadingCount}
+				<div class="flex flex-col items-center justify-center gap-3 opacity-90">
+					<!-- Count text -->
+					<p class="text-sm text-white/80 md:text-base">
+						<span class="font-semibold text-white">{vipCount}+ special monkeys</span> have already reserved
+					</p>
+					<!-- Avatar group - monkey heads with colored backgrounds -->
+					<div class="flex -space-x-3">
+						{#each ['bg-baorange', 'bg-primary-100', 'bg-tertiary', 'bg-green-500'] as bgColor}
+							<div class="rounded-full border-2 border-white shadow-md {bgColor} p-1 md:p-1.5">
+								<img src={monkeyHead} alt="Monkey avatar" class="h-8 w-8 md:h-9 md:w-9" />
+							</div>
+						{/each}
+					</div>
+				</div>
+			{/if}
 
 			<!-- Cards image - centered, larger -->
 			<div class="mb-6 w-full">
@@ -219,27 +250,6 @@
 				>
 					No thanks, I'll pay $10 later instead
 				</a>
-
-				<!-- Social Proof Section -->
-				{#if !loadingCount}
-					<div class="mt-8 flex flex-col items-center justify-center gap-3 opacity-90">
-						<!-- Title -->
-						<p class="text-base font-semibold text-white/90 md:text-lg">Joined so far</p>
-						<!-- Avatar group - monkey heads with colored backgrounds -->
-						<div class="flex -space-x-3">
-							{#each ['bg-baorange', 'bg-primary-100', 'bg-secondary'] as bgColor}
-								<div class="rounded-full border-2 border-white shadow-md {bgColor} p-1 md:p-1.5">
-									<img src={monkeyHead} alt="Monkey avatar" class="h-8 w-8 md:h-9 md:w-9" />
-								</div>
-							{/each}
-						</div>
-						<!-- Count text -->
-						<p class="text-sm text-white/80 md:text-base">
-							<span class="font-semibold text-white">{vipCount}+ special monkeys</span> have already
-							reserved
-						</p>
-					</div>
-				{/if}
 			</div>
 		</div>
 		<div class="mx-auto my-8 w-full max-w-6xl px-4">

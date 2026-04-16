@@ -212,7 +212,7 @@ picture {
 
 .title-subhead {
 	font-family: 'Poppins', sans-serif;
-	font-size: clamp(1rem, 2.2vw, 1.4rem);
+	font-size: clamp(1rem, 2.2vw, 1.2rem);
 	font-weight: 600;
 	line-height: 1.4;
 	color: #fff;
