@@ -10,7 +10,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import cards from '$lib/assets/vip-exclusive.png?enhanced';
+	import cards from '$lib/assets/booster-green.png?enhanced';
 	import monkeyHead from '$lib/assets/icons/monkeyhead-128x128.png';
 	import { Award, Handshake, ShieldCheck, CheckCircle2 } from 'lucide-svelte';
 	import { ConfettiExplosion } from 'svelte-confetti-explosion';
@@ -174,7 +174,7 @@
 			{/if}
 
 			<!-- Cards image - centered, larger -->
-			<div class="mb-6 w-full">
+			<div class="my-6 w-full">
 				<enhanced:img
 					src={cards}
 					alt="Monkey Business expansion cards"
