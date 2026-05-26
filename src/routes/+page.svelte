@@ -26,7 +26,7 @@
 	}
 
 	// Count-up animation function
-	function animateCount(target: number, duration: number = 1500) {
+	function animateCount(target: number, duration: number = 1600) {
 		const startTime = performance.now();
 		const startValue = 0;
 
