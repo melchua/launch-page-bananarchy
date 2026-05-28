@@ -14,13 +14,7 @@ const config = {
 		// adapter-cloudflare supports both static prerendered pages and dynamic server routes
 		// Pages are still prerendered via export const prerender = true in +layout.ts
 		// API routes work seamlessly in both dev and production
-		adapter: adapter({
-			// Cloudflare Pages compatibility
-			routes: {
-				include: ['/*'],
-				exclude: ['<all>']
-			}
-		})
+		adapter: adapter()
 	}
 };
 
