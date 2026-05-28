@@ -14,7 +14,14 @@ const config = {
 		// adapter-cloudflare supports both static prerendered pages and dynamic server routes
 		// Pages are still prerendered via export const prerender = true in +layout.ts
 		// API routes work seamlessly in both dev and production
-		adapter: adapter()
+		adapter: adapter({
+			// Whole-site _redirects uses `/*`, which must not be combined with
+			// default exclude `<all>` (adds /_app/* etc.) — Cloudflare rejects overlapping rules.
+			routes: {
+				include: ['/_sveltekit_worker_unmatched'],
+				exclude: ['/*']
+			}
+		})
 	}
 };
 
